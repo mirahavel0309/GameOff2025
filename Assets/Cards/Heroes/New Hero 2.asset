@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01f24917ff3bfa4c9a79e9073b9c80c, type: 3}
+  m_Name: New Hero 2
+  m_EditorClassIdentifier: 
+  cardName: Hero
+  artwork: {fileID: 21300000, guid: 2d277fadf3dd60b4aab27d9815e80c8b, type: 3}
+  cost: 1
+  attack: 4
+  health: 10
+  characterPrefab: {fileID: 6709276644064086281, guid: 37bcd2a61baa4fe40bf6d1ab8f702f13, type: 3}
+  description: 
+  baseAttack: 5
+  baseHealth: 5
+  baseMana: 5
+  attackDescription: 
+  castDescription: 
+  defendDescription: 

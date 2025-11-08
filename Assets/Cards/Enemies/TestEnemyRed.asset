@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbd8fcb07ab4c54b9da586851665bd2, type: 3}
+  m_Name: TestEnemyRed
+  m_EditorClassIdentifier: 
+  cardName: Bard
+  artwork: {fileID: 21300000, guid: 608aaf69519067e45aa50184ad42f1e6, type: 3}
+  cost: 1
+  attack: 5
+  health: 8
+  description: 
