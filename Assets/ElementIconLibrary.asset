@@ -15,9 +15,13 @@ MonoBehaviour:
   icons:
   - element: 0
     icon: {fileID: 21300000, guid: 46eca39e2189f5a46a93f105ee137636, type: 3}
+    elementalProjectilePrefab: {fileID: 6709276644064086281, guid: 38d6ced756e16464896b8a5ba1ebaad7, type: 3}
   - element: 1
     icon: {fileID: 21300000, guid: 502e753eb42f6c14494373918d2f3e7b, type: 3}
+    elementalProjectilePrefab: {fileID: 6709276644064086281, guid: b63924300eaafc14da8132385c90ed6e, type: 3}
   - element: 2
     icon: {fileID: 21300000, guid: aeada8d48b9a7844a9ff0420987c568c, type: 3}
+    elementalProjectilePrefab: {fileID: 6709276644064086281, guid: 2ebf8e57a48465e46acff37b09329dff, type: 3}
   - element: 3
     icon: {fileID: -8105560202311982947, guid: b3883a4b3cfada64fa9f8920cf858f8a, type: 3}
+    elementalProjectilePrefab: {fileID: 6709276644064086281, guid: 38d6ced756e16464896b8a5ba1ebaad7, type: 3}

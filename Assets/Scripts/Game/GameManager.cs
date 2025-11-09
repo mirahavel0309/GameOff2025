@@ -282,9 +282,9 @@ public class GameManager : MonoBehaviour
             useButton.gameObject.SetActive(matchedSkill != null);
 
         if (matchedSkill != null)
-            Debug.Log($"Found skill: {matchedSkill.skillName}");
+            InfoPanel.instance.ShowMessage($"Found skill: {matchedSkill.skillName}");
         else
-            Debug.Log("No skill matches current combo.");
+            InfoPanel.instance.ShowMessage($"No skill matches current combo!");
     }
 
     private BaseSkill FindMatchingSkill(List<ElementType> combo)

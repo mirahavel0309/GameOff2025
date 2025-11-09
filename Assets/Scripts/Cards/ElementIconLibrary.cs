@@ -5,10 +5,11 @@ using UnityEngine;
 public class ElementIconLibrary : ScriptableObject
 {
     [System.Serializable]
-    public struct ElementIconPair
+    public class ElementIconPair
     {
         public ElementType element;
         public Sprite icon;
+        public GameObject elementalProjectilePrefab; // <-- NEW
     }
 
     public List<ElementIconPair> icons = new List<ElementIconPair>();
@@ -24,5 +25,10 @@ public class ElementIconLibrary : ScriptableObject
         }
 
         return iconLookup.TryGetValue(element, out Sprite result) ? result : null;
+    }
+    public GameObject GetElementProjectilePrefab(ElementType element)
+    {
+        var pair = icons.Find(e => e.element == element);
+        return pair?.elementalProjectilePrefab;
     }
 }

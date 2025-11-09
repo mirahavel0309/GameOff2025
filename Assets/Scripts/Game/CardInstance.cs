@@ -144,8 +144,9 @@ public class CardInstance : MonoBehaviour
         if (attackText != null) attackText.text = currentAttack.ToString();
         if (healthText != null) healthText.text = currentHealth.ToString();
 
-        if (cardSprite != null && baseCard != null && baseCard.artwork != null)
-            cardSprite.sprite = baseCard.artwork;
+        // I think I'll reomve baseCard. Right sprite will come from prefab of the object
+        //if (cardSprite != null && baseCard != null && baseCard.artwork != null)
+        //    cardSprite.sprite = baseCard.artwork;
     }
     private void OnMouseEnter()
     {
