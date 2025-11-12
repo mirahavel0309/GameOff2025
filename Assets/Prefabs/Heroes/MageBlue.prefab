@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: -6943740390802484920}
   m_Layer: 0
   m_Name: MageBlue
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentAttack: 10
-  currentHealth: 25
+  maxHealth: 10
   state: 1
   attackText: {fileID: 6513506504482716756}
   healthText: {fileID: 1140594244276213103}

@@ -11,7 +11,8 @@ public class CardInstance : MonoBehaviour
     [Header("Card Data")]
     //public Card baseCard;
     public int currentAttack;
-    public int currentHealth;
+    private int currentHealth;
+    public int maxHealth;
     public CardState state;
 
     [Header("References")]
@@ -36,6 +37,7 @@ public class CardInstance : MonoBehaviour
     }
     void Start()
     {
+        currentHealth = maxHealth;
         Initialize();
     }
     public virtual void Initialize()
@@ -99,13 +101,7 @@ public class CardInstance : MonoBehaviour
             }
             else // Enemy card clicked
             {
-                if (selectedAttacker != null)
-                {
-                    if(GameManager.Instance.IsActionPending("Attack"))
-                        StartCoroutine(selectedAttacker.PerformAttack(this));
-                    if(GameManager.Instance.IsActionPending("Cast"))
-                        GameManager.Instance.GetSelectedHero().CastOnEnemy(this);
-                }
+
             }
         }
     }
@@ -274,6 +270,21 @@ public class CardInstance : MonoBehaviour
         {
             StartCoroutine(HandleDestruction());
         }
+    }
+    public void Heal(int amount)
+    {
+        currentHealth = Mathf.Min(maxHealth, currentHealth + amount);
+        UpdateVisuals();
+
+        // Optional floating text feedback
+        EffectsManager.instance.CreateFloatingText(
+            transform.position + Vector3.up * 1.5f,
+            "+" + amount,
+            Color.green,
+            1.2f,
+            0.8f,
+            1.2f
+        );
     }
     private IEnumerator HandleDestruction()
     {

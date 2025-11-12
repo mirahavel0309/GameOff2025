@@ -285,11 +285,29 @@ public class GameManager : MonoBehaviour
 
         foreach (var skill in allSkills)
         {
-            if (skill.requiredElements.Count == combo.Count &&
-                !skill.requiredElements.Except(combo).Any())
+            if (skill.requiredElements.Count != combo.Count)
+                continue;
+
+            List<ElementType> skillElements = new List<ElementType>(skill.requiredElements);
+            List<ElementType> comboElements = new List<ElementType>(combo);
+
+            bool match = true;
+
+            foreach (var elem in comboElements)
             {
-                result.Add(skill);
+                if (skillElements.Contains(elem))
+                {
+                    skillElements.Remove(elem);
+                }
+                else
+                {
+                    match = false;
+                    break;
+                }
             }
+
+            if (match && skillElements.Count == 0)
+                result.Add(skill);
         }
 
         return result;

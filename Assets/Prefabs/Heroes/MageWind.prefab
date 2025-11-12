@@ -583,7 +583,7 @@ GameObject:
   - component: {fileID: 4964113359520524644}
   - component: {fileID: -6943740390802484920}
   m_Layer: 0
-  m_Name: MageGreen
+  m_Name: MageWind
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,7 +627,7 @@ MonoBehaviour:
   troopsField: {fileID: 0}
   currentContainer: {fileID: 0}
   heroData: {fileID: 11400000, guid: ee8e3ba51ff30db47b7384e19a611fd7, type: 2}
-  mainElement: 2
+  mainElement: 0
 --- !u!61 &3303585355228617710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
   WaterResistance: 0
   NatureResistance: 0
   WindResistance: 0
-  PhysicalResistance: 25
+  PhysicalResistance: 0
 --- !u!1 &8612068103122048513
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,12 +822,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 8e53333cb1c1b3f44856799f2b3583e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 041b679863c031e4bb78ce81c9a9fa26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.6, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
