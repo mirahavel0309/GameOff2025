@@ -26,6 +26,8 @@ public class CardInstance : MonoBehaviour
     public MonoBehaviour currentContainer; // could be PlayerHand or TroopsField
 
     public bool HasActedThisTurn { get; set; } = false;
+    public List<StatusEffect> activeEffects = new List<StatusEffect>();
+
 
     private bool isSelected = false;
     private Vector3 originalPosition;
@@ -42,11 +44,6 @@ public class CardInstance : MonoBehaviour
     }
     public virtual void Initialize()
     {
-        //if (baseCard != null)
-        //{
-        //    currentAttack = baseCard.attack;
-        //    currentHealth = baseCard.health;
-        //}
         UpdateVisuals();
 
         if (highlightSprite != null)
@@ -68,15 +65,11 @@ public class CardInstance : MonoBehaviour
 
     void OnMouseDown()
     {
-
-        //if (!GameManager.Instance.PlayerInputEnabled) return;
-
         if (Input.GetMouseButtonDown(0))
         {
             HandleLeftClick();
         }
 
-        // If player right-clicks, cancel
         if (Input.GetMouseButtonDown(1))
         {
             HandleRightClick();
@@ -117,25 +110,6 @@ public class CardInstance : MonoBehaviour
             }
         }
     }
-
-    private void PlayCard()
-    {
-        //// Make sure to remove this card from its current container first
-        //if (currentContainer is PlayerHand hand)
-        //{
-        //    hand.RemoveCard(this);
-        //}
-
-        // Add card to the troops field
-        if (troopsField != null)
-        {
-            troopsField.AddCard(this);
-            currentContainer = troopsField;
-        }
-
-        ChangeState(CardState.OnField);
-    }
-
     public virtual void UpdateVisuals()
     {
         if (attackText != null) attackText.text = currentAttack.ToString();
@@ -210,9 +184,12 @@ public class CardInstance : MonoBehaviour
 
         // Move toward target (0.25s)
         yield return MoveToPosition(target.transform.position, 0.25f);
-
+        int accuracy = 100;
+        LowerAccuracyStatus accStatus = GetComponent<LowerAccuracyStatus>();
+        if (accStatus != null)
+            accuracy -= accStatus.accuracyPenalty;
         // Deal damage
-        target.TakeDamage(currentAttack, ElementType.Physical);
+        target.TakeDamage(currentAttack, ElementType.Physical, accuracy);
 
         // Return (0.25s)
         yield return MoveToPosition(originalPosition, 0.25f);
@@ -315,5 +292,33 @@ public class CardInstance : MonoBehaviour
         }
 
         transform.position = target;
+    }
+    public void AddStatusEffect(StatusEffect effectPrefab)
+    {
+        // Check if an effect of the same type already exists
+        StatusEffect existingEffect = activeEffects.Find(e => e != null && e.GetType() == effectPrefab.GetType());
+        if (existingEffect != null)
+        {
+            existingEffect.Reapply(effectPrefab);
+            return;
+        }
+
+        StatusEffect newEffect = gameObject.AddComponent(effectPrefab.GetType()) as StatusEffect;
+        newEffect.Initialize(this, effectPrefab);
+        activeEffects.Add(newEffect);
+    }
+
+    public IEnumerator ProcessStartOfTurnEffects()
+    {
+        if (activeEffects == null || activeEffects.Count == 0)
+            yield break;
+        foreach (var effect in new List<StatusEffect>(activeEffects))
+        {
+            if (effect != null)
+                yield return effect.OnTurnStartCoroutine();
+        }
+
+        // Clean up any expired effects (destroyed components)
+        activeEffects.RemoveAll(e => e == null);
     }
 }

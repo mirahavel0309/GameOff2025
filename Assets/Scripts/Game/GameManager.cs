@@ -103,12 +103,6 @@ public class GameManager : MonoBehaviour
             StartCoroutine(PlayerTurnRoutine());    
         }
     }
-
-    public void AddElementToCombo(ElementType element)
-    {
-        selectedElements.Add(element);
-        Debug.Log($"Element {element} added. Current combo: {string.Join(", ", selectedElements)}");
-    }
     public void SelectTarget(CardInstance target)
     {
         SelectedTarget = target;
@@ -140,10 +134,20 @@ public class GameManager : MonoBehaviour
     }
     private IEnumerator EnemyTurnRoutine()
     {
-        Debug.Log("--- Enemy Turn ---");
-
         List<CardInstance> enemyCards = enemyField.GetCards();
         List<CardInstance> playerCards = playerField.GetCards();
+
+        foreach (var enemyCard in new List<CardInstance>(enemyCards))
+        {
+            if (enemyCard == null) continue;
+
+            yield return StartCoroutine(enemyCard.ProcessStartOfTurnEffects());
+
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        enemyCards = enemyField.GetCards().ToList(); // Rebuild the list after potential removals
+        enemyCards.RemoveAll(e => e.GetComponent<FreezeEffect>() != null); // make frozen units skip action
 
         foreach (var enemyCard in enemyCards)
         {
@@ -187,57 +191,6 @@ public class GameManager : MonoBehaviour
     {
         playerInput.SetInputEnabled(enabled);
     }
-    public void OnHeroActionChosen(HeroInstance hero, string actionType)
-    {
-        selectedHero = hero;
-        pendingActionType = actionType;
-        //Debug.Log($"{hero.cardData.cardName} selected action: {actionType}");
-
-        switch (actionType)
-        {
-            case "Attack":
-                BeginAttackAction();
-                break;
-
-            case "Cast":
-                BeginCastAction();
-                break;
-
-            case "Defend":
-                BeginDefendAction();
-                break;
-        }
-    }
-    private void BeginAttackAction()
-    {
-        Debug.Log("Choose an enemy target to attack...");
-        selectedHero.SelectAsAttacker();
-        // Next left-click on an enemy card triggers attack
-    }
-    private void BeginCastAction()
-    {
-        Debug.Log("Choose a target for the spell (can be enemy or ally)...");
-        selectedHero.SelectAsAttacker();
-        // The click handling in CardInstance can detect this mode and pass target
-    }
-    private void BeginDefendAction()
-    {
-        Debug.Log("Choose a target for the spell (can be enemy or ally)...");
-        selectedHero.SelectAsAttacker();
-        // The click handling in CardInstance can detect this mode and pass target
-    }
-    public void ClearPendingAction()
-    {
-        pendingActionType = null;
-    }
-
-    public bool AreCardsAllies(CardInstance a, CardInstance b)
-    {
-        // Simple check: compare field ownership
-        List<CardInstance> cards = playerField.GetCards();
-        return (cards.Contains(a) && cards.Contains(b));
-    }
-    // Called by ElementalCardInstance when toggled ON
     public void AddElementToCombo(ElementType element, ElementalCardInstance card)
     {
         selectedElements.Add(element);

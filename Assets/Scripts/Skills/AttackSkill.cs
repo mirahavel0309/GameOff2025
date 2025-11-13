@@ -17,6 +17,10 @@ public class AttackSkill : BaseSkill
     public ElementType damageType;
     public ElementIconLibrary elementsLib;
     public GameObject onHitEffect;
+    [Header("Status Effect")]
+    public StatusEffect statusEffect;   // The effect to apply
+    [Range(0, 100)]
+    public int chanceToProc = 0;        // % chance to apply
     public override void Execute()
     {
         GameManager.Instance.StartCoroutine(WaitForTargetAndAttack());
@@ -42,8 +46,21 @@ public class AttackSkill : BaseSkill
         yield return GameManager.Instance.StartCoroutine(PerformAttackVisuals(target));
 
         target.TakeDamage(baseDamage, damageType);
+        if (statusEffect != null)
+        {
+            int roll = Random.Range(0, 100);
+            if (roll < chanceToProc)
+            {
+                Debug.Log($"Applying {statusEffect.effectName} to {target.name} ({roll}% < {chanceToProc}%)");
+                target.AddStatusEffect(statusEffect);
+            }
+            else
+            {
+                Debug.Log($"Effect {statusEffect.effectName} did not proc ({roll}% >= {chanceToProc}%)");
+            }
+        }
 
-        if(onHitEffect)
+        if (onHitEffect)
             Instantiate(onHitEffect, target.transform.position, Quaternion.identity);
 
         GameManager.Instance.SetPlayerInput(true);

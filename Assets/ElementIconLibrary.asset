@@ -23,5 +23,5 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: aeada8d48b9a7844a9ff0420987c568c, type: 3}
     elementalProjectilePrefab: {fileID: 6709276644064086281, guid: 2ebf8e57a48465e46acff37b09329dff, type: 3}
   - element: 3
-    icon: {fileID: -8105560202311982947, guid: b3883a4b3cfada64fa9f8920cf858f8a, type: 3}
-    elementalProjectilePrefab: {fileID: 6709276644064086281, guid: 38d6ced756e16464896b8a5ba1ebaad7, type: 3}
+    icon: {fileID: 21300000, guid: 206ab1fda725450428c77bcb587d7c1f, type: 3}
+    elementalProjectilePrefab: {fileID: 6709276644064086281, guid: b62686274c0e1d5499c20a9f4da79047, type: 3}

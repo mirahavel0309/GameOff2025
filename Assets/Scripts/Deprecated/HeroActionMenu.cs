@@ -57,7 +57,6 @@ public class HeroActionMenu : MonoBehaviour
 
     private void OnActionSelected(string action)
     {
-        GameManager.Instance.OnHeroActionChosen(hero, action);
         Destroy(gameObject);
     }
 }

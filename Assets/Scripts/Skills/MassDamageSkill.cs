@@ -14,7 +14,7 @@ public class MassDamageSkill : BaseSkill
     public float mergeDelay = 0.3f;
     public float damageEffectDuration = 0.6f;
 
-    [Header("Healing")]
+    [Header("Damage")]
     public int baseDamage = 8;
     public ElementType damageElement;
 
