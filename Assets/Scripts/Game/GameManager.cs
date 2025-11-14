@@ -159,8 +159,10 @@ public class GameManager : MonoBehaviour
             if (enemyCard == null) continue;
             if (playerCards.Count == 0) break;
 
+            AttackMonsterSkill skill = enemyCard.gameObject.GetComponent<AttackMonsterSkill>();
+
             CardInstance target = playerCards[Random.Range(0, playerCards.Count)];
-            yield return enemyCard.StartCoroutine(enemyCard.PerformAttack(target));
+            yield return skill.StartCoroutine(skill.Execute(target));
             yield return new WaitForSeconds(0.5f);
         }
 
