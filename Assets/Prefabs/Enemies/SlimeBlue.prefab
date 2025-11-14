@@ -556,6 +556,7 @@ GameObject:
   - component: {fileID: 6227583397517256033}
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
+  - component: {fileID: 6404585004606260512}
   m_Layer: 0
   m_Name: SlimeBlue
   m_TagString: Enemy
@@ -600,6 +601,7 @@ MonoBehaviour:
   highlightSprite: {fileID: 9070761382798154575}
   troopsField: {fileID: 0}
   currentContainer: {fileID: 0}
+  activeEffects: []
 --- !u!114 &6227583397517256033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,6 +720,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6404585004606260512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6571f8a5130e3df42919917e6c59c214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Slam
+  skillDescription: SlimeSlam
+  animator: {fileID: 5490996520537943343}
+  spriteRenderer: {fileID: 8469931686135480976}
+  damage: 5
+  isProjectileAttack: 0
 --- !u!1 &8612068103122048513
 GameObject:
   m_ObjectHideFlags: 0

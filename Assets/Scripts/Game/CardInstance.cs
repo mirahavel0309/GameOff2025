@@ -162,7 +162,7 @@ public class CardInstance : MonoBehaviour
             selectedAttacker = null;
         }
     }
-    private void ToggleHighlight(bool active)
+    public void ToggleHighlight(bool active)
     {
         if (highlightSprite != null)
         {

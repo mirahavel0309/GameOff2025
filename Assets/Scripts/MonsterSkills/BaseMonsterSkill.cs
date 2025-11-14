@@ -6,8 +6,10 @@ public abstract class BaseMonsterSkill : MonoBehaviour
 {
     public string skillName;
     public string skillDescription;
-    public Sprite idleSprite;
-    public Sprite actingSprite;
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
 
-    public abstract void Execute();
+    public abstract IEnumerator Execute(CardInstance target);
+
+
 }
