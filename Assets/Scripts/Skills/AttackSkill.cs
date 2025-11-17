@@ -57,12 +57,7 @@ public class AttackSkill : BaseSkill
             int roll = Random.Range(0, 100);
             if (roll < chanceToProc)
             {
-                Debug.Log($"Applying {statusEffect.effectName} to {target.name} ({roll}% < {chanceToProc}%)");
                 target.AddStatusEffect(statusEffect, hero.spellPower);
-            }
-            else
-            {
-                Debug.Log($"Effect {statusEffect.effectName} did not proc ({roll}% >= {chanceToProc}%)");
             }
         }
 

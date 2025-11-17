@@ -266,7 +266,7 @@ public class CardInstance : MonoBehaviour
             1.2f
         );
     }
-    private IEnumerator HandleDestruction()
+    protected virtual IEnumerator HandleDestruction()
     {
         state = CardState.Destroyed;
         GameManager.Instance.SetPlayerInput(false);

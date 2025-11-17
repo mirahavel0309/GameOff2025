@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,19 @@ public class TroopsField : MonoBehaviour
         occupiedPositions.Add(freeSlot);
 
         // Place card at spawn point and animate move to target
+        card.transform.position = spawnPoint.position;
+        StartCoroutine(MoveCardToPosition(card, freeSlot.position));
+    }
+    public void ReasignPositions(CardInstance card)
+    {
+        Transform freeSlot = FindFreePosition();
+        if (freeSlot == null)
+        {
+            Debug.LogWarning("No free position available on TroopsField!");
+            return;
+        }
+        cardToPosition[card] = freeSlot;
+        occupiedPositions.Add(freeSlot);
         card.transform.position = spawnPoint.position;
         StartCoroutine(MoveCardToPosition(card, freeSlot.position));
     }
@@ -78,20 +92,6 @@ public class TroopsField : MonoBehaviour
     {
         return cardsOnField;
     }
-    //private void UpdateCardPositions()
-    //{
-    //    if (cardsOnField.Count == 0)
-    //        return;
-
-    //    float totalWidth = (cardsOnField.Count - 1) * cardSpacing;
-    //    Vector3 startPos = transform.position - new Vector3(totalWidth / 2f, 0, 0);
-
-    //    for (int i = 0; i < cardsOnField.Count; i++)
-    //    {
-    //        Vector3 targetPos = startPos + new Vector3(i * cardSpacing, 0, 0);
-    //        StartCoroutine(MoveCard(cardsOnField[i], targetPos, moveDuration));
-    //    }
-    //}
 
     private IEnumerator MoveCard(CardInstance card, Vector3 targetPosition, float duration)
     {
@@ -107,5 +107,10 @@ public class TroopsField : MonoBehaviour
         }
 
         card.transform.position = targetPosition;
+    }
+
+    internal void ClearPositions()
+    {
+        occupiedPositions.Clear();
     }
 }

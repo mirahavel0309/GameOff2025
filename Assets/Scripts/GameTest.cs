@@ -7,9 +7,9 @@ public class GameTest : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            playerDeck.Draw();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    playerDeck.Draw();
+        //}
     }
 }

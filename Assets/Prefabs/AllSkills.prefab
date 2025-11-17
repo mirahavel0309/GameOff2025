@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2053963176220810609}
   - component: {fileID: 8092683419946573335}
   m_Layer: 0
-  m_Name: Poison Cloud (1)
+  m_Name: ForceOfNature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,6 +136,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1714363467411018263, guid: fd3e7606c9b5a4a41a5da6ab7479961c, type: 3}
   projectileSpeed: 6
   explosionDuration: 0.7
+  baseDamage: 0
 --- !u!1 &603527255239897448
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,9 +458,9 @@ MonoBehaviour:
   skillIcon: {fileID: 21300000, guid: aeada8d48b9a7844a9ff0420987c568c, type: 3}
   requiredElements: 02000000
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: e8c7ef42158dbeb408affcb64101ea98, type: 3}
-  elementalRiseHeight: 2
-  elementalLaunchDuration: 0.4
-  mergeDelay: 0.3
+  elementalRiseHeight: 3
+  elementalLaunchDuration: 0.8
+  mergeDelay: 0.5
   travelDuration: 0.8
   impactDelay: 0.1
   baseDamage: 5
@@ -750,9 +751,9 @@ MonoBehaviour:
   skillIcon: {fileID: 21300000, guid: 46eca39e2189f5a46a93f105ee137636, type: 3}
   requiredElements: 00000000
   formedProjectilePrefab: {fileID: 5492295935689872714, guid: c312136891914fb46af1d49656c27422, type: 3}
-  elementalRiseHeight: 2
-  elementalLaunchDuration: 0.4
-  mergeDelay: 0.3
+  elementalRiseHeight: 3
+  elementalLaunchDuration: 0.8
+  mergeDelay: 0.5
   travelDuration: 1.2
   impactDelay: 0.1
   baseDamage: 6
@@ -903,7 +904,6 @@ Transform:
   - {fileID: 4243293888438101628}
   - {fileID: 662386776760917500}
   - {fileID: 8819700758213495337}
-  - {fileID: 3017241780462994162}
   - {fileID: 1363584519338582312}
   - {fileID: 3960938627122982397}
   - {fileID: 3414202757869708508}
@@ -1170,9 +1170,9 @@ MonoBehaviour:
   skillIcon: {fileID: 21300000, guid: 502e753eb42f6c14494373918d2f3e7b, type: 3}
   requiredElements: 01000000
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: 20735f9ec6bc8f74a89132bf657c5c7d, type: 3}
-  elementalRiseHeight: 2
-  elementalLaunchDuration: 0.4
-  mergeDelay: 0.3
+  elementalRiseHeight: 3
+  elementalLaunchDuration: 0.8
+  mergeDelay: 0.5
   travelDuration: 0.8
   impactDelay: 0.1
   baseDamage: 6
@@ -1310,6 +1310,7 @@ MonoBehaviour:
   elementalLaunchDuration: 0.4
   mergeDelay: 0.3
   effectDuration: 0.6
+  mainElement: 0
   statusEffect: {fileID: 8864758488775592378}
 --- !u!114 &8864758488775592378
 MonoBehaviour:
@@ -1328,66 +1329,6 @@ MonoBehaviour:
   effectPrefab: {fileID: 0}
   duration: 3
   regenAmount: 5
---- !u!1 &8515794195755145526
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3017241780462994162}
-  - component: {fileID: 5382414303002658051}
-  m_Layer: 0
-  m_Name: SteamStrike
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3017241780462994162
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8515794195755145526}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3888285316096645545}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5382414303002658051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8515794195755145526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e53af9f0852ec7847941291553b7d24c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: Steam
-  description: 
-  skillIcon: {fileID: 7414261224600783322, guid: d7d8cab9a146b164aa3833b351312f17, type: 3}
-  requiredElements: 0000000001000000
-  formedProjectilePrefab: {fileID: 6709276644064086281, guid: 6febf0cd02dd1764ea4cb9491e35308f, type: 3}
-  elementalRiseHeight: 2
-  elementalLaunchDuration: 0.4
-  mergeDelay: 0.3
-  travelDuration: 1
-  impactDelay: 0.1
-  baseDamage: 12
-  damageType: 3
-  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
-  onHitEffect: {fileID: 0}
-  statusEffect: {fileID: 0}
-  chanceToProc: 0
 --- !u!1 &8739283652470979721
 GameObject:
   m_ObjectHideFlags: 0

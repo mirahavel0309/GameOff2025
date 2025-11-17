@@ -44,8 +44,6 @@ public class ElementalCardInstance : MonoBehaviour, IPointerClickHandler
             GameManager.Instance.AddElementToCombo(elementType, this);
         else
             GameManager.Instance.RemoveElementFromCombo(elementType, this);
-
-        Debug.Log($"Played element card: {elementType}");
     }
     public void Consume()
     {

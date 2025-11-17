@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icons:
   - element: 0
-    icon: {fileID: 21300000, guid: 46eca39e2189f5a46a93f105ee137636, type: 3}
+    icon: {fileID: 3078762230685488240, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
     elementalProjectilePrefab: {fileID: 6709276644064086281, guid: 38d6ced756e16464896b8a5ba1ebaad7, type: 3}
   - element: 1
-    icon: {fileID: 21300000, guid: 502e753eb42f6c14494373918d2f3e7b, type: 3}
+    icon: {fileID: 5208024241582667449, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
     elementalProjectilePrefab: {fileID: 6709276644064086281, guid: b63924300eaafc14da8132385c90ed6e, type: 3}
   - element: 2
-    icon: {fileID: 21300000, guid: aeada8d48b9a7844a9ff0420987c568c, type: 3}
+    icon: {fileID: -7105074764738127781, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
     elementalProjectilePrefab: {fileID: 6709276644064086281, guid: 2ebf8e57a48465e46acff37b09329dff, type: 3}
   - element: 3
-    icon: {fileID: 21300000, guid: 206ab1fda725450428c77bcb587d7c1f, type: 3}
+    icon: {fileID: -1562093178560388313, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
     elementalProjectilePrefab: {fileID: 6709276644064086281, guid: b62686274c0e1d5499c20a9f4da79047, type: 3}

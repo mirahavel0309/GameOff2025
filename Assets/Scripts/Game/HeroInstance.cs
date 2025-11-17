@@ -52,11 +52,21 @@ public class HeroInstance : CardInstance
         GameManager.Instance.SelectHero(this);
         Debug.Log("Hero Selected");
     }
-}
+    protected override IEnumerator HandleDestruction()
+    {
+        base.HandleDestruction();
+        state = CardState.Destroyed;
+        GameManager.Instance.SetPlayerInput(false);
 
-public enum HeroActionType
-{
-    Attack,
-    Cast,
-    Defend
+        yield return new WaitForSeconds(0.5f);
+
+        if (currentContainer is TroopsField field)
+        {
+            field.RemoveCard(this);
+        }
+        PlayerHand.instance.RemoveCardsOfType(mainElement);
+
+        Destroy(gameObject);
+        GameManager.Instance.SetPlayerInput(true);
+    }
 }

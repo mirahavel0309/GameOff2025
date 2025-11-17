@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerHand : MonoBehaviour
@@ -71,6 +72,18 @@ public class PlayerHand : MonoBehaviour
         for (int i = 0; i < cardsInHand.Count; i++)
             cardsInHand[i].transform.localPosition = targetPositions[i];
     }
+
+    public void RemoveCardsOfType(ElementType mainElement)
+    {
+        ElementalCardInstance[] cards = cardsInHand.Where(x => x.elementType == mainElement).ToArray();
+        cardsInHand.RemoveAll(x => x.elementType == mainElement);
+        foreach (var item in cards)
+        {
+            Destroy(item.gameObject);
+        }
+        RepositionCardsSmooth();
+    }
+
     public List<ElementalCardInstance> GetCards()
     {
         return cardsInHand;

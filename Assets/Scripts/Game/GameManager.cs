@@ -23,23 +23,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerInputController playerInput;
     [SerializeField] private List<HeroCard> startingHeroes;
     public bool IsActionPending(string type) => pendingActionType == type;
-
-    public List<CardInstance> GetEnemies()
-    {
-        return enemyField.GetCards();
-    }
-
-    public HeroActionMenu heroActionMenuPrefab;
-
-    internal HeroInstance GetHeroOfelement(ElementType element)
-    {
-        foreach (var hero in PlayerHeroes)
-        {
-            if (hero.mainElement == element)
-                return hero;
-        }
-        return null;
-    }
+    [Header("Stages swap")]
+    [HideInInspector]public int waveCounter = 0;
+    public int maxWavesCount = 2;
+    public Transform[] exitPathPoints;
+    private int currentStageIndex = 0;
+    public GameBoard[] allStages;
+    public Transform roomOrigin;
 
     private string pendingActionType = null;
 
@@ -77,8 +67,26 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GameStartRoutine());
         StartCoroutine(WaveMonitorRoutine());
     }
+
+    public List<CardInstance> GetEnemies()
+    {
+        return enemyField.GetCards();
+    }
+
+    public HeroActionMenu heroActionMenuPrefab;
+
+    internal HeroInstance GetHeroOfelement(ElementType element)
+    {
+        foreach (var hero in PlayerHeroes)
+        {
+            if (hero.mainElement == element)
+                return hero;
+        }
+        return null;
+    }
     private IEnumerator GameStartRoutine()
     {
+        yield return StartCoroutine(LoadNextRoomEnvironment());
         // Spawn heroes
         for (int i = 0; i < startingHeroes.Count; i++)
         {
@@ -102,21 +110,27 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitUntil(() => enemyField.GetCards().Count == 0 && waveActive);
 
+            yield return new WaitForSeconds(0.5f);
             waveActive = false;
-            Debug.Log("Wave cleared!");
 
             // TODO: Intermission phase (player upgrades, shop, etc.)
             // yield return StartCoroutine(IntermissionRoutine());
             // For now, we go straight to the next wave
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
+            waveCounter++;
+            if (waveCounter < maxWavesCount)
+            {
+                yield return enemySpawner.SpawnWaveCoroutine();
+                waveActive = true;
 
-            Debug.Log("Spawning next wave...");
-            yield return enemySpawner.SpawnWaveCoroutine();
-            waveActive = true;
-
-            // Return control to the player
-            StartCoroutine(PlayerTurnRoutine());    
+                // Return control to the player
+                StartCoroutine(PlayerTurnRoutine());
+            }
+            else
+            {
+                StartCoroutine(EndLevel());
+            }  
         }
     }
     public void SelectTarget(CardInstance target)
@@ -201,7 +215,6 @@ public class GameManager : MonoBehaviour
         // Wait a bit to let final skill visuals complete
         yield return new WaitForSeconds(1f);
         playerInput.EndTurnPressed = true;
-        Debug.Log("simulate pressing end turn!");
     }
 
     private void ResetAllAttacks()
@@ -315,5 +328,110 @@ public class GameManager : MonoBehaviour
                 Destroy(card);
         }
         activeSkillCards.Clear();
+    }
+    public IEnumerator EndLevel()
+    {
+        Debug.Log("EndLevel triggered.");
+
+        SetPlayerInput(false);
+        InfoPanel.instance.ShowMessage("Stage Cleared!");
+
+        yield return new WaitForSeconds(1f);
+
+        bool hasNextStage = (currentStageIndex + 1) < allStages.Length;
+
+        if (hasNextStage)
+        {
+            yield return StartCoroutine(MoveHeroesThroughPath(exitPathPoints));
+
+            currentStageIndex++;
+
+            yield return StartCoroutine(LoadNextRoomEnvironment());
+
+            //yield return StartCoroutine(MoveHeroesThroughPath(entryPathPoints));
+
+
+            waveCounter = 0;
+
+            yield return enemySpawner.SpawnWaveCoroutine();
+            waveActive = true;
+
+            StartCoroutine(PlayerTurnRoutine());
+        }
+        else
+        {
+            // --- Step 1: Play victory celebration movement if needed ---
+            yield return StartCoroutine(MoveHeroesThroughPath(exitPathPoints));
+
+            // --- Step 2: End game with Win Screen ---
+            Debug.Log("GAME COMPLETED. Display Win Screen.");
+
+            // TODO: Call your WinScreen or transition here
+            // Example:
+            // UIManager.Instance.ShowWinScreen();
+
+            InfoPanel.instance.Hide();
+        }
+    }
+    private IEnumerator MoveHeroesThroughPath(Transform[] pathPoints)
+    {
+        if (pathPoints == null || pathPoints.Length == 0)
+            yield break;
+
+        List<HeroInstance> heroes = PlayerHeroes;
+
+        float travelSpeed = 6f;
+
+        // Move heroes through each point in sequence
+        foreach (Transform t in pathPoints)
+        {
+            bool allReached = false;
+
+            while (!allReached)
+            {
+                allReached = true;
+
+                foreach (var hero in heroes)
+                {
+                    if (hero == null) continue;
+
+                    hero.transform.position = Vector3.MoveTowards(
+                        hero.transform.position,
+                        t.position,
+                        travelSpeed * Time.deltaTime
+                    );
+
+                    if (Vector3.Distance(hero.transform.position, t.position) > 0.05f)
+                        allReached = false;
+                }
+
+                yield return null;
+            }
+
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+    private IEnumerator LoadNextRoomEnvironment()
+    {
+        Debug.Log("Loading next room...");
+
+        GameBoard roomPrefab = allStages[currentStageIndex];
+
+        GameBoard newRoom = Instantiate(roomPrefab, roomOrigin);
+
+        playerField.fieldPositions = newRoom.playerLocations.ToList();
+        playerField.spawnPoint = newRoom.playerEnterLocation;
+        enemyField.fieldPositions = newRoom.enemyLocations.ToList();
+        enemyField.spawnPoint = newRoom.enemyEnterLocation;
+        exitPathPoints = newRoom.exitPath;
+
+        playerField.ClearPositions();
+        foreach (var hero in PlayerHeroes)
+        {
+            hero.transform.position = newRoom.playerEnterLocation.position;
+            playerField.ReasignPositions(hero);
+        }
+
+        yield return new WaitForSeconds(1f);
     }
 }
