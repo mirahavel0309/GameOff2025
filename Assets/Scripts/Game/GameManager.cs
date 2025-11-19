@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public GameBoard[] allStages;
     public Transform roomOrigin;
     GameBoard currentRoom;
+    public Image blackFade;
 
     private string pendingActionType = null;
 
@@ -356,7 +357,7 @@ public class GameManager : MonoBehaviour
 
             currentStageIndex++;
 
-            yield return StartCoroutine(LoadNextRoomEnvironment());
+            yield return StartCoroutine(FadeScreen());
 
             //yield return StartCoroutine(MoveHeroesThroughPath(entryPathPoints));
 
@@ -383,6 +384,35 @@ public class GameManager : MonoBehaviour
             InfoPanel.instance.Hide();
         }
     }
+
+    public IEnumerator FadeScreen()
+    {
+        float duration = 1f;
+        blackFade.gameObject.SetActive(true);
+
+        for (float t = 0; t < duration; t += Time.deltaTime)
+        {
+            float normalized = t / duration;
+            Color c = blackFade.color;
+            c.a = Mathf.Lerp(0f, 1f, normalized);
+            blackFade.color = c;
+            yield return null;
+        }
+        blackFade.color = new Color(blackFade.color.r, blackFade.color.g, blackFade.color.b, 1f);
+        yield return StartCoroutine(LoadNextRoomEnvironment());
+        for (float t = 0; t < duration; t += Time.deltaTime)
+        {
+            float normalized = t / duration;
+            Color c = blackFade.color;
+            c.a = Mathf.Lerp(1f, 0f, normalized);
+            blackFade.color = c;
+            yield return null;
+        }
+
+        blackFade.gameObject.SetActive(false);
+        blackFade.color = new Color(blackFade.color.r, blackFade.color.g, blackFade.color.b, 0f);
+    }
+
     private IEnumerator MoveHeroesThroughPath(Transform[] pathPoints)
     {
         if (pathPoints == null || pathPoints.Length == 0)
