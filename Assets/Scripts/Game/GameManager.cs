@@ -4,6 +4,13 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public struct CameraPathPoint
+{
+    public Transform target;   // position + rotation
+    public float time;        // movement speed
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -27,11 +34,15 @@ public class GameManager : MonoBehaviour
     [HideInInspector]public int waveCounter = 0;
     public int maxWavesCount = 2;
     public Transform[] exitPathPoints;
+    public CameraPathPoint[] enterCameraPath;
+    public CameraPathPoint[] exitCameraPath;
     private int currentStageIndex = 0;
     public GameBoard[] allStages;
     public Transform roomOrigin;
     GameBoard currentRoom;
     public Image blackFade;
+    public Camera cam;
+    public FreeCameraControl camController;
 
     private string pendingActionType = null;
 
@@ -56,7 +67,7 @@ public class GameManager : MonoBehaviour
     public CardInstance SelectedTarget;
     private List<ElementalCardInstance> selectedCards = new List<ElementalCardInstance>();
     private BaseSkill matchedSkill = null;
-    private bool waveActive = false;
+    [SerializeField] private bool waveActive = false;
 
     void Awake()
     {
@@ -88,7 +99,10 @@ public class GameManager : MonoBehaviour
     }
     private IEnumerator GameStartRoutine()
     {
+        camController.enabled = false;
         yield return StartCoroutine(LoadNextRoomEnvironment());
+        yield return StartCoroutine(MoveCamera(enterCameraPath));
+        camController.enabled = true;
         // Spawn heroes
         for (int i = 0; i < startingHeroes.Count; i++)
         {
@@ -103,8 +117,11 @@ public class GameManager : MonoBehaviour
         // Spawn enemy wave
         waveCounter++;
         InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
+        
         yield return enemySpawner.SpawnWaveCoroutine();
         waveActive = true;
+        
+        
 
         StartCoroutine(PlayerTurnRoutine());
     }
@@ -354,19 +371,18 @@ public class GameManager : MonoBehaviour
         if (hasNextStage)
         {
             yield return StartCoroutine(MoveHeroesThroughPath(exitPathPoints));
-
             currentStageIndex++;
-
+            camController.enabled = false;
             yield return StartCoroutine(FadeScreen());
+            camController.enabled = true;
+
 
             //yield return StartCoroutine(MoveHeroesThroughPath(entryPathPoints));
 
 
             waveCounter = 0;
-
             yield return enemySpawner.SpawnWaveCoroutine();
             waveActive = true;
-
             StartCoroutine(PlayerTurnRoutine());
         }
         else
@@ -385,10 +401,44 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private IEnumerator MoveCamera(CameraPathPoint[] path)
+    {
+        camController.enabled = false;
+        foreach (var point in path)
+        {
+            Transform target = point.target;
+            float duration = point.time;
+
+            Vector3 startPos = cam.transform.position;
+            Quaternion startRot = cam.transform.rotation;
+
+            float t = 0f;
+            while (t < duration)
+            {
+                t += Time.deltaTime;
+                float normalized = t / duration;
+
+                cam.transform.position = Vector3.Lerp(startPos, target.position, normalized);
+                cam.transform.rotation = Quaternion.Slerp(startRot, target.rotation, normalized);
+
+                yield return null;
+            }
+
+            cam.transform.position = target.position;
+            cam.transform.rotation = target.rotation;
+
+            
+            camController.ResetValues();
+            //yield return new WaitForSeconds(0.05f);
+        }
+        
+    }
+
     public IEnumerator FadeScreen()
     {
         float duration = 1f;
         blackFade.gameObject.SetActive(true);
+        yield return StartCoroutine(MoveCamera(exitCameraPath));
 
         for (float t = 0; t < duration; t += Time.deltaTime)
         {
@@ -399,7 +449,11 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         blackFade.color = new Color(blackFade.color.r, blackFade.color.g, blackFade.color.b, 1f);
+
         yield return StartCoroutine(LoadNextRoomEnvironment());
+        StartCoroutine(MoveCamera(enterCameraPath));
+
+
         for (float t = 0; t < duration; t += Time.deltaTime)
         {
             float normalized = t / duration;
@@ -451,6 +505,10 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
+
+
+
+
     private IEnumerator LoadNextRoomEnvironment()
     {
         Debug.Log("Loading next room...");
@@ -466,6 +524,8 @@ public class GameManager : MonoBehaviour
         enemyField.fieldPositions = currentRoom.enemyLocations.ToList();
         enemyField.spawnPoint = currentRoom.enemyEnterLocation;
         exitPathPoints = currentRoom.exitPath;
+        enterCameraPath = currentRoom.enterCameraPath;
+        exitCameraPath = currentRoom.exitCameraPath;
 
         playerField.ClearPositions();
         foreach (var hero in PlayerHeroes)

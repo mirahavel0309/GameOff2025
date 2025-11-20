@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+
 public class GameBoard : MonoBehaviour
 {
     public Transform playerEnterLocation;
@@ -9,4 +11,6 @@ public class GameBoard : MonoBehaviour
     public Transform[] enemyLocations;
 
     public Transform[] exitPath;
+    public CameraPathPoint[] exitCameraPath;
+    public CameraPathPoint[] enterCameraPath;
 }

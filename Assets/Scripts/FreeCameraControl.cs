@@ -23,6 +23,7 @@ public class CameraSaveData
 public class FreeCameraControl : MonoBehaviour
 {
     public Transform focusTarget;  // The object the camera follows
+    public Vector3 originalPosition;
     public float moveSpeed = 10f;
     public float zoomSpeed = 5f;
     public float rotationSpeed = 90f;
@@ -120,5 +121,14 @@ public class FreeCameraControl : MonoBehaviour
         CutawayHeight = data.cutawayHeight;
         pitch = data.pitch;
         yaw = data.yaw;
+    }
+
+    public void ResetValues()
+    {
+
+        currentDistance = 15f;
+        pitch = 30f;
+        yaw = 0f;
+        focusTarget.position = originalPosition;
     }
 }

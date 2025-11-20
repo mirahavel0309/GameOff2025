@@ -17,7 +17,7 @@ public class WaveSpawner : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(StartFirstWave());
+        //StartCoroutine(StartFirstWave());
     }
 
     private IEnumerator StartFirstWave()
