@@ -628,7 +628,7 @@ MonoBehaviour:
   troopsField: {fileID: 0}
   currentContainer: {fileID: 0}
   activeEffects: []
-  mainElement: 0
+  mainElement: 3
   spellPower: 100
   isDefeated: 0
 --- !u!61 &3303585355228617710

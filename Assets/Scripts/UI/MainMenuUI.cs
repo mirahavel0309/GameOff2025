@@ -29,7 +29,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Base3");
+        SceneController.ToHeroSelection();
     }
 
     public void ShowMainMenu()

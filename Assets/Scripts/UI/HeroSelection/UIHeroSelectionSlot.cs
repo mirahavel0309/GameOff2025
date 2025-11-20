@@ -10,7 +10,10 @@ public class UIHeroSelectionSlot : MonoBehaviour
 
     [SerializeField] protected string heroName;
     [SerializeField] protected Image iconImage;
-    [SerializeField] protected string descriptionText;
+
+    [SerializeField] 
+    [TextArea(4,4)]
+    protected string descriptionText;
     [SerializeField] protected GameObject heroPrefab;
     protected bool isSelected = false;
     private Button heroButton;

@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
     private List<ElementalCardInstance> selectedCards = new List<ElementalCardInstance>();
     private BaseSkill matchedSkill = null;
     [SerializeField] private bool waveActive = false;
+    public HeroSelectionData heroSelectionData;
 
     void Awake()
     {
@@ -104,13 +105,14 @@ public class GameManager : MonoBehaviour
         yield return StartCoroutine(MoveCamera(enterCameraPath));
         camController.enabled = true;
         // Spawn heroes
-        for (int i = 0; i < startingHeroes.Count; i++)
+        for (int i = 0; i < heroSelectionData.selectedHeroes.Length; i++)
         {
-            HeroInstance hero = Instantiate(startingHeroes[i].characterPrefab, playerField.transform).GetComponent<HeroInstance>();
-            hero.SetCardData(startingHeroes[i]);
+            HeroInstance hero = Instantiate(heroSelectionData.selectedHeroes[i], playerField.transform).GetComponent<HeroInstance>();
+            //hero.SetCardData(hero);
             hero.troopsField = playerField;
             PlayerHeroes.Add(hero);
             playerField.AddCard(hero);
+            playerDeck.availableElements.Add(hero.mainElement);
             yield return new WaitForSeconds(0.1f);
         }
 
@@ -511,8 +513,6 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator LoadNextRoomEnvironment()
     {
-        Debug.Log("Loading next room...");
-
         GameBoard roomPrefab = allStages[currentStageIndex];
         if (currentRoom != null)
             Destroy(currentRoom.gameObject);

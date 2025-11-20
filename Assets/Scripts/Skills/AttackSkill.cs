@@ -21,6 +21,8 @@ public class AttackSkill : BaseSkill
     public StatusEffect statusEffect;   // The effect to apply
     [Range(0, 100)]
     public int chanceToProc = 0;        // % chance to apply
+    public AudioClip soundLaunch;
+    public AudioClip soundHit;
     public override void Execute()
     {
         GameManager.Instance.StartCoroutine(WaitForTargetAndAttack());
@@ -64,6 +66,9 @@ public class AttackSkill : BaseSkill
         if (onHitEffect)
             Instantiate(onHitEffect, target.transform.position, Quaternion.identity);
 
+        if (soundHit)
+            EffectsManager.instance.CreateSoundEffect(soundHit, transform.position);
+
         GameManager.Instance.SetPlayerInput(true);
         GameManager.Instance.RegisterActionUse();
     }
@@ -76,6 +81,8 @@ public class AttackSkill : BaseSkill
         if (formedProjectilePrefab != null)
         {
             GameObject formedProjectile = Instantiate(formedProjectilePrefab, mergePoint, Quaternion.identity);
+            if (soundLaunch)
+                EffectsManager.instance.CreateSoundEffect(soundLaunch, transform.position);
 
             yield return MoveProjectile(formedProjectile, target.transform.position, travelDuration);
 

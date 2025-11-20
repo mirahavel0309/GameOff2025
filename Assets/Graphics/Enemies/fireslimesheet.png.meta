@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 622715393ac38c543894fb66369141b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1388811668736980147
+    second: fireslimesheet_0
+  - first:
+      213: 4993706854489507417
+    second: fireslimesheet_1
+  - first:
+      213: -6757740794091399198
+    second: fireslimesheet_2
+  - first:
+      213: -6087275456559791507
+    second: fireslimesheet_3
+  - first:
+      213: -5278814105180265959
+    second: fireslimesheet_4
+  - first:
+      213: 5228110282108404624
+    second: fireslimesheet_5
+  - first:
+      213: 1860682817633422263
+    second: fireslimesheet_6
+  - first:
+      213: -3155816566877027278
+    second: fireslimesheet_7
+  - first:
+      213: -2465695408163183090
+    second: fireslimesheet_8
+  - first:
+      213: 5744895884090162292
+    second: fireslimesheet_9
+  - first:
+      213: 4637566589559160030
+    second: fireslimesheet_10
+  - first:
+      213: 5596266695769919423
+    second: fireslimesheet_11
+  - first:
+      213: -2245582119693338354
+    second: fireslimesheet_12
+  - first:
+      213: -1930552999195201437
+    second: fireslimesheet_13
+  - first:
+      213: -5878221500411736696
+    second: fireslimesheet_14
+  - first:
+      213: 8101734072849334430
+    second: fireslimesheet_15
+  - first:
+      213: 8084100182822253946
+    second: fireslimesheet_16
+  - first:
+      213: -8408217823682347580
+    second: fireslimesheet_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fireslimesheet_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 242
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b43cfebadc064310800000000000000
+      internalID: 1388811668736980147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 242
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956c7462de53d4540800000000000000
+      internalID: 4993706854489507417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 242
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e714044d8ea732a0800000000000000
+      internalID: -6757740794091399198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 242
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62ccc95937a58ba0800000000000000
+      internalID: -6087275456559791507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_4
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 242
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912a8692a82edb6b0800000000000000
+      internalID: -5278814105180265959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_5
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 162
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09383a31a9afd8840800000000000000
+      internalID: 5228110282108404624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_6
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 162
+        width: 54
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb86b01a2972d910800000000000000
+      internalID: 1860682817633422263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_7
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 160
+        width: 49
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234800b7d894434d0800000000000000
+      internalID: -3155816566877027278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_8
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 160
+        width: 49
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e062f10171718cdd0800000000000000
+      internalID: -2465695408163183090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_9
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 162
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c3cca6e58f9bf40800000000000000
+      internalID: 5744895884090162292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 82
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcb4e80e32fb5040800000000000000
+      internalID: 4637566589559160030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_11
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 82
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf07b5d8eee9ad40800000000000000
+      internalID: 5596266695769919423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_12
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 82
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09b5b1b5f616d0e0800000000000000
+      internalID: -2245582119693338354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_13
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 82
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360b7e6964c4535e0800000000000000
+      internalID: -1930552999195201437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_14
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 82
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d05e480bc5c6ea0800000000000000
+      internalID: -5878221500411736696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 2
+        width: 39
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e900dd4e6342f6070800000000000000
+      internalID: 8101734072849334430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_16
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 2
+        width: 48
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a757acde84e703070800000000000000
+      internalID: 8084100182822253946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireslimesheet_17
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 2
+        width: 57
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd3e412072005b80800000000000000
+      internalID: -8408217823682347580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fireslimesheet_0: 1388811668736980147
+      fireslimesheet_1: 4993706854489507417
+      fireslimesheet_10: 4637566589559160030
+      fireslimesheet_11: 5596266695769919423
+      fireslimesheet_12: -2245582119693338354
+      fireslimesheet_13: -1930552999195201437
+      fireslimesheet_14: -5878221500411736696
+      fireslimesheet_15: 8101734072849334430
+      fireslimesheet_16: 8084100182822253946
+      fireslimesheet_17: -8408217823682347580
+      fireslimesheet_2: -6757740794091399198
+      fireslimesheet_3: -6087275456559791507
+      fireslimesheet_4: -5278814105180265959
+      fireslimesheet_5: 5228110282108404624
+      fireslimesheet_6: 1860682817633422263
+      fireslimesheet_7: -3155816566877027278
+      fireslimesheet_8: -2465695408163183090
+      fireslimesheet_9: 5744895884090162292
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

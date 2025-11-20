@@ -38,8 +38,6 @@ public class WaveSpawner : MonoBehaviour
         waveActive = true;
         currentWave++;
 
-        Debug.Log($"Wave {currentWave} started!");
-
         for (int i = 0; i < cardsPerWave; i++)
         {
             yield return new WaitForSeconds(spawnDelay);

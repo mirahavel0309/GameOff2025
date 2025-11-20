@@ -253,6 +253,7 @@ MonoBehaviour:
   description: BOOM
   skillIcon: {fileID: 21300000, guid: 46eca39e2189f5a46a93f105ee137636, type: 3}
   requiredElements: 02000000
+  soundCharge: {fileID: 0}
   formedProjectilePrefab: {fileID: 5492295935689872714, guid: c312136891914fb46af1d49656c27422, type: 3}
   elementalRiseHeight: 3
   elementalLaunchDuration: 0.1
@@ -260,11 +261,13 @@ MonoBehaviour:
   travelDuration: 0.1
   impactDelay: 0.1
   baseDamage: 100000000
-  damageType: 0
+  damageType: 2
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
   onHitEffect: {fileID: 1714363467411018263, guid: e6c971256c7042c4d85a927ed0c430ab, type: 3}
   statusEffect: {fileID: 58659594}
   chanceToProc: 20
+  soundLaunch: {fileID: 0}
+  soundHit: {fileID: 0}
 --- !u!1 &85264201
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,10 +420,7 @@ MonoBehaviour:
   enemyField: {fileID: 960329713}
   enemySpawner: {fileID: 1443255507}
   playerInput: {fileID: 85264206}
-  startingHeroes:
-  - {fileID: 11400000, guid: ee8e3ba51ff30db47b7384e19a611fd7, type: 2}
-  - {fileID: 11400000, guid: e689895781598804ea065d6f881bbab7, type: 2}
-  - {fileID: 11400000, guid: e9ae7d5f1a5b8d647936db430b06dbe5, type: 2}
+  startingHeroes: []
   waveCounter: 0
   maxWavesCount: 1
   exitPathPoints: []
@@ -442,6 +442,7 @@ MonoBehaviour:
   skillCardPrefab: {fileID: 335086097788171298, guid: 3c5dd5cc47b622f4b9ee3fcc1e1506b7, type: 3}
   SelectedTarget: {fileID: 0}
   waveActive: 0
+  heroSelectionData: {fileID: 11400000, guid: 811c7989e4ee13f42b251d2f32f370af, type: 2}
   heroActionMenuPrefab: {fileID: 1022675898966368115, guid: ae7e434581da284458b79177c41c0cc1, type: 3}
 --- !u!114 &85264208
 MonoBehaviour:
@@ -2102,6 +2103,7 @@ MonoBehaviour:
   description: BOOM
   skillIcon: {fileID: 21300000, guid: 46eca39e2189f5a46a93f105ee137636, type: 3}
   requiredElements: 01000000
+  soundCharge: {fileID: 0}
   formedProjectilePrefab: {fileID: 5492295935689872714, guid: c312136891914fb46af1d49656c27422, type: 3}
   elementalRiseHeight: 3
   elementalLaunchDuration: 0.1
@@ -2109,11 +2111,13 @@ MonoBehaviour:
   travelDuration: 0.1
   impactDelay: 0.1
   baseDamage: 100000000
-  damageType: 0
+  damageType: 1
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
   onHitEffect: {fileID: 1714363467411018263, guid: e6c971256c7042c4d85a927ed0c430ab, type: 3}
   statusEffect: {fileID: 1005269856}
   chanceToProc: 20
+  soundLaunch: {fileID: 0}
+  soundHit: {fileID: 0}
 --- !u!1 &1019090612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,7 +2223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076a3438133e594429a90305d59c0764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableElements: 000000000100000002000000
+  availableElements: 
   elementalCardPrefab: {fileID: 5609116671932995483, guid: 36fc3f2c09138fe49be7d701262bc4fe, type: 3}
   playerHand: {fileID: 576037514}
 --- !u!114 &1029937653
@@ -3282,6 +3286,7 @@ MonoBehaviour:
   description: BOOM
   skillIcon: {fileID: 21300000, guid: 46eca39e2189f5a46a93f105ee137636, type: 3}
   requiredElements: 00000000
+  soundCharge: {fileID: 0}
   formedProjectilePrefab: {fileID: 5492295935689872714, guid: c312136891914fb46af1d49656c27422, type: 3}
   elementalRiseHeight: 3
   elementalLaunchDuration: 0.1
@@ -3294,6 +3299,8 @@ MonoBehaviour:
   onHitEffect: {fileID: 1714363467411018263, guid: e6c971256c7042c4d85a927ed0c430ab, type: 3}
   statusEffect: {fileID: 2060931955}
   chanceToProc: 20
+  soundLaunch: {fileID: 0}
+  soundHit: {fileID: 0}
 --- !u!114 &2139420255 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6231369601263220994, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}

@@ -10,6 +10,7 @@ public abstract class BaseSkill : MonoBehaviour
     public Sprite skillIcon;
     public List<ElementType> requiredElements = new List<ElementType>();
     protected Vector3 mergePoint; // some skill need this point
+    public AudioClip soundCharge;
 
     public abstract void Execute();
 
@@ -26,11 +27,11 @@ public abstract class BaseSkill : MonoBehaviour
     }
     public IEnumerator PerformElementalLaunches(ElementIconLibrary elementsLib, List<ElementType> requiredElements, float riseHeight, float launchDuration, float mergeDelay)
     {
-        List<HeroInstance> contributingHeroes = new List<HeroInstance>();
+        Dictionary<ElementType, HeroInstance> contributingHeroes = new Dictionary<ElementType, HeroInstance>();
         foreach (var hero in GameManager.Instance.PlayerHeroes)
         {
             if (requiredElements.Contains(hero.mainElement))
-                contributingHeroes.Add(hero);
+                contributingHeroes.Add(hero.mainElement, hero);
         }
 
         if (contributingHeroes.Count == 0)
@@ -41,8 +42,10 @@ public abstract class BaseSkill : MonoBehaviour
 
         List<GameObject> elementalProjectiles = new List<GameObject>();
 
-        foreach (var hero in contributingHeroes)
+        foreach (var element in requiredElements)
         {
+            HeroInstance hero = contributingHeroes[element];
+
             hero.spellPower += 1;
             GameObject projectilePrefab = elementsLib.GetElementProjectilePrefab(hero.mainElement);
 
@@ -54,12 +57,35 @@ public abstract class BaseSkill : MonoBehaviour
 
             GameObject proj = GameObject.Instantiate(projectilePrefab, hero.transform.position, Quaternion.identity);
             elementalProjectiles.Add(proj);
+            if (soundCharge)
+                EffectsManager.instance.CreateSoundEffect(soundCharge, transform.position);
             //EffectsManager.instance.CreateSoundEffect(elementsLib.GetElementSound(hero.mainElement), transform.position);
 
             Vector3 riseTarget = hero.transform.position + Vector3.up * riseHeight;
             GameManager.Instance.StartCoroutine(MoveProjectile(proj, riseTarget, launchDuration));
             yield return new WaitForSeconds(0.5f);
         }
+        //foreach (var hero in contributingHeroes)
+        //{
+        //    hero.spellPower += 1;
+        //    GameObject projectilePrefab = elementsLib.GetElementProjectilePrefab(hero.mainElement);
+
+        //    if (projectilePrefab == null)
+        //    {
+        //        Debug.LogWarning($"No projectile prefab found for element {hero.mainElement}");
+        //        continue;
+        //    }
+
+        //    GameObject proj = GameObject.Instantiate(projectilePrefab, hero.transform.position, Quaternion.identity);
+        //    elementalProjectiles.Add(proj);
+        //    if(soundCharge)
+        //        EffectsManager.instance.CreateSoundEffect(soundCharge, transform.position);
+        //    //EffectsManager.instance.CreateSoundEffect(elementsLib.GetElementSound(hero.mainElement), transform.position);
+
+        //    Vector3 riseTarget = hero.transform.position + Vector3.up * riseHeight;
+        //    GameManager.Instance.StartCoroutine(MoveProjectile(proj, riseTarget, launchDuration));
+        //    yield return new WaitForSeconds(0.5f);
+        //}
 
         yield return new WaitForSeconds(launchDuration + mergeDelay);
 

@@ -74,7 +74,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -86,13 +86,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342909808893539448}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20435163, y: -0.00850489, z: 0.001775898, w: 0.978859}
-  m_LocalPosition: {x: -3.2057724, y: 44.41546, z: -11.842613}
+  m_LocalRotation: {x: 0.12843604, y: -0.008616312, z: 0.0011162985, w: 0.9916798}
+  m_LocalPosition: {x: -2.83, y: 47.01, z: -33.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4436371623664568209}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.759, y: -0.996, z: 0}
 --- !u!1 &1763933454318660337
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +310,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -322,13 +322,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3964152501227762658}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.060892977, y: 0.39343783, z: -0.026126048, w: 0.9169603}
-  m_LocalPosition: {x: 4.707548, y: 28.635757, z: 13.421688}
+  m_LocalRotation: {x: 0.049758814, y: 0.088996276, z: -0.04375597, w: 0.99382555}
+  m_LocalPosition: {x: -4.4141, y: 31.239992, z: 2.8990374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4436371623664568209}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.125, y: 9.993, z: -4.506}
 --- !u!1 &4233551916422817015
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,14 +463,16 @@ MonoBehaviour:
   enterCameraPath:
   - target: {fileID: 138835874395480603}
     time: 0
+  - target: {fileID: 138835874395480603}
+    time: 0.5
   - target: {fileID: 1409035599972922711}
     time: 1
   - target: {fileID: 1409035599972922711}
     time: 1
+  - target: {fileID: 1280223778785435687}
+    time: 2.5
   - target: {fileID: 1280223778785435687}
     time: 1.5
-  - target: {fileID: 1280223778785435687}
-    time: 1
   - target: {fileID: 702007292600018630}
     time: 1
 --- !u!1 &5271518687853046077
@@ -516,7 +518,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (12)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -642,7 +644,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -655,7 +657,7 @@ Transform:
   m_GameObject: {fileID: 7228815064309087811}
   serializedVersion: 2
   m_LocalRotation: {x: 0.057437044, y: 0.36725417, z: -0.02272776, w: 0.92806727}
-  m_LocalPosition: {x: 13.671648, y: 28.635765, z: 5.4826508}
+  m_LocalPosition: {x: 6.36, y: 31.24, z: -6.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -709,7 +711,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -722,7 +724,7 @@ Transform:
   m_GameObject: {fileID: 8585545243726760155}
   serializedVersion: 2
   m_LocalRotation: {x: 0.15843984, y: 0.049160182, z: -0.007898305, w: 0.9861124}
-  m_LocalPosition: {x: -1.8684459, y: 32.82824, z: 1.9785882}
+  m_LocalPosition: {x: -4.8500004, y: 37.42, z: -11.709999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

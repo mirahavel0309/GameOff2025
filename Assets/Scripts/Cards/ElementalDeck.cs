@@ -5,9 +5,9 @@ public class ElementalDeck : MonoBehaviour
 {
     public List<ElementType> availableElements = new List<ElementType>
     {
-        ElementType.Fire,
-        ElementType.Water,
-        ElementType.Wind
+        //ElementType.Fire,
+        //ElementType.Water,
+        //ElementType.Wind
     };
 
     [Header("References")]
@@ -16,7 +16,7 @@ public class ElementalDeck : MonoBehaviour
 
     private void Start()
     {
-        DrawMultiple(5);
+        //DrawMultiple(5);
     }
     public void DrawCard()
     {

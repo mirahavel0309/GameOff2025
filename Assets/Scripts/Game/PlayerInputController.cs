@@ -31,6 +31,5 @@ public class PlayerInputController : MonoBehaviour
             return;
 
         EndTurnPressed = true;
-        Debug.Log("End Turn Pressed!");
     }
 }

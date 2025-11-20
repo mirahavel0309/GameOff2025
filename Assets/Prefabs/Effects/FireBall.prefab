@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3356008617069416882}
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599375547942348672}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &3724548120762767690
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c53141848dfaa5141bfe4770fad4b7e3, type: 2}
+  - {fileID: 2100000, guid: 60f175938f886af4ba6e363d52e1d581, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 7156837921697504398}
   - component: {fileID: 7852189477225666454}
   m_Layer: 0
-  m_Name: FireBolt
+  m_Name: FireBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +227,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -334,7 +334,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.8962264, g: 0.43976533, b: 0, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -398,7 +398,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -556,7 +556,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -609,7 +609,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -662,8 +662,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotation:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 0.7853981
+      minMaxState: 0
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -981,7 +981,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 20
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4891,7 +4891,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 39064f571d9820e4ba3a35d40682215a, type: 2}
+  - {fileID: 2100000, guid: c53141848dfaa5141bfe4770fad4b7e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4912,7 +4912,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 0
+  m_RenderMode: 4
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -5135,27 +5135,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8746769528401929062, guid: 2cb85d18f81a3a4468eede879757a627, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8746769528401929062, guid: 2cb85d18f81a3a4468eede879757a627, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8746769528401929062, guid: 2cb85d18f81a3a4468eede879757a627, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.08877714
-      objectReference: {fileID: 0}
-    - target: {fileID: 8746769528401929062, guid: 2cb85d18f81a3a4468eede879757a627, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.6203047
-      objectReference: {fileID: 0}
-    - target: {fileID: 8746769528401929062, guid: 2cb85d18f81a3a4468eede879757a627, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.8962264
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9087911987034456201, guid: 2cb85d18f81a3a4468eede879757a627, type: 3}
       propertyPath: m_Name
       value: Ripple
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087911987034456201, guid: 2cb85d18f81a3a4468eede879757a627, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
