@@ -23,7 +23,7 @@ public class AttackMonsterSkill : BaseMonsterSkill
     public IEnumerator PerformPhysicalAttack(CardInstance target)
     {
 
-        if (target == null || target.state == CardState.Destroyed) yield break;
+        if (target == null) yield break;
 
         animator.SetTrigger("Action");
 

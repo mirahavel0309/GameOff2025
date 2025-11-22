@@ -37,7 +37,6 @@ public class AttackSkill : BaseSkill
     {
         GameManager.Instance.SetPlayerInput(false);
 
-        Debug.Log("Select enemy target...");
         GameManager.Instance.SelectedTarget = null;
         InfoPanel.instance.ShowMessage("Select enemy as target...");
 
@@ -46,9 +45,6 @@ public class AttackSkill : BaseSkill
         InfoPanel.instance.Hide();
         var target = GameManager.Instance.SelectedTarget;
         GameManager.Instance.SelectTarget(null);
-
-        // Example: perform attack animation
-        Debug.Log($"Attacking {target.name}!");
 
         yield return GameManager.Instance.StartCoroutine(PerformAttackVisuals(target));
 

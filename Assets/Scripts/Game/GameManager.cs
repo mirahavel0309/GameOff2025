@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,13 +18,12 @@ public class GameManager : MonoBehaviour
 
     [Header("Game State")]
     public bool playerTurn = true;
-    public int actionsThisTurn = 0;
+    public int actionsThisTurn = 3;
     public int maxActionsPerTurn = 3;
 
     [Header("References")]
     [SerializeField] private HeroInstance heroPrefab;
     [SerializeField] private ElementalDeck playerDeck;
-    public PlayerHand playerHand;
     public TroopsField playerField;
     [SerializeField] private TroopsField enemyField;
     [SerializeField] private WaveSpawner enemySpawner;
@@ -44,10 +44,17 @@ public class GameManager : MonoBehaviour
     public Camera cam;
     public FreeCameraControl camController;
 
+    [Header("Monster Scaling")]
+    public float hpScaleIncPerWave = 0.025f;
+    public float dmgScaleIncPerWave = 0.015f;
+    public float hpScaleIncPerStage = 0.25f;
+    public float dmgScaleIncPerStage = 0.15f;
+
     private string pendingActionType = null;
 
     [Header("Turn Settings")]
     [SerializeField] private float enemyTurnDuration = 2f;
+    public int[] healLevels;
 
     [Header("Global Skills")]
     public List<BaseSkill> allSkills = new List<BaseSkill>();
@@ -58,6 +65,8 @@ public class GameManager : MonoBehaviour
     public Transform skillCardParent;        // UI parent container for displaying skill cards
     public GameObject skillCardPrefab;       // Prefab with SkillCardUI script
     private List<GameObject> activeSkillCards = new List<GameObject>();
+    public TextMeshProUGUI actionsText;
+    public TextMeshProUGUI healText;
 
     public bool PlayerInputEnabled => playerInput.InputEnabled;
 
@@ -141,7 +150,12 @@ public class GameManager : MonoBehaviour
             // For now, we go straight to the next wave
 
             yield return new WaitForSeconds(0.5f);
+
+            HealOnWaveClear();
+
             waveCounter++;
+            enemySpawner.healthScale += hpScaleIncPerWave;
+            enemySpawner.damageScale += dmgScaleIncPerWave;
             if (waveCounter < maxWavesCount)
             {
                 InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
@@ -170,6 +184,19 @@ public class GameManager : MonoBehaviour
     {
         return selectedHero;
     }
+    private void Update()
+    {
+        actionsText.text = $"actions left: {actionsThisTurn}";
+        if(actionsThisTurn > 0)
+        {
+            healText.gameObject.SetActive(true);
+            healText.text = $"heal for {healLevels[actionsThisTurn - 1]} hp";
+        }
+        else
+        {
+            healText.gameObject.SetActive(false);
+        }
+    }
 
     private IEnumerator PlayerTurnRoutine()
     {
@@ -187,13 +214,15 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
 
-        actionsThisTurn = 0;
+        actionsThisTurn = 3;
         ResetAllAttacks();
         playerDeck.DrawUntilHandIsFull();
 
         SetPlayerInput(true);
         yield return new WaitUntil(() => playerInput.EndTurnPressed);
         playerInput.EndTurnPressed = false;
+
+        //HealPlayers(); bad idea. can be exploited :(
 
         SetPlayerInput(false);
         StartCoroutine(EnemyTurnRoutine());
@@ -233,9 +262,9 @@ public class GameManager : MonoBehaviour
     }
     public void RegisterActionUse()
     {
-        actionsThisTurn++;
+        actionsThisTurn--;
 
-        if (actionsThisTurn >= maxActionsPerTurn)
+        if (actionsThisTurn <= 0 || PlayerHand.instance.GetCards().Count == 0)
         {
             StartCoroutine(EndTurnAfterDelay());
         }
@@ -245,6 +274,28 @@ public class GameManager : MonoBehaviour
         // Wait a bit to let final skill visuals complete
         yield return new WaitForSeconds(1f);
         playerInput.EndTurnPressed = true;
+    }
+    private void HealPlayers()
+    {
+        // experimental... looking for ways to replace green mage in battles.
+        if (actionsThisTurn > 0)
+        {
+            foreach (var hero in PlayerHeroes)
+            {
+                hero.Heal(healLevels[actionsThisTurn - 1]);
+            }
+        }
+    }
+    private void HealOnWaveClear()
+    {
+        // experimental... looking for ways to replace green mage in battles.
+        if (actionsThisTurn > 0)
+        {
+            foreach (var hero in PlayerHeroes)
+            {
+                hero.Heal(5);
+            }
+        }
     }
 
     private void ResetAllAttacks()
@@ -378,6 +429,8 @@ public class GameManager : MonoBehaviour
             yield return StartCoroutine(FadeScreen());
             camController.enabled = true;
 
+            enemySpawner.healthScale += hpScaleIncPerStage;
+            enemySpawner.damageScale += dmgScaleIncPerStage;
 
             //yield return StartCoroutine(MoveHeroesThroughPath(entryPathPoints));
 

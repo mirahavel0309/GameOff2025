@@ -56,7 +56,6 @@ public class HeroInstance : CardInstance
     protected override IEnumerator HandleDestruction()
     {
         base.HandleDestruction();
-        state = CardState.Destroyed;
         GameManager.Instance.SetPlayerInput(false);
 
         yield return new WaitForSeconds(0.5f);

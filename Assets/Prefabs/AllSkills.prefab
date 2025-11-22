@@ -49,7 +49,7 @@ MonoBehaviour:
   description: 'Deal <damage> water damage.
 
     25% chance to freeze'
-  skillIcon: {fileID: 21300000, guid: 502e753eb42f6c14494373918d2f3e7b, type: 3}
+  skillIcon: {fileID: -7077343089386191299, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0100000001000000
   soundCharge: {fileID: 0}
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: 20735f9ec6bc8f74a89132bf657c5c7d, type: 3}
@@ -133,7 +133,7 @@ MonoBehaviour:
     Do additional
     <damage> nature damage if enemy is already poisoned and heal all friendly heroes
     for total damage dealt.'
-  skillIcon: {fileID: 21300000, guid: aeada8d48b9a7844a9ff0420987c568c, type: 3}
+  skillIcon: {fileID: -790576937132370401, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 020000000200000002000000
   soundCharge: {fileID: 0}
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: e8c7ef42158dbeb408affcb64101ea98, type: 3}
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: HealingWind
   description: Heal all heroes for <value>
-  skillIcon: {fileID: 21300000, guid: aeada8d48b9a7844a9ff0420987c568c, type: 3}
+  skillIcon: {fileID: 4469321049813077669, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0300000002000000
   soundCharge: {fileID: 0}
   healEffectPrefab: {fileID: 1714363467411018263, guid: 9d41950162247bf45b990eaa5955a0b7, type: 3}
@@ -219,83 +219,6 @@ MonoBehaviour:
   mergeDelay: 0.3
   healEffectDuration: 1.8
   baseHeal: 8
---- !u!1 &1198788994615657237
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4243293888438101628}
-  - component: {fileID: 5112836150357441731}
-  - component: {fileID: 5156723642772372427}
-  m_Layer: 0
-  m_Name: Fire Storm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4243293888438101628
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198788994615657237}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3888285316096645545}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5112836150357441731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198788994615657237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01b9d904c21dad145901231d80b2f48a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: Fire Storm
-  description: Deal <damage> fire damage to all enemies
-  skillIcon: {fileID: 3078762230685488240, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
-  requiredElements: 0000000003000000
-  soundCharge: {fileID: 0}
-  damageEffectPrefab: {fileID: 1714363467411018263, guid: 65011c07cdf399f47a57ad68b59e5b20, type: 3}
-  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
-  elementalRiseHeight: 2
-  elementalLaunchDuration: 0.4
-  mergeDelay: 0.3
-  damageEffectDuration: 0.6
-  baseDamage: 10
-  damageElement: 0
-  statusEffect: {fileID: 5156723642772372427}
-  chanceToProc: 33
---- !u!114 &5156723642772372427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198788994615657237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576b6ef1b9da5834ea250c3346fa2b46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectName: Burning
-  description: Burn damage
-  effectPrefab: {fileID: 6709276644064086281, guid: 439f64f9a70c20242b9a36f8ade449d4, type: 3}
-  duration: 3
-  damagePerTurn: 4
 --- !u!1 &1468682435076087105
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,10 +265,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Twister
   description: Deal <damage> damage to all enemies
-  skillIcon: {fileID: 7414261224600783322, guid: d7d8cab9a146b164aa3833b351312f17, type: 3}
+  skillIcon: {fileID: 1977104565186118404, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 03000000
   soundCharge: {fileID: 0}
-  damageEffectPrefab: {fileID: 1714363467411018263, guid: 9d41950162247bf45b990eaa5955a0b7, type: 3}
+  damageEffectPrefab: {fileID: 1714363467411018263, guid: 52449de75b5b2484e836ca388a7df108, type: 3}
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
   elementalRiseHeight: 3
   elementalLaunchDuration: 0.8
@@ -404,7 +327,7 @@ MonoBehaviour:
   description: 'Deal <damage> water damage.
 
     Lowers enemy accuracy'
-  skillIcon: {fileID: 21300000, guid: 502e753eb42f6c14494373918d2f3e7b, type: 3}
+  skillIcon: {fileID: -8695878343116310139, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 01000000
   soundCharge: {fileID: 0}
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: 20735f9ec6bc8f74a89132bf657c5c7d, type: 3}
@@ -487,7 +410,7 @@ MonoBehaviour:
   description: 'Deal <damage> nature damage.
 
     Can poison the target'
-  skillIcon: {fileID: 21300000, guid: aeada8d48b9a7844a9ff0420987c568c, type: 3}
+  skillIcon: {fileID: 5146373342249952597, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 02000000
   soundCharge: {fileID: 0}
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: e8c7ef42158dbeb408affcb64101ea98, type: 3}
@@ -570,7 +493,7 @@ MonoBehaviour:
   description: 'Deal <damage> fire damage
 
     (place holder spell)'
-  skillIcon: {fileID: 21300000, guid: 46eca39e2189f5a46a93f105ee137636, type: 3}
+  skillIcon: {fileID: -6750922645889386751, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0000000000000000
   soundCharge: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
   formedProjectilePrefab: {fileID: 5492295935689872714, guid: c312136891914fb46af1d49656c27422, type: 3}
@@ -653,7 +576,7 @@ MonoBehaviour:
   description: 'Deal <damage> water damage.
 
     Greatly reduce target''s accuracy'
-  skillIcon: {fileID: 5208024241582667449, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  skillIcon: {fileID: -4218509066409255030, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 010000000100000001000000
   soundCharge: {fileID: 0}
   beamPrefab: {fileID: 6772939638736423725, guid: f915f5b490e652a4fb5a7cddac988694, type: 3}
@@ -729,7 +652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Healing wave
   description: Recover <value> HP of selected hero
-  skillIcon: {fileID: 21300000, guid: aeada8d48b9a7844a9ff0420987c568c, type: 3}
+  skillIcon: {fileID: 9135118030149634273, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0100000002000000
   soundCharge: {fileID: 0}
   healEffectPrefab: {fileID: 1714363467411018263, guid: 9d41950162247bf45b990eaa5955a0b7, type: 3}
@@ -786,7 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Fire Bolt
   description: Deal <damage> fire damage
-  skillIcon: {fileID: 21300000, guid: 46eca39e2189f5a46a93f105ee137636, type: 3}
+  skillIcon: {fileID: -7045954298782371865, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 00000000
   soundCharge: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
   formedProjectilePrefab: {fileID: 5492295935689872714, guid: 9f9ba681ce513474a9b1545a8d6c7f32, type: 3}
@@ -887,7 +810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Meteor
   description: 
-  skillIcon: {fileID: 3078762230685488240, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  skillIcon: {fileID: 832105648995339053, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 000000000000000000000000
   soundCharge: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
   meteorProjectilePrefab: {fileID: 5492295935689872714, guid: bf2a7b6d69a0c7b418b4f7b704f14f19, type: 3}
@@ -955,7 +878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Protect
   description: Negate next incoming Fire based attack
-  skillIcon: {fileID: 3078762230685488240, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  skillIcon: {fileID: -300472272976743755, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 00000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 1714363467411018263, guid: fd3e7606c9b5a4a41a5da6ab7479961c, type: 3}
@@ -1020,12 +943,12 @@ Transform:
   - {fileID: 5870522338513362286}
   - {fileID: 2353722128031004221}
   - {fileID: 8508211387903809880}
-  - {fileID: 1056810620491216476}
-  - {fileID: 4165272945851778630}
-  - {fileID: 4040578615867806062}
+  - {fileID: 4495334691320168752}
+  - {fileID: 4267475614071034565}
+  - {fileID: 6148179363782547605}
   - {fileID: 1085832643424013418}
   - {fileID: 2053963176220810609}
-  - {fileID: 4243293888438101628}
+  - {fileID: 5977205973010761622}
   - {fileID: 662386776760917500}
   - {fileID: 8819700758213495337}
   - {fileID: 1363584519338582312}
@@ -1037,7 +960,7 @@ Transform:
   - {fileID: 1388280566008209799}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5296848784323969942
+--- !u!1 &5814782397157253723
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1045,9 +968,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4040578615867806062}
-  - component: {fileID: 392622566911232175}
-  - component: {fileID: 1818837378801677308}
+  - component: {fileID: 6148179363782547605}
+  - component: {fileID: 6006666558014768418}
+  - component: {fileID: 1835551666500344175}
   m_Layer: 0
   m_Name: Blizzard
   m_TagString: Untagged
@@ -1055,13 +978,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4040578615867806062
+--- !u!4 &6148179363782547605
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5296848784323969942}
+  m_GameObject: {fileID: 5814782397157253723}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1070,42 +993,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3888285316096645545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &392622566911232175
+--- !u!114 &6006666558014768418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5296848784323969942}
+  m_GameObject: {fileID: 5814782397157253723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01b9d904c21dad145901231d80b2f48a, type: 3}
+  m_Script: {fileID: 11500000, guid: a1b9312736cc6f248afe661a5b21ad28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: Twister
-  description: 'Deal <damage> water damage to all enemies.
-
-    50% chance to freeze.'
-  skillIcon: {fileID: 5208024241582667449, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  skillName: Blizzard
+  description: Deal <damage> damage to all enemies
+  skillIcon: {fileID: 4445889734292919843, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0100000003000000
   soundCharge: {fileID: 0}
-  damageEffectPrefab: {fileID: 1714363467411018263, guid: 9d41950162247bf45b990eaa5955a0b7, type: 3}
-  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
-  elementalRiseHeight: 4
-  elementalLaunchDuration: 0.8
-  mergeDelay: 0.5
-  damageEffectDuration: 0.6
+  stormPrefab: {fileID: 1796097532597538004, guid: 71920dbf64881134ebc96208659569e2, type: 3}
   baseDamage: 7
-  damageElement: 1
-  statusEffect: {fileID: 1818837378801677308}
-  chanceToProc: 50
---- !u!114 &1818837378801677308
+  damageType: 1
+  statusEffect: {fileID: 1835551666500344175}
+  chanceToProc: 40
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
+  elementalRiseHeight: 2
+  elementalLaunchDuration: 0.4
+  mergeDelay: 0.3
+  travelDuration: 1.5
+  returnDuration: 1
+  soundStormStart: {fileID: 0}
+  soundStormEnd: {fileID: 0}
+--- !u!114 &1835551666500344175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5296848784323969942}
+  m_GameObject: {fileID: 5814782397157253723}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32dea774f41dd8b47a66362e3f1d4a32, type: 3}
@@ -1115,6 +1039,68 @@ MonoBehaviour:
   description: 
   effectPrefab: {fileID: 0}
   duration: 2
+--- !u!1 &5968227544144529352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4495334691320168752}
+  - component: {fileID: 6269358639060742360}
+  m_Layer: 0
+  m_Name: Tornado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4495334691320168752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968227544144529352}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6269358639060742360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968227544144529352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b9312736cc6f248afe661a5b21ad28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Tornado
+  description: Deal <damage> damage to all enemies
+  skillIcon: {fileID: -3189097892625286062, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  requiredElements: 0300000003000000
+  soundCharge: {fileID: 0}
+  stormPrefab: {fileID: 1796097532597538004, guid: 25ffda84358fdcb4e8666129718a27ba, type: 3}
+  baseDamage: 8
+  damageType: 3
+  statusEffect: {fileID: 0}
+  chanceToProc: 0
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
+  elementalRiseHeight: 2
+  elementalLaunchDuration: 0.4
+  mergeDelay: 0.3
+  travelDuration: 1.6
+  returnDuration: 0.8
+  soundStormStart: {fileID: 0}
+  soundStormEnd: {fileID: 0}
 --- !u!1 &5971056974758335138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,7 +1148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Poison Cloud
   description: Deal <damage> nature damage to all enemies
-  skillIcon: {fileID: 7414261224600783322, guid: d7d8cab9a146b164aa3833b351312f17, type: 3}
+  skillIcon: {fileID: 5281346450343443467, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0300000002000000
   soundCharge: {fileID: 0}
   damageEffectPrefab: {fileID: 1714363467411018263, guid: 9d41950162247bf45b990eaa5955a0b7, type: 3}
@@ -1241,7 +1227,7 @@ MonoBehaviour:
 
     Heal all freindly
     heroes based on the damage dealt.'
-  skillIcon: {fileID: 21300000, guid: aeada8d48b9a7844a9ff0420987c568c, type: 3}
+  skillIcon: {fileID: 6174377461120657799, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0200000002000000
   soundCharge: {fileID: 0}
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: e8c7ef42158dbeb408affcb64101ea98, type: 3}
@@ -1298,7 +1284,7 @@ MonoBehaviour:
   description: 'Deal <damage> water damage.
 
     15% chance to freeze'
-  skillIcon: {fileID: 21300000, guid: 502e753eb42f6c14494373918d2f3e7b, type: 3}
+  skillIcon: {fileID: 4730339109292127003, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 01000000
   soundCharge: {fileID: 0}
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: 20735f9ec6bc8f74a89132bf657c5c7d, type: 3}
@@ -1378,7 +1364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Protect
   description: Negate next incoming Wind based attack
-  skillIcon: {fileID: -1562093178560388313, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  skillIcon: {fileID: -4932745210665146139, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 03000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 1714363467411018263, guid: fd3e7606c9b5a4a41a5da6ab7479961c, type: 3}
@@ -1406,7 +1392,7 @@ MonoBehaviour:
   effectPrefab: {fileID: 6709276644064086281, guid: 23972ba5287a0c244b078253dc02a2b7, type: 3}
   duration: 1
   element: 3
---- !u!1 &6657980912034565992
+--- !u!1 &6726078022341029017
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1414,22 +1400,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1056810620491216476}
-  - component: {fileID: 1051995855224939420}
+  - component: {fileID: 5977205973010761622}
+  - component: {fileID: 2202099664794658958}
+  - component: {fileID: 8869304084395227921}
   m_Layer: 0
-  m_Name: Tornado
+  m_Name: Fire Storm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1056810620491216476
+--- !u!4 &5977205973010761622
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6657980912034565992}
+  m_GameObject: {fileID: 6726078022341029017}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1438,33 +1425,115 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3888285316096645545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1051995855224939420
+--- !u!114 &2202099664794658958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6657980912034565992}
+  m_GameObject: {fileID: 6726078022341029017}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01b9d904c21dad145901231d80b2f48a, type: 3}
+  m_Script: {fileID: 11500000, guid: a1b9312736cc6f248afe661a5b21ad28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: Tornado
-  description: Deal <damage> damage to all enemies
-  skillIcon: {fileID: 7414261224600783322, guid: d7d8cab9a146b164aa3833b351312f17, type: 3}
-  requiredElements: 0300000003000000
+  skillName: Fire Storm
+  description: Deal <damage> fire damage to all enemies
+  skillIcon: {fileID: -3189097892625286062, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  requiredElements: 0000000003000000
   soundCharge: {fileID: 0}
-  damageEffectPrefab: {fileID: 1714363467411018263, guid: 9d41950162247bf45b990eaa5955a0b7, type: 3}
+  stormPrefab: {fileID: 1796097532597538004, guid: 9048b7f03918e1346a80205dcfdfa2cb, type: 3}
+  baseDamage: 10
+  damageType: 0
+  statusEffect: {fileID: 8869304084395227921}
+  chanceToProc: 30
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
-  elementalRiseHeight: 4
-  elementalLaunchDuration: 0.8
-  mergeDelay: 0.5
-  damageEffectDuration: 0.8
-  baseDamage: 8
-  damageElement: 3
+  elementalRiseHeight: 2
+  elementalLaunchDuration: 0.4
+  mergeDelay: 0.3
+  travelDuration: 1.8
+  returnDuration: 1
+  soundStormStart: {fileID: 0}
+  soundStormEnd: {fileID: 0}
+--- !u!114 &8869304084395227921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726078022341029017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576b6ef1b9da5834ea250c3346fa2b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectName: Burning
+  description: Burn damage
+  effectPrefab: {fileID: 6709276644064086281, guid: 439f64f9a70c20242b9a36f8ade449d4, type: 3}
+  duration: 3
+  damagePerTurn: 4
+--- !u!1 &6812847760955241205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4267475614071034565}
+  - component: {fileID: 4516347019866971733}
+  m_Layer: 0
+  m_Name: Hurricane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4267475614071034565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6812847760955241205}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4516347019866971733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6812847760955241205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b9312736cc6f248afe661a5b21ad28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Hurricane
+  description: Deal <damage> damage to all enemies
+  skillIcon: {fileID: -3189097892625286062, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  requiredElements: 030000000300000003000000
+  soundCharge: {fileID: 0}
+  stormPrefab: {fileID: 1796097532597538004, guid: 616864db2eafb37458b30998031ad001, type: 3}
+  baseDamage: 12
+  damageType: 3
   statusEffect: {fileID: 0}
   chanceToProc: 0
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
+  elementalRiseHeight: 2
+  elementalLaunchDuration: 0.4
+  mergeDelay: 0.3
+  travelDuration: 1.8
+  returnDuration: 0.8
+  soundStormStart: {fileID: 0}
+  soundStormEnd: {fileID: 0}
 --- !u!1 &7294114056512695778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Protect
   description: Negate next incoming Nature based attack
-  skillIcon: {fileID: -7105074764738127781, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  skillIcon: {fileID: 974909791873148181, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 02000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 1714363467411018263, guid: fd3e7606c9b5a4a41a5da6ab7479961c, type: 3}
@@ -1587,7 +1656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Protect
   description: Negate next incoming Water based attack
-  skillIcon: {fileID: 5208024241582667449, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  skillIcon: {fileID: -5253547813027793777, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 01000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 1714363467411018263, guid: fd3e7606c9b5a4a41a5da6ab7479961c, type: 3}
@@ -1662,7 +1731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Regeneration
   description: Grant +<value> health regeneration to selected hero
-  skillIcon: {fileID: 0}
+  skillIcon: {fileID: 5416130795730616692, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0200000000000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 1714363467411018263, guid: fd3e7606c9b5a4a41a5da6ab7479961c, type: 3}
@@ -1690,62 +1759,3 @@ MonoBehaviour:
   effectPrefab: {fileID: 6709276644064086281, guid: 7206cf20b2462d44f994e7cb77128949, type: 3}
   duration: 3
   regenAmount: 5
---- !u!1 &8739283652470979721
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4165272945851778630}
-  - component: {fileID: 4799487478891234752}
-  m_Layer: 0
-  m_Name: Hurricane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4165272945851778630
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8739283652470979721}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3888285316096645545}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4799487478891234752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8739283652470979721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01b9d904c21dad145901231d80b2f48a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: Hurricane
-  description: Deal <damage> damage to all enemies
-  skillIcon: {fileID: 7414261224600783322, guid: d7d8cab9a146b164aa3833b351312f17, type: 3}
-  requiredElements: 030000000300000003000000
-  soundCharge: {fileID: 0}
-  damageEffectPrefab: {fileID: 1714363467411018263, guid: 9d41950162247bf45b990eaa5955a0b7, type: 3}
-  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
-  elementalRiseHeight: 5
-  elementalLaunchDuration: 0.8
-  mergeDelay: 0.5
-  damageEffectDuration: 0.8
-  baseDamage: 12
-  damageElement: 3
-  statusEffect: {fileID: 0}
-  chanceToProc: 0

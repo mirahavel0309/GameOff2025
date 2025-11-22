@@ -7,8 +7,6 @@ public class EnchantmentCardInstance : CardInstance
     public Elements elementType;
     public override void Initialize()
     {
-        attackText.enabled = false;
-        healthText.enabled = false;
     }
     protected override void HandleLeftClick()
     {

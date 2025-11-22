@@ -13,11 +13,8 @@ public class CardInstance : MonoBehaviour
     public int attackPower = 100;
     private int currentHealth;
     public int maxHealth;
-    public CardState state;
 
     [Header("References")]
-    [SerializeField] protected TextMeshPro attackText;
-    [SerializeField] protected TextMeshPro healthText;
     [SerializeField] private SpriteRenderer cardSprite;
     [SerializeField] private SpriteRenderer highlightSprite;
     public Animator animator;
@@ -33,15 +30,23 @@ public class CardInstance : MonoBehaviour
     private bool isSelected = false;
     private Vector3 originalPosition;
     private CharacterResistances resistances;
+    protected ProgressBar hpBar;
     protected static CardInstance selectedAttacker;
     private void Awake()
     {
         resistances = GetComponent<CharacterResistances>();
     }
+    public void ScalePower(float hpScale, float attackScale)
+    {
+        maxHealth = Mathf.RoundToInt(hpScale * maxHealth);
+        attackPower = Mathf.RoundToInt(attackPower * attackScale);
+    }
     void Start()
     {
         currentHealth = maxHealth;
         Initialize();
+        hpBar = GetComponentInChildren<ProgressBar>();
+        hpBar.SetValue(currentHealth, maxHealth);
     }
     public virtual void Initialize()
     {
@@ -49,10 +54,6 @@ public class CardInstance : MonoBehaviour
 
         if (highlightSprite != null)
             highlightSprite.enabled = false;
-    }
-    public void ChangeState(CardState newState)
-    {
-        state = newState;
     }
 
     void OnMouseDown()
@@ -71,40 +72,35 @@ public class CardInstance : MonoBehaviour
     {
         GameManager.Instance.SelectTarget(this);
 
-        if (state == CardState.OnField)
+        // Player card clicked
+        if (troopsField.CompareTag("PlayerField"))
         {
-            // Player card clicked
-            if (troopsField.CompareTag("PlayerField"))
+            if (HasActedThisTurn)
             {
-                if (HasActedThisTurn)
-                {
-                    Debug.Log("This card already attacked this turn.");
-                    return;
-                }
-
-                SelectAsAttacker();
+                Debug.Log("This card already attacked this turn.");
+                return;
             }
-            else // Enemy card clicked
-            {
 
-            }
+            SelectAsAttacker();
+        }
+        else // Enemy card clicked
+        {
+
         }
     }
     protected virtual void HandleRightClick()
     {
-        if (state == CardState.OnField)
+        // If player right-clicks, cancel
+        if (Input.GetMouseButtonDown(1))
         {
-            // If player right-clicks, cancel
-            if (Input.GetMouseButtonDown(1))
-            {
-                ClearSelection();
-                return;
-            }
+            ClearSelection();
+            return;
         }
-    }
+}
     public virtual void UpdateVisuals()
     {
-        if (healthText != null) healthText.text = currentHealth.ToString();
+        if (hpBar)
+            hpBar.SetValue(currentHealth, maxHealth);
 
         // I think I'll reomve baseCard. Right sprite will come from prefab of the object
         //if (cardSprite != null && baseCard != null && baseCard.artwork != null)
@@ -209,6 +205,10 @@ public class CardInstance : MonoBehaviour
 
         int realDamageDone = Mathf.Min(finalDamage, currentHealth); // needed for life drain skill
         currentHealth -= finalDamage;
+
+        if(hpBar)
+            hpBar.SetValue(currentHealth, maxHealth);
+
         StartCoroutine(Shake(0.35f, 0.25f));
         UpdateVisuals();
 
@@ -222,20 +222,21 @@ public class CardInstance : MonoBehaviour
     {
         currentHealth = Mathf.Min(maxHealth, currentHealth + amount);
         UpdateVisuals();
-
-        // Optional floating text feedback
-        EffectsManager.instance.CreateFloatingText(
-            transform.position + Vector3.up * 1.5f,
-            "+" + amount,
-            Color.green,
-            1.2f,
-            0.8f,
-            1.2f
-        );
+        if(amount > 0)
+        {
+            // Optional floating text feedback
+            EffectsManager.instance.CreateFloatingText(
+                transform.position + Vector3.up * 1.5f,
+                "+" + amount,
+                Color.green,
+                1.2f,
+                0.8f,
+                1.2f
+            );
+        }
     }
     protected virtual IEnumerator HandleDestruction()
     {
-        state = CardState.Destroyed;
         GameManager.Instance.SetPlayerInput(false);
 
         yield return new WaitForSeconds(0.5f);

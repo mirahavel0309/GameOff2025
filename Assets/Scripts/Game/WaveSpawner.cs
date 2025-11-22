@@ -11,6 +11,8 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private int cardsPerWave = 2;
     [SerializeField] private float spawnDelay = 0.5f;
+    public float healthScale = 1;
+    public float damageScale = 1;
 
     private int currentWave = 0;
     private bool waveActive = false;
@@ -53,11 +55,11 @@ public class WaveSpawner : MonoBehaviour
 
         GameObject newCardGO = Instantiate(randomEnemy, transform.position, Quaternion.identity).gameObject;
         CardInstance cardInstance = newCardGO.GetComponent<CardInstance>();
+        cardInstance.ScalePower(healthScale, damageScale);
 
         if (cardInstance != null)
         {
             //cardInstance.SetCardData(randomCard);
-            cardInstance.ChangeState(CardState.OnField);
             cardInstance.currentContainer = enemyField;
             cardInstance.troopsField = enemyField;
             enemyField.AddCard(cardInstance);
