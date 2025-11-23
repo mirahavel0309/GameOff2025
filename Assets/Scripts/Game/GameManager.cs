@@ -152,14 +152,19 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             HealOnWaveClear();
-
+            int enemyCount = 3;
             waveCounter++;
+            if (waveCounter is (2 or 4 or 8 or 9))
+                enemyCount = 4;
+            if (waveCounter is (5 or 10))
+                enemyCount = 5;
+
             enemySpawner.healthScale += hpScaleIncPerWave;
             enemySpawner.damageScale += dmgScaleIncPerWave;
             if (waveCounter < maxWavesCount)
             {
                 InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
-                yield return enemySpawner.SpawnWaveCoroutine();
+                yield return enemySpawner.SpawnWaveCoroutine(enemyCount);
                 waveActive = true;
 
                 // Return control to the player
@@ -250,7 +255,7 @@ public class GameManager : MonoBehaviour
             if (enemyCard == null) continue;
             if (playerCards.Count == 0) break;
 
-            AttackMonsterSkill skill = enemyCard.gameObject.GetComponent<AttackMonsterSkill>();
+            BaseMonsterSkill skill = enemyCard.gameObject.GetComponent<BaseMonsterSkill>();
 
             CardInstance target = playerCards[Random.Range(0, playerCards.Count)];
             yield return skill.StartCoroutine(skill.Execute(target));

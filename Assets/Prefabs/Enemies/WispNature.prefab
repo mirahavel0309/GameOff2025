@@ -205,6 +205,37 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &5772884601450585773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7742039288137689837}
+  m_Layer: 0
+  m_Name: attackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7742039288137689837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5772884601450585773}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.568, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3856908114468915698}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6069016087985007266
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +358,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5278898677840557890}
+  - {fileID: 7742039288137689837}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4211456961534145143
@@ -343,7 +375,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPower: 100
   maxHealth: 15
-  state: 0
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
@@ -362,7 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f984bcfb3ac8764e945ae2421d0f0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strong: 00000000
+  strong: 01000000
   wakness: 00000000
 --- !u!61 &3303585355228617710
 BoxCollider2D:
@@ -398,7 +429,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.5}
+  m_Offset: {x: 0, y: 1.8}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -408,7 +439,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6, y: 0.8}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
 --- !u!212 &4964113359520524644
 SpriteRenderer:
@@ -482,7 +513,13 @@ MonoBehaviour:
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
   damage: 5
+  element: 4
   isProjectileAttack: 0
+  projectilePrefab: {fileID: 5492295935689872714, guid: 9f9ba681ce513474a9b1545a8d6c7f32, type: 3}
+  projectileSpeed: 12
+  projectileSpawnPoint: {fileID: 7742039288137689837}
+  statusEffect: {fileID: 0}
+  chanceToProc: 0
 --- !u!1 &8612068103122048513
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +531,7 @@ GameObject:
   - component: {fileID: 8922424402728669570}
   - component: {fileID: 8469931686135480976}
   - component: {fileID: 5490996520537943343}
+  - component: {fileID: 7618492454478049316}
   m_Layer: 0
   m_Name: CardArt
   m_TagString: Untagged
@@ -593,6 +631,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7618492454478049316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8612068103122048513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d53493f9f3a9b9499278e63389d5c60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4461116633926394973
 PrefabInstance:
   m_ObjectHideFlags: 0

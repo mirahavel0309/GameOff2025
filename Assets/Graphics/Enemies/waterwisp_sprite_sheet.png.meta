@@ -571,8 +571,8 @@ TextureImporter:
       name: waterwisp_sprite_sheet_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 240
+        x: 300
+        y: 320
         width: 60
         height: 80
       alignment: 0
@@ -593,7 +593,7 @@ TextureImporter:
       name: waterwisp_sprite_sheet_6
       rect:
         serializedVersion: 2
-        x: 60
+        x: 0
         y: 240
         width: 60
         height: 80
@@ -615,7 +615,7 @@ TextureImporter:
       name: waterwisp_sprite_sheet_7
       rect:
         serializedVersion: 2
-        x: 120
+        x: 60
         y: 240
         width: 60
         height: 80
@@ -637,7 +637,7 @@ TextureImporter:
       name: waterwisp_sprite_sheet_8
       rect:
         serializedVersion: 2
-        x: 180
+        x: 120
         y: 240
         width: 60
         height: 80
@@ -659,7 +659,7 @@ TextureImporter:
       name: waterwisp_sprite_sheet_9
       rect:
         serializedVersion: 2
-        x: 240
+        x: 180
         y: 240
         width: 60
         height: 80
@@ -681,8 +681,8 @@ TextureImporter:
       name: waterwisp_sprite_sheet_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
+        x: 240
+        y: 240
         width: 60
         height: 80
       alignment: 0
@@ -703,8 +703,8 @@ TextureImporter:
       name: waterwisp_sprite_sheet_11
       rect:
         serializedVersion: 2
-        x: 60
-        y: 160
+        x: 300
+        y: 240
         width: 60
         height: 80
       alignment: 0
@@ -725,7 +725,7 @@ TextureImporter:
       name: waterwisp_sprite_sheet_12
       rect:
         serializedVersion: 2
-        x: 120
+        x: 0
         y: 160
         width: 60
         height: 80
@@ -747,7 +747,7 @@ TextureImporter:
       name: waterwisp_sprite_sheet_13
       rect:
         serializedVersion: 2
-        x: 180
+        x: 60
         y: 160
         width: 60
         height: 80
@@ -769,7 +769,7 @@ TextureImporter:
       name: waterwisp_sprite_sheet_14
       rect:
         serializedVersion: 2
-        x: 240
+        x: 120
         y: 160
         width: 60
         height: 80
@@ -791,8 +791,8 @@ TextureImporter:
       name: waterwisp_sprite_sheet_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 80
+        x: 180
+        y: 160
         width: 60
         height: 80
       alignment: 0
@@ -813,8 +813,8 @@ TextureImporter:
       name: waterwisp_sprite_sheet_16
       rect:
         serializedVersion: 2
-        x: 60
-        y: 80
+        x: 240
+        y: 160
         width: 60
         height: 80
       alignment: 0
@@ -835,8 +835,8 @@ TextureImporter:
       name: waterwisp_sprite_sheet_17
       rect:
         serializedVersion: 2
-        x: 120
-        y: 80
+        x: 300
+        y: 160
         width: 60
         height: 80
       alignment: 0
@@ -857,7 +857,7 @@ TextureImporter:
       name: waterwisp_sprite_sheet_18
       rect:
         serializedVersion: 2
-        x: 180
+        x: 0
         y: 80
         width: 60
         height: 80
@@ -879,7 +879,7 @@ TextureImporter:
       name: waterwisp_sprite_sheet_19
       rect:
         serializedVersion: 2
-        x: 240
+        x: 60
         y: 80
         width: 60
         height: 80
@@ -901,8 +901,8 @@ TextureImporter:
       name: waterwisp_sprite_sheet_20
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 120
+        y: 80
         width: 60
         height: 80
       alignment: 0
@@ -923,8 +923,8 @@ TextureImporter:
       name: waterwisp_sprite_sheet_21
       rect:
         serializedVersion: 2
-        x: 60
-        y: 0
+        x: 180
+        y: 80
         width: 60
         height: 80
       alignment: 0
@@ -945,8 +945,8 @@ TextureImporter:
       name: waterwisp_sprite_sheet_22
       rect:
         serializedVersion: 2
-        x: 120
-        y: 0
+        x: 240
+        y: 80
         width: 60
         height: 80
       alignment: 0
@@ -967,8 +967,8 @@ TextureImporter:
       name: waterwisp_sprite_sheet_23
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
+        x: 300
+        y: 80
         width: 60
         height: 80
       alignment: 0
@@ -981,6 +981,116 @@ TextureImporter:
       bones: []
       spriteID: 27bacb796a6c9f710800000000000000
       internalID: 1727630350885890930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterwisp_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29e0508230e74e419c14839be1e31f6
+      internalID: -1030493014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterwisp_sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd08953439577147a695a9faa549905
+      internalID: -1694224640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterwisp_sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3035d53d568141b4aae1e646a9b5acd0
+      internalID: -1515033302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterwisp_sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819d98dd82db7c64e847354e47e10008
+      internalID: 783434418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterwisp_sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4fdc2e65d934149aa01540111e29b5
+      internalID: -416117054
       vertices: []
       indices: 
       edges: []
@@ -1016,6 +1126,11 @@ TextureImporter:
       waterwisp_sprite_sheet_21: -7634265058637975181
       waterwisp_sprite_sheet_22: 4709058513682910476
       waterwisp_sprite_sheet_23: 1727630350885890930
+      waterwisp_sprite_sheet_24: -1030493014
+      waterwisp_sprite_sheet_25: -1694224640
+      waterwisp_sprite_sheet_26: -1515033302
+      waterwisp_sprite_sheet_27: 783434418
+      waterwisp_sprite_sheet_28: -416117054
       waterwisp_sprite_sheet_3: -5059953865444582337
       waterwisp_sprite_sheet_4: 4023947961210495951
       waterwisp_sprite_sheet_5: -3710979782066131315

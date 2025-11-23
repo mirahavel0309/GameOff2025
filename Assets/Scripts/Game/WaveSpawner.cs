@@ -27,12 +27,12 @@ public class WaveSpawner : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         yield return StartCoroutine(SpawnWave());
     }
-    public IEnumerator SpawnWaveCoroutine()
+    public IEnumerator SpawnWaveCoroutine(int enemyCount = 3)
     {
-        yield return StartCoroutine(SpawnWave());
+        yield return StartCoroutine(SpawnWave(enemyCount));
     }
 
-    private IEnumerator SpawnWave()
+    private IEnumerator SpawnWave(int enemyCount = 3)
     {
         if (waveActive)
             yield break;
@@ -40,7 +40,7 @@ public class WaveSpawner : MonoBehaviour
         waveActive = true;
         currentWave++;
 
-        for (int i = 0; i < cardsPerWave; i++)
+        for (int i = 0; i < enemyCount; i++)
         {
             yield return new WaitForSeconds(spawnDelay);
             SpawnRandomEnemyCard();
