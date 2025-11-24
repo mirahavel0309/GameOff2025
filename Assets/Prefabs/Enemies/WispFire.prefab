@@ -447,6 +447,7 @@ GameObject:
   - component: {fileID: 8922424402728669570}
   - component: {fileID: 8469931686135480976}
   - component: {fileID: 5490996520537943343}
+  - component: {fileID: 8561590454015779370}
   m_Layer: 0
   m_Name: CardArt
   m_TagString: Untagged
