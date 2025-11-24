@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1412600133853498528}
   - component: {fileID: 1215650501361886922}
   - component: {fileID: 8641361682647678523}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 5278898677840557890}
   - component: {fileID: 6952861829707331195}
   - component: {fileID: 6263082922313263319}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3594013314797568617}
   - component: {fileID: 9070761382798154575}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hightlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
   - component: {fileID: 5747047734960535275}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WispWater
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -343,7 +343,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPower: 100
   maxHealth: 15
-  state: 0
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
@@ -494,7 +493,7 @@ GameObject:
   - component: {fileID: 8922424402728669570}
   - component: {fileID: 8469931686135480976}
   - component: {fileID: 5490996520537943343}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CardArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,6 +604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HPBar
       objectReference: {fileID: 0}
+    - target: {fileID: 181281477184934585, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2373855660703006710, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -684,6 +687,14 @@ PrefabInstance:
     - target: {fileID: 2373855660703006710, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115948033877064229, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214681682728906579, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

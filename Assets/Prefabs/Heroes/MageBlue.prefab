@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5278898677840557890}
   - component: {fileID: 6952861829707331195}
   - component: {fileID: 7023221105722195758}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3594013314797568617}
   - component: {fileID: 9070761382798154575}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hightlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
   - component: {fileID: -6943740390802484920}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MageBlue
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -240,9 +240,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPower: 100
   maxHealth: 25
-  state: 1
-  attackText: {fileID: 0}
-  healthText: {fileID: 0}
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 7073153086154531137}
@@ -365,8 +362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f984bcfb3ac8764e945ae2421d0f0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strong: 
-  wakness: 
+  strong: 01000000
+  wakness: 02000000
 --- !u!1 &7515075531823105663
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +376,7 @@ GameObject:
   - component: {fileID: 2861701638089755853}
   - component: {fileID: 3249091342032797792}
   - component: {fileID: 7349124249275102663}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +477,7 @@ GameObject:
   - component: {fileID: 8922424402728669570}
   - component: {fileID: 8469931686135480976}
   - component: {fileID: 7073153086154531137}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CardArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,6 +588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HPBar
       objectReference: {fileID: 0}
+    - target: {fileID: 181281477184934585, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2373855660703006710, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -670,6 +671,14 @@ PrefabInstance:
     - target: {fileID: 2373855660703006710, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115948033877064229, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214681682728906579, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

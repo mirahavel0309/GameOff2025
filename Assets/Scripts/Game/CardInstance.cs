@@ -30,6 +30,11 @@ public class CardInstance : MonoBehaviour
     private bool isSelected = false;
     private Vector3 originalPosition;
     private CharacterResistances resistances;
+    // Public accessors for UI / external systems
+    public int CurrentHealth => currentHealth;
+    public int MaxHealth => maxHealth;
+    public CharacterResistances Resistances => resistances;
+    public IReadOnlyList<StatusEffect> ActiveEffects => activeEffects.AsReadOnly();
     protected ProgressBar hpBar;
     protected static CardInstance selectedAttacker;
     private void Awake()
@@ -96,7 +101,7 @@ public class CardInstance : MonoBehaviour
             ClearSelection();
             return;
         }
-}
+    }
     public virtual void UpdateVisuals()
     {
         if (hpBar)
@@ -110,11 +115,17 @@ public class CardInstance : MonoBehaviour
     {
         isSelected = true;
         ToggleSelection();
+        // Show hover UI immediately via HoverManager
+        if (HoverManager.Instance != null)
+            HoverManager.Instance.ShowNow(this);
     }
     private void OnMouseExit()
     {
         isSelected = false;
         ToggleSelection();
+        // Hide hover UI
+        if (HoverManager.Instance != null)
+            HoverManager.Instance.HideNow(this);
     }
 
     private void ToggleSelection()
@@ -148,9 +159,9 @@ public class CardInstance : MonoBehaviour
 
     public int TakeDamage(int dmg, ElementType element, int accuracy = 100)
     {
-        if(accuracy < 100)
+        if (accuracy < 100)
         {
-            if(Random.Range(1, 100) > accuracy)
+            if (Random.Range(1, 100) > accuracy)
             {
                 EffectsManager.instance.CreateFloatingText(transform.position, "Miss", Color.black);
                 return 0;
@@ -199,14 +210,14 @@ public class CardInstance : MonoBehaviour
 
             // Apply resistance (e.g., 50 = 50% reduction, -20 = +20% damage)
             finalDamage = Mathf.RoundToInt(dmg * (1f - (resistance / 100f)));
-            EffectsManager.instance.CreateFloatingText(transform.position, finalDamage.ToString() , textColor);
+            EffectsManager.instance.CreateFloatingText(transform.position, finalDamage.ToString(), textColor);
         }
 
 
         int realDamageDone = Mathf.Min(finalDamage, currentHealth); // needed for life drain skill
         currentHealth -= finalDamage;
 
-        if(hpBar)
+        if (hpBar)
             hpBar.SetValue(currentHealth, maxHealth);
 
         StartCoroutine(Shake(0.35f, 0.25f));
@@ -222,7 +233,7 @@ public class CardInstance : MonoBehaviour
     {
         currentHealth = Mathf.Min(maxHealth, currentHealth + amount);
         UpdateVisuals();
-        if(amount > 0)
+        if (amount > 0)
         {
             // Optional floating text feedback
             EffectsManager.instance.CreateFloatingText(
@@ -314,5 +325,11 @@ public class CardInstance : MonoBehaviour
         }
 
         transform.position = originalPos;
+    }
+    public Sprite GetCardVisual()
+    {
+        if (cardSprite != null)
+            return cardSprite.sprite;
+        return null;
     }
 }
