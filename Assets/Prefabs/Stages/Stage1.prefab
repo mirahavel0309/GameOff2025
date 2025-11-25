@@ -323,7 +323,7 @@ Transform:
   m_GameObject: {fileID: 3964152501227762658}
   serializedVersion: 2
   m_LocalRotation: {x: 0.049758814, y: 0.088996276, z: -0.04375597, w: 0.99382555}
-  m_LocalPosition: {x: -4.4141, y: 31.239992, z: 2.8990374}
+  m_LocalPosition: {x: -8.87, y: 32.05, z: -1.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -445,6 +445,8 @@ MonoBehaviour:
   - {fileID: 6920351801894929110}
   - {fileID: 1169516690173488600}
   - {fileID: 7376237778282137747}
+  skybox: {fileID: 2100000, guid: d4834a8b6f4336f4cbac5b99a74500a0, type: 2}
+  StageBoss: {fileID: 6709276644064086281, guid: 1987098d3e7950b4083a0b8bffb94ba8, type: 3}
   enemyEnterLocation: {fileID: 6434012521762773382}
   enemyLocations:
   - {fileID: 900942098131315695}
@@ -657,7 +659,7 @@ Transform:
   m_GameObject: {fileID: 7228815064309087811}
   serializedVersion: 2
   m_LocalRotation: {x: 0.057437044, y: 0.36725417, z: -0.02272776, w: 0.92806727}
-  m_LocalPosition: {x: 6.36, y: 31.24, z: -6.74}
+  m_LocalPosition: {x: 1.9041004, y: 32.05001, z: -11.489037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -688,7 +690,7 @@ Transform:
   m_GameObject: {fileID: 8294681473345919124}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -724,7 +726,7 @@ Transform:
   m_GameObject: {fileID: 8585545243726760155}
   serializedVersion: 2
   m_LocalRotation: {x: 0.15843984, y: 0.049160182, z: -0.007898305, w: 0.9861124}
-  m_LocalPosition: {x: -4.8500004, y: 37.42, z: -11.709999}
+  m_LocalPosition: {x: -5.23, y: 42.33, z: -15.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1024,7 +1026,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2b1c68ed2337f2f4da290f70095a2aec, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b1c68ed2337f2f4da290f70095a2aec, type: 3}
       propertyPath: m_LocalScale.y
@@ -1040,7 +1042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b1c68ed2337f2f4da290f70095a2aec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.97
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b1c68ed2337f2f4da290f70095a2aec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1076,7 +1078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b1c68ed2337f2f4da290f70095a2aec, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 2b1c68ed2337f2f4da290f70095a2aec, type: 3}
       propertyPath: m_CastShadows
@@ -1122,6 +1124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerEnterLocation: {fileID: 0}
   playerLocations: []
+  skybox: {fileID: 0}
+  StageBoss: {fileID: 0}
   enemyEnterLocation: {fileID: 0}
   enemyLocations: []
   exitPath: []

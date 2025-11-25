@@ -64,8 +64,8 @@ public class CharacterHoverUI : MonoBehaviour
                     weak += element.ToString() + ", ";
                 }
             }
-            strongText.text = $"Strong: {strong.TrimEnd(' ', ',')}";
-            weakText.text = $"Weak: {weak.TrimEnd(' ', ',')}";
+            strongText.text = $"{strong.TrimEnd(' ', ',')}";
+            weakText.text = $"{weak.TrimEnd(' ', ',')}";
         }
         else
         {

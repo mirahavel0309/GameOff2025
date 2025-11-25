@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class AttackMonsterSkill : BaseMonsterSkill
 {
@@ -19,9 +20,11 @@ public class AttackMonsterSkill : BaseMonsterSkill
     public StatusEffect statusEffect;   // The effect to apply
     [Range(0, 100)]
     public int chanceToProc = 0;        // % chance to apply
+    private List<PassiveSkill> passiveSkills;
 
     public override IEnumerator Execute(CardInstance target)
     {
+        passiveSkills = GetComponents<PassiveSkill>().ToList();
         cardInstance = this.GetComponent<CardInstance>();
         if (isProjectileAttack)
         {
@@ -32,7 +35,16 @@ public class AttackMonsterSkill : BaseMonsterSkill
             yield return StartCoroutine(PerformPhysicalAttack(target));
         }
     }
-    
+    public int GetAttackPower()
+    {
+        int final = damage;
+
+        foreach (var passive in passiveSkills)
+            final = passive.ModifyAttack(final);
+
+        return final;
+    }
+
     public IEnumerator PerformPhysicalAttack(CardInstance target)
     {
 
@@ -53,7 +65,7 @@ public class AttackMonsterSkill : BaseMonsterSkill
         if (accStatus != null)
             accuracy -= accStatus.accuracyPenalty;
         // Deal damage
-        target.TakeDamage(Mathf.RoundToInt(damage * cardInstance.attackPower * 0.01f), element, accuracy);
+        target.TakeDamage(Mathf.RoundToInt(GetAttackPower() * cardInstance.attackPower * 0.01f), element, accuracy);
         if (statusEffect != null)
         {
             int roll = Random.Range(0, 100);
@@ -114,7 +126,7 @@ public class AttackMonsterSkill : BaseMonsterSkill
             if (accStatus != null)
                 accuracy -= accStatus.accuracyPenalty;
 
-            target.TakeDamage(Mathf.RoundToInt(damage * cardInstance.attackPower * 0.01f), element, accuracy);
+            target.TakeDamage(Mathf.RoundToInt(GetAttackPower() * cardInstance.attackPower * 0.01f), element, accuracy);
 
             // Proc status effects
             if (statusEffect != null)

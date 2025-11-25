@@ -17,6 +17,7 @@ public class MassDamageSkill : BaseSkill
     [Header("Damage")]
     public int baseDamage = 8;
     public ElementType damageElement;
+    public int baseAccuracy = 90;
     [Header("Status Effect")]
     public StatusEffect statusEffect;
     [Range(0, 100)]
@@ -71,7 +72,7 @@ public class MassDamageSkill : BaseSkill
             }
 
             HeroInstance hero = GameManager.Instance.GetHeroOfelement(damageElement);
-            target.TakeDamage(Mathf.RoundToInt(baseDamage * (hero.spellPower / 100f)), damageElement);
+            target.TakeDamage(Mathf.RoundToInt(baseDamage * (hero.spellPower / 100f)), damageElement, baseAccuracy);
 
             if (statusEffect != null)
             {

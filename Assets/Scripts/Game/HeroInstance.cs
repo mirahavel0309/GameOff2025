@@ -60,9 +60,9 @@ public class HeroInstance : CardInstance
 
         yield return new WaitForSeconds(0.5f);
 
-        if (currentContainer is TroopsField field)
+        if (troopsField != null)
         {
-            field.RemoveCard(this);
+            troopsField.RemoveCard(this);
         }
         PlayerHand.instance.RemoveCardsOfType(mainElement);
         GameManager.Instance.RemoveElementFromDeck(mainElement);

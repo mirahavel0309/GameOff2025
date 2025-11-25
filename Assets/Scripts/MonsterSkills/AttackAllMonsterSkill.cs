@@ -9,6 +9,7 @@ public class AttackAllMonsterSkill : BaseMonsterSkill
     public ElementType element = ElementType.Physical;
     public GameObject selfEffectPrefab;
     public GameObject attackEffetPrefab;
+    public int baseAccuracy = 85;
     private bool castEventTriggered = false;
 
     [Header("Status effect Settings")]
@@ -44,7 +45,7 @@ public class AttackAllMonsterSkill : BaseMonsterSkill
 
         foreach (var hero in GameManager.Instance.PlayerHeroes)
         {
-            int accuracy = 100;
+            int accuracy = baseAccuracy;
             LowerAccuracyStatus accStatus = GetComponent<LowerAccuracyStatus>();
             if (accStatus != null)
                 accuracy -= accStatus.accuracyPenalty;

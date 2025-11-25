@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class AttackSkill : BaseSkill
 {
@@ -23,14 +24,25 @@ public class AttackSkill : BaseSkill
     public int chanceToProc = 0;        // % chance to apply
     public AudioClip soundLaunch;
     public AudioClip soundHit;
+    private List<PassiveSkill> passiveSkills;
     public override void Execute()
     {
         GameManager.Instance.StartCoroutine(WaitForTargetAndAttack());
+        passiveSkills = GetComponents<PassiveSkill>().ToList();
     }
     public override string UpdatedDescription()
     {
         HeroInstance hero = GameManager.Instance.GetHeroOfelement(damageType);
         return description.Replace("<damage>", Mathf.RoundToInt(baseDamage * (hero.spellPower / 100f)).ToString());
+    }
+    public int GetAttackPower()
+    {
+        int final = baseDamage;
+
+        foreach (var passive in passiveSkills)
+            final = passive.ModifyAttack(final);
+
+        return final;
     }
 
     private IEnumerator WaitForTargetAndAttack()
@@ -49,7 +61,7 @@ public class AttackSkill : BaseSkill
         yield return GameManager.Instance.StartCoroutine(PerformAttackVisuals(target));
 
         HeroInstance hero = GameManager.Instance.GetHeroOfelement(damageType);
-        target.TakeDamage(Mathf.RoundToInt(baseDamage * (hero.spellPower / 100f)), damageType);
+        target.TakeDamage(Mathf.RoundToInt(GetAttackPower() * (hero.spellPower / 100f)), damageType);
         if (statusEffect != null)
         {
             int roll = Random.Range(0, 100);

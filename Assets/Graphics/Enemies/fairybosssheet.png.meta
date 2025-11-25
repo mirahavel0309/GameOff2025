@@ -1,0 +1,852 @@
+fileFormatVersion: 2
+guid: 804ab314ce9c4c24db25c12d12c1a301
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2561467258347170871
+    second: fairybosssheet_0
+  - first:
+      213: -1029185867224330346
+    second: fairybosssheet_1
+  - first:
+      213: 2386906973974647483
+    second: fairybosssheet_2
+  - first:
+      213: -2773360605001165513
+    second: fairybosssheet_3
+  - first:
+      213: -2478929800582925405
+    second: fairybosssheet_4
+  - first:
+      213: -3063236324092965124
+    second: fairybosssheet_5
+  - first:
+      213: -5043901478760203397
+    second: fairybosssheet_6
+  - first:
+      213: 5297896194969908191
+    second: fairybosssheet_7
+  - first:
+      213: 3903599769979030054
+    second: fairybosssheet_8
+  - first:
+      213: -7608891836928210976
+    second: fairybosssheet_9
+  - first:
+      213: 7648640017129436323
+    second: fairybosssheet_10
+  - first:
+      213: -1409227869759796747
+    second: fairybosssheet_11
+  - first:
+      213: -8513000697444847294
+    second: fairybosssheet_12
+  - first:
+      213: 2859523561350979949
+    second: fairybosssheet_13
+  - first:
+      213: 8283751877745219560
+    second: fairybosssheet_14
+  - first:
+      213: 3461763089219483290
+    second: fairybosssheet_15
+  - first:
+      213: -1392484356701342475
+    second: fairybosssheet_16
+  - first:
+      213: -7612177398451033449
+    second: fairybosssheet_17
+  - first:
+      213: 9182150125031516835
+    second: fairybosssheet_18
+  - first:
+      213: -2944112587856317462
+    second: fairybosssheet_19
+  - first:
+      213: -4112421228225942741
+    second: fairybosssheet_20
+  - first:
+      213: 5721715651571139987
+    second: fairybosssheet_21
+  - first:
+      213: 408372995071164889
+    second: fairybosssheet_22
+  - first:
+      213: 3242639114075374224
+    second: fairybosssheet_23
+  - first:
+      213: 8479325982793055732
+    second: fairybosssheet_24
+  - first:
+      213: -4066779503568744498
+    second: fairybosssheet_25
+  - first:
+      213: -121346529487873439
+    second: fairybosssheet_26
+  - first:
+      213: -1289897401601617186
+    second: fairybosssheet_27
+  - first:
+      213: -495311283213650408
+    second: fairybosssheet_28
+  - first:
+      213: 1352585751931429643
+    second: fairybosssheet_29
+  - first:
+      213: -2639814550617114974
+    second: fairybosssheet_30
+  - first:
+      213: -7769267686813427263
+    second: fairybosssheet_31
+  - first:
+      213: -3055323729707447371
+    second: fairybosssheet_32
+  - first:
+      213: 2146782600959846567
+    second: fairybosssheet_33
+  - first:
+      213: -7952404337425606491
+    second: fairybosssheet_34
+  - first:
+      213: 2533090916370942653
+    second: fairybosssheet_35
+  - first:
+      213: 1432844339701671914
+    second: fairybosssheet_36
+  - first:
+      213: -7230375049175285479
+    second: fairybosssheet_37
+  - first:
+      213: 691633371813774152
+    second: fairybosssheet_38
+  - first:
+      213: -2672001502827017348
+    second: fairybosssheet_39
+  - first:
+      213: 5618611605593507258
+    second: fairybosssheet_40
+  - first:
+      213: -9071935845620877828
+    second: fairybosssheet_41
+  - first:
+      213: -1035817728132208550
+    second: fairybosssheet_42
+  - first:
+      213: 4930889690370217457
+    second: fairybosssheet_43
+  - first:
+      213: -7483557052189924794
+    second: fairybosssheet_44
+  - first:
+      213: 4243630786224831992
+    second: fairybosssheet_45
+  - first:
+      213: -5992640421289638393
+    second: fairybosssheet_46
+  - first:
+      213: 2509036355548469062
+    second: fairybosssheet_47
+  - first:
+      213: -3959334988354159960
+    second: fairybosssheet_48
+  - first:
+      213: 2636330373233383645
+    second: fairybosssheet_49
+  - first:
+      213: 1630053835153462649
+    second: fairybosssheet_50
+  - first:
+      213: -3528931532627690279
+    second: fairybosssheet_51
+  - first:
+      213: 5379136359362688683
+    second: fairybosssheet_52
+  - first:
+      213: 3022159141137473705
+    second: fairybosssheet_53
+  - first:
+      213: -3709582560713569373
+    second: fairybosssheet_54
+  - first:
+      213: 6565922928290294438
+    second: fairybosssheet_55
+  - first:
+      213: -1335116445343672215
+    second: fairybosssheet_56
+  - first:
+      213: 4196815406996993888
+    second: fairybosssheet_57
+  - first:
+      213: -144482428181189535
+    second: fairybosssheet_58
+  - first:
+      213: -7217414550687749811
+    second: fairybosssheet_59
+  - first:
+      213: -5923910204424755134
+    second: fairybosssheet_60
+  - first:
+      213: -5341924408639358682
+    second: fairybosssheet_61
+  - first:
+      213: 9097252077059469572
+    second: fairybosssheet_62
+  - first:
+      213: -4504587200997853971
+    second: fairybosssheet_63
+  - first:
+      213: -5699597586995440294
+    second: fairybosssheet_64
+  - first:
+      213: 9103623940287180107
+    second: fairybosssheet_65
+  - first:
+      213: 201007050739613646
+    second: fairybosssheet_66
+  - first:
+      213: 8217299234762500829
+    second: fairybosssheet_67
+  - first:
+      213: -5127273853019194697
+    second: fairybosssheet_68
+  - first:
+      213: -7356662028012062696
+    second: fairybosssheet_69
+  - first:
+      213: 7911104828660916587
+    second: fairybosssheet_70
+  - first:
+      213: -2895647200117545749
+    second: fairybosssheet_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fairybosssheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c35c6a8917d37cd0800000000000000
+      internalID: -2561467258347170871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 320
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69fcd3818e897b1f0800000000000000
+      internalID: -1029185867224330346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 320
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb259a71f3fff1120800000000000000
+      internalID: 2386906973974647483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 320
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735d7d0493b0389d0800000000000000
+      internalID: -2773360605001165513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_4
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 320
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a3ff15fa72199dd0800000000000000
+      internalID: -2478929800582925405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe8d5ffac23d75d0800000000000000
+      internalID: -3063236324092965124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_6
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 240
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b3e6c2456700ab0800000000000000
+      internalID: -5043901478760203397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 240
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd333161588e58940800000000000000
+      internalID: 5297896194969908191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_8
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 240
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a85e20f4f5c2630800000000000000
+      internalID: 3903599769979030054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7468d1039c76690800000000000000
+      internalID: -7608891836928210976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a476d3429d652a60800000000000000
+      internalID: 7648640017129436323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_11
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 160
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f9036708ba617ce0800000000000000
+      internalID: -1409227869759796747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_12
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 160
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 241b52038febbd980800000000000000
+      internalID: -8513000697444847294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_13
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 160
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d616f2557811fa720800000000000000
+      internalID: 2859523561350979949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e79a70917cc5f270800000000000000
+      internalID: 8283751877745219560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a967c7d3037aa0030800000000000000
+      internalID: 3461763089219483290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_16
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 80
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f43783fad6ecace0800000000000000
+      internalID: -1392484356701342475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_17
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 80
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79aa116bcfc1c5690800000000000000
+      internalID: -7612177398451033449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_18
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 80
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aaefccb3ec8d6f70800000000000000
+      internalID: 9182150125031516835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_19
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3711e23396427d0800000000000000
+      internalID: -2944112587856317462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b21d47eaebde6c0800000000000000
+      internalID: -4112421228225942741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairybosssheet_21
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395c0b5f11e976f40800000000000000
+      internalID: 5721715651571139987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 11cf99cef82840f4da663be84d54ef6a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fairybosssheet_0: -2561467258347170871
+      fairybosssheet_1: -1029185867224330346
+      fairybosssheet_10: 7648640017129436323
+      fairybosssheet_11: -1409227869759796747
+      fairybosssheet_12: -8513000697444847294
+      fairybosssheet_13: 2859523561350979949
+      fairybosssheet_14: 8283751877745219560
+      fairybosssheet_15: 3461763089219483290
+      fairybosssheet_16: -1392484356701342475
+      fairybosssheet_17: -7612177398451033449
+      fairybosssheet_18: 9182150125031516835
+      fairybosssheet_19: -2944112587856317462
+      fairybosssheet_2: 2386906973974647483
+      fairybosssheet_20: -4112421228225942741
+      fairybosssheet_21: 5721715651571139987
+      fairybosssheet_3: -2773360605001165513
+      fairybosssheet_4: -2478929800582925405
+      fairybosssheet_5: -3063236324092965124
+      fairybosssheet_6: -5043901478760203397
+      fairybosssheet_7: 5297896194969908191
+      fairybosssheet_8: 3903599769979030054
+      fairybosssheet_9: -7608891836928210976
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

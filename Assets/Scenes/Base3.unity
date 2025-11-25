@@ -199,7 +199,6 @@ GameObject:
   - component: {fileID: 85264204}
   - component: {fileID: 85264203}
   - component: {fileID: 85264202}
-  - component: {fileID: 85264208}
   - component: {fileID: 85264207}
   - component: {fileID: 85264206}
   m_Layer: 0
@@ -332,6 +331,7 @@ MonoBehaviour:
   playerTurn: 1
   actionsThisTurn: 0
   maxActionsPerTurn: 3
+  skybox: {fileID: 2100000, guid: 5d0ff66652aaf0843b86288d7d0c6aa0, type: 2}
   heroPrefab: {fileID: 7403856116639826396, guid: 44044dba6aaef0447950080e5a1237e4, type: 3}
   playerDeck: {fileID: 1029937652}
   playerField: {fileID: 941959983}
@@ -347,14 +347,16 @@ MonoBehaviour:
   allStages:
   - {fileID: 2834218747037540613, guid: e618952bd17bcad419fbcf7890b9cbcb, type: 3}
   - {fileID: 2834218747037540613, guid: 68cd82868b3d59b499d1fd79d7f1f3cd, type: 3}
+  - {fileID: 2834218747037540613, guid: 113291d2eb7f6d745a855d29acf46e39, type: 3}
+  - {fileID: 2834218747037540613, guid: 2795d4b69f8f40344ba7e22d299ec4a2, type: 3}
   roomOrigin: {fileID: 0}
   blackFade: {fileID: 430195005}
   cam: {fileID: 519420031}
   camController: {fileID: 519420033}
-  hpScaleIncPerWave: 0.05
+  hpScaleIncPerWave: 0.04
   dmgScaleIncPerWave: 0.02
-  hpScaleIncPerStage: 0.5
-  dmgScaleIncPerStage: 0.2
+  hpScaleIncPerStage: 0.2
+  dmgScaleIncPerStage: 0.1
   enemyTurnDuration: 2
   healLevels: 020000000300000005000000
   allSkills:
@@ -369,25 +371,6 @@ MonoBehaviour:
   waveActive: 0
   heroSelectionData: {fileID: 11400000, guid: 811c7989e4ee13f42b251d2f32f370af, type: 2}
   heroActionMenuPrefab: {fileID: 1022675898966368115, guid: ae7e434581da284458b79177c41c0cc1, type: 3}
---- !u!114 &85264208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85264201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 043a49b06f92a0147a25f8e0c89b2304, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerEnterLocation: {fileID: 0}
-  playerLocations: []
-  enemyEnterLocation: {fileID: 0}
-  enemyLocations: []
-  exitPath: []
-  exitCameraPath: []
-  enterCameraPath: []
 --- !u!1 &133252082
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +840,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0.01834381, b: 0.047169805, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2139,13 +2122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebf14d994512ad478e989e99fb0b3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  cam: {fileID: 519420031}
-  maxDistance: 200
   hoverUIPrefab: {fileID: 3677018592636668436, guid: b50439dc6f37fbf41947599515f4975c, type: 3}
-  hoverDelay: 0.08
 --- !u!4 &1247837221
 Transform:
   m_ObjectHideFlags: 0
@@ -2294,7 +2271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 4211456961534145143, guid: af6eb3f28d9b7bf488ab33b5b7033738, type: 3}
   - {fileID: 4211456961534145143, guid: 55f5926adf1343044aecdd711d43477e, type: 3}
   - {fileID: 4211456961534145143, guid: be79d6d370e7a9448b458773f3844744, type: 3}
   - {fileID: 4211456961534145143, guid: 3a8e1d3c40086884480d3773c710e230, type: 3}
@@ -2303,12 +2279,14 @@ MonoBehaviour:
   - {fileID: 4211456961534145143, guid: c31c871803d03a14fa0b1631b70537e7, type: 3}
   - {fileID: 4211456961534145143, guid: 99c5cde7d720cae4aaf7bd622d309fe2, type: 3}
   - {fileID: 4211456961534145143, guid: 1a93b1caa91e1bc41bec195ec13c5b04, type: 3}
+  - {fileID: 4211456961534145143, guid: af6eb3f28d9b7bf488ab33b5b7033738, type: 3}
   enemyField: {fileID: 960329713}
   cardPrefab: {fileID: 6709276644064086281, guid: 8e4c7e8762720134ca8f85c82daded8e, type: 3}
-  cardsPerWave: 3
+  cardsPerWave: 1
   spawnDelay: 0.5
   healthScale: 1
   damageScale: 1
+  BossPrefab: {fileID: 0}
 --- !u!224 &1453165598 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1799675912029699754, guid: b50439dc6f37fbf41947599515f4975c, type: 3}

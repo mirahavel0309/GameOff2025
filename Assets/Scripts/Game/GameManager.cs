@@ -20,12 +20,13 @@ public class GameManager : MonoBehaviour
     public bool playerTurn = true;
     public int actionsThisTurn = 3;
     public int maxActionsPerTurn = 3;
+    public Material skybox;
 
     [Header("References")]
     [SerializeField] private HeroInstance heroPrefab;
     [SerializeField] private ElementalDeck playerDeck;
     public TroopsField playerField;
-    [SerializeField] private TroopsField enemyField;
+    [SerializeField] public TroopsField enemyField;
     [SerializeField] private WaveSpawner enemySpawner;
     [SerializeField] private PlayerInputController playerInput;
     [SerializeField] private List<HeroCard> startingHeroes;
@@ -170,6 +171,15 @@ public class GameManager : MonoBehaviour
                 // Return control to the player
                 StartCoroutine(PlayerTurnRoutine());
             }
+            else if (waveCounter == maxWavesCount)
+            {
+                InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
+                yield return enemySpawner.SpawnBossCoroutine();
+                waveActive = true;
+
+                // Return control to the player
+                StartCoroutine(PlayerTurnRoutine());
+            }
             else
             {
                 StartCoroutine(EndLevel());
@@ -243,6 +253,7 @@ public class GameManager : MonoBehaviour
             if (enemyCard == null) continue;
 
             yield return StartCoroutine(enemyCard.ProcessStartOfTurnEffects());
+            yield return StartCoroutine(enemyCard.ProcessPassivesTurnStart());
 
             yield return new WaitForSeconds(0.2f);
         }
@@ -255,10 +266,12 @@ public class GameManager : MonoBehaviour
             if (enemyCard == null) continue;
             if (playerCards.Count == 0) break;
 
-            BaseMonsterSkill skill = enemyCard.gameObject.GetComponent<BaseMonsterSkill>();
+            BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>();
+
+            BaseMonsterSkill selectedSkill = skills[Random.Range(0, skills.Length)];
 
             CardInstance target = playerCards[Random.Range(0, playerCards.Count)];
-            yield return skill.StartCoroutine(skill.Execute(target));
+            yield return selectedSkill.StartCoroutine(selectedSkill.Execute(target));
             yield return new WaitForSeconds(0.5f);
         }
 
@@ -440,8 +453,9 @@ public class GameManager : MonoBehaviour
             //yield return StartCoroutine(MoveHeroesThroughPath(entryPathPoints));
 
 
-            waveCounter = 0;
+            waveCounter = 1;
             yield return enemySpawner.SpawnWaveCoroutine();
+            InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
             waveActive = true;
             StartCoroutine(PlayerTurnRoutine());
         }
@@ -566,9 +580,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
-
     private IEnumerator LoadNextRoomEnvironment()
     {
         GameBoard roomPrefab = allStages[currentStageIndex];
@@ -584,6 +595,8 @@ public class GameManager : MonoBehaviour
         exitPathPoints = currentRoom.exitPath;
         enterCameraPath = currentRoom.enterCameraPath;
         exitCameraPath = currentRoom.exitCameraPath;
+        RenderSettings.skybox = currentRoom.skybox;
+        enemySpawner.BossPrefab = currentRoom.StageBoss;
 
         playerField.ClearPositions();
         foreach (var hero in PlayerHeroes)

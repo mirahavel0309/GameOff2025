@@ -15,7 +15,7 @@ public class TroopsField : MonoBehaviour
     private Dictionary<CardInstance, Transform> cardToPosition = new Dictionary<CardInstance, Transform>();
     private HashSet<Transform> occupiedPositions = new HashSet<Transform>();
 
-    public void AddCard(CardInstance card)
+    public void AddCard(CardInstance card, bool setPosition = true)
     {
         if (card == null)
             return;
@@ -32,8 +32,10 @@ public class TroopsField : MonoBehaviour
         occupiedPositions.Add(freeSlot);
 
         // Place card at spawn point and animate move to target
-        card.transform.position = spawnPoint.position;
+        if(setPosition)
+            card.transform.position = spawnPoint.position;
         StartCoroutine(MoveCardToPosition(card, freeSlot.position));
+        card.troopsField = this;
     }
     public void ReasignPositions(CardInstance card)
     {

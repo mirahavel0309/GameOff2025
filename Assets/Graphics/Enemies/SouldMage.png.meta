@@ -103,7 +103,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -117,7 +117,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -140,7 +140,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -182,10 +182,10 @@ TextureImporter:
       name: SouldMage_0
       rect:
         serializedVersion: 2
-        x: 113
-        y: 199
-        width: 79
-        height: 80
+        x: 0
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: SouldMage_1
       rect:
         serializedVersion: 2
-        x: 241
-        y: 279
-        width: 18
-        height: 17
+        x: 100
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: SouldMage_2
       rect:
         serializedVersion: 2
-        x: 341
-        y: 279
-        width: 18
-        height: 17
+        x: 200
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,10 +248,10 @@ TextureImporter:
       name: SouldMage_3
       rect:
         serializedVersion: 2
-        x: 13
-        y: 199
-        width: 79
-        height: 79
+        x: 300
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,10 +270,10 @@ TextureImporter:
       name: SouldMage_4
       rect:
         serializedVersion: 2
-        x: 213
-        y: 199
-        width: 79
-        height: 79
+        x: 0
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,10 +292,10 @@ TextureImporter:
       name: SouldMage_5
       rect:
         serializedVersion: 2
-        x: 300
-        y: 242
-        width: 16
-        height: 16
+        x: 100
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,10 +314,10 @@ TextureImporter:
       name: SouldMage_6
       rect:
         serializedVersion: 2
-        x: 313
-        y: 199
-        width: 79
-        height: 79
+        x: 200
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: SouldMage_7
       rect:
         serializedVersion: 2
-        x: 383
-        y: 244
-        width: 16
-        height: 16
+        x: 300
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,10 +358,10 @@ TextureImporter:
       name: SouldMage_8
       rect:
         serializedVersion: 2
-        x: 41
-        y: 179
-        width: 18
-        height: 17
+        x: 0
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -380,10 +380,10 @@ TextureImporter:
       name: SouldMage_9
       rect:
         serializedVersion: 2
-        x: 141
-        y: 179
-        width: 18
-        height: 17
+        x: 100
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,297 +398,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: SouldMage_10
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 179
-        width: 18
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59c031da6ce268670800000000000000
-      internalID: 8540565174196833429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_11
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 142
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6de67ff5e67db5810800000000000000
-      internalID: 1755233348847365846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_12
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 99
-        width: 79
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89090827494f1a650800000000000000
-      internalID: 6242539476925583512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_13
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5df5152149a4d3f30800000000000000
-      internalID: 4556880397791748053
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_14
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 142
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cedb58bbc50d3e670800000000000000
-      internalID: 8566920012890488300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_15
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 99
-        width: 79
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ab8f64b88e983faa0800000000000000
-      internalID: -6128403036059010886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_16
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 94ad6d6dfcb7729d0800000000000000
-      internalID: -2799132510794622391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_17
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 142
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5be2cef7e92a28bc0800000000000000
-      internalID: -3782281935403077963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_18
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 99
-        width: 79
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 75f422e0aceb21970800000000000000
-      internalID: 8724245203199872855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_19
-      rect:
-        serializedVersion: 2
-        x: 283
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 452aa6c415cc7f3f0800000000000000
-      internalID: -866999753699057068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_20
-      rect:
-        serializedVersion: 2
-        x: 313
-        y: 99
-        width: 79
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1944e48a6b2f3ee30800000000000000
-      internalID: 4531732516386522257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_21
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 0
-        width: 79
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a54b695e1add7c150800000000000000
-      internalID: 5892922324848915546
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SouldMage_22
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 0
-        width: 79
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e0a4e4481b7251680800000000000000
-      internalID: -8785071854733866482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8cf5a99bd70e468428a84124aee347ac
     internalID: 0
     vertices: []
     indices: 
@@ -700,20 +414,7 @@ TextureImporter:
     nameFileIdTable:
       SouldMage_0: 6269664910093430196
       SouldMage_1: -6901480040502898416
-      SouldMage_10: 8540565174196833429
-      SouldMage_11: 1755233348847365846
-      SouldMage_12: 6242539476925583512
-      SouldMage_13: 4556880397791748053
-      SouldMage_14: 8566920012890488300
-      SouldMage_15: -6128403036059010886
-      SouldMage_16: -2799132510794622391
-      SouldMage_17: -3782281935403077963
-      SouldMage_18: 8724245203199872855
-      SouldMage_19: -866999753699057068
       SouldMage_2: 6503678018540300304
-      SouldMage_20: 4531732516386522257
-      SouldMage_21: 5892922324848915546
-      SouldMage_22: -8785071854733866482
       SouldMage_3: 544268757613305645
       SouldMage_4: 1915905804173614986
       SouldMage_5: 1153481829575281991

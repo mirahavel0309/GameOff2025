@@ -11,6 +11,7 @@ public class StormSkill : BaseSkill
     [Header("Damage Settings")]
     public int baseDamage = 15;
     public ElementType damageType;
+    public int baseAccuracy = 85;
     public StatusEffect statusEffect;   // The effect to apply
     [Range(0, 100)]
     public int chanceToProc = 0;        // % chance to apply
@@ -84,7 +85,7 @@ public class StormSkill : BaseSkill
         foreach (var enemy in enemies)
         {
             if (enemy != null)
-                enemy.TakeDamage(damage, damageType);
+                enemy.TakeDamage(damage, damageType, baseAccuracy);
             if (statusEffect != null)
             {
                 int roll = Random.Range(0, 100);

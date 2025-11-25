@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 23e4606124f9a0343beb300ce4b2b3f3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -578164960704136706
+    second: mediumsheet_0
+  - first:
+      213: -8546856621633645542
+    second: mediumsheet_1
+  - first:
+      213: 8050753059215261586
+    second: mediumsheet_2
+  - first:
+      213: -1587952483762265708
+    second: mediumsheet_3
+  - first:
+      213: 2546758876769420370
+    second: mediumsheet_4
+  - first:
+      213: -2426323348874015315
+    second: mediumsheet_5
+  - first:
+      213: -6747254453875614035
+    second: mediumsheet_6
+  - first:
+      213: -2230378760345161248
+    second: mediumsheet_7
+  - first:
+      213: 1106667822250151132
+    second: mediumsheet_8
+  - first:
+      213: 5035981165521500504
+    second: mediumsheet_9
+  - first:
+      213: -4820636601918122506
+    second: mediumsheet_10
+  - first:
+      213: 3989787983663158672
+    second: mediumsheet_11
+  - first:
+      213: -564219330312863708
+    second: mediumsheet_12
+  - first:
+      213: 6920273013338053404
+    second: mediumsheet_13
+  - first:
+      213: 2150362566216958761
+    second: mediumsheet_14
+  - first:
+      213: 8519257023221859242
+    second: mediumsheet_15
+  - first:
+      213: 2679216892148828588
+    second: mediumsheet_16
+  - first:
+      213: -8668154580523953805
+    second: mediumsheet_17
+  - first:
+      213: -1499070244326389844
+    second: mediumsheet_18
+  - first:
+      213: -4484687294837711060
+    second: mediumsheet_19
+  - first:
+      213: -1898343143202511890
+    second: mediumsheet_20
+  - first:
+      213: 2762907558599753309
+    second: mediumsheet_21
+  - first:
+      213: 6127934111280783266
+    second: mediumsheet_22
+  - first:
+      213: -8733414570182655975
+    second: mediumsheet_23
+  - first:
+      213: -9048809808701907676
+    second: mediumsheet_24
+  - first:
+      213: -1378088469328346662
+    second: mediumsheet_25
+  - first:
+      213: 6424362920720832010
+    second: mediumsheet_26
+  - first:
+      213: 7531471161573405691
+    second: mediumsheet_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mediumsheet_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 239
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9f6af0802f9f7f0800000000000000
+      internalID: -578164960704136706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 286
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14d4519f27736980800000000000000
+      internalID: -8546856621633645542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 270
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f3aeca0450abf60800000000000000
+      internalID: 8050753059215261586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_3
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 239
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491a62d11a576f9e0800000000000000
+      internalID: -1587952483762265708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 287
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2540a6284b7e75320800000000000000
+      internalID: 2546758876769420370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_5
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 271
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadc028f4c7f35ed0800000000000000
+      internalID: -2426323348874015315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_6
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 239
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae529b92dfec52a0800000000000000
+      internalID: -6747254453875614035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_7
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 288
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1fc03a55a1c01e0800000000000000
+      internalID: -2230378760345161248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_8
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 239
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc439d558cab5f00800000000000000
+      internalID: 1106667822250151132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_9
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 286
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8597772303663e540800000000000000
+      internalID: 5035981165521500504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 269
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f59c672d88a91db0800000000000000
+      internalID: -4820636601918122506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_11
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 269
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0955d5748039e5730800000000000000
+      internalID: 3989787983663158672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 187
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4200b49228d7b28f0800000000000000
+      internalID: -564219330312863708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_13
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 159
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b9cb4f3afb90060800000000000000
+      internalID: 6920273013338053404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_14
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 204
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923c8a16c5f97dd10800000000000000
+      internalID: 2150362566216958761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_15
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 159
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3046b202b7a3670800000000000000
+      internalID: 8519257023221859242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_16
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 204
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9c1cc719d7e2520800000000000000
+      internalID: 2679216892148828588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_17
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 159
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371d1b9b55784b780800000000000000
+      internalID: -8668154580523953805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_18
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 159
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca741912e8b323be0800000000000000
+      internalID: -1499070244326389844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 79
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f9d7e8aa033c1c0800000000000000
+      internalID: -4484687294837711060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_20
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 124
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3ad9718fab7a5e0800000000000000
+      internalID: -1898343143202511890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_21
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 79
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e749939c1d75620800000000000000
+      internalID: 2762907558599753309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_22
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 124
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2afd3e56b9bca0550800000000000000
+      internalID: 6127934111280783266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_23
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 109
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 910ca0458bdacc680800000000000000
+      internalID: -8733414570182655975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_24
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 79
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d9040fb6b2c6280800000000000000
+      internalID: -9048809808701907676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_25
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 79
+        width: 51
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad14f9ca6db00ece0800000000000000
+      internalID: -1378088469328346662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0691c5e90ce72950800000000000000
+      internalID: 6424362920720832010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumsheet_27
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 0
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf37ea53e19258860800000000000000
+      internalID: 7531471161573405691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mediumsheet_0: -578164960704136706
+      mediumsheet_1: -8546856621633645542
+      mediumsheet_10: -4820636601918122506
+      mediumsheet_11: 3989787983663158672
+      mediumsheet_12: -564219330312863708
+      mediumsheet_13: 6920273013338053404
+      mediumsheet_14: 2150362566216958761
+      mediumsheet_15: 8519257023221859242
+      mediumsheet_16: 2679216892148828588
+      mediumsheet_17: -8668154580523953805
+      mediumsheet_18: -1499070244326389844
+      mediumsheet_19: -4484687294837711060
+      mediumsheet_2: 8050753059215261586
+      mediumsheet_20: -1898343143202511890
+      mediumsheet_21: 2762907558599753309
+      mediumsheet_22: 6127934111280783266
+      mediumsheet_23: -8733414570182655975
+      mediumsheet_24: -9048809808701907676
+      mediumsheet_25: -1378088469328346662
+      mediumsheet_26: 6424362920720832010
+      mediumsheet_27: 7531471161573405691
+      mediumsheet_3: -1587952483762265708
+      mediumsheet_4: 2546758876769420370
+      mediumsheet_5: -2426323348874015315
+      mediumsheet_6: -6747254453875614035
+      mediumsheet_7: -2230378760345161248
+      mediumsheet_8: 1106667822250151132
+      mediumsheet_9: 5035981165521500504
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

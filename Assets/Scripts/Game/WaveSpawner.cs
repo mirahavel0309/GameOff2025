@@ -16,20 +16,25 @@ public class WaveSpawner : MonoBehaviour
 
     private int currentWave = 0;
     private bool waveActive = false;
+    public GameObject BossPrefab;
 
     void Start()
     {
         //StartCoroutine(StartFirstWave());
     }
 
-    private IEnumerator StartFirstWave()
-    {
-        yield return new WaitForSeconds(0.5f);
-        yield return StartCoroutine(SpawnWave());
-    }
+    //private IEnumerator StartFirstWave()
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+    //    yield return StartCoroutine(SpawnWave());
+    //}
     public IEnumerator SpawnWaveCoroutine(int enemyCount = 3)
     {
         yield return StartCoroutine(SpawnWave(enemyCount));
+    }
+    public IEnumerator SpawnBossCoroutine()
+    {
+        yield return StartCoroutine(SpawnBoss());
     }
 
     private IEnumerator SpawnWave(int enemyCount = 3)
@@ -48,6 +53,27 @@ public class WaveSpawner : MonoBehaviour
 
         waveActive = false;
     }
+    private IEnumerator SpawnBoss()
+    {
+        if (waveActive)
+            yield break;
+
+        waveActive = true;
+        currentWave++;
+
+        GameObject newCardGO = Instantiate(BossPrefab, transform.position, Quaternion.identity).gameObject;
+        CardInstance cardInstance = newCardGO.GetComponent<CardInstance>();
+        cardInstance.ScalePower(healthScale, damageScale);
+
+        if (cardInstance != null)
+        {
+            //cardInstance.SetCardData(randomCard);
+            cardInstance.troopsField = enemyField;
+            enemyField.AddCard(cardInstance);
+        }
+
+        waveActive = false;
+    }
 
     private void SpawnRandomEnemyCard()
     {
@@ -60,7 +86,6 @@ public class WaveSpawner : MonoBehaviour
         if (cardInstance != null)
         {
             //cardInstance.SetCardData(randomCard);
-            cardInstance.currentContainer = enemyField;
             cardInstance.troopsField = enemyField;
             enemyField.AddCard(cardInstance);
         }

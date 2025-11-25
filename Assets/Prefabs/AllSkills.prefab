@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Tornado
   description: Deal <damage> damage to all enemies
-  skillIcon: {fileID: -3189097892625286062, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  skillIcon: {fileID: -7160454106363218442, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0300000003000000
   soundCharge: {fileID: 0}
   stormPrefab: {fileID: 1796097532597538004, guid: 25ffda84358fdcb4e8666129718a27ba, type: 3}
@@ -1518,7 +1518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Hurricane
   description: Deal <damage> damage to all enemies
-  skillIcon: {fileID: -3189097892625286062, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  skillIcon: {fileID: 7041759631525811923, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 030000000300000003000000
   soundCharge: {fileID: 0}
   stormPrefab: {fileID: 1796097532597538004, guid: 616864db2eafb37458b30998031ad001, type: 3}

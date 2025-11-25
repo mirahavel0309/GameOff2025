@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public enum CardState { InHand, OnField, InDeck, Destroyed }
 [RequireComponent(typeof(SpriteRenderer))]
@@ -11,7 +12,7 @@ public class CardInstance : MonoBehaviour
     [Header("Card Data")]
     //public Card baseCard;
     public int attackPower = 100;
-    private int currentHealth;
+    private int currentHealth = 0;
     public int maxHealth;
 
     [Header("References")]
@@ -19,10 +20,6 @@ public class CardInstance : MonoBehaviour
     [SerializeField] private SpriteRenderer highlightSprite;
     public Animator animator;
     public TroopsField troopsField;
-
-    // New: track what container this card currently belongs to
-    public MonoBehaviour currentContainer; // could be PlayerHand or TroopsField
-
     public bool HasActedThisTurn { get; set; } = false;
     public List<StatusEffect> activeEffects = new List<StatusEffect>();
 
@@ -35,7 +32,8 @@ public class CardInstance : MonoBehaviour
     public int MaxHealth => maxHealth;
     public CharacterResistances Resistances => resistances;
     public IReadOnlyList<StatusEffect> ActiveEffects => activeEffects.AsReadOnly();
-    protected ProgressBar hpBar;
+    protected ProgressBar hpBar; 
+    private List<PassiveSkill> passiveSkills;
     protected static CardInstance selectedAttacker;
     private void Awake()
     {
@@ -48,10 +46,12 @@ public class CardInstance : MonoBehaviour
     }
     void Start()
     {
-        currentHealth = maxHealth;
+        if(currentHealth == 0)
+            currentHealth = maxHealth;
         Initialize();
         hpBar = GetComponentInChildren<ProgressBar>();
         hpBar.SetValue(currentHealth, maxHealth);
+        passiveSkills = GetComponents<PassiveSkill>().ToList();
     }
     public virtual void Initialize()
     {
@@ -111,6 +111,13 @@ public class CardInstance : MonoBehaviour
         //if (cardSprite != null && baseCard != null && baseCard.artwork != null)
         //    cardSprite.sprite = baseCard.artwork;
     }
+
+    internal void SetHealth(int value)
+    {
+        currentHealth = value;
+        UpdateVisuals();
+    }
+
     private void OnMouseEnter()
     {
         isSelected = true;
@@ -157,7 +164,7 @@ public class CardInstance : MonoBehaviour
         }
     }
 
-    public int TakeDamage(int dmg, ElementType element, int accuracy = 100)
+    public int TakeDamage(int dmg, ElementType element, int accuracy = 95)
     {
         if (accuracy < 100)
         {
@@ -252,9 +259,9 @@ public class CardInstance : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        if (currentContainer is TroopsField field)
+        if (troopsField != null)
         {
-            field.RemoveCard(this);
+            troopsField.RemoveCard(this);
         }
 
         Destroy(gameObject);
@@ -331,5 +338,12 @@ public class CardInstance : MonoBehaviour
         if (cardSprite != null)
             return cardSprite.sprite;
         return null;
+    }
+    public IEnumerator ProcessPassivesTurnStart()
+    {
+        foreach (var passive in passiveSkills)
+        {
+            yield return passive.OnTurnStart();
+        }
     }
 }

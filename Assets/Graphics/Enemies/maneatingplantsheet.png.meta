@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: f1e73ddae75bd624aaa67703ef9deda7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4558186901569228127
+    second: maneatingplantsheet_0
+  - first:
+      213: 7742659935363173041
+    second: maneatingplantsheet_1
+  - first:
+      213: -5233062572629740230
+    second: maneatingplantsheet_2
+  - first:
+      213: 1361008752501587572
+    second: maneatingplantsheet_3
+  - first:
+      213: 8866059690144963455
+    second: maneatingplantsheet_4
+  - first:
+      213: -411081789426585396
+    second: maneatingplantsheet_5
+  - first:
+      213: -4666497627540342302
+    second: maneatingplantsheet_6
+  - first:
+      213: 8879488984355956082
+    second: maneatingplantsheet_7
+  - first:
+      213: -1251881728416542412
+    second: maneatingplantsheet_8
+  - first:
+      213: 8533930643751564846
+    second: maneatingplantsheet_9
+  - first:
+      213: 817629391663464910
+    second: maneatingplantsheet_10
+  - first:
+      213: 1425308716096746639
+    second: maneatingplantsheet_11
+  - first:
+      213: -8544322184379215316
+    second: maneatingplantsheet_12
+  - first:
+      213: 8842572578012788806
+    second: maneatingplantsheet_13
+  - first:
+      213: 1989443347198812691
+    second: maneatingplantsheet_14
+  - first:
+      213: 5828565245383613972
+    second: maneatingplantsheet_15
+  - first:
+      213: -3012810235055928919
+    second: maneatingplantsheet_16
+  - first:
+      213: -2064935088970563537
+    second: maneatingplantsheet_17
+  - first:
+      213: 352314344873691722
+    second: maneatingplantsheet_18
+  - first:
+      213: -7014600200171447131
+    second: maneatingplantsheet_19
+  - first:
+      213: 1963185538287101113
+    second: maneatingplantsheet_20
+  - first:
+      213: 7920548439722902169
+    second: maneatingplantsheet_21
+  - first:
+      213: -8789762111290266454
+    second: maneatingplantsheet_22
+  - first:
+      213: -6665791251308248091
+    second: maneatingplantsheet_23
+  - first:
+      213: 1347923842108895934
+    second: maneatingplantsheet_24
+  - first:
+      213: -1763648823532848272
+    second: maneatingplantsheet_25
+  - first:
+      213: 5127908340467416611
+    second: maneatingplantsheet_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: maneatingplantsheet_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 239
+        width: 47
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5d4fdf26dee14f30800000000000000
+      internalID: 4558186901569228127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 239
+        width: 47
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba88f75034737b60800000000000000
+      internalID: 7742659935363173041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 239
+        width: 47
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a35330fe05d6067b0800000000000000
+      internalID: -5233062572629740230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_3
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 239
+        width: 47
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47efd0ddf3643e210800000000000000
+      internalID: 1361008752501587572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_4
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 239
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b108450529a0b70800000000000000
+      internalID: 8866059690144963455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 159
+        width: 47
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0b89f5a4b8b4af0800000000000000
+      internalID: -411081789426585396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 159
+        width: 45
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e93145c1254d3fb0800000000000000
+      internalID: -4666497627540342302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_7
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 159
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 275e78b8f284a3b70800000000000000
+      internalID: 8879488984355956082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_8
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 159
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4311ee4633c60aee0800000000000000
+      internalID: -1251881728416542412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_9
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 159
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26f1aea4bc9e6670800000000000000
+      internalID: 8533930643751564846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 79
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec10508899dc85b00800000000000000
+      internalID: 817629391663464910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_11
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 79
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84f636c9b6b7c310800000000000000
+      internalID: 1425308716096746639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_12
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 79
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2256993e387c6980800000000000000
+      internalID: -8544322184379215316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_13
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 79
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648ff05e8e027ba70800000000000000
+      internalID: 8842572578012788806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_14
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 79
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 312ac8a0f2ceb9b10800000000000000
+      internalID: 1989443347198812691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 79
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e1749a53933e050800000000000000
+      internalID: 5828565245383613972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_16
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 79
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a984d3cd095036d0800000000000000
+      internalID: -3012810235055928919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_17
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 79
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f208ba12a70e753e0800000000000000
+      internalID: -2064935088970563537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_18
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 79
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a887fa70ca3e400800000000000000
+      internalID: 352314344873691722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_19
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 79
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac956b684227ae90800000000000000
+      internalID: -7014600200171447131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_20
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 38
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b469cd78d2ae3b10800000000000000
+      internalID: 1963185538287101113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_21
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99245ff47d07bed60800000000000000
+      internalID: 7920548439722902169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_22
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac2b501eed740680800000000000000
+      internalID: -8789762111290266454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_23
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e38dde7c2a5e73a0800000000000000
+      internalID: -6665791251308248091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_24
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 0
+        width: 47
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb23e21c799c4b210800000000000000
+      internalID: 1347923842108895934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_25
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 47
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bf9cc3db24687e0800000000000000
+      internalID: -1763648823532848272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maneatingplantsheet_26
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32eb252877df92740800000000000000
+      internalID: 5127908340467416611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      maneatingplantsheet_0: 4558186901569228127
+      maneatingplantsheet_1: 7742659935363173041
+      maneatingplantsheet_10: 817629391663464910
+      maneatingplantsheet_11: 1425308716096746639
+      maneatingplantsheet_12: -8544322184379215316
+      maneatingplantsheet_13: 8842572578012788806
+      maneatingplantsheet_14: 1989443347198812691
+      maneatingplantsheet_15: 5828565245383613972
+      maneatingplantsheet_16: -3012810235055928919
+      maneatingplantsheet_17: -2064935088970563537
+      maneatingplantsheet_18: 352314344873691722
+      maneatingplantsheet_19: -7014600200171447131
+      maneatingplantsheet_2: -5233062572629740230
+      maneatingplantsheet_20: 1963185538287101113
+      maneatingplantsheet_21: 7920548439722902169
+      maneatingplantsheet_22: -8789762111290266454
+      maneatingplantsheet_23: -6665791251308248091
+      maneatingplantsheet_24: 1347923842108895934
+      maneatingplantsheet_25: -1763648823532848272
+      maneatingplantsheet_26: 5127908340467416611
+      maneatingplantsheet_3: 1361008752501587572
+      maneatingplantsheet_4: 8866059690144963455
+      maneatingplantsheet_5: -411081789426585396
+      maneatingplantsheet_6: -4666497627540342302
+      maneatingplantsheet_7: 8879488984355956082
+      maneatingplantsheet_8: -1251881728416542412
+      maneatingplantsheet_9: 8533930643751564846
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
