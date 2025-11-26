@@ -306,3 +306,4 @@ MonoBehaviour:
   elementNameText: {fileID: 318330693140813800}
   selectionHighlight: {fileID: 0}
   iconLibrary: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
+  useSound: {fileID: 8300000, guid: b7095625f53a34b4486280e188465c59, type: 3}

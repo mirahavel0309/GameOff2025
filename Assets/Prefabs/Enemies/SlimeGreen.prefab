@@ -242,6 +242,7 @@ MonoBehaviour:
   attackPower: 100
   maxHealth: 20
   speed: 90
+  speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
@@ -381,6 +382,7 @@ MonoBehaviour:
   damage: 5
   element: 2
   isProjectileAttack: 0
+  baseAccuracy: 95
   projectilePrefab: {fileID: 0}
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 0}

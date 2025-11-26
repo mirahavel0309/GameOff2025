@@ -9,6 +9,7 @@ public class AttackMonsterSkill : BaseMonsterSkill
     public int damage;
     public ElementType element = ElementType.Physical;
     public bool isProjectileAttack;
+    public int baseAccuracy = 95;
 
     [Header("Projectile Settings")]
     public GameObject projectilePrefab;     // Assign in Inspector
@@ -24,7 +25,7 @@ public class AttackMonsterSkill : BaseMonsterSkill
 
     public override IEnumerator Execute(CardInstance target)
     {
-        passiveSkills = GetComponents<PassiveSkill>().ToList();
+            passiveSkills = GetComponents<PassiveSkill>().ToList();
         cardInstance = this.GetComponent<CardInstance>();
         if (isProjectileAttack)
         {
@@ -121,7 +122,7 @@ public class AttackMonsterSkill : BaseMonsterSkill
             // Hit target
             Destroy(proj);
 
-            int accuracy = 100;
+            int accuracy = baseAccuracy;
             LowerAccuracyStatus accStatus = GetComponent<LowerAccuracyStatus>();
             if (accStatus != null)
                 accuracy -= accStatus.accuracyPenalty;

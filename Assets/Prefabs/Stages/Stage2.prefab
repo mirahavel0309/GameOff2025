@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -74,7 +74,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -281,7 +281,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -343,7 +343,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -416,14 +416,21 @@ MonoBehaviour:
   - {fileID: 1169516690173488600}
   - {fileID: 7376237778282137747}
   skybox: {fileID: 2100000, guid: 49a3fd332806b1c4c878c7508765362b, type: 2}
-  StageBoss: {fileID: 6709276644064086281, guid: 1987098d3e7950b4083a0b8bffb94ba8, type: 3}
+  StageBoss: {fileID: 6709276644064086281, guid: 383f6b4a53e8d5749bb1138553df92be, type: 3}
+  enemies:
+  - {fileID: 6709276644064086281, guid: 7b950bfd76534164caf00a8244db4fb3, type: 3}
+  - {fileID: 6709276644064086281, guid: 01aa4909fcbfdb3498105ad37ea431bf, type: 3}
+  - {fileID: 6709276644064086281, guid: be79d6d370e7a9448b458773f3844744, type: 3}
+  - {fileID: 6709276644064086281, guid: 3a8e1d3c40086884480d3773c710e230, type: 3}
+  - {fileID: 6709276644064086281, guid: 61beaf43098592e41ae95fc3187fb783, type: 3}
+  - {fileID: 6709276644064086281, guid: e7af1823bccf3cb43aff9b155fd0bd46, type: 3}
   enemyEnterLocation: {fileID: 6434012521762773382}
   enemyLocations:
-  - {fileID: 900942098131315695}
-  - {fileID: 8270747820692214902}
   - {fileID: 5067815843480621744}
-  - {fileID: 6433615865740809664}
   - {fileID: 4253077545052784523}
+  - {fileID: 6433615865740809664}
+  - {fileID: 8270747820692214902}
+  - {fileID: 900942098131315695}
   exitPath:
   - {fileID: 6433615865740809664}
   - {fileID: 6434012521762773382}
@@ -569,7 +576,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

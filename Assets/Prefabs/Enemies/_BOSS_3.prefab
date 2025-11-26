@@ -344,11 +344,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPower: 100
   maxHealth: 15
+  speed: 100
+  speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
   troopsField: {fileID: 0}
-  currentContainer: {fileID: 0}
   activeEffects: []
 --- !u!114 &6227583397517256033
 MonoBehaviour:
@@ -485,6 +486,7 @@ MonoBehaviour:
   element: 3
   selfEffectPrefab: {fileID: 1714363467411018263, guid: d2603cce40f4d154298f25fdb5777d13, type: 3}
   attackEffetPrefab: {fileID: 1714363467411018263, guid: 52449de75b5b2484e836ca388a7df108, type: 3}
+  baseAccuracy: 85
   statusEffect: {fileID: 0}
   chanceToProc: 0
 --- !u!1 &8223478066681231905
@@ -546,7 +548,7 @@ Transform:
   m_GameObject: {fileID: 8612068103122048513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.191, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -596,7 +598,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6269664910093430196, guid: 09462f0201bc4134ea5310cdddea5f45, type: 3}
+  m_Sprite: {fileID: 2293299658211410618, guid: fb943cb9e4c8f3d42824256b27623c10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -617,7 +619,7 @@ Animator:
   m_GameObject: {fileID: 8612068103122048513}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8a126d12c542dd84cbb6b940490b1b25, type: 2}
+  m_Controller: {fileID: 9100000, guid: 97f1f7eb828cd1d488ca4dfe070bf7df, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

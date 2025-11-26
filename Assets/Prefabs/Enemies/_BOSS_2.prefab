@@ -305,7 +305,8 @@ GameObject:
   - component: {fileID: 6227583397517256033}
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
-  - component: {fileID: 993956769459973435}
+  - component: {fileID: 2837698498057697484}
+  - component: {fileID: 2510708917844097302}
   m_Layer: 0
   m_Name: _BOSS_2
   m_TagString: Enemy
@@ -328,6 +329,7 @@ Transform:
   m_Children:
   - {fileID: 5278898677840557890}
   - {fileID: 805646930765066053}
+  - {fileID: 1129199153631084343}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4211456961534145143
@@ -343,7 +345,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPower: 100
-  maxHealth: 15
+  maxHealth: 100
+  speed: 95
+  speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
@@ -397,7 +401,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.8}
+  m_Offset: {x: 0, y: 1.75}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -407,7 +411,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 2, y: 2.5}
   m_EdgeRadius: 0
 --- !u!212 &4964113359520524644
 SpriteRenderer:
@@ -464,7 +468,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &993956769459973435
+--- !u!114 &2837698498057697484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -473,20 +477,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 6709276644064086281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1c7e70adb5efcb498ef8d0f65cecf2c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6571f8a5130e3df42919917e6c59c214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 
   skillDescription: 
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
-  damage: 3
-  element: 3
-  selfEffectPrefab: {fileID: 1714363467411018263, guid: d2603cce40f4d154298f25fdb5777d13, type: 3}
-  attackEffetPrefab: {fileID: 1714363467411018263, guid: 52449de75b5b2484e836ca388a7df108, type: 3}
-  baseAccuracy: 85
-  statusEffect: {fileID: 0}
-  chanceToProc: 0
+  damage: 7
+  element: 4
+  isProjectileAttack: 0
+  baseAccuracy: 90
+  projectilePrefab: {fileID: 0}
+  projectileSpeed: 12
+  projectileSpawnPoint: {fileID: 0}
+  statusEffect: {fileID: 5811571262455106499}
+  chanceToProc: 25
+--- !u!114 &2510708917844097302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50465aca2cdef044ebeed1640a85c5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 6709276644064086281, guid: 7b950bfd76534164caf00a8244db4fb3, type: 3}
+  spawnCount: 4
 --- !u!1 &8223478066681231905
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +538,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3856908114468915698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8609036024684998392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129199153631084343}
+  - component: {fileID: 5811571262455106499}
+  m_Layer: 0
+  m_Name: effect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1129199153631084343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609036024684998392}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.62585074, y: 1.4194667, z: 0.029866014}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3856908114468915698}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5811571262455106499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609036024684998392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2da2645c03c52a41b009a62a5516a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectName: Fear
+  description: Remove this element for duration of effect
+  effectPrefab: {fileID: 6709276644064086281, guid: bace77786fb3ad142af45c7325556a35, type: 3}
+  duration: 2
+  affectedElement: 0
 --- !u!1 &8612068103122048513
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,7 +665,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6269664910093430196, guid: 09462f0201bc4134ea5310cdddea5f45, type: 3}
+  m_Sprite: {fileID: -883731238352582941, guid: 33355bddc5433e3469a7bf0ee18d92cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -657,6 +726,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2042399561204207113, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042399561204207113, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042399561204207113, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042399561204207113, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042399561204207113, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042399561204207113, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -0.099999994
+      objectReference: {fileID: 0}
     - target: {fileID: 2373855660703006710, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -683,7 +776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2373855660703006710, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2373855660703006710, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
       propertyPath: m_SizeDelta.y
@@ -740,6 +833,30 @@ PrefabInstance:
     - target: {fileID: 3115948033877064229, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591559657199352790, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591559657199352790, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591559657199352790, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591559657199352790, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591559657199352790, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591559657199352790, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -0.099999994
       objectReference: {fileID: 0}
     - target: {fileID: 7214681682728906579, guid: 1e3066cc91854ac4ebc64fcc60037506, type: 3}
       propertyPath: m_Layer

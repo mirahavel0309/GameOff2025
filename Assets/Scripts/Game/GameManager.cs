@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public Image blackFade;
     public Camera cam;
     public FreeCameraControl camController;
+    public AudioClip useSound;
 
     [Header("Monster Scaling")]
     public float hpScaleIncPerWave = 0.025f;
@@ -221,6 +222,11 @@ public class GameManager : MonoBehaviour
 
     private void BeginNextTurn()
     {
+        if (playerField.AllHeroesDefeated())
+        {
+            GameOverScreen.instance.Show();
+        }
+
         ProcessNextAttacker();
         CardInstance card = attackQueue.Dequeue();
         UpdateAttackQueue();
@@ -386,7 +392,7 @@ public class GameManager : MonoBehaviour
         enemyCards.RemoveAll(e => e.GetComponent<FreezeEffect>() != null); // make frozen units skip action
 
 
-        if (enemyCard != null && playerCards.Count != 0) {
+        if (enemyCard != null && playerCards.Count != 0 && enemyCard.GetComponent<FreezeEffect>() == null) {
 
             BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>();
 
@@ -537,6 +543,8 @@ public class GameManager : MonoBehaviour
         selectedCards.Clear();
 
         ClearSkillCards();
+
+        EffectsManager.instance.CreateSoundEffect(useSound, Vector3.zero);
 
         chosenSkill.Execute();
     }
@@ -733,5 +741,10 @@ public class GameManager : MonoBehaviour
     {
         if(playerDeck.availableElements.Contains(element))
             playerDeck.availableElements.Remove(element);
+    }
+    public void AddElementToDeck(ElementType element)
+    {
+        if (!playerDeck.availableElements.Contains(element))
+            playerDeck.availableElements.Add(element);
     }
 }

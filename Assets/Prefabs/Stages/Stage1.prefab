@@ -447,6 +447,14 @@ MonoBehaviour:
   - {fileID: 7376237778282137747}
   skybox: {fileID: 2100000, guid: d4834a8b6f4336f4cbac5b99a74500a0, type: 2}
   StageBoss: {fileID: 6709276644064086281, guid: 1987098d3e7950b4083a0b8bffb94ba8, type: 3}
+  enemies:
+  - {fileID: 6709276644064086281, guid: 3a8e1d3c40086884480d3773c710e230, type: 3}
+  - {fileID: 6709276644064086281, guid: 61beaf43098592e41ae95fc3187fb783, type: 3}
+  - {fileID: 6709276644064086281, guid: e7af1823bccf3cb43aff9b155fd0bd46, type: 3}
+  - {fileID: 6709276644064086281, guid: c31c871803d03a14fa0b1631b70537e7, type: 3}
+  - {fileID: 6709276644064086281, guid: 99c5cde7d720cae4aaf7bd622d309fe2, type: 3}
+  - {fileID: 6709276644064086281, guid: 1a93b1caa91e1bc41bec195ec13c5b04, type: 3}
+  - {fileID: 6709276644064086281, guid: af6eb3f28d9b7bf488ab33b5b7033738, type: 3}
   enemyEnterLocation: {fileID: 6434012521762773382}
   enemyLocations:
   - {fileID: 900942098131315695}
@@ -1126,6 +1134,7 @@ MonoBehaviour:
   playerLocations: []
   skybox: {fileID: 0}
   StageBoss: {fileID: 0}
+  enemies: []
   enemyEnterLocation: {fileID: 0}
   enemyLocations: []
   exitPath: []

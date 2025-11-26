@@ -416,7 +416,7 @@ MonoBehaviour:
   - {fileID: 1169516690173488600}
   - {fileID: 7376237778282137747}
   skybox: {fileID: 2100000, guid: c2c39a420b8ec554294d4c29888453f5, type: 2}
-  StageBoss: {fileID: 6709276644064086281, guid: 3fec6352fa8f1cb4c9cdecc5fad99bbd, type: 3}
+  StageBoss: {fileID: 6709276644064086281, guid: 1b741d83858d072458ac3bfe239ce13e, type: 3}
   enemyEnterLocation: {fileID: 6434012521762773382}
   enemyLocations:
   - {fileID: 900942098131315695}

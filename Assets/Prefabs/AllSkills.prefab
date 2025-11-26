@@ -267,7 +267,7 @@ MonoBehaviour:
   description: Deal <damage> damage to all enemies
   skillIcon: {fileID: 1977104565186118404, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 03000000
-  soundCharge: {fileID: 0}
+  soundCharge: {fileID: 8300000, guid: dbb61bcff02e2984f8b4dc0a6b7a13d4, type: 3}
   damageEffectPrefab: {fileID: 1714363467411018263, guid: 52449de75b5b2484e836ca388a7df108, type: 3}
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
   elementalRiseHeight: 3
@@ -276,6 +276,7 @@ MonoBehaviour:
   damageEffectDuration: 0.8
   baseDamage: 3
   damageElement: 3
+  baseAccuracy: 90
   statusEffect: {fileID: 0}
   chanceToProc: 0
 --- !u!1 &1564098721372178323
@@ -1013,6 +1014,7 @@ MonoBehaviour:
   stormPrefab: {fileID: 1796097532597538004, guid: 71920dbf64881134ebc96208659569e2, type: 3}
   baseDamage: 7
   damageType: 1
+  baseAccuracy: 85
   statusEffect: {fileID: 1835551666500344175}
   chanceToProc: 40
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
@@ -1021,7 +1023,7 @@ MonoBehaviour:
   mergeDelay: 0.3
   travelDuration: 1.5
   returnDuration: 1
-  soundStormStart: {fileID: 0}
+  soundStormStart: {fileID: 8300000, guid: 23fe39a6dbd6ece4fae475333ca242e6, type: 3}
   soundStormEnd: {fileID: 0}
 --- !u!114 &1835551666500344175
 MonoBehaviour:
@@ -1091,6 +1093,7 @@ MonoBehaviour:
   stormPrefab: {fileID: 1796097532597538004, guid: 25ffda84358fdcb4e8666129718a27ba, type: 3}
   baseDamage: 8
   damageType: 3
+  baseAccuracy: 85
   statusEffect: {fileID: 0}
   chanceToProc: 0
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
@@ -1099,7 +1102,7 @@ MonoBehaviour:
   mergeDelay: 0.3
   travelDuration: 1.6
   returnDuration: 0.8
-  soundStormStart: {fileID: 0}
+  soundStormStart: {fileID: 8300000, guid: 23fe39a6dbd6ece4fae475333ca242e6, type: 3}
   soundStormEnd: {fileID: 0}
 --- !u!1 &5971056974758335138
 GameObject:
@@ -1159,6 +1162,7 @@ MonoBehaviour:
   damageEffectDuration: 0.6
   baseDamage: 3
   damageElement: 3
+  baseAccuracy: 90
   statusEffect: {fileID: 6948721776827682173}
   chanceToProc: 50
 --- !u!114 &6948721776827682173
@@ -1445,6 +1449,7 @@ MonoBehaviour:
   stormPrefab: {fileID: 1796097532597538004, guid: 9048b7f03918e1346a80205dcfdfa2cb, type: 3}
   baseDamage: 10
   damageType: 0
+  baseAccuracy: 85
   statusEffect: {fileID: 8869304084395227921}
   chanceToProc: 30
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
@@ -1453,7 +1458,7 @@ MonoBehaviour:
   mergeDelay: 0.3
   travelDuration: 1.8
   returnDuration: 1
-  soundStormStart: {fileID: 0}
+  soundStormStart: {fileID: 8300000, guid: 23fe39a6dbd6ece4fae475333ca242e6, type: 3}
   soundStormEnd: {fileID: 0}
 --- !u!114 &8869304084395227921
 MonoBehaviour:
@@ -1524,6 +1529,7 @@ MonoBehaviour:
   stormPrefab: {fileID: 1796097532597538004, guid: 616864db2eafb37458b30998031ad001, type: 3}
   baseDamage: 12
   damageType: 3
+  baseAccuracy: 85
   statusEffect: {fileID: 0}
   chanceToProc: 0
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
@@ -1532,7 +1538,7 @@ MonoBehaviour:
   mergeDelay: 0.3
   travelDuration: 1.8
   returnDuration: 0.8
-  soundStormStart: {fileID: 0}
+  soundStormStart: {fileID: 8300000, guid: 23fe39a6dbd6ece4fae475333ca242e6, type: 3}
   soundStormEnd: {fileID: 0}
 --- !u!1 &7294114056512695778
 GameObject:

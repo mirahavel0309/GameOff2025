@@ -118,7 +118,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -155,7 +155,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -197,10 +197,10 @@ TextureImporter:
       name: mediumsheet_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 239
-        width: 36
-        height: 49
+        x: 0
+        y: 240
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +219,10 @@ TextureImporter:
       name: mediumsheet_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 286
-        width: 7
-        height: 7
+        x: 60
+        y: 240
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: mediumsheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 270
-        width: 22
-        height: 18
+        x: 120
+        y: 240
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,10 +263,10 @@ TextureImporter:
       name: mediumsheet_3
       rect:
         serializedVersion: 2
-        x: 74
-        y: 239
-        width: 36
-        height: 50
+        x: 180
+        y: 240
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,10 +285,10 @@ TextureImporter:
       name: mediumsheet_4
       rect:
         serializedVersion: 2
-        x: 75
-        y: 287
-        width: 7
-        height: 7
+        x: 0
+        y: 160
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: mediumsheet_5
       rect:
         serializedVersion: 2
-        x: 124
-        y: 271
-        width: 22
-        height: 18
+        x: 60
+        y: 160
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,10 +329,10 @@ TextureImporter:
       name: mediumsheet_6
       rect:
         serializedVersion: 2
-        x: 134
-        y: 239
-        width: 36
-        height: 51
+        x: 120
+        y: 160
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,10 +351,10 @@ TextureImporter:
       name: mediumsheet_7
       rect:
         serializedVersion: 2
-        x: 135
-        y: 288
-        width: 7
-        height: 7
+        x: 180
+        y: 160
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,10 +373,10 @@ TextureImporter:
       name: mediumsheet_8
       rect:
         serializedVersion: 2
-        x: 194
-        y: 239
-        width: 36
-        height: 50
+        x: 0
+        y: 80
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,10 +395,10 @@ TextureImporter:
       name: mediumsheet_9
       rect:
         serializedVersion: 2
-        x: 195
-        y: 286
-        width: 7
-        height: 7
+        x: 60
+        y: 80
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,10 +417,10 @@ TextureImporter:
       name: mediumsheet_10
       rect:
         serializedVersion: 2
-        x: 4
-        y: 269
-        width: 22
-        height: 18
+        x: 120
+        y: 80
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,10 +439,10 @@ TextureImporter:
       name: mediumsheet_11
       rect:
         serializedVersion: 2
-        x: 184
-        y: 269
-        width: 22
-        height: 18
+        x: 180
+        y: 80
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -461,10 +461,10 @@ TextureImporter:
       name: mediumsheet_12
       rect:
         serializedVersion: 2
-        x: 4
-        y: 187
-        width: 22
-        height: 18
+        x: 0
+        y: 0
+        width: 60
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -479,341 +479,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: mediumsheet_13
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 159
-        width: 36
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c1b9cb4f3afb90060800000000000000
-      internalID: 6920273013338053404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_14
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 204
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 923c8a16c5f97dd10800000000000000
-      internalID: 2150362566216958761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_15
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 159
-        width: 47
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aa3046b202b7a3670800000000000000
-      internalID: 8519257023221859242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_16
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 204
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca9c1cc719d7e2520800000000000000
-      internalID: 2679216892148828588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_17
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 159
-        width: 48
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 371d1b9b55784b780800000000000000
-      internalID: -8668154580523953805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_18
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 159
-        width: 50
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca741912e8b323be0800000000000000
-      internalID: -1499070244326389844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_19
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 79
-        width: 49
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c2f9d7e8aa033c1c0800000000000000
-      internalID: -4484687294837711060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_20
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 124
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee3ad9718fab7a5e0800000000000000
-      internalID: -1898343143202511890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_21
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 79
-        width: 51
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5e749939c1d75620800000000000000
-      internalID: 2762907558599753309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_22
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 124
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2afd3e56b9bca0550800000000000000
-      internalID: 6127934111280783266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_23
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 109
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 910ca0458bdacc680800000000000000
-      internalID: -8733414570182655975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_24
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 79
-        width: 36
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 42d9040fb6b2c6280800000000000000
-      internalID: -9048809808701907676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_25
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 79
-        width: 51
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ad14f9ca6db00ece0800000000000000
-      internalID: -1378088469328346662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_26
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a0691c5e90ce72950800000000000000
-      internalID: 6424362920720832010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mediumsheet_27
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 0
-        width: 29
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf37ea53e19258860800000000000000
-      internalID: 7531471161573405691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1ed069d662ef1d947add2ef5da4b7fb6
     internalID: 0
     vertices: []
     indices: 
@@ -828,22 +498,7 @@ TextureImporter:
       mediumsheet_10: -4820636601918122506
       mediumsheet_11: 3989787983663158672
       mediumsheet_12: -564219330312863708
-      mediumsheet_13: 6920273013338053404
-      mediumsheet_14: 2150362566216958761
-      mediumsheet_15: 8519257023221859242
-      mediumsheet_16: 2679216892148828588
-      mediumsheet_17: -8668154580523953805
-      mediumsheet_18: -1499070244326389844
-      mediumsheet_19: -4484687294837711060
       mediumsheet_2: 8050753059215261586
-      mediumsheet_20: -1898343143202511890
-      mediumsheet_21: 2762907558599753309
-      mediumsheet_22: 6127934111280783266
-      mediumsheet_23: -8733414570182655975
-      mediumsheet_24: -9048809808701907676
-      mediumsheet_25: -1378088469328346662
-      mediumsheet_26: 6424362920720832010
-      mediumsheet_27: 7531471161573405691
       mediumsheet_3: -1587952483762265708
       mediumsheet_4: 2546758876769420370
       mediumsheet_5: -2426323348874015315

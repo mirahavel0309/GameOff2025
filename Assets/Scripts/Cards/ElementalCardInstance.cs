@@ -13,6 +13,7 @@ public class ElementalCardInstance : MonoBehaviour, IPointerClickHandler
     public TextMeshProUGUI elementNameText;
     public Image selectionHighlight;
     public ElementIconLibrary iconLibrary;
+    public AudioClip useSound;
     private bool isSelected = false;
 
     public void Initialize(ElementType type)
@@ -41,7 +42,10 @@ public class ElementalCardInstance : MonoBehaviour, IPointerClickHandler
         transform.localPosition = isSelected ? new Vector3(pos.x, 50, pos.z) : new Vector3(pos.x, 0, pos.z);
         
         if (isSelected)
+        {
+            EffectsManager.instance.CreateSoundEffect(useSound, Vector3.zero);
             GameManager.Instance.AddElementToCombo(elementType, this);
+        }
         else
             GameManager.Instance.RemoveElementFromCombo(elementType, this);
     }

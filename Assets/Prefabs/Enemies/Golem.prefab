@@ -344,6 +344,7 @@ MonoBehaviour:
   attackPower: 100
   maxHealth: 40
   speed: 80
+  speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
@@ -480,9 +481,10 @@ MonoBehaviour:
   skillDescription: SlimeSlam
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
-  damage: 5
+  damage: 4
   element: 4
   isProjectileAttack: 0
+  baseAccuracy: 85
   projectilePrefab: {fileID: 0}
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 0}
