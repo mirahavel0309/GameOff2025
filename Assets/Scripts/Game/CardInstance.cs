@@ -14,9 +14,11 @@ public class CardInstance : MonoBehaviour
     public int attackPower = 100;
     private int currentHealth = 0;
     public int maxHealth;
+    public int speed = 100;
+    public int speedCount = 500;
 
     [Header("References")]
-    [SerializeField] private SpriteRenderer cardSprite;
+    [SerializeField] public SpriteRenderer cardSprite;
     [SerializeField] private SpriteRenderer highlightSprite;
     public Animator animator;
     public TroopsField troopsField;

@@ -80,6 +80,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool waveActive = false;
     public HeroSelectionData heroSelectionData;
 
+    private Queue<CardInstance> attackQueue = new Queue<CardInstance>();
+    public Image[] attackQueueImages;
+    public Image currentAttackerImage;
+
     void Awake()
     {
         Instance = this;
@@ -108,6 +112,130 @@ public class GameManager : MonoBehaviour
         }
         return null;
     }
+
+    private void ResetSpeeds()
+    {
+        var enemies = enemyField.GetCards();
+        var heroes = playerField.GetCards();
+
+        foreach (var card in heroes)
+        {
+            card.speedCount = 499;
+        }
+        foreach (var card in enemies)
+        {
+            card.speedCount = 500;
+        }
+    }
+
+    private void ProcessNextAttacker()
+    {
+        var enemies = enemyField.GetCards();
+        var heroes = playerField.GetCards();
+        int lowestCount = 100000;
+        int highestSpeed = 0;
+        CardInstance nextCard = null;
+
+        foreach (var card in heroes)
+        {
+            if (card.speedCount < lowestCount)
+            {
+                nextCard = card;
+                lowestCount = card.speedCount;
+                highestSpeed = card.speed;
+            }
+            else if (card.speedCount == lowestCount && card.speed > highestSpeed){
+                nextCard = card;
+                lowestCount = card.speedCount;
+                highestSpeed = card.speed;
+            }
+            card.speedCount -= card.speed;
+        }
+        foreach (var card in enemies)
+        {
+            if (card.speedCount < lowestCount)
+            {
+                nextCard = card;
+                lowestCount = card.speedCount;
+                highestSpeed = card.speed;
+            }
+            else if (card.speedCount == lowestCount && card.speed > highestSpeed)
+            {
+                nextCard = card;
+                lowestCount = card.speedCount;
+                highestSpeed = card.speed;
+            }
+            card.speedCount -= card.speed;
+        }
+
+
+
+        nextCard.speedCount = 500;
+        attackQueue.Enqueue(nextCard);
+        Debug.Log("Added " + nextCard.gameObject.name + " to the attack queue");
+        
+
+        Queue<CardInstance> newAttackQueue = new Queue<CardInstance>();
+        bool dead = false;
+        foreach (var card in attackQueue)
+        {
+            if (card == null || (card.GetComponent<HeroInstance>() != null && card.GetComponent<HeroInstance>().isDefeated))
+            {
+                dead = true;
+            }
+            else
+            {
+                newAttackQueue.Enqueue(card);
+            }
+        }
+        attackQueue = newAttackQueue;
+        if (dead) ProcessNextAttacker();
+        UpdateAttackQueue();
+    }
+
+    private void UpdateAttackQueue()
+    {
+        int num = 0;
+        foreach (var card in attackQueue)
+        {
+            if (num > 3) continue;
+            attackQueueImages[num].sprite = card.cardSprite.sprite;
+            num += 1;
+        }
+        for (int i = num; i < 4; i++)
+        {
+            attackQueueImages[num].sprite = null;
+        }
+    }
+
+    private void StartOfWaveRoutine()
+    {
+        attackQueue.Clear();
+        ResetSpeeds();
+        for (int i = 0; i < 4; i++)
+        {
+            ProcessNextAttacker();
+        }
+        BeginNextTurn();
+    }
+
+    private void BeginNextTurn()
+    {
+        ProcessNextAttacker();
+        CardInstance card = attackQueue.Dequeue();
+        UpdateAttackQueue();
+
+        if (card.gameObject.GetComponent<HeroInstance>() != null)
+        {
+            StartCoroutine(PlayerTurnRoutine(card));
+        }
+        else
+        {
+            StartCoroutine(EnemyTurnRoutine(card));
+        }
+        currentAttackerImage.sprite = card.cardSprite.sprite;
+    }
+
     private IEnumerator GameStartRoutine()
     {
         camController.enabled = false;
@@ -132,10 +260,8 @@ public class GameManager : MonoBehaviour
         
         yield return enemySpawner.SpawnWaveCoroutine();
         waveActive = true;
-        
-        
 
-        StartCoroutine(PlayerTurnRoutine());
+        StartOfWaveRoutine();
     }
     private IEnumerator WaveMonitorRoutine()
     {
@@ -169,7 +295,7 @@ public class GameManager : MonoBehaviour
                 waveActive = true;
 
                 // Return control to the player
-                StartCoroutine(PlayerTurnRoutine());
+                StartOfWaveRoutine();
             }
             else if (waveCounter == maxWavesCount)
             {
@@ -178,7 +304,7 @@ public class GameManager : MonoBehaviour
                 waveActive = true;
 
                 // Return control to the player
-                StartCoroutine(PlayerTurnRoutine());
+                StartOfWaveRoutine();
             }
             else
             {
@@ -213,7 +339,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private IEnumerator PlayerTurnRoutine()
+    
+
+    private IEnumerator PlayerTurnRoutine(CardInstance hero)
     {
         currentTurn++;
 
@@ -222,14 +350,13 @@ public class GameManager : MonoBehaviour
             GameOverScreen.instance.Show();
         }
 
-        foreach (var hero in playerField.GetCards())
-        {
-            if (hero == null) continue;
+
+        if (hero != null) {
             yield return StartCoroutine(hero.ProcessStartOfTurnEffects());
             yield return new WaitForSeconds(0.2f);
         }
 
-        actionsThisTurn = 3;
+        actionsThisTurn = 1;
         ResetAllAttacks();
         playerDeck.DrawUntilHandIsFull();
 
@@ -240,18 +367,15 @@ public class GameManager : MonoBehaviour
         //HealPlayers(); bad idea. can be exploited :(
 
         SetPlayerInput(false);
-        StartCoroutine(EnemyTurnRoutine());
+        BeginNextTurn();
     }
-    private IEnumerator EnemyTurnRoutine()
+    private IEnumerator EnemyTurnRoutine(CardInstance enemyCard)
     {
         List<CardInstance> enemyCards = enemyField.GetCards();
         List<CardInstance> playerCards = playerField.GetCards().ToList();
         playerCards.RemoveAll(x => (x as HeroInstance).isDefeated);
 
-        foreach (var enemyCard in new List<CardInstance>(enemyCards))
-        {
-            if (enemyCard == null) continue;
-
+        if (enemyCard != null) {
             yield return StartCoroutine(enemyCard.ProcessStartOfTurnEffects());
             yield return StartCoroutine(enemyCard.ProcessPassivesTurnStart());
 
@@ -261,10 +385,8 @@ public class GameManager : MonoBehaviour
         enemyCards = enemyField.GetCards().ToList(); // Rebuild the list after potential removals
         enemyCards.RemoveAll(e => e.GetComponent<FreezeEffect>() != null); // make frozen units skip action
 
-        foreach (var enemyCard in enemyCards)
-        {
-            if (enemyCard == null) continue;
-            if (playerCards.Count == 0) break;
+
+        if (enemyCard != null && playerCards.Count != 0) {
 
             BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>();
 
@@ -276,7 +398,7 @@ public class GameManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(enemyTurnDuration);
-        StartCoroutine(PlayerTurnRoutine());
+        BeginNextTurn();
     }
     public void RegisterActionUse()
     {
@@ -457,7 +579,7 @@ public class GameManager : MonoBehaviour
             yield return enemySpawner.SpawnWaveCoroutine();
             InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
             waveActive = true;
-            StartCoroutine(PlayerTurnRoutine());
+            StartOfWaveRoutine();
         }
         else
         {

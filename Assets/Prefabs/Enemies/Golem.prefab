@@ -343,11 +343,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPower: 100
   maxHealth: 40
+  speed: 80
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
   troopsField: {fileID: 0}
-  currentContainer: {fileID: 0}
   activeEffects: []
 --- !u!114 &6227583397517256033
 MonoBehaviour:
@@ -481,7 +481,13 @@ MonoBehaviour:
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
   damage: 5
+  element: 4
   isProjectileAttack: 0
+  projectilePrefab: {fileID: 0}
+  projectileSpeed: 12
+  projectileSpawnPoint: {fileID: 0}
+  statusEffect: {fileID: 0}
+  chanceToProc: 0
 --- !u!1 &8612068103122048513
 GameObject:
   m_ObjectHideFlags: 0

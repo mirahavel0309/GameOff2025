@@ -240,11 +240,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPower: 100
   maxHealth: 25
+  speed: 75
+  speedCount: 499
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 7073153086154531137}
   troopsField: {fileID: 0}
-  currentContainer: {fileID: 0}
   activeEffects: []
   mainElement: 1
   spellPower: 100

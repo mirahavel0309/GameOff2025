@@ -6,6 +6,7 @@ public class HeroInstance : CardInstance
 {
     public ElementType mainElement;
     public int spellPower = 100;
+    
     public bool isDefeated = false;
     public override void Initialize()
     {
