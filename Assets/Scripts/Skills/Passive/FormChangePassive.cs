@@ -110,6 +110,7 @@ public class FormChangePassive : PassiveSkill
         // Spawn new form
         GameObject newObj = Instantiate(secondFormPrefab, oldPos, oldRot);
         CardInstance newCard = newObj.GetComponent<CardInstance>();
+        newCard.speedCount = -50;
 
         // Apply proportional HP transfer
         newCard.SetHealth(Mathf.Max(1, Mathf.RoundToInt(newCard.maxHealth * hpFraction)));

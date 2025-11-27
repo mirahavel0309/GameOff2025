@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98f4d9bbff060e459126560c50f1e3c, type: 3}
   m_Name: HeroSelectionData
   m_EditorClassIdentifier: 
-  selectedHeroes: []
+  selectedHeroes:
+  - {fileID: 6709276644064086281, guid: 37bcd2a61baa4fe40bf6d1ab8f702f13, type: 3}
+  - {fileID: 6709276644064086281, guid: 44044dba6aaef0447950080e5a1237e4, type: 3}
+  - {fileID: 6709276644064086281, guid: 68966fe7c228e6f4cb69bcf9aa954bf9, type: 3}
   hasSelection: 0

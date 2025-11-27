@@ -30,8 +30,6 @@ public class AttackAllMonsterSkill : BaseMonsterSkill
         // Play casting animation
         animator.SetTrigger("StartCast");
 
-        GameManager.Instance.SetPlayerInput(false);
-
         float maxWait = 1.35f;
         float timer = 0f;
         GameObject selfEffect = Instantiate(selfEffectPrefab, transform.position, Quaternion.identity);
@@ -66,9 +64,6 @@ public class AttackAllMonsterSkill : BaseMonsterSkill
         }
 
         yield return new WaitForSeconds(0.2f);
-
-
-        GameManager.Instance.SetPlayerInput(true);
     }
 
     private IEnumerator MoveToPosition(Vector3 target, float duration)

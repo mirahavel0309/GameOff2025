@@ -53,7 +53,6 @@ public class AttackMonsterSkill : BaseMonsterSkill
 
         animator.SetTrigger("Action");
 
-        GameManager.Instance.SetPlayerInput(false);
         cardInstance.ToggleHighlight(false);
         GameManager.Instance.SelectHero(null);
 
@@ -77,8 +76,6 @@ public class AttackMonsterSkill : BaseMonsterSkill
         }
 
         yield return MoveToPosition(originalPosition, 0.25f);
-
-        GameManager.Instance.SetPlayerInput(true);
     }
     public IEnumerator PerformProjectileAttack(CardInstance target)
     {
@@ -87,8 +84,6 @@ public class AttackMonsterSkill : BaseMonsterSkill
 
         // Play casting animation
         animator.SetTrigger("StartCast");
-
-        GameManager.Instance.SetPlayerInput(false);
 
         // Wait for animation event OR fallback timeout
         float maxWait = 1.35f;   // fallback
@@ -141,8 +136,6 @@ public class AttackMonsterSkill : BaseMonsterSkill
         }
 
         yield return new WaitForSeconds(0.2f);
-
-        GameManager.Instance.SetPlayerInput(true);
     }
 
     private IEnumerator MoveToPosition(Vector3 target, float duration)

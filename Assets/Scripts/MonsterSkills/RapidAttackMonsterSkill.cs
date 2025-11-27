@@ -30,8 +30,6 @@ public class RapidAttackMonsterSkill : BaseMonsterSkill
             yield break;
         }
 
-        GameManager.Instance.SetPlayerInput(false);
-
         // monster plays cast animation
         animator.SetTrigger("Cast");
 
@@ -40,12 +38,6 @@ public class RapidAttackMonsterSkill : BaseMonsterSkill
         // Prepare potential player targets — only alive heroes
         List<CardInstance> playerTargets = GameManager.Instance.playerField.GetCards();
         playerTargets.RemoveAll(x => x == null || (x as HeroInstance)?.isDefeated == true);
-
-        if (playerTargets.Count == 0)
-        {
-            GameManager.Instance.SetPlayerInput(true);
-            yield break;
-        }
 
         CardInstance chosen = null;
         for (int i = 0; i < attacksCount; i++)
@@ -72,8 +64,6 @@ public class RapidAttackMonsterSkill : BaseMonsterSkill
             yield return new WaitForSeconds(timeBetweenShots);
         }
         animator.SetTrigger("Idle");
-
-        GameManager.Instance.SetPlayerInput(true);
     }
 
     private IEnumerator FireProjectile(RapidAttackEntry entry, CardInstance target)

@@ -268,6 +268,7 @@ public class GameManager : MonoBehaviour
         waveActive = true;
 
         StartOfWaveRoutine();
+        playerDeck.DrawUntilHandIsFull();
     }
     private IEnumerator WaveMonitorRoutine()
     {
@@ -364,7 +365,7 @@ public class GameManager : MonoBehaviour
 
         actionsThisTurn = 1;
         ResetAllAttacks();
-        playerDeck.DrawUntilHandIsFull();
+        playerDeck.DrawMultiple(1);
 
         SetPlayerInput(true);
         yield return new WaitUntil(() => playerInput.EndTurnPressed);

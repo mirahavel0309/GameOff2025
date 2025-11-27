@@ -42,7 +42,11 @@ public class ElementalDeck : MonoBehaviour
     public void DrawMultiple(int count)
     {
         for (int i = 0; i < count; i++)
+        {
+            if(playerHand.GetCards().Count >= 5)
+            return;
             DrawCard();
+        }
     }
 
     internal void DrawUntilHandIsFull()
