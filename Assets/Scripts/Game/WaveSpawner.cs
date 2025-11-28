@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public static WaveSpawner instance;
     [Header("Wave Settings")]
     //[SerializeField] private List<Card> possibleCards;
     [SerializeField] public List<CardInstance> enemies;
@@ -18,6 +19,10 @@ public class WaveSpawner : MonoBehaviour
     private bool waveActive = false;
     public GameObject BossPrefab;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         //StartCoroutine(StartFirstWave());
@@ -28,7 +33,7 @@ public class WaveSpawner : MonoBehaviour
     //    yield return new WaitForSeconds(0.5f);
     //    yield return StartCoroutine(SpawnWave());
     //}
-    public IEnumerator SpawnWaveCoroutine(int enemyCount = 1)
+    public IEnumerator SpawnWaveCoroutine(int enemyCount = 3)
     {
         yield return StartCoroutine(SpawnWave(enemyCount));
     }

@@ -287,11 +287,11 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             HealOnWaveClear();
-            int enemyCount = 1;
+            int enemyCount = 3;
             waveCounter++;
-            if (waveCounter is (2 or 4 or 8 or 9))
+            if (waveCounter is (2 or 4 or 8))
                 enemyCount = 4;
-            if (waveCounter is (5 or 10))
+            if (waveCounter is (5 or 9))
                 enemyCount = 5;
 
             enemySpawner.healthScale += hpScaleIncPerWave;
@@ -394,9 +394,9 @@ public class GameManager : MonoBehaviour
         enemyCards.RemoveAll(e => e.GetComponent<FreezeEffect>() != null); // make frozen units skip action
 
 
-        if (enemyCard != null && playerCards.Count != 0 && enemyCard.GetComponent<FreezeEffect>() == null) {
+        if (enemyCard != null && enemyCard.GetComponent<FreezeEffect>() == null) {
 
-            BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>().Where(x => !x.enabled).ToArray();
+            BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>().Where(x => x.enabled).ToArray();
 
             BaseMonsterSkill selectedSkill = skills[Random.Range(0, skills.Length)];
 

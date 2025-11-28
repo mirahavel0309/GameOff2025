@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPower: 100
-  maxHealth: 120
+  maxHealth: 150
   speed: 100
   speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
@@ -489,6 +489,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8469931686135480976}
   monsterPrefab: {fileID: 6709276644064086281, guid: 55f5926adf1343044aecdd711d43477e, type: 3}
   summonAnimationDelay: 0.4
+  count: 1
 --- !u!114 &7258016911986738553
 MonoBehaviour:
   m_ObjectHideFlags: 0

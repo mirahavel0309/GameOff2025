@@ -45,6 +45,7 @@ public class SummonMonsterSkill : BaseMonsterSkill
             GameObject newMonsterGO = Instantiate(monsterPrefab);
             CardInstance summonedCard = newMonsterGO.GetComponent<CardInstance>();
             summonedCard.speedCount = 100;
+            summonedCard.ScalePower(WaveSpawner.instance.healthScale, WaveSpawner.instance.damageScale);
             if (summonedCard == null)
             {
                 Debug.LogError("Summoned prefab does not contain CardInstance!");

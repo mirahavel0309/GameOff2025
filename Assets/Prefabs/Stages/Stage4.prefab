@@ -417,7 +417,16 @@ MonoBehaviour:
   - {fileID: 7376237778282137747}
   skybox: {fileID: 2100000, guid: c2c39a420b8ec554294d4c29888453f5, type: 2}
   StageBoss: {fileID: 6709276644064086281, guid: 1b741d83858d072458ac3bfe239ce13e, type: 3}
-  enemies: []
+  enemies:
+  - {fileID: 4211456961534145143, guid: 3a8e1d3c40086884480d3773c710e230, type: 3}
+  - {fileID: 4211456961534145143, guid: 61beaf43098592e41ae95fc3187fb783, type: 3}
+  - {fileID: 4211456961534145143, guid: e7af1823bccf3cb43aff9b155fd0bd46, type: 3}
+  - {fileID: 4211456961534145143, guid: c31c871803d03a14fa0b1631b70537e7, type: 3}
+  - {fileID: 4211456961534145143, guid: 99c5cde7d720cae4aaf7bd622d309fe2, type: 3}
+  - {fileID: 4211456961534145143, guid: 1a93b1caa91e1bc41bec195ec13c5b04, type: 3}
+  - {fileID: 4211456961534145143, guid: af6eb3f28d9b7bf488ab33b5b7033738, type: 3}
+  - {fileID: 4211456961534145143, guid: be79d6d370e7a9448b458773f3844744, type: 3}
+  - {fileID: 4211456961534145143, guid: 01aa4909fcbfdb3498105ad37ea431bf, type: 3}
   enemyEnterLocation: {fileID: 6434012521762773382}
   enemyLocations:
   - {fileID: 900942098131315695}

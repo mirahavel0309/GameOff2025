@@ -131,7 +131,7 @@ RectTransform:
   m_GameObject: {fileID: 2943385213234899157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.72095, y: 0.72095, z: 0.72095}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4781189812124174874}
@@ -140,7 +140,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0.657}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6476674095530957167
 Canvas:
@@ -306,6 +306,8 @@ GameObject:
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
   - component: {fileID: 1716852544195132345}
+  - component: {fileID: 8077459593497783422}
+  - component: {fileID: 8194706822023651428}
   m_Layer: 0
   m_Name: _BOSS_4
   m_TagString: Enemy
@@ -344,7 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPower: 100
   maxHealth: 130
-  speed: 100
+  speed: 95
   speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
@@ -399,7 +401,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.8}
+  m_Offset: {x: 0, y: 1.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -409,7 +411,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!212 &4964113359520524644
 SpriteRenderer:
@@ -485,6 +487,44 @@ MonoBehaviour:
   monsterPrefab: {fileID: 6709276644064086281, guid: 00489db4fa50efb448f5b637ef16dbae, type: 3}
   summonAnimationDelay: 0.4
   count: 4
+--- !u!114 &8077459593497783422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10f89398947375439107a64800129a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: 
+  skillDescription: 
+  animator: {fileID: 5490996520537943343}
+  spriteRenderer: {fileID: 8469931686135480976}
+  startEffectPrefab: {fileID: 6709276644064086281, guid: 3b26cffa798346a4bac6470599ea3cff, type: 3}
+  beamPrefab: {fileID: 6772939638736423725, guid: bc2ac6dd703eaa74ab7d9297908cd52b, type: 3}
+  beamOrigin: {fileID: 805646930765066053}
+  suckInDuration: 0.4
+  beamDelay: 0.2
+  damageLevels: 0300000005000000080000000c0000001200000019000000
+--- !u!114 &8194706822023651428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a793abae207bb4894d3ecae4261411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castDescription: 
+  skills:
+  - {fileID: 1716852544195132345}
+  - {fileID: 8077459593497783422}
 --- !u!1 &8223478066681231905
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +550,7 @@ Transform:
   m_GameObject: {fileID: 8223478066681231905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.418, z: 0}
+  m_LocalPosition: {x: 0, y: 4.15, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
