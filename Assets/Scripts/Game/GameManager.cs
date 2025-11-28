@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     public HeroSelectionData heroSelectionData;
 
     private Queue<CardInstance> attackQueue = new Queue<CardInstance>();
+    private PriorityQueue<CardInstance> attackPQ = new PriorityQueue<CardInstance>();
     public Image[] attackQueueImages;
     public Image currentAttackerImage;
 
@@ -171,7 +172,7 @@ public class GameManager : MonoBehaviour
 
 
 
-        nextCard.speedCount = 500;
+        nextCard.speedCount += 500;
         attackQueue.Enqueue(nextCard);
         Debug.Log("Added " + nextCard.gameObject.name + " to the attack queue");
         
