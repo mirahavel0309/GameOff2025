@@ -286,7 +286,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             HealOnWaveClear();
-            int enemyCount = 3;
+            int enemyCount = 1;
             waveCounter++;
             if (waveCounter is (2 or 4 or 8 or 9))
                 enemyCount = 4;
@@ -395,7 +395,7 @@ public class GameManager : MonoBehaviour
 
         if (enemyCard != null && playerCards.Count != 0 && enemyCard.GetComponent<FreezeEffect>() == null) {
 
-            BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>();
+            BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>().Where(x => !x.enabled).ToArray();
 
             BaseMonsterSkill selectedSkill = skills[Random.Range(0, skills.Length)];
 
@@ -440,7 +440,8 @@ public class GameManager : MonoBehaviour
         {
             foreach (var hero in PlayerHeroes)
             {
-                hero.Heal(5);
+                hero.maxHealth += 1;
+                hero.Heal(10);
             }
         }
     }
@@ -728,6 +729,7 @@ public class GameManager : MonoBehaviour
         exitCameraPath = currentRoom.exitCameraPath;
         RenderSettings.skybox = currentRoom.skybox;
         enemySpawner.BossPrefab = currentRoom.StageBoss;
+        enemySpawner.enemies = currentRoom.enemies.ToList();
 
         playerField.ClearPositions();
         foreach (var hero in PlayerHeroes)

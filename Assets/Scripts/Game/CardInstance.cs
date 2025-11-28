@@ -219,6 +219,13 @@ public class CardInstance : MonoBehaviour
 
             // Apply resistance (e.g., 50 = 50% reduction, -20 = +20% damage)
             finalDamage = Mathf.RoundToInt(dmg * (1f - (resistance / 100f)));
+
+
+            foreach (var passive in GetComponents<PassiveSkill>())
+            {
+                passive.OnReceiveDamage(ref finalDamage, element, this);
+            }
+
             EffectsManager.instance.CreateFloatingText(transform.position, finalDamage.ToString(), textColor);
         }
 

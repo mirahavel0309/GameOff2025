@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPower: 100
-  maxHealth: 25
+  maxHealth: 30
   speed: 115
   speedCount: 499
   cardSprite: {fileID: 8469931686135480976}

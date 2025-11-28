@@ -58,7 +58,7 @@ MonoBehaviour:
   mergeDelay: 0.3
   travelDuration: 0.8
   impactDelay: 0.1
-  baseDamage: 10
+  baseDamage: 11
   damageType: 1
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
   onHitEffect: {fileID: 1714363467411018263, guid: 65011c07cdf399f47a57ad68b59e5b20, type: 3}
@@ -141,7 +141,7 @@ MonoBehaviour:
   poisonEffect: {fileID: 8472181017592084466}
   projectileSpeed: 6
   explosionDuration: 0.7
-  baseDamage: 5
+  baseDamage: 8
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
   elementalRiseHeight: 4
   elementalLaunchDuration: 0.8
@@ -218,7 +218,7 @@ MonoBehaviour:
   elementalLaunchDuration: 0.8
   mergeDelay: 0.3
   healEffectDuration: 1.8
-  baseHeal: 8
+  baseHeal: 10
 --- !u!1 &1468682435076087105
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +362,87 @@ MonoBehaviour:
   effectPrefab: {fileID: 0}
   duration: 3
   accuracyPenalty: 10
+--- !u!1 &1650015951956989329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149882833638696070}
+  - component: {fileID: 7988300940588598902}
+  - component: {fileID: 1495885071526234886}
+  m_Layer: 0
+  m_Name: Shield-water
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1149882833638696070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650015951956989329}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7988300940588598902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650015951956989329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe64fe727b4273342b750575b2ccf86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Shield
+  description: 'Appies water shield to all allies.
+
+    <passive_info>'
+  skillIcon: {fileID: -5253547813027793777, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  requiredElements: 01000000
+  soundCharge: {fileID: 0}
+  effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
+  elementalRiseHeight: 2
+  elementalLaunchDuration: 0.4
+  mergeDelay: 0.3
+  effectDuration: 0.6
+  passiveToGrant: {fileID: 1495885071526234886}
+  mainElement: 1
+--- !u!114 &1495885071526234886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650015951956989329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1af12b99ed28949a721a36cbfb8aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castDescription: 
+  shieldAmount: 20
+  maxShieldAmount: 20
+  strongAgainst: 0
+  weakAgainst: 2
+  visualPrefab: {fileID: 6709276644064086281, guid: 721c3ef872a717145a08403cbdb71832, type: 3}
+  shieldBarPrefab: {fileID: 181281477184934585, guid: 386d1a89cd2ea094097437ec711a6e62, type: 3}
+  worldVisualOffset: {x: 0, y: 0, z: 0}
+  uiBarOffset: {x: 0, y: -0.25, z: 0}
 --- !u!1 &1885629959649619913
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +584,7 @@ MonoBehaviour:
   mergeDelay: 0.5
   travelDuration: 1.2
   impactDelay: 0.1
-  baseDamage: 12
+  baseDamage: 18
   damageType: 0
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
   onHitEffect: {fileID: 1714363467411018263, guid: e6c971256c7042c4d85a927ed0c430ab, type: 3}
@@ -581,7 +662,7 @@ MonoBehaviour:
   requiredElements: 010000000100000001000000
   soundCharge: {fileID: 0}
   beamPrefab: {fileID: 6772939638736423725, guid: f915f5b490e652a4fb5a7cddac988694, type: 3}
-  baseDamage: 17
+  baseDamage: 25
   damageType: 1
   accuracyEffect: {fileID: 8793795446632012447}
   elementalRiseHeight: 3.5
@@ -662,7 +743,7 @@ MonoBehaviour:
   elementalLaunchDuration: 0.6
   mergeDelay: 0.3
   healEffectDuration: 1.5
-  baseHeal: 10
+  baseHeal: 15
 --- !u!1 &3127187402080381879
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +800,7 @@ MonoBehaviour:
   mergeDelay: 0.5
   travelDuration: 1.2
   impactDelay: 0.1
-  baseDamage: 6
+  baseDamage: 8
   damageType: 0
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
   onHitEffect: {fileID: 1714363467411018263, guid: e6c971256c7042c4d85a927ed0c430ab, type: 3}
@@ -816,7 +897,7 @@ MonoBehaviour:
   soundCharge: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
   meteorProjectilePrefab: {fileID: 5492295935689872714, guid: bf2a7b6d69a0c7b418b4f7b704f14f19, type: 3}
   meteorImpactVFX: {fileID: 1714363467411018263, guid: 8ee80d1cd635a8c4f8638713a08788a2, type: 3}
-  baseDamage: 20
+  baseDamage: 32
   damageType: 0
   meteorHeight: 12
   travelDuration: 1
@@ -832,6 +913,87 @@ MonoBehaviour:
   BeamPrefab: {fileID: 6772939638736423725, guid: 7481c411a3ea53a4f89e9a758e4cb3eb, type: 3}
   statusEffect: {fileID: 7081780952953809561}
   chanceToProc: 50
+--- !u!1 &3404736493932315954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6206925093518659093}
+  - component: {fileID: 982367365429467642}
+  - component: {fileID: 3664175141009682504}
+  m_Layer: 0
+  m_Name: Shield-wind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6206925093518659093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404736493932315954}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &982367365429467642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404736493932315954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe64fe727b4273342b750575b2ccf86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Shield
+  description: 'Appies wind shield to all allies.
+
+    <passive_info>'
+  skillIcon: {fileID: -4932745210665146139, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  requiredElements: 03000000
+  soundCharge: {fileID: 0}
+  effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
+  elementalRiseHeight: 2
+  elementalLaunchDuration: 0.4
+  mergeDelay: 0.3
+  effectDuration: 0.6
+  passiveToGrant: {fileID: 3664175141009682504}
+  mainElement: 3
+--- !u!114 &3664175141009682504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404736493932315954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1af12b99ed28949a721a36cbfb8aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castDescription: 
+  shieldAmount: 10
+  maxShieldAmount: 10
+  strongAgainst: 3
+  weakAgainst: 4
+  visualPrefab: {fileID: 6709276644064086281, guid: 23972ba5287a0c244b078253dc02a2b7, type: 3}
+  shieldBarPrefab: {fileID: 181281477184934585, guid: 386d1a89cd2ea094097437ec711a6e62, type: 3}
+  worldVisualOffset: {x: 0, y: 0, z: 0}
+  uiBarOffset: {x: 0, y: -0.25, z: 0}
 --- !u!1 &3868967560574743431
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,7 +1011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7111370223924812283
 Transform:
   m_ObjectHideFlags: 0
@@ -959,8 +1121,93 @@ Transform:
   - {fileID: 578380868019956768}
   - {fileID: 3612042997355899802}
   - {fileID: 1388280566008209799}
+  - {fileID: 8347499323515073548}
+  - {fileID: 1149882833638696070}
+  - {fileID: 200217564348600959}
+  - {fileID: 6206925093518659093}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4869640314808536140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 200217564348600959}
+  - component: {fileID: 17515799786402081}
+  - component: {fileID: 5242258301314352235}
+  m_Layer: 0
+  m_Name: Shield-nature
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &200217564348600959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4869640314808536140}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &17515799786402081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4869640314808536140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe64fe727b4273342b750575b2ccf86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Shield
+  description: 'Appies nature shield to all allies.
+
+    <passive_info>'
+  skillIcon: {fileID: 974909791873148181, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  requiredElements: 02000000
+  soundCharge: {fileID: 0}
+  effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
+  elementalRiseHeight: 2
+  elementalLaunchDuration: 0.4
+  mergeDelay: 0.3
+  effectDuration: 0.6
+  passiveToGrant: {fileID: 5242258301314352235}
+  mainElement: 2
+--- !u!114 &5242258301314352235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4869640314808536140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1af12b99ed28949a721a36cbfb8aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castDescription: 
+  shieldAmount: 10
+  maxShieldAmount: 10
+  strongAgainst: 1
+  weakAgainst: 0
+  visualPrefab: {fileID: 6709276644064086281, guid: 27943e1427f1b4248bfec9c0c662f7e0, type: 3}
+  shieldBarPrefab: {fileID: 181281477184934585, guid: 386d1a89cd2ea094097437ec711a6e62, type: 3}
+  worldVisualOffset: {x: 0, y: 0, z: 0}
+  uiBarOffset: {x: 0, y: -0.25, z: 0}
 --- !u!1 &5814782397157253723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +1259,7 @@ MonoBehaviour:
   requiredElements: 0100000003000000
   soundCharge: {fileID: 0}
   stormPrefab: {fileID: 1796097532597538004, guid: 71920dbf64881134ebc96208659569e2, type: 3}
-  baseDamage: 7
+  baseDamage: 10
   damageType: 1
   baseAccuracy: 85
   statusEffect: {fileID: 1835551666500344175}
@@ -1238,7 +1485,7 @@ MonoBehaviour:
   drainExplosionPrefab: {fileID: 1714363467411018263, guid: e6c971256c7042c4d85a927ed0c430ab, type: 3}
   projectileSpeed: 6
   explosionDuration: 0.6
-  baseDamage: 10
+  baseDamage: 15
 --- !u!1 &6168288286251122584
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,7 +1544,7 @@ MonoBehaviour:
   mergeDelay: 0.5
   travelDuration: 0.8
   impactDelay: 0.1
-  baseDamage: 6
+  baseDamage: 5
   damageType: 1
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
   onHitEffect: {fileID: 1714363467411018263, guid: 65011c07cdf399f47a57ad68b59e5b20, type: 3}
@@ -1338,7 +1585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1388280566008209799
 Transform:
   m_ObjectHideFlags: 0
@@ -1447,7 +1694,7 @@ MonoBehaviour:
   requiredElements: 0000000003000000
   soundCharge: {fileID: 0}
   stormPrefab: {fileID: 1796097532597538004, guid: 9048b7f03918e1346a80205dcfdfa2cb, type: 3}
-  baseDamage: 10
+  baseDamage: 12
   damageType: 0
   baseAccuracy: 85
   statusEffect: {fileID: 8869304084395227921}
@@ -1527,7 +1774,7 @@ MonoBehaviour:
   requiredElements: 030000000300000003000000
   soundCharge: {fileID: 0}
   stormPrefab: {fileID: 1796097532597538004, guid: 616864db2eafb37458b30998031ad001, type: 3}
-  baseDamage: 12
+  baseDamage: 14
   damageType: 3
   baseAccuracy: 85
   statusEffect: {fileID: 0}
@@ -1557,7 +1804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3612042997355899802
 Transform:
   m_ObjectHideFlags: 0
@@ -1632,7 +1879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &578380868019956768
 Transform:
   m_ObjectHideFlags: 0
@@ -1690,6 +1937,87 @@ MonoBehaviour:
   effectPrefab: {fileID: 6709276644064086281, guid: 721c3ef872a717145a08403cbdb71832, type: 3}
   duration: 1
   element: 1
+--- !u!1 &8279245249303061341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8347499323515073548}
+  - component: {fileID: 6409646673187585374}
+  - component: {fileID: 4392196929380347229}
+  m_Layer: 0
+  m_Name: Shield-fire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8347499323515073548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279245249303061341}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6409646673187585374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279245249303061341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe64fe727b4273342b750575b2ccf86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Shield
+  description: 'Appies fire shield to all allies.
+
+    <passive_info>'
+  skillIcon: {fileID: -300472272976743755, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  requiredElements: 00000000
+  soundCharge: {fileID: 0}
+  effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
+  elementalRiseHeight: 2
+  elementalLaunchDuration: 0.4
+  mergeDelay: 0.3
+  effectDuration: 0.6
+  passiveToGrant: {fileID: 4392196929380347229}
+  mainElement: 0
+--- !u!114 &4392196929380347229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279245249303061341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1af12b99ed28949a721a36cbfb8aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castDescription: 
+  shieldAmount: 10
+  maxShieldAmount: 10
+  strongAgainst: 2
+  weakAgainst: 1
+  visualPrefab: {fileID: 6709276644064086281, guid: 9babe8a219f9ec24084afd3eabd4e1d0, type: 3}
+  shieldBarPrefab: {fileID: 181281477184934585, guid: 386d1a89cd2ea094097437ec711a6e62, type: 3}
+  worldVisualOffset: {x: 0, y: 0, z: 0}
+  uiBarOffset: {x: 0, y: -0.25, z: 0}
 --- !u!1 &8304244999460207555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,5 +2091,5 @@ MonoBehaviour:
   effectName: Regeneration
   description: Regenerate health each turn
   effectPrefab: {fileID: 6709276644064086281, guid: 7206cf20b2462d44f994e7cb77128949, type: 3}
-  duration: 3
-  regenAmount: 5
+  duration: 5
+  regenAmount: 7

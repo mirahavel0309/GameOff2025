@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPower: 100
-  maxHealth: 25
+  maxHealth: 30
   speed: 75
   speedCount: 499
   cardSprite: {fileID: 8469931686135480976}
@@ -544,7 +544,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: de68f43c939c0364ab550b691e869b53, type: 3}
+  m_Sprite: {fileID: -8961644127206672786, guid: 6d94169791f915d41b259b22848504d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

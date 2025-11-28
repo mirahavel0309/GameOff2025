@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public abstract class PassiveSkill : MonoBehaviour
 {
     protected CardInstance owner;
+    [TextArea(4,4)]
+    public string castDescription;
     private void Start()
     {
         Initialize();
@@ -20,5 +23,12 @@ public abstract class PassiveSkill : MonoBehaviour
     public virtual int ModifyDefense(int value) => value;
     public virtual IEnumerator OnTurnStart() { yield break;  }
 
-    public virtual int OnDamageTaken(int incomingDamage) => incomingDamage;
+    public virtual void OnReceiveDamage(ref int dmg, ElementType dmgType, CardInstance owner) { }
+
+    public virtual string GetDescription(int spellPower)
+    {
+        return "";
+    }
+
+    public virtual void InitializeFromCaster(HeroInstance mainHero) { }
 }

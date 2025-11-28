@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 6227583397517256033}
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
-  - component: {fileID: 993956769459973435}
+  - component: {fileID: 1716852544195132345}
   m_Layer: 0
   m_Name: _BOSS_4
   m_TagString: Enemy
@@ -343,12 +343,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPower: 100
-  maxHealth: 15
+  maxHealth: 130
+  speed: 100
+  speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
   troopsField: {fileID: 0}
-  currentContainer: {fileID: 0}
   activeEffects: []
 --- !u!114 &6227583397517256033
 MonoBehaviour:
@@ -465,7 +466,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &993956769459973435
+--- !u!114 &1716852544195132345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -474,19 +475,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6709276644064086281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1c7e70adb5efcb498ef8d0f65cecf2c, type: 3}
+  m_Script: {fileID: 11500000, guid: b18e8c3e68af25f40841a7386f4f2612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 
   skillDescription: 
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
-  damage: 3
-  element: 3
-  selfEffectPrefab: {fileID: 1714363467411018263, guid: d2603cce40f4d154298f25fdb5777d13, type: 3}
-  attackEffetPrefab: {fileID: 1714363467411018263, guid: 52449de75b5b2484e836ca388a7df108, type: 3}
-  statusEffect: {fileID: 0}
-  chanceToProc: 0
+  monsterPrefab: {fileID: 6709276644064086281, guid: 00489db4fa50efb448f5b637ef16dbae, type: 3}
+  summonAnimationDelay: 0.4
+  count: 4
 --- !u!1 &8223478066681231905
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +615,7 @@ Animator:
   m_GameObject: {fileID: 8612068103122048513}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8a126d12c542dd84cbb6b940490b1b25, type: 2}
+  m_Controller: {fileID: 9100000, guid: 26495bc631eba9b40956c675761d91b4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

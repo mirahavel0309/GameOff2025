@@ -8,7 +8,7 @@ public class GameBoard : MonoBehaviour
     public Transform[] playerLocations;
     public Material skybox;
     public GameObject StageBoss;
-    public GameObject[] enemies;
+    public CardInstance[] enemies;
 
     public Transform enemyEnterLocation;
     public Transform[] enemyLocations;

@@ -470,7 +470,7 @@ MonoBehaviour:
   dmgScaleIncPerWave: 0.01
   hpScaleIncPerStage: 0.2
   dmgScaleIncPerStage: 0.05
-  enemyTurnDuration: 2
+  enemyTurnDuration: 0.25
   healLevels: 020000000300000005000000
   allSkills:
   - {fileID: 882667805}

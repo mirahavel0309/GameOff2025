@@ -305,7 +305,12 @@ GameObject:
   - component: {fileID: 6227583397517256033}
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
-  - component: {fileID: 993956769459973435}
+  - component: {fileID: 4127169459360096781}
+  - component: {fileID: 7258016911986738553}
+  - component: {fileID: 8482742120064239500}
+  - component: {fileID: 2496579275888005016}
+  - component: {fileID: 2911726063156282068}
+  - component: {fileID: 1059308180252739420}
   m_Layer: 0
   m_Name: _BOSS_3
   m_TagString: Enemy
@@ -343,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPower: 100
-  maxHealth: 15
+  maxHealth: 120
   speed: 100
   speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
@@ -466,7 +471,92 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &993956769459973435
+--- !u!114 &4127169459360096781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18e8c3e68af25f40841a7386f4f2612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: 
+  skillDescription: 
+  animator: {fileID: 5490996520537943343}
+  spriteRenderer: {fileID: 8469931686135480976}
+  monsterPrefab: {fileID: 6709276644064086281, guid: 55f5926adf1343044aecdd711d43477e, type: 3}
+  summonAnimationDelay: 0.4
+--- !u!114 &7258016911986738553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50465aca2cdef044ebeed1640a85c5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castDescription: 
+  enemyPrefab: {fileID: 6709276644064086281, guid: 55f5926adf1343044aecdd711d43477e, type: 3}
+  spawnCount: 2
+--- !u!114 &8482742120064239500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f742aa3201741e347ab695a64ea38f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: 
+  skillDescription: 
+  animator: {fileID: 5490996520537943343}
+  spriteRenderer: {fileID: 8469931686135480976}
+  healAmount: 20
+  projectilePrefab: {fileID: 6709276644064086281, guid: e8c7ef42158dbeb408affcb64101ea98, type: 3}
+  hitPrefab: {fileID: 1714363467411018263, guid: fd3e7606c9b5a4a41a5da6ab7479961c, type: 3}
+  projectileSpeed: 8
+  origin: {fileID: 805646930765066053}
+--- !u!114 &2496579275888005016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50465aca2cdef044ebeed1640a85c5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castDescription: 
+  enemyPrefab: {fileID: 6709276644064086281, guid: 99c5cde7d720cae4aaf7bd622d309fe2, type: 3}
+  spawnCount: 2
+--- !u!114 &2911726063156282068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4fa3940bdf7af0499c9e76017f3a156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castDescription: 
+  attackSkill: {fileID: 1059308180252739420}
+  summonSkill: {fileID: 4127169459360096781}
+  healSkill: {fileID: 8482742120064239500}
+--- !u!114 &1059308180252739420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -482,10 +572,10 @@ MonoBehaviour:
   skillDescription: 
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
-  damage: 3
-  element: 3
+  damage: 5
+  element: 4
   selfEffectPrefab: {fileID: 1714363467411018263, guid: d2603cce40f4d154298f25fdb5777d13, type: 3}
-  attackEffetPrefab: {fileID: 1714363467411018263, guid: 52449de75b5b2484e836ca388a7df108, type: 3}
+  attackEffetPrefab: {fileID: 1714363467411018263, guid: d2603cce40f4d154298f25fdb5777d13, type: 3}
   baseAccuracy: 85
   statusEffect: {fileID: 0}
   chanceToProc: 0
@@ -514,7 +604,7 @@ Transform:
   m_GameObject: {fileID: 8223478066681231905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.418, z: 0}
+  m_LocalPosition: {x: -0.048, y: 1.008, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []

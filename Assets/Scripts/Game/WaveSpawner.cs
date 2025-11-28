@@ -6,7 +6,7 @@ public class WaveSpawner : MonoBehaviour
 {
     [Header("Wave Settings")]
     //[SerializeField] private List<Card> possibleCards;
-    [SerializeField] private List<CardInstance> enemies;
+    [SerializeField] public List<CardInstance> enemies;
     [SerializeField] private TroopsField enemyField;
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private int cardsPerWave = 2;
@@ -28,7 +28,7 @@ public class WaveSpawner : MonoBehaviour
     //    yield return new WaitForSeconds(0.5f);
     //    yield return StartCoroutine(SpawnWave());
     //}
-    public IEnumerator SpawnWaveCoroutine(int enemyCount = 3)
+    public IEnumerator SpawnWaveCoroutine(int enemyCount = 1)
     {
         yield return StartCoroutine(SpawnWave(enemyCount));
     }

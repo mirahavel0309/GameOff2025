@@ -1,0 +1,1898 @@
+fileFormatVersion: 2
+guid: 73b49588283b8be409ede238366dd1a4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7175396696648647120
+    second: acuraccylosssheet_0
+  - first:
+      213: 6752101049940232367
+    second: acuraccylosssheet_1
+  - first:
+      213: -7468457993150364202
+    second: acuraccylosssheet_2
+  - first:
+      213: -8313373083652492005
+    second: acuraccylosssheet_3
+  - first:
+      213: -7979915105852721604
+    second: acuraccylosssheet_4
+  - first:
+      213: -9005475868732414986
+    second: acuraccylosssheet_5
+  - first:
+      213: 8906423569054361034
+    second: acuraccylosssheet_6
+  - first:
+      213: -24859813030539849
+    second: acuraccylosssheet_7
+  - first:
+      213: -4452695208713489705
+    second: acuraccylosssheet_8
+  - first:
+      213: -2950294952976292678
+    second: acuraccylosssheet_9
+  - first:
+      213: 6911888597094412139
+    second: acuraccylosssheet_10
+  - first:
+      213: -410312160754433894
+    second: acuraccylosssheet_11
+  - first:
+      213: 6368485789392172200
+    second: acuraccylosssheet_12
+  - first:
+      213: 6464353590233670198
+    second: acuraccylosssheet_13
+  - first:
+      213: -8398537183151315863
+    second: acuraccylosssheet_14
+  - first:
+      213: 6824608261295736045
+    second: acuraccylosssheet_15
+  - first:
+      213: 912273399593724075
+    second: acuraccylosssheet_16
+  - first:
+      213: 5742898940067466871
+    second: acuraccylosssheet_17
+  - first:
+      213: -6794450683819202488
+    second: acuraccylosssheet_18
+  - first:
+      213: -3609801541552703078
+    second: acuraccylosssheet_19
+  - first:
+      213: -7105210608537261794
+    second: acuraccylosssheet_20
+  - first:
+      213: -5663784147042461093
+    second: acuraccylosssheet_21
+  - first:
+      213: 234736555944997887
+    second: acuraccylosssheet_22
+  - first:
+      213: -2416013930447631374
+    second: acuraccylosssheet_23
+  - first:
+      213: 5619865237071069217
+    second: acuraccylosssheet_24
+  - first:
+      213: 3339797224131774921
+    second: acuraccylosssheet_25
+  - first:
+      213: 8892500849570118330
+    second: acuraccylosssheet_26
+  - first:
+      213: -4879103196419482184
+    second: acuraccylosssheet_27
+  - first:
+      213: -3845527706333243394
+    second: acuraccylosssheet_28
+  - first:
+      213: 4548539361855989792
+    second: acuraccylosssheet_29
+  - first:
+      213: 2182010307457334600
+    second: acuraccylosssheet_30
+  - first:
+      213: 6471789864731098964
+    second: acuraccylosssheet_31
+  - first:
+      213: 3917637593559079370
+    second: acuraccylosssheet_32
+  - first:
+      213: -785756073546044432
+    second: acuraccylosssheet_33
+  - first:
+      213: 8057626317525186611
+    second: acuraccylosssheet_34
+  - first:
+      213: 5159993974503782895
+    second: acuraccylosssheet_35
+  - first:
+      213: -6149272844206156052
+    second: acuraccylosssheet_36
+  - first:
+      213: -5124154162216528252
+    second: acuraccylosssheet_37
+  - first:
+      213: 5351229559912373025
+    second: acuraccylosssheet_38
+  - first:
+      213: -4095680070305979449
+    second: acuraccylosssheet_39
+  - first:
+      213: 6043082031630213680
+    second: acuraccylosssheet_40
+  - first:
+      213: 6539875771230844393
+    second: acuraccylosssheet_41
+  - first:
+      213: -4040498609003265788
+    second: acuraccylosssheet_42
+  - first:
+      213: 6265165438451533526
+    second: acuraccylosssheet_43
+  - first:
+      213: -4820166535099735727
+    second: acuraccylosssheet_44
+  - first:
+      213: 6096307239605942912
+    second: acuraccylosssheet_45
+  - first:
+      213: -8332868129909895
+    second: acuraccylosssheet_46
+  - first:
+      213: 3546528254553764493
+    second: acuraccylosssheet_47
+  - first:
+      213: -337169741122473180
+    second: acuraccylosssheet_48
+  - first:
+      213: -383551462985573905
+    second: acuraccylosssheet_49
+  - first:
+      213: -3097044504646196924
+    second: acuraccylosssheet_50
+  - first:
+      213: -4417678364578444104
+    second: acuraccylosssheet_51
+  - first:
+      213: -7049304315882903627
+    second: acuraccylosssheet_52
+  - first:
+      213: 4067447946536451056
+    second: acuraccylosssheet_53
+  - first:
+      213: -288391354284004047
+    second: acuraccylosssheet_54
+  - first:
+      213: 7251682050879005751
+    second: acuraccylosssheet_55
+  - first:
+      213: 5160863372288313034
+    second: acuraccylosssheet_56
+  - first:
+      213: -8272153272313913422
+    second: acuraccylosssheet_57
+  - first:
+      213: -3988019071295285949
+    second: acuraccylosssheet_58
+  - first:
+      213: -2093544269726502977
+    second: acuraccylosssheet_59
+  - first:
+      213: -2349561609744722681
+    second: acuraccylosssheet_60
+  - first:
+      213: 1715448397940200965
+    second: acuraccylosssheet_61
+  - first:
+      213: 40212699556436607
+    second: acuraccylosssheet_62
+  - first:
+      213: 5825125170183286641
+    second: acuraccylosssheet_63
+  - first:
+      213: 3189750159067387479
+    second: acuraccylosssheet_64
+  - first:
+      213: 5893176376713160358
+    second: acuraccylosssheet_65
+  - first:
+      213: -2758681270765483971
+    second: acuraccylosssheet_66
+  - first:
+      213: -8955549642942077688
+    second: acuraccylosssheet_67
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: acuraccylosssheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 392
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03efeb5a8bedb6c90800000000000000
+      internalID: -7175396696648647120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 395
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa8ca39712844bd50800000000000000
+      internalID: 6752101049940232367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 394
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5885a5605ba5890800000000000000
+      internalID: -7468457993150364202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 387
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15799ff937f0ac80800000000000000
+      internalID: -8313373083652492005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_4
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 390
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36ffd99d75a14190800000000000000
+      internalID: -7979915105852721604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 389
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f32ad2196f160380800000000000000
+      internalID: -9005475868732414986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 392
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5e6ac3c09f99b70800000000000000
+      internalID: 8906423569054361034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_7
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 385
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bdc12bb12ea7aff0800000000000000
+      internalID: -24859813030539849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_8
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 388
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d27c8f8c49d432c0800000000000000
+      internalID: -4452695208713489705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_9
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 387
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab468312f527e07d0800000000000000
+      internalID: -2950294952976292678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_10
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 390
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6fa2ecee06fbef50800000000000000
+      internalID: 6911888597094412139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_11
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 385
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90853383474e4af0800000000000000
+      internalID: -410312160754433894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_12
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 380
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4f7d17518616850800000000000000
+      internalID: 6368485789392172200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_13
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 383
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6322668375ff5b950800000000000000
+      internalID: 6464353590233670198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_14
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 382
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9642b55ede6627b80800000000000000
+      internalID: -8398537183151315863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_15
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 375
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de48ab92e01e5be50800000000000000
+      internalID: 6824608261295736045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_16
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 378
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba862d0d2db09ac00800000000000000
+      internalID: 912273399593724075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_17
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 377
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e40b7a820e2bf40800000000000000
+      internalID: 5742898940067466871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_18
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 380
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 848eb030a1345b1a0800000000000000
+      internalID: -6794450683819202488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_19
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 289
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99f71e9f9867edc0800000000000000
+      internalID: -3609801541552703078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_20
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 292
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e19acc7b898356d90800000000000000
+      internalID: -7105210608537261794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_21
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 291
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a9b0783523661b0800000000000000
+      internalID: -5663784147042461093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_22
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 294
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff376e867a3f14300800000000000000
+      internalID: 234736555944997887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 284
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb064f7128987ed0800000000000000
+      internalID: -2416013930447631374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_24
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 287
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120003568a5cdfd40800000000000000
+      internalID: 5619865237071069217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_25
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 286
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9c53e51e7595e20800000000000000
+      internalID: 3339797224131774921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 289
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba7c7f7862886b70800000000000000
+      internalID: 8892500849570118330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_27
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 284
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd91f25e71f94cb0800000000000000
+      internalID: -4879103196419482184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_28
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 279
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef79512fce0f1aac0800000000000000
+      internalID: -3845527706333243394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_29
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 282
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028ee4e4378af1f30800000000000000
+      internalID: 4548539361855989792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_30
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 281
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d3c3850de084e10800000000000000
+      internalID: 2182010307457334600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_31
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 274
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f354cc79a60d950800000000000000
+      internalID: 6471789864731098964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_32
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 277
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac91ec282ae3e5630800000000000000
+      internalID: 3917637593559079370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_33
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 276
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fbae24a30f6815f0800000000000000
+      internalID: -785756073546044432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_34
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 279
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3387de4d17072df60800000000000000
+      internalID: 8057626317525186611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_35
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 272
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe934755e2bfb9740800000000000000
+      internalID: 5159993974503782895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_36
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 274
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6d22eade469aaa0800000000000000
+      internalID: -6149272844206156052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_37
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 269
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4869eba30f853e8b0800000000000000
+      internalID: -5124154162216528252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_38
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 271
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b9526cee2634a40800000000000000
+      internalID: 5351229559912373025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_39
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 183
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c3e3c70da83927c0800000000000000
+      internalID: -4095680070305979449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_40
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 186
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0326dd317175dd350800000000000000
+      internalID: 6043082031630213680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_41
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 185
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e5f56b3d5e42ca50800000000000000
+      internalID: 6539875771230844393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_42
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 188
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40186ee2ce34de7c0800000000000000
+      internalID: -4040498609003265788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 178
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d645f1a5c652f650800000000000000
+      internalID: 6265165438451533526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_44
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 181
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151a72d13145b1db0800000000000000
+      internalID: -4820166535099735727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_45
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 180
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08aba52822f6a9450800000000000000
+      internalID: 6096307239605942912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_46
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 183
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9731823fc4562eff0800000000000000
+      internalID: -8332868129909895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_47
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 172
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82309e38acc73130800000000000000
+      internalID: 3546528254553764493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_48
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 175
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423726728e1225bf0800000000000000
+      internalID: -337169741122473180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_49
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 174
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9d9aff9f95daaf0800000000000000
+      internalID: -383551462985573905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_50
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 177
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441ecfe8e661505d0800000000000000
+      internalID: -3097044504646196924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_51
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 167
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc8f5beee041b2c0800000000000000
+      internalID: -4417678364578444104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_52
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 170
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7eb22d217db2e90800000000000000
+      internalID: -7049304315882903627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_53
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 169
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb72bb6b5a727830800000000000000
+      internalID: 4067447946536451056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_54
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 172
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13dab9b579d6ffbf0800000000000000
+      internalID: -288391354284004047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_55
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 167
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73428ba776623a460800000000000000
+      internalID: 7251682050879005751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_56
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 162
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac6c197c4e11f9740800000000000000
+      internalID: 5160863372288313034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_57
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 165
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bfd4243d68633d80800000000000000
+      internalID: -8272153272313913422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_58
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 164
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34516f9b8c5b7a8c0800000000000000
+      internalID: -3988019071295285949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_59
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 79
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbfa569249c32f2e0800000000000000
+      internalID: -2093544269726502977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_60
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 80
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70555491a2ea46fd0800000000000000
+      internalID: -2349561609744722681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_61
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 0
+        width: 22
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5061db5aa3f7ec710800000000000000
+      internalID: 1715448397940200965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_62
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 82
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a5588bc3dde8000800000000000000
+      internalID: 40212699556436607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_63
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 79
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f26fcba7007d050800000000000000
+      internalID: 5825125170183286641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_64
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 79
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7561571aed4444c20800000000000000
+      internalID: 3189750159067387479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_65
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 79
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a626b4f0b4c8c150800000000000000
+      internalID: 5893176376713160358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_66
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 79
+        width: 26
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d380087100237b9d0800000000000000
+      internalID: -2758681270765483971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acuraccylosssheet_67
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 79
+        width: 160
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 805af0c5c0f77b380800000000000000
+      internalID: -8955549642942077688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      acuraccylosssheet_0: -7175396696648647120
+      acuraccylosssheet_1: 6752101049940232367
+      acuraccylosssheet_10: 6911888597094412139
+      acuraccylosssheet_11: -410312160754433894
+      acuraccylosssheet_12: 6368485789392172200
+      acuraccylosssheet_13: 6464353590233670198
+      acuraccylosssheet_14: -8398537183151315863
+      acuraccylosssheet_15: 6824608261295736045
+      acuraccylosssheet_16: 912273399593724075
+      acuraccylosssheet_17: 5742898940067466871
+      acuraccylosssheet_18: -6794450683819202488
+      acuraccylosssheet_19: -3609801541552703078
+      acuraccylosssheet_2: -7468457993150364202
+      acuraccylosssheet_20: -7105210608537261794
+      acuraccylosssheet_21: -5663784147042461093
+      acuraccylosssheet_22: 234736555944997887
+      acuraccylosssheet_23: -2416013930447631374
+      acuraccylosssheet_24: 5619865237071069217
+      acuraccylosssheet_25: 3339797224131774921
+      acuraccylosssheet_26: 8892500849570118330
+      acuraccylosssheet_27: -4879103196419482184
+      acuraccylosssheet_28: -3845527706333243394
+      acuraccylosssheet_29: 4548539361855989792
+      acuraccylosssheet_3: -8313373083652492005
+      acuraccylosssheet_30: 2182010307457334600
+      acuraccylosssheet_31: 6471789864731098964
+      acuraccylosssheet_32: 3917637593559079370
+      acuraccylosssheet_33: -785756073546044432
+      acuraccylosssheet_34: 8057626317525186611
+      acuraccylosssheet_35: 5159993974503782895
+      acuraccylosssheet_36: -6149272844206156052
+      acuraccylosssheet_37: -5124154162216528252
+      acuraccylosssheet_38: 5351229559912373025
+      acuraccylosssheet_39: -4095680070305979449
+      acuraccylosssheet_4: -7979915105852721604
+      acuraccylosssheet_40: 6043082031630213680
+      acuraccylosssheet_41: 6539875771230844393
+      acuraccylosssheet_42: -4040498609003265788
+      acuraccylosssheet_43: 6265165438451533526
+      acuraccylosssheet_44: -4820166535099735727
+      acuraccylosssheet_45: 6096307239605942912
+      acuraccylosssheet_46: -8332868129909895
+      acuraccylosssheet_47: 3546528254553764493
+      acuraccylosssheet_48: -337169741122473180
+      acuraccylosssheet_49: -383551462985573905
+      acuraccylosssheet_5: -9005475868732414986
+      acuraccylosssheet_50: -3097044504646196924
+      acuraccylosssheet_51: -4417678364578444104
+      acuraccylosssheet_52: -7049304315882903627
+      acuraccylosssheet_53: 4067447946536451056
+      acuraccylosssheet_54: -288391354284004047
+      acuraccylosssheet_55: 7251682050879005751
+      acuraccylosssheet_56: 5160863372288313034
+      acuraccylosssheet_57: -8272153272313913422
+      acuraccylosssheet_58: -3988019071295285949
+      acuraccylosssheet_59: -2093544269726502977
+      acuraccylosssheet_6: 8906423569054361034
+      acuraccylosssheet_60: -2349561609744722681
+      acuraccylosssheet_61: 1715448397940200965
+      acuraccylosssheet_62: 40212699556436607
+      acuraccylosssheet_63: 5825125170183286641
+      acuraccylosssheet_64: 3189750159067387479
+      acuraccylosssheet_65: 5893176376713160358
+      acuraccylosssheet_66: -2758681270765483971
+      acuraccylosssheet_67: -8955549642942077688
+      acuraccylosssheet_7: -24859813030539849
+      acuraccylosssheet_8: -4452695208713489705
+      acuraccylosssheet_9: -2950294952976292678
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
