@@ -12,7 +12,7 @@ public class CardInstance : MonoBehaviour
     [Header("Card Data")]
     //public Card baseCard;
     public int attackPower = 100;
-    private int currentHealth = 0;
+    protected int currentHealth = 0;
     public int maxHealth;
     public int speed = 100;
     public int speedCount = 500;

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class HeroInstance : CardInstance
 {
@@ -72,5 +73,13 @@ public class HeroInstance : CardInstance
         isDefeated = true;
         animator.Play("DefeatFall");
         GameManager.Instance.SetPlayerInput(true);
+    }
+
+    public void Revive()
+    {
+        animator.Play("Idle");
+        isDefeated = false;
+        currentHealth = maxHealth / 2;
+        GameManager.Instance.AddElementToDeck(mainElement);
     }
 }

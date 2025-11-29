@@ -583,6 +583,7 @@ public class GameManager : MonoBehaviour
 
         if (hasNextStage)
         {
+            RevieveFallenHeroes();
             yield return StartCoroutine(MoveHeroesThroughPath(exitPathPoints));
             currentStageIndex++;
             camController.enabled = false;
@@ -610,6 +611,14 @@ public class GameManager : MonoBehaviour
             yield return StartCoroutine(JustFadeOut());
             yield return new WaitForSeconds(4f);
             SceneController.ToEndScene();
+        }
+    }
+    public void RevieveFallenHeroes()
+    {
+        foreach (var hero in PlayerHeroes)
+        {
+            if (hero.isDefeated)
+                hero.Revive();
         }
     }
 

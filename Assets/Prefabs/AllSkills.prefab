@@ -285,7 +285,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Meteor
-  description: 
+  description: 'Deal <damage> fire damage. to selected target and half damage to
+    nearby enemies.
+
+    Can cause burn'
   skillIcon: {fileID: 832105648995339053, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0000000000000000000000000000000000000000
   soundCharge: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
@@ -1220,7 +1223,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Meteor
-  description: 
+  description: 'Deal <damage> fire damage. to selected target and half damage to
+    nearby enemies.
+
+    Can cause burn'
   skillIcon: {fileID: 832105648995339053, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 000000000000000000000000
   soundCharge: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
@@ -1534,7 +1540,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Meteor
-  description: 
+  description: 'Deal <damage> fire damage. to selected target and half damage to
+    nearby enemies.
+
+    Can cause burn'
   skillIcon: {fileID: 832105648995339053, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 00000000000000000000000000000000
   soundCharge: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
