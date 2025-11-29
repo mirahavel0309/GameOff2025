@@ -39,29 +39,21 @@ public class BossSoulBeamSkill : BaseMonsterSkill
 
             absorbed.Add(enemy);
 
-            // Move enemy into center effect
             StartCoroutine(MoveToAndDestroy(enemy));
         }
 
-        // Wait for movement animation to complete
         yield return new WaitForSeconds(suckInDuration);
 
-        // -----------------------------
-        // 3. Calculate damage
-        // -----------------------------
         int count = absorbed.Count;
         int dmg = damageLevels != null && damageLevels.Length > 0 ?
                   damageLevels[Mathf.Clamp(count, 0, damageLevels.Length - 1)] :
                   0; // fallback
+        dmg = Mathf.RoundToInt(dmg * cardOwner.attackPower * 0.01f);
 
-        // -----------------------------
-        // 4. Beam every hero
-        // -----------------------------
         foreach (var hero in playerHeroes)
         {
             if (hero == null || hero.isDefeated) continue;
 
-            // Spawn and place beam
             GameObject beamGO = Instantiate(beamPrefab);
             BeamController beam = beamGO.GetComponent<BeamController>();
 
@@ -76,24 +68,15 @@ public class BossSoulBeamSkill : BaseMonsterSkill
             hero.TakeDamage(dmg, ElementType.Physical);
             EffectsManager.instance.CreateFloatingText(hero.transform.position + Vector3.up * 2f, "-" + dmg, Color.red, 1.5f, 1.3f);
 
-            // Remove beam slightly after impact
             Destroy(beamGO, 0.25f);
         }
 
-        // -----------------------------
-        // 5. Clean up effect
-        // -----------------------------
         if (fx != null)
             Destroy(fx, 0.8f);
 
-        // End monster turn
         yield return new WaitForSeconds(0.2f);
     }
 
-
-    // -----------------------------------------
-    // Helper: Move enemy into effect & destroy
-    // -----------------------------------------
     private IEnumerator MoveToAndDestroy(CardInstance enemy)
     {
         Vector3 target = transform.position;

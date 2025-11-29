@@ -3201,16 +3201,16 @@ MonoBehaviour:
   enemySpawner: {fileID: 249942234}
   playerInput: {fileID: 1692789815}
   startingHeroes: []
+  bgm: {fileID: 1147447105}
+  winSound: {fileID: 8300000, guid: 4d6ad05d01056fb4aa34ea8b76c13899, type: 3}
+  lossSound: {fileID: 8300000, guid: 8aeb31aeafead4d47a96ecd72d845128, type: 3}
   waveCounter: 0
   maxWavesCount: 2
   exitPathPoints: []
   enterCameraPath: []
   exitCameraPath: []
   allStages:
-  - {fileID: 2834218747037540613, guid: 113291d2eb7f6d745a855d29acf46e39, type: 3}
-  - {fileID: 2834218747037540613, guid: 68cd82868b3d59b499d1fd79d7f1f3cd, type: 3}
   - {fileID: 2834218747037540613, guid: 2795d4b69f8f40344ba7e22d299ec4a2, type: 3}
-  - {fileID: 2834218747037540613, guid: e618952bd17bcad419fbcf7890b9cbcb, type: 3}
   roomOrigin: {fileID: 0}
   blackFade: {fileID: 1175245345}
   cam: {fileID: 1147447108}

@@ -451,6 +451,9 @@ MonoBehaviour:
   enemySpawner: {fileID: 1443255507}
   playerInput: {fileID: 85264206}
   startingHeroes: []
+  bgm: {fileID: 519420034}
+  winSound: {fileID: 8300000, guid: 4d6ad05d01056fb4aa34ea8b76c13899, type: 3}
+  lossSound: {fileID: 8300000, guid: 8aeb31aeafead4d47a96ecd72d845128, type: 3}
   waveCounter: 0
   maxWavesCount: 10
   exitPathPoints: []

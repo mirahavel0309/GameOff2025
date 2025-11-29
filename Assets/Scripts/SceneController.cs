@@ -19,4 +19,8 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("Base3");
     }
+    public static void ToEndScene()
+    {
+        SceneManager.LoadScene("EndScene");
+    }
 }

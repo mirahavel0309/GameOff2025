@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private WaveSpawner enemySpawner;
     [SerializeField] private PlayerInputController playerInput;
     [SerializeField] private List<HeroCard> startingHeroes;
+    public AudioSource bgm;
+    public AudioClip winSound;
+    public AudioClip lossSound;
     public bool IsActionPending(string type) => pendingActionType == type;
     [Header("Stages swap")]
     [HideInInspector]public int waveCounter = 0;
@@ -225,7 +228,10 @@ public class GameManager : MonoBehaviour
     {
         if (playerField.AllHeroesDefeated())
         {
+            bgm.Stop();
+            EffectsManager.instance.CreateSoundEffect(lossSound, Vector3.zero);
             GameOverScreen.instance.Show();
+            return;
         }
 
         ProcessNextAttacker();
@@ -355,6 +361,8 @@ public class GameManager : MonoBehaviour
 
         if (playerField.AllHeroesDefeated())
         {
+            bgm.Stop();
+            EffectsManager.instance.CreateSoundEffect(lossSound, Vector3.zero);
             GameOverScreen.instance.Show();
         }
 
@@ -394,7 +402,8 @@ public class GameManager : MonoBehaviour
         enemyCards.RemoveAll(e => e.GetComponent<FreezeEffect>() != null); // make frozen units skip action
 
 
-        if (enemyCard != null && enemyCard.GetComponent<FreezeEffect>() == null) {
+        playerCards.RemoveAll(x => (x as HeroInstance).isDefeated);
+        if (enemyCard != null && playerCards.Count > 0 && enemyCard.GetComponent<FreezeEffect>() == null) {
 
             BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>().Where(x => x.enabled).ToArray();
 
@@ -594,17 +603,13 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            // --- Step 1: Play victory celebration movement if needed ---
-            yield return StartCoroutine(MoveHeroesThroughPath(exitPathPoints));
-
-            // --- Step 2: End game with Win Screen ---
-            Debug.Log("GAME COMPLETED. Display Win Screen.");
-
-            // TODO: Call your WinScreen or transition here
-            // Example:
-            // UIManager.Instance.ShowWinScreen();
-
+            bgm.Stop();
+            yield return new WaitForSeconds(1f);
+            EffectsManager.instance.CreateSoundEffect(winSound, Vector3.zero);
             InfoPanel.instance.Hide();
+            yield return StartCoroutine(JustFadeOut());
+            yield return new WaitForSeconds(4f);
+            SceneController.ToEndScene();
         }
     }
 
@@ -639,6 +644,22 @@ public class GameManager : MonoBehaviour
             //yield return new WaitForSeconds(0.05f);
         }
         
+    }
+    public IEnumerator JustFadeOut()
+    {
+        float duration = 1f;
+        blackFade.gameObject.SetActive(true);
+        yield return StartCoroutine(MoveCamera(exitCameraPath));
+
+        for (float t = 0; t < duration; t += Time.deltaTime)
+        {
+            float normalized = t / duration;
+            Color c = blackFade.color;
+            c.a = Mathf.Lerp(0f, 1f, normalized);
+            blackFade.color = c;
+            yield return null;
+        }
+        blackFade.color = new Color(blackFade.color.r, blackFade.color.g, blackFade.color.b, 1f);
     }
 
     public IEnumerator FadeScreen()
