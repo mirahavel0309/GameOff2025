@@ -342,8 +342,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: Fairy spirit
   attackPower: 100
   maxHealth: 100
+  speed: 100
+  speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}

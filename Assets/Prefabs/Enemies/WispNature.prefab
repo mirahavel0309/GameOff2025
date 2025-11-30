@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: Stone Wisp
   attackPower: 100
   maxHealth: 15
   speed: 115
@@ -522,6 +523,8 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 7742039288137689837}
   statusEffect: {fileID: 0}
   chanceToProc: 0
+  originSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 3d6df8197fdc27641b83566378663ae4, type: 3}
 --- !u!1 &8612068103122048513
 GameObject:
   m_ObjectHideFlags: 0

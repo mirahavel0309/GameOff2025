@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: Flame Wisp
   attackPower: 100
   maxHealth: 15
   speed: 115
@@ -381,7 +382,7 @@ MonoBehaviour:
   skillDescription: SlimeSlam
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
-  damage: 5
+  damage: 7
   element: 0
   isProjectileAttack: 1
   baseAccuracy: 95
@@ -389,7 +390,9 @@ MonoBehaviour:
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 8265629112012339449}
   statusEffect: {fileID: 7023228873294849280}
-  chanceToProc: 15
+  chanceToProc: 21
+  originSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!114 &7023228873294849280
 MonoBehaviour:
   m_ObjectHideFlags: 0

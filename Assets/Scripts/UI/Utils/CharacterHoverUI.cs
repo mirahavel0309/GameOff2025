@@ -41,7 +41,7 @@ public class CharacterHoverUI : MonoBehaviour
         root.gameObject.SetActive(true);
 
         // Basic info
-        nameText.text = card.name;
+        nameText.text = card.visibleName;
         hpText.text = $"{card.CurrentHealth} / {card.MaxHealth}";
         characterImage.sprite = card.GetCardVisual();
         // Resistances / weaknesses

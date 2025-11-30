@@ -22,6 +22,8 @@ public class AttackMonsterSkill : BaseMonsterSkill
     [Range(0, 100)]
     public int chanceToProc = 0;        // % chance to apply
     private List<PassiveSkill> passiveSkills;
+    public AudioClip originSound;
+    public AudioClip hitSound;
 
     public override IEnumerator Execute(CardInstance target)
     {
@@ -66,6 +68,8 @@ public class AttackMonsterSkill : BaseMonsterSkill
             accuracy -= accStatus.accuracyPenalty;
         // Deal damage
         target.TakeDamage(Mathf.RoundToInt(GetAttackPower() * cardInstance.attackPower * 0.01f), element, accuracy);
+        if (hitSound)
+            EffectsManager.instance.CreateSoundEffect(hitSound, Vector3.zero);
         if (statusEffect != null)
         {
             int roll = Random.Range(0, 100);
@@ -99,6 +103,8 @@ public class AttackMonsterSkill : BaseMonsterSkill
         if (projectilePrefab != null)
         {
             GameObject proj = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
+            if (originSound)
+                EffectsManager.instance.CreateSoundEffect(originSound, Vector3.zero);
 
             Vector3 start = projectileSpawnPoint.position;
             Vector3 end = target.transform.position;
@@ -123,6 +129,8 @@ public class AttackMonsterSkill : BaseMonsterSkill
                 accuracy -= accStatus.accuracyPenalty;
 
             target.TakeDamage(Mathf.RoundToInt(GetAttackPower() * cardInstance.attackPower * 0.01f), element, accuracy);
+            if (hitSound)
+                EffectsManager.instance.CreateSoundEffect(hitSound, Vector3.zero);
 
             // Proc status effects
             if (statusEffect != null)

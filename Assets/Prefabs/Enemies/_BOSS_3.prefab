@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: Golem Gnome
   attackPower: 100
   maxHealth: 150
   speed: 100
@@ -573,11 +574,13 @@ MonoBehaviour:
   skillDescription: 
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
-  damage: 5
+  damage: 8
   element: 4
   selfEffectPrefab: {fileID: 1714363467411018263, guid: d2603cce40f4d154298f25fdb5777d13, type: 3}
   attackEffetPrefab: {fileID: 1714363467411018263, guid: d2603cce40f4d154298f25fdb5777d13, type: 3}
   baseAccuracy: 85
+  originSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 2b3f6f67fb69d2b4f9159696cf41eec6, type: 3}
   statusEffect: {fileID: 0}
   chanceToProc: 0
 --- !u!1 &8223478066681231905

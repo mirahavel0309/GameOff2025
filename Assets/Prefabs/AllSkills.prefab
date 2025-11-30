@@ -51,7 +51,7 @@ MonoBehaviour:
     25% chance to freeze'
   skillIcon: {fileID: -7077343089386191299, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0100000001000000
-  soundCharge: {fileID: 0}
+  soundCharge: {fileID: 8300000, guid: 1fc3b9ebcfe227f4888737cc9242f3a7, type: 3}
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: 20735f9ec6bc8f74a89132bf657c5c7d, type: 3}
   elementalRiseHeight: 3
   elementalLaunchDuration: 0.4
@@ -64,8 +64,8 @@ MonoBehaviour:
   onHitEffect: {fileID: 1714363467411018263, guid: 65011c07cdf399f47a57ad68b59e5b20, type: 3}
   statusEffect: {fileID: 7447087559828320654}
   chanceToProc: 25
-  soundLaunch: {fileID: 0}
-  soundHit: {fileID: 0}
+  soundLaunch: {fileID: 8300000, guid: 7a97542a230f233469c04b7207546999, type: 3}
+  soundHit: {fileID: 8300000, guid: 0247fff4ab587ea40906e8fd8ab6f422, type: 3}
 --- !u!114 &7447087559828320654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +82,7 @@ MonoBehaviour:
   description: 
   effectPrefab: {fileID: 0}
   duration: 2
+  speedPenalty: 0
 --- !u!1 &439547023762225137
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,7 +503,7 @@ MonoBehaviour:
     Lowers enemy accuracy'
   skillIcon: {fileID: -8695878343116310139, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 01000000
-  soundCharge: {fileID: 0}
+  soundCharge: {fileID: 8300000, guid: 1480fbbf9b648f94f859e704de867d05, type: 3}
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: 20735f9ec6bc8f74a89132bf657c5c7d, type: 3}
   elementalRiseHeight: 2
   elementalLaunchDuration: 0.4
@@ -515,8 +516,8 @@ MonoBehaviour:
   onHitEffect: {fileID: 1714363467411018263, guid: 65011c07cdf399f47a57ad68b59e5b20, type: 3}
   statusEffect: {fileID: 8102499659551185982}
   chanceToProc: 100
-  soundLaunch: {fileID: 0}
-  soundHit: {fileID: 0}
+  soundLaunch: {fileID: 8300000, guid: daf2065e3efef9a4d96c214cb5653ec7, type: 3}
+  soundHit: {fileID: 8300000, guid: 43dec50d34ee42d48a4d14c37584c770, type: 3}
 --- !u!114 &8102499659551185982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +667,7 @@ MonoBehaviour:
     Can poison the target'
   skillIcon: {fileID: 5146373342249952597, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 02000000
-  soundCharge: {fileID: 0}
+  soundCharge: {fileID: 8300000, guid: 96076f6d8ae514c4f9dbda1e356f4597, type: 3}
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: e8c7ef42158dbeb408affcb64101ea98, type: 3}
   elementalRiseHeight: 3
   elementalLaunchDuration: 0.8
@@ -679,8 +680,8 @@ MonoBehaviour:
   onHitEffect: {fileID: 1714363467411018263, guid: fd3e7606c9b5a4a41a5da6ab7479961c, type: 3}
   statusEffect: {fileID: 1189204908714521856}
   chanceToProc: 50
-  soundLaunch: {fileID: 0}
-  soundHit: {fileID: 0}
+  soundLaunch: {fileID: 8300000, guid: 82e660506a5e61f49a7ec8a6f308155d, type: 3}
+  soundHit: {fileID: 8300000, guid: 2165bf057d0df4649b31b725ea6e6c01, type: 3}
 --- !u!114 &1189204908714521856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,8 +763,8 @@ MonoBehaviour:
   onHitEffect: {fileID: 1714363467411018263, guid: e6c971256c7042c4d85a927ed0c430ab, type: 3}
   statusEffect: {fileID: 6737540347070165985}
   chanceToProc: 50
-  soundLaunch: {fileID: 0}
-  soundHit: {fileID: 0}
+  soundLaunch: {fileID: 8300000, guid: ac69c2057526c0f428f1b7ef48890792, type: 3}
+  soundHit: {fileID: 8300000, guid: 2b3f6f67fb69d2b4f9159696cf41eec6, type: 3}
 --- !u!114 &6737540347070165985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1805,6 +1806,7 @@ MonoBehaviour:
   description: 
   effectPrefab: {fileID: 0}
   duration: 2
+  speedPenalty: 0
 --- !u!1 &5968227544144529352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,7 +2056,7 @@ MonoBehaviour:
     15% chance to freeze'
   skillIcon: {fileID: 4730339109292127003, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 01000000
-  soundCharge: {fileID: 0}
+  soundCharge: {fileID: 8300000, guid: 1fc3b9ebcfe227f4888737cc9242f3a7, type: 3}
   formedProjectilePrefab: {fileID: 6709276644064086281, guid: 20735f9ec6bc8f74a89132bf657c5c7d, type: 3}
   elementalRiseHeight: 3
   elementalLaunchDuration: 0.8
@@ -2067,8 +2069,8 @@ MonoBehaviour:
   onHitEffect: {fileID: 1714363467411018263, guid: 65011c07cdf399f47a57ad68b59e5b20, type: 3}
   statusEffect: {fileID: 487419827448504152}
   chanceToProc: 15
-  soundLaunch: {fileID: 0}
-  soundHit: {fileID: 0}
+  soundLaunch: {fileID: 8300000, guid: 7a97542a230f233469c04b7207546999, type: 3}
+  soundHit: {fileID: 8300000, guid: 0247fff4ab587ea40906e8fd8ab6f422, type: 3}
 --- !u!114 &487419827448504152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,6 +2087,7 @@ MonoBehaviour:
   description: 
   effectPrefab: {fileID: 0}
   duration: 2
+  speedPenalty: 0
 --- !u!1 &6395192032614187813
 GameObject:
   m_ObjectHideFlags: 0

@@ -239,8 +239,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: Skeleton Warrior
   attackPower: 100
-  maxHealth: 25
+  maxHealth: 35
   speed: 80
   speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
@@ -379,7 +380,7 @@ MonoBehaviour:
   skillDescription: SlimeSlam
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
-  damage: 5
+  damage: 4
   element: 4
   isProjectileAttack: 0
   baseAccuracy: 95
@@ -388,6 +389,8 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 0}
   statusEffect: {fileID: 0}
   chanceToProc: 0
+  originSound: {fileID: 8300000, guid: 40ac736bf2918c144ad764a9daf627e7, type: 3}
+  hitSound: {fileID: 8300000, guid: 3d6df8197fdc27641b83566378663ae4, type: 3}
 --- !u!1 &6770874624018280308
 GameObject:
   m_ObjectHideFlags: 0

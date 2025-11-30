@@ -19,7 +19,7 @@ public class PoisonEffect : StatusEffect
         if (target == null)
             yield break;
 
-        target.TakeDamage(damagePerTurn, ElementType.Nature);
+        target.TakeDamage(damagePerTurn, ElementType.Nature, 100);
 
         // add visual effect for posin here and wait a bit
         yield return new WaitForSeconds(0.3f);

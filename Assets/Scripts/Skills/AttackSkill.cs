@@ -61,8 +61,8 @@ public class AttackSkill : BaseSkill
         yield return GameManager.Instance.StartCoroutine(PerformAttackVisuals(target));
 
         HeroInstance hero = GameManager.Instance.GetHeroOfelement(damageType);
-        target.TakeDamage(Mathf.RoundToInt(GetAttackPower() * (hero.spellPower / 100f)), damageType);
-        if (statusEffect != null)
+        int damageDealth = target.TakeDamage(Mathf.RoundToInt(GetAttackPower() * (hero.spellPower / 100f)), damageType);
+        if (statusEffect != null && damageDealth > 0)
         {
             int roll = Random.Range(0, 100);
             if (roll < chanceToProc)

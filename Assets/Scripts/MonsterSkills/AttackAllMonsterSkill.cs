@@ -11,6 +11,8 @@ public class AttackAllMonsterSkill : BaseMonsterSkill
     public GameObject attackEffetPrefab;
     public int baseAccuracy = 85;
     private bool castEventTriggered = false;
+    public AudioClip originSound;
+    public AudioClip hitSound;
 
     [Header("Status effect Settings")]
     public StatusEffect statusEffect;   // The effect to apply
@@ -29,7 +31,8 @@ public class AttackAllMonsterSkill : BaseMonsterSkill
 
         // Play casting animation
         animator.SetTrigger("StartCast");
-
+        if (originSound)
+            EffectsManager.instance.CreateSoundEffect(originSound, Vector3.zero);
         float maxWait = 1.35f;
         float timer = 0f;
         GameObject selfEffect = Instantiate(selfEffectPrefab, transform.position, Quaternion.identity);
@@ -49,6 +52,8 @@ public class AttackAllMonsterSkill : BaseMonsterSkill
                 accuracy -= accStatus.accuracyPenalty;
             // Deal damage
             hero.TakeDamage(Mathf.RoundToInt(damage * cardInstance.attackPower * 0.01f), element, accuracy);
+            if (hitSound)
+                EffectsManager.instance.CreateSoundEffect(hitSound, Vector3.zero);
 
             if (statusEffect != null)
             {

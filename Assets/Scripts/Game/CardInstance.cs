@@ -9,6 +9,7 @@ public enum CardState { InHand, OnField, InDeck, Destroyed }
 public class CardInstance : MonoBehaviour
 {
 
+    public string visibleName;
     [Header("Card Data")]
     //public Card baseCard;
     public int attackPower = 100;

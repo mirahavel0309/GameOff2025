@@ -72,9 +72,9 @@ public class MassDamageSkill : BaseSkill
             }
 
             HeroInstance hero = GameManager.Instance.GetHeroOfelement(damageElement);
-            target.TakeDamage(Mathf.RoundToInt(baseDamage * (hero.spellPower / 100f)), damageElement, baseAccuracy);
+            int damageDealth = target.TakeDamage(Mathf.RoundToInt(baseDamage * (hero.spellPower / 100f)), damageElement, baseAccuracy);
 
-            if (statusEffect != null)
+            if (statusEffect != null && damageDealth > 0)
             {
                 int roll = Random.Range(0, 100);
                 if (roll < chanceToProc)

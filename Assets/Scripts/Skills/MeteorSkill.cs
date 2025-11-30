@@ -37,6 +37,11 @@ public class MeteorSkill : BaseSkill
     {
         GameManager.Instance.StartCoroutine(WaitForTargetAndCastMeteor());
     }
+    public override string UpdatedDescription()
+    {
+        HeroInstance hero = GameManager.Instance.GetHeroOfelement(damageType);
+        return description.Replace("<damage>", Mathf.RoundToInt(baseDamage * (hero.spellPower / 100f)).ToString());
+    }
 
     private IEnumerator WaitForTargetAndCastMeteor()
     {

@@ -1,61 +1,61 @@
 fileFormatVersion: 2
-guid: 622715393ac38c543894fb66369141b1
+guid: 97437621f35f2f6428dadb2a6c20d1e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1388811668736980147
-    second: fireslimesheet_0
+      213: 2971337184243970962
+    second: nature_slime_0
   - first:
-      213: 4993706854489507417
-    second: fireslimesheet_1
+      213: -4585763328464062353
+    second: nature_slime_1
   - first:
-      213: -6757740794091399198
-    second: fireslimesheet_2
+      213: -7095726258338734123
+    second: nature_slime_2
   - first:
-      213: -6087275456559791507
-    second: fireslimesheet_3
+      213: -7006457138225854576
+    second: nature_slime_3
   - first:
-      213: -5278814105180265959
-    second: fireslimesheet_4
+      213: -68447821908387141
+    second: nature_slime_4
   - first:
-      213: 5228110282108404624
-    second: fireslimesheet_5
+      213: 4212885934124203842
+    second: nature_slime_5
   - first:
-      213: 1860682817633422263
-    second: fireslimesheet_6
+      213: -467899513412276457
+    second: nature_slime_6
   - first:
-      213: -3155816566877027278
-    second: fireslimesheet_7
+      213: -3930619052821127118
+    second: nature_slime_7
   - first:
-      213: -2465695408163183090
-    second: fireslimesheet_8
+      213: -5919383407661556289
+    second: nature_slime_8
   - first:
-      213: 5744895884090162292
-    second: fireslimesheet_9
+      213: 3178891135935211407
+    second: nature_slime_9
   - first:
-      213: 4637566589559160030
-    second: fireslimesheet_10
+      213: -6467183308109160717
+    second: nature_slime_10
   - first:
-      213: 5596266695769919423
-    second: fireslimesheet_11
+      213: -4712050748703529471
+    second: nature_slime_11
   - first:
-      213: -2245582119693338354
-    second: fireslimesheet_12
+      213: 3867223352678331017
+    second: nature_slime_12
   - first:
-      213: -1930552999195201437
-    second: fireslimesheet_13
+      213: -5492282192835882313
+    second: nature_slime_13
   - first:
-      213: -5878221500411736696
-    second: fireslimesheet_14
+      213: 8636690111519655782
+    second: nature_slime_14
   - first:
-      213: 8101734072849334430
-    second: fireslimesheet_15
+      213: -4147875932056994794
+    second: nature_slime_15
   - first:
-      213: 8084100182822253946
-    second: fireslimesheet_16
+      213: -7015767735918701941
+    second: nature_slime_16
   - first:
-      213: -8408217823682347580
-    second: fireslimesheet_17
+      213: -4167485467255502742
+    second: nature_slime_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -164,7 +164,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fireslimesheet_0
+      name: nature_slime_0
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b43cfebadc064310800000000000000
-      internalID: 1388811668736980147
+      spriteID: 29375ce1d6f4c3920800000000000000
+      internalID: 2971337184243970962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_1
+      name: nature_slime_1
       rect:
         serializedVersion: 2
         x: 80
@@ -201,14 +201,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 956c7462de53d4540800000000000000
-      internalID: 4993706854489507417
+      spriteID: f68f2e69c881c50c0800000000000000
+      internalID: -4585763328464062353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_2
+      name: nature_slime_2
       rect:
         serializedVersion: 2
         x: 160
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e714044d8ea732a0800000000000000
-      internalID: -6757740794091399198
+      spriteID: 5dfde44109ae68d90800000000000000
+      internalID: -7095726258338734123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_3
+      name: nature_slime_3
       rect:
         serializedVersion: 2
         x: 240
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d62ccc95937a58ba0800000000000000
-      internalID: -6087275456559791507
+      spriteID: 0974c06ca5014ce90800000000000000
+      internalID: -7006457138225854576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_4
+      name: nature_slime_4
       rect:
         serializedVersion: 2
         x: 320
@@ -267,14 +267,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 912a8692a82edb6b0800000000000000
-      internalID: -5278814105180265959
+      spriteID: bba50819113dc0ff0800000000000000
+      internalID: -68447821908387141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_5
+      name: nature_slime_5
       rect:
         serializedVersion: 2
         x: 0
@@ -289,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09383a31a9afd8840800000000000000
-      internalID: 5228110282108404624
+      spriteID: 24f76beaf6d277a30800000000000000
+      internalID: 4212885934124203842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_6
+      name: nature_slime_6
       rect:
         serializedVersion: 2
         x: 80
@@ -311,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bb86b01a2972d910800000000000000
-      internalID: 1860682817633422263
+      spriteID: 71fab702fdfa189f0800000000000000
+      internalID: -467899513412276457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_7
+      name: nature_slime_7
       rect:
         serializedVersion: 2
         x: 160
@@ -333,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 234800b7d894434d0800000000000000
-      internalID: -3155816566877027278
+      spriteID: 230e639fbc2a379c0800000000000000
+      internalID: -3930619052821127118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_8
+      name: nature_slime_8
       rect:
         serializedVersion: 2
         x: 240
@@ -355,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e062f10171718cdd0800000000000000
-      internalID: -2465695408163183090
+      spriteID: fbdddf827202adda0800000000000000
+      internalID: -5919383407661556289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_9
+      name: nature_slime_9
       rect:
         serializedVersion: 2
         x: 320
@@ -377,14 +377,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47c3cca6e58f9bf40800000000000000
-      internalID: 5744895884090162292
+      spriteID: f876e0945a0bd1c20800000000000000
+      internalID: 3178891135935211407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_10
+      name: nature_slime_10
       rect:
         serializedVersion: 2
         x: 0
@@ -399,14 +399,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: edcb4e80e32fb5040800000000000000
-      internalID: 4637566589559160030
+      spriteID: 3fe51debb03ff36a0800000000000000
+      internalID: -6467183308109160717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_11
+      name: nature_slime_11
       rect:
         serializedVersion: 2
         x: 80
@@ -421,14 +421,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbf07b5d8eee9ad40800000000000000
-      internalID: 5596266695769919423
+      spriteID: 106a9ef3fce6b9eb0800000000000000
+      internalID: -4712050748703529471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_12
+      name: nature_slime_12
       rect:
         serializedVersion: 2
         x: 160
@@ -443,14 +443,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e09b5b1b5f616d0e0800000000000000
-      internalID: -2245582119693338354
+      spriteID: 982bc7b56232ba530800000000000000
+      internalID: 3867223352678331017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_13
+      name: nature_slime_13
       rect:
         serializedVersion: 2
         x: 240
@@ -465,14 +465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 360b7e6964c4535e0800000000000000
-      internalID: -1930552999195201437
+      spriteID: 7b250d9e17e77c3b0800000000000000
+      internalID: -5492282192835882313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_14
+      name: nature_slime_14
       rect:
         serializedVersion: 2
         x: 320
@@ -487,14 +487,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88d05e480bc5c6ea0800000000000000
-      internalID: -5878221500411736696
+      spriteID: 6670244b5efabd770800000000000000
+      internalID: 8636690111519655782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_15
+      name: nature_slime_15
       rect:
         serializedVersion: 2
         x: 0
@@ -509,14 +509,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e900dd4e6342f6070800000000000000
-      internalID: 8101734072849334430
+      spriteID: 61cb951f0d8cf66c0800000000000000
+      internalID: -4147875932056994794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_16
+      name: nature_slime_16
       rect:
         serializedVersion: 2
         x: 80
@@ -531,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a757acde84e703070800000000000000
-      internalID: 8084100182822253946
+      spriteID: b825be15a6cf2ae90800000000000000
+      internalID: -7015767735918701941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_17
+      name: nature_slime_17
       rect:
         serializedVersion: 2
         x: 160
@@ -553,8 +553,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4cd3e412072005b80800000000000000
-      internalID: -8408217823682347580
+      spriteID: a6802ad3c0e1a26c0800000000000000
+      internalID: -4167485467255502742
       vertices: []
       indices: 
       edges: []
@@ -563,7 +563,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a01e81e360b9f6244b5abcf425b0f9b9
+    spriteID: 0c3d76e9fb0360e4b977ccbdd9377546
     internalID: 0
     vertices: []
     indices: 
@@ -573,24 +573,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fireslimesheet_0: 1388811668736980147
-      fireslimesheet_1: 4993706854489507417
-      fireslimesheet_10: 4637566589559160030
-      fireslimesheet_11: 5596266695769919423
-      fireslimesheet_12: -2245582119693338354
-      fireslimesheet_13: -1930552999195201437
-      fireslimesheet_14: -5878221500411736696
-      fireslimesheet_15: 8101734072849334430
-      fireslimesheet_16: 8084100182822253946
-      fireslimesheet_17: -8408217823682347580
-      fireslimesheet_2: -6757740794091399198
-      fireslimesheet_3: -6087275456559791507
-      fireslimesheet_4: -5278814105180265959
-      fireslimesheet_5: 5228110282108404624
-      fireslimesheet_6: 1860682817633422263
-      fireslimesheet_7: -3155816566877027278
-      fireslimesheet_8: -2465695408163183090
-      fireslimesheet_9: 5744895884090162292
+      nature_slime_0: 2971337184243970962
+      nature_slime_1: -4585763328464062353
+      nature_slime_10: -6467183308109160717
+      nature_slime_11: -4712050748703529471
+      nature_slime_12: 3867223352678331017
+      nature_slime_13: -5492282192835882313
+      nature_slime_14: 8636690111519655782
+      nature_slime_15: -4147875932056994794
+      nature_slime_16: -7015767735918701941
+      nature_slime_17: -4167485467255502742
+      nature_slime_2: -7095726258338734123
+      nature_slime_3: -7006457138225854576
+      nature_slime_4: -68447821908387141
+      nature_slime_5: 4212885934124203842
+      nature_slime_6: -467899513412276457
+      nature_slime_7: -3930619052821127118
+      nature_slime_8: -5919383407661556289
+      nature_slime_9: 3178891135935211407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

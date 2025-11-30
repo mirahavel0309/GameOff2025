@@ -345,8 +345,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: Fairy
   attackPower: 100
   maxHealth: 100
+  speed: 100
+  speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
@@ -486,11 +489,14 @@ MonoBehaviour:
   damage: 10
   element: 0
   isProjectileAttack: 1
+  baseAccuracy: 95
   projectilePrefab: {fileID: 5492295935689872714, guid: 9f9ba681ce513474a9b1545a8d6c7f32, type: 3}
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 805646930765066053}
   statusEffect: {fileID: 0}
   chanceToProc: 0
+  originSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!114 &2029707144743111891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,6 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af34c289ea30a54098a17109e086134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  castDescription: 
   hpThreshold: 0.5
   secondFormPrefab: {fileID: 6709276644064086281, guid: 3fec6352fa8f1cb4c9cdecc5fad99bbd, type: 3}
   shakeDuration: 0.4
@@ -528,11 +535,14 @@ MonoBehaviour:
   damage: 10
   element: 1
   isProjectileAttack: 1
+  baseAccuracy: 95
   projectilePrefab: {fileID: 6709276644064086281, guid: 20735f9ec6bc8f74a89132bf657c5c7d, type: 3}
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 805646930765066053}
   statusEffect: {fileID: 0}
   chanceToProc: 0
+  originSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!114 &3261283324487052897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,11 +562,14 @@ MonoBehaviour:
   damage: 10
   element: 2
   isProjectileAttack: 1
+  baseAccuracy: 95
   projectilePrefab: {fileID: 6709276644064086281, guid: e8c7ef42158dbeb408affcb64101ea98, type: 3}
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 805646930765066053}
   statusEffect: {fileID: 0}
   chanceToProc: 0
+  originSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &8223478066681231905
 GameObject:
   m_ObjectHideFlags: 0

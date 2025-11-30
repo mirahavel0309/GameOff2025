@@ -7,6 +7,7 @@ public class MassHealSkill : BaseSkill
     [Header("Skill Visuals")]
     public GameObject healEffectPrefab;
     public ElementIconLibrary elementsLib;
+    public AudioClip healSound;
 
     [Header("Projectile Timing")]
     public float elementalRiseHeight = 2.0f;
@@ -69,6 +70,8 @@ public class MassHealSkill : BaseSkill
             }
 
             target.Heal(Mathf.RoundToInt(baseHeal * (hero.spellPower / 100f)));
+            if (healSound)
+                EffectsManager.instance.CreateSoundEffect(healSound, Vector3.zero);
 
             // Small stagger for visual pacing
             yield return new WaitForSeconds(0.1f);

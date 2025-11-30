@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
   - component: {fileID: 5747047734960535275}
+  - component: {fileID: 3743045065367564717}
   m_Layer: 6
   m_Name: SlimeRed
   m_TagString: Enemy
@@ -341,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: fire Slime
   attackPower: 100
   maxHealth: 20
   speed: 90
@@ -398,7 +400,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.5}
+  m_Offset: {x: 0.4, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -408,7 +410,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6, y: 0.8}
+  m_Size: {x: 1.5, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &4964113359520524644
 SpriteRenderer:
@@ -481,15 +483,34 @@ MonoBehaviour:
   skillDescription: SlimeSlam
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
-  damage: 5
+  damage: 6
   element: 0
   isProjectileAttack: 0
   baseAccuracy: 95
   projectilePrefab: {fileID: 0}
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 0}
-  statusEffect: {fileID: 0}
-  chanceToProc: 0
+  statusEffect: {fileID: 3743045065367564717}
+  chanceToProc: 10
+  originSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 40ac736bf2918c144ad764a9daf627e7, type: 3}
+--- !u!114 &3743045065367564717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576b6ef1b9da5834ea250c3346fa2b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectName: 
+  description: 
+  effectPrefab: {fileID: 0}
+  duration: 3
+  damagePerTurn: 2
 --- !u!1 &8612068103122048513
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +589,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4811861934610032324, guid: e6dcb6007beaa674c9659ea1c4836144, type: 3}
+  m_Sprite: {fileID: 1388811668736980147, guid: 622715393ac38c543894fb66369141b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

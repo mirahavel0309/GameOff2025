@@ -1,61 +1,61 @@
 fileFormatVersion: 2
-guid: 622715393ac38c543894fb66369141b1
+guid: cb34efe790679734ab66bad8e35478af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1388811668736980147
-    second: fireslimesheet_0
+      213: -3972691880002762918
+    second: slime_spritesheet_0
   - first:
-      213: 4993706854489507417
-    second: fireslimesheet_1
+      213: 185273964626852292
+    second: slime_spritesheet_1
   - first:
-      213: -6757740794091399198
-    second: fireslimesheet_2
+      213: -2494720475795009309
+    second: slime_spritesheet_2
   - first:
-      213: -6087275456559791507
-    second: fireslimesheet_3
+      213: 4004852365708811859
+    second: slime_spritesheet_3
   - first:
-      213: -5278814105180265959
-    second: fireslimesheet_4
+      213: -2540513707462572328
+    second: slime_spritesheet_4
   - first:
-      213: 5228110282108404624
-    second: fireslimesheet_5
+      213: -4274099877474758581
+    second: slime_spritesheet_5
   - first:
-      213: 1860682817633422263
-    second: fireslimesheet_6
+      213: 1910898978208789147
+    second: slime_spritesheet_6
   - first:
-      213: -3155816566877027278
-    second: fireslimesheet_7
+      213: 4143079626918877683
+    second: slime_spritesheet_7
   - first:
-      213: -2465695408163183090
-    second: fireslimesheet_8
+      213: -4113847630476860729
+    second: slime_spritesheet_8
   - first:
-      213: 5744895884090162292
-    second: fireslimesheet_9
+      213: 30343468084892780
+    second: slime_spritesheet_9
   - first:
-      213: 4637566589559160030
-    second: fireslimesheet_10
+      213: -88975248114899469
+    second: slime_spritesheet_10
   - first:
-      213: 5596266695769919423
-    second: fireslimesheet_11
+      213: 6594812665686601892
+    second: slime_spritesheet_11
   - first:
-      213: -2245582119693338354
-    second: fireslimesheet_12
+      213: 2482175033045573690
+    second: slime_spritesheet_12
   - first:
-      213: -1930552999195201437
-    second: fireslimesheet_13
+      213: 8362078115520233020
+    second: slime_spritesheet_13
   - first:
-      213: -5878221500411736696
-    second: fireslimesheet_14
+      213: 3882258480079301089
+    second: slime_spritesheet_14
   - first:
-      213: 8101734072849334430
-    second: fireslimesheet_15
+      213: 8070294389882960005
+    second: slime_spritesheet_15
   - first:
-      213: 8084100182822253946
-    second: fireslimesheet_16
+      213: -2068211280229322706
+    second: slime_spritesheet_16
   - first:
-      213: -8408217823682347580
-    second: fireslimesheet_17
+      213: 8334024866636099368
+    second: slime_spritesheet_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -164,7 +164,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fireslimesheet_0
+      name: slime_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b43cfebadc064310800000000000000
-      internalID: 1388811668736980147
+      spriteID: a574b5a88c92ed8c0800000000000000
+      internalID: -3972691880002762918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_1
+      name: slime_spritesheet_1
       rect:
         serializedVersion: 2
         x: 80
@@ -201,14 +201,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 956c7462de53d4540800000000000000
-      internalID: 4993706854489507417
+      spriteID: 4c936bf60b9329200800000000000000
+      internalID: 185273964626852292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_2
+      name: slime_spritesheet_2
       rect:
         serializedVersion: 2
         x: 160
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e714044d8ea732a0800000000000000
-      internalID: -6757740794091399198
+      spriteID: 3e05852e1f8f06dd0800000000000000
+      internalID: -2494720475795009309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_3
+      name: slime_spritesheet_3
       rect:
         serializedVersion: 2
         x: 240
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d62ccc95937a58ba0800000000000000
-      internalID: -6087275456559791507
+      spriteID: 35ed4fb0208149730800000000000000
+      internalID: 4004852365708811859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_4
+      name: slime_spritesheet_4
       rect:
         serializedVersion: 2
         x: 320
@@ -267,14 +267,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 912a8692a82edb6b0800000000000000
-      internalID: -5278814105180265959
+      spriteID: 8d6cea74e384ebcd0800000000000000
+      internalID: -2540513707462572328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_5
+      name: slime_spritesheet_5
       rect:
         serializedVersion: 2
         x: 0
@@ -289,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09383a31a9afd8840800000000000000
-      internalID: 5228110282108404624
+      spriteID: b40939c7ec85fa4c0800000000000000
+      internalID: -4274099877474758581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_6
+      name: slime_spritesheet_6
       rect:
         serializedVersion: 2
         x: 80
@@ -311,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bb86b01a2972d910800000000000000
-      internalID: 1860682817633422263
+      spriteID: b92bacd0f70e48a10800000000000000
+      internalID: 1910898978208789147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_7
+      name: slime_spritesheet_7
       rect:
         serializedVersion: 2
         x: 160
@@ -333,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 234800b7d894434d0800000000000000
-      internalID: -3155816566877027278
+      spriteID: 3f958ae38fc2f7930800000000000000
+      internalID: 4143079626918877683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_8
+      name: slime_spritesheet_8
       rect:
         serializedVersion: 2
         x: 240
@@ -355,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e062f10171718cdd0800000000000000
-      internalID: -2465695408163183090
+      spriteID: 7c2285d406da8e6c0800000000000000
+      internalID: -4113847630476860729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_9
+      name: slime_spritesheet_9
       rect:
         serializedVersion: 2
         x: 320
@@ -377,14 +377,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47c3cca6e58f9bf40800000000000000
-      internalID: 5744895884090162292
+      spriteID: c641474393dcb6000800000000000000
+      internalID: 30343468084892780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_10
+      name: slime_spritesheet_10
       rect:
         serializedVersion: 2
         x: 0
@@ -399,14 +399,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: edcb4e80e32fb5040800000000000000
-      internalID: 4637566589559160030
+      spriteID: 3f52f46bb75e3cef0800000000000000
+      internalID: -88975248114899469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_11
+      name: slime_spritesheet_11
       rect:
         serializedVersion: 2
         x: 80
@@ -421,14 +421,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbf07b5d8eee9ad40800000000000000
-      internalID: 5596266695769919423
+      spriteID: 4a03f7abd2b758b50800000000000000
+      internalID: 6594812665686601892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_12
+      name: slime_spritesheet_12
       rect:
         serializedVersion: 2
         x: 160
@@ -443,14 +443,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e09b5b1b5f616d0e0800000000000000
-      internalID: -2245582119693338354
+      spriteID: a30660b9a05727220800000000000000
+      internalID: 2482175033045573690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_13
+      name: slime_spritesheet_13
       rect:
         serializedVersion: 2
         x: 240
@@ -465,14 +465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 360b7e6964c4535e0800000000000000
-      internalID: -1930552999195201437
+      spriteID: c3eb6abedb11c0470800000000000000
+      internalID: 8362078115520233020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_14
+      name: slime_spritesheet_14
       rect:
         serializedVersion: 2
         x: 320
@@ -487,14 +487,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88d05e480bc5c6ea0800000000000000
-      internalID: -5878221500411736696
+      spriteID: 1e9ef5fb48d80e530800000000000000
+      internalID: 3882258480079301089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_15
+      name: slime_spritesheet_15
       rect:
         serializedVersion: 2
         x: 0
@@ -509,14 +509,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e900dd4e6342f6070800000000000000
-      internalID: 8101734072849334430
+      spriteID: 5883dc54df17fff60800000000000000
+      internalID: 8070294389882960005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_16
+      name: slime_spritesheet_16
       rect:
         serializedVersion: 2
         x: 80
@@ -531,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a757acde84e703070800000000000000
-      internalID: 8084100182822253946
+      spriteID: e20b9796ccc3c43e0800000000000000
+      internalID: -2068211280229322706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireslimesheet_17
+      name: slime_spritesheet_17
       rect:
         serializedVersion: 2
         x: 160
@@ -553,8 +553,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4cd3e412072005b80800000000000000
-      internalID: -8408217823682347580
+      spriteID: 82fed1de57768a370800000000000000
+      internalID: 8334024866636099368
       vertices: []
       indices: 
       edges: []
@@ -563,7 +563,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a01e81e360b9f6244b5abcf425b0f9b9
+    spriteID: eb7abe04d31e6814083243ba47d576f9
     internalID: 0
     vertices: []
     indices: 
@@ -573,24 +573,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fireslimesheet_0: 1388811668736980147
-      fireslimesheet_1: 4993706854489507417
-      fireslimesheet_10: 4637566589559160030
-      fireslimesheet_11: 5596266695769919423
-      fireslimesheet_12: -2245582119693338354
-      fireslimesheet_13: -1930552999195201437
-      fireslimesheet_14: -5878221500411736696
-      fireslimesheet_15: 8101734072849334430
-      fireslimesheet_16: 8084100182822253946
-      fireslimesheet_17: -8408217823682347580
-      fireslimesheet_2: -6757740794091399198
-      fireslimesheet_3: -6087275456559791507
-      fireslimesheet_4: -5278814105180265959
-      fireslimesheet_5: 5228110282108404624
-      fireslimesheet_6: 1860682817633422263
-      fireslimesheet_7: -3155816566877027278
-      fireslimesheet_8: -2465695408163183090
-      fireslimesheet_9: 5744895884090162292
+      slime_spritesheet_0: -3972691880002762918
+      slime_spritesheet_1: 185273964626852292
+      slime_spritesheet_10: -88975248114899469
+      slime_spritesheet_11: 6594812665686601892
+      slime_spritesheet_12: 2482175033045573690
+      slime_spritesheet_13: 8362078115520233020
+      slime_spritesheet_14: 3882258480079301089
+      slime_spritesheet_15: 8070294389882960005
+      slime_spritesheet_16: -2068211280229322706
+      slime_spritesheet_17: 8334024866636099368
+      slime_spritesheet_2: -2494720475795009309
+      slime_spritesheet_3: 4004852365708811859
+      slime_spritesheet_4: -2540513707462572328
+      slime_spritesheet_5: -4274099877474758581
+      slime_spritesheet_6: 1910898978208789147
+      slime_spritesheet_7: 4143079626918877683
+      slime_spritesheet_8: -4113847630476860729
+      slime_spritesheet_9: 30343468084892780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

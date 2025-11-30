@@ -469,10 +469,10 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   camController: {fileID: 519420033}
   useSound: {fileID: 8300000, guid: 5223c412ac4accc4f8578b76507c6627, type: 3}
-  hpScaleIncPerWave: 0.04
-  dmgScaleIncPerWave: 0.01
-  hpScaleIncPerStage: 0.2
-  dmgScaleIncPerStage: 0.05
+  hpScaleIncPerWave: 0.05
+  dmgScaleIncPerWave: 0.001
+  hpScaleIncPerStage: 0.5
+  dmgScaleIncPerStage: 0.33
   enemyTurnDuration: 0.25
   healLevels: 020000000300000005000000
   allSkills:
@@ -3994,18 +3994,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 85264205}
     m_Modifications:
-    - target: {fileID: 653854832165345850, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundHit
-      value: 
-      objectReference: {fileID: 8300000, guid: 0247fff4ab587ea40906e8fd8ab6f422, type: 3}
-    - target: {fileID: 653854832165345850, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundCharge
-      value: 
-      objectReference: {fileID: 8300000, guid: 1fc3b9ebcfe227f4888737cc9242f3a7, type: 3}
-    - target: {fileID: 653854832165345850, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundLaunch
-      value: 
-      objectReference: {fileID: 8300000, guid: 7a97542a230f233469c04b7207546999, type: 3}
     - target: {fileID: 3875543213905387267, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
       propertyPath: m_Name
       value: AllSkills
@@ -4050,42 +4038,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4510518710026713089, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundHit
-      value: 
-      objectReference: {fileID: 8300000, guid: 43dec50d34ee42d48a4d14c37584c770, type: 3}
-    - target: {fileID: 4510518710026713089, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundCharge
-      value: 
-      objectReference: {fileID: 8300000, guid: 1480fbbf9b648f94f859e704de867d05, type: 3}
-    - target: {fileID: 4510518710026713089, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundLaunch
-      value: 
-      objectReference: {fileID: 8300000, guid: daf2065e3efef9a4d96c214cb5653ec7, type: 3}
-    - target: {fileID: 6231369601263220994, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundHit
-      value: 
-      objectReference: {fileID: 8300000, guid: 2165bf057d0df4649b31b725ea6e6c01, type: 3}
-    - target: {fileID: 6231369601263220994, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundCharge
-      value: 
-      objectReference: {fileID: 8300000, guid: 96076f6d8ae514c4f9dbda1e356f4597, type: 3}
-    - target: {fileID: 6231369601263220994, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundLaunch
-      value: 
-      objectReference: {fileID: 8300000, guid: 82e660506a5e61f49a7ec8a6f308155d, type: 3}
-    - target: {fileID: 7096329154374751660, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundHit
-      value: 
-      objectReference: {fileID: 8300000, guid: 0247fff4ab587ea40906e8fd8ab6f422, type: 3}
-    - target: {fileID: 7096329154374751660, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundCharge
-      value: 
-      objectReference: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
-    - target: {fileID: 7096329154374751660, guid: c5dd0ed80e717e64d8e4eea370f3ba26, type: 3}
-      propertyPath: soundLaunch
-      value: 
-      objectReference: {fileID: 8300000, guid: ac69c2057526c0f428f1b7ef48890792, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4099,6 +4051,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1986672882}
     m_Modifications:
+    - target: {fileID: 1251371220817291702, guid: b50439dc6f37fbf41947599515f4975c, type: 3}
+      propertyPath: m_TextWrappingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1799675912029699754, guid: b50439dc6f37fbf41947599515f4975c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4182,6 +4138,10 @@ PrefabInstance:
     - target: {fileID: 2953689212864432110, guid: b50439dc6f37fbf41947599515f4975c, type: 3}
       propertyPath: m_Name
       value: CharacterHoverUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670114585796024288, guid: b50439dc6f37fbf41947599515f4975c, type: 3}
+      propertyPath: m_text
+      value: 'Resist:'
       objectReference: {fileID: 0}
     - target: {fileID: 5710363200740543385, guid: b50439dc6f37fbf41947599515f4975c, type: 3}
       propertyPath: m_AnchorMax.y

@@ -342,9 +342,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: Wind Wisp
   attackPower: 100
   maxHealth: 15
   speed: 115
+  speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
@@ -486,6 +488,8 @@ MonoBehaviour:
   selfEffectPrefab: {fileID: 1714363467411018263, guid: d2603cce40f4d154298f25fdb5777d13, type: 3}
   attackEffetPrefab: {fileID: 1714363467411018263, guid: 52449de75b5b2484e836ca388a7df108, type: 3}
   baseAccuracy: 85
+  originSound: {fileID: 8300000, guid: dbb61bcff02e2984f8b4dc0a6b7a13d4, type: 3}
+  hitSound: {fileID: 0}
   statusEffect: {fileID: 0}
   chanceToProc: 0
 --- !u!1 &8223478066681231905

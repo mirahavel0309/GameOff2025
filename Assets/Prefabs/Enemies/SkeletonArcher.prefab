@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
   - component: {fileID: 5747047734960535275}
+  - component: {fileID: 6879159179632067034}
   m_Layer: 6
   m_Name: SkeletonArcher
   m_TagString: Enemy
@@ -271,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: Skeleton archer
   attackPower: 100
   maxHealth: 25
   speed: 80
@@ -411,15 +413,34 @@ MonoBehaviour:
   skillDescription: SlimeSlam
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
-  damage: 5
+  damage: 6
   element: 4
   isProjectileAttack: 1
   baseAccuracy: 95
   projectilePrefab: {fileID: 5492295935689872714, guid: 99a09a49e36843647acff66646c118fe, type: 3}
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 5314099105409602643}
-  statusEffect: {fileID: 0}
-  chanceToProc: 0
+  statusEffect: {fileID: 6879159179632067034}
+  chanceToProc: 20
+  originSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 3d6df8197fdc27641b83566378663ae4, type: 3}
+--- !u!114 &6879159179632067034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df21daa2d307ba74f9bdf34225afc74e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectName: 
+  description: 
+  effectPrefab: {fileID: 0}
+  duration: 3
+  damagePerTurn: 3
 --- !u!1 &6770874624018280308
 GameObject:
   m_ObjectHideFlags: 0

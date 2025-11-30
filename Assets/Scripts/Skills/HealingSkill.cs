@@ -14,6 +14,7 @@ public class HealingSkill : BaseSkill
     public float mergeDelay = 0.3f;
     public float healEffectDuration = 0.6f;
     public int baseHeal = 10;
+    public AudioClip healSound;
 
     public override void Execute()
     {
@@ -77,6 +78,8 @@ public class HealingSkill : BaseSkill
         {
             HeroInstance hero = GameManager.Instance.GetHeroOfelement(ElementType.Nature);
             target.Heal(Mathf.RoundToInt(baseHeal * (hero.spellPower / 100f)));
+            if (healSound)
+                EffectsManager.instance.CreateSoundEffect(healSound, Vector3.zero);
         }
 
         GameManager.Instance.SetPlayerInput(true);

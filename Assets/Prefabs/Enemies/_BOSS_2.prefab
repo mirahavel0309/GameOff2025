@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: Wraith
   attackPower: 100
   maxHealth: 100
   speed: 95
@@ -493,6 +494,8 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 0}
   statusEffect: {fileID: 5811571262455106499}
   chanceToProc: 25
+  originSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 40ac736bf2918c144ad764a9daf627e7, type: 3}
 --- !u!114 &2510708917844097302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,6 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50465aca2cdef044ebeed1640a85c5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  castDescription: 
   enemyPrefab: {fileID: 6709276644064086281, guid: a25ec649ca03889498d4494637cca775, type: 3}
   spawnCount: 4
 --- !u!1 &8223478066681231905

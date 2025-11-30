@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb024d530251498f3b3be151a9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibleName: Water Wisp
   attackPower: 100
   maxHealth: 15
   speed: 115
@@ -522,6 +523,8 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 8308446801663998858}
   statusEffect: {fileID: 0}
   chanceToProc: 0
+  originSound: {fileID: 8300000, guid: daf2065e3efef9a4d96c214cb5653ec7, type: 3}
+  hitSound: {fileID: 8300000, guid: 43dec50d34ee42d48a4d14c37584c770, type: 3}
 --- !u!1 &8612068103122048513
 GameObject:
   m_ObjectHideFlags: 0
