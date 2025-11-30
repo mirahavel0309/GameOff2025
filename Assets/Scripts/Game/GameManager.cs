@@ -200,6 +200,10 @@ public class GameManager : MonoBehaviour
 
     private void UpdateAttackQueue()
     {
+        while (attackQueue.Count < 4)
+        {
+            ProcessNextAttacker();
+        }
         int num = 0;
         foreach (var card in attackQueue)
         {
