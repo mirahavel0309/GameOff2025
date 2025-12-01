@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
   - component: {fileID: -6943740390802484920}
+  - component: {fileID: 76208650636484743}
   m_Layer: 6
   m_Name: MageWind
   m_TagString: Player
@@ -467,6 +468,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strong: 03000000
   wakness: 04000000
+--- !u!114 &76208650636484743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69498dc457939f743ab6ac9dee053120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dissolveTime: 0.75
+  _spriteRenderers:
+  - {fileID: 8469931686135480976}
+  _outlineColor: {r: 1.8979572, g: 1.8979572, b: 1.8979572, a: 1}
+  _intensity: 1.63
 --- !u!1 &8612068103122048513
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +541,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ed0707c785b47842ad9c874032a7128, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

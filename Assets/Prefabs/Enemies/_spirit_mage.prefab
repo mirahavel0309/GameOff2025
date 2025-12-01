@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 8330408080377156783}
   - component: {fileID: 6622335080072796675}
   - component: {fileID: 1542871406198034571}
+  - component: {fileID: 8564501587394534196}
   m_Layer: 0
   m_Name: _spirit_mage
   m_TagString: Enemy
@@ -494,8 +495,8 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 805646930765066053}
   statusEffect: {fileID: 0}
   chanceToProc: 0
-  originSound: {fileID: 0}
-  hitSound: {fileID: 0}
+  originSound: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
+  hitSound: {fileID: 8300000, guid: 2b3f6f67fb69d2b4f9159696cf41eec6, type: 3}
 --- !u!114 &6622335080072796675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,8 +522,8 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 805646930765066053}
   statusEffect: {fileID: 0}
   chanceToProc: 0
-  originSound: {fileID: 0}
-  hitSound: {fileID: 0}
+  originSound: {fileID: 8300000, guid: 1fc3b9ebcfe227f4888737cc9242f3a7, type: 3}
+  hitSound: {fileID: 8300000, guid: 0247fff4ab587ea40906e8fd8ab6f422, type: 3}
 --- !u!114 &1542871406198034571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,8 +549,25 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 805646930765066053}
   statusEffect: {fileID: 0}
   chanceToProc: 0
-  originSound: {fileID: 0}
-  hitSound: {fileID: 0}
+  originSound: {fileID: 8300000, guid: 96076f6d8ae514c4f9dbda1e356f4597, type: 3}
+  hitSound: {fileID: 8300000, guid: 2165bf057d0df4649b31b725ea6e6c01, type: 3}
+--- !u!114 &8564501587394534196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69498dc457939f743ab6ac9dee053120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dissolveTime: 0.75
+  _spriteRenderers:
+  - {fileID: 8469931686135480976}
+  _outlineColor: {r: 2.4235451, g: 0, b: 0.1128063, a: 1}
+  _intensity: 1.63
 --- !u!1 &8223478066681231905
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +656,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ed0707c785b47842ad9c874032a7128, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

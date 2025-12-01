@@ -306,7 +306,8 @@ GameObject:
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
   - component: {fileID: 5747047734960535275}
-  - component: {fileID: 3743045065367564717}
+  - component: {fileID: 7589829126479986527}
+  - component: {fileID: 626748720319223399}
   m_Layer: 6
   m_Name: SlimeRed
   m_TagString: Enemy
@@ -490,11 +491,11 @@ MonoBehaviour:
   projectilePrefab: {fileID: 0}
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 0}
-  statusEffect: {fileID: 3743045065367564717}
+  statusEffect: {fileID: 0}
   chanceToProc: 10
   originSound: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 40ac736bf2918c144ad764a9daf627e7, type: 3}
---- !u!114 &3743045065367564717
+--- !u!114 &7589829126479986527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -511,6 +512,23 @@ MonoBehaviour:
   effectPrefab: {fileID: 0}
   duration: 3
   damagePerTurn: 2
+--- !u!114 &626748720319223399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69498dc457939f743ab6ac9dee053120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dissolveTime: 0.75
+  _spriteRenderers:
+  - {fileID: 8469931686135480976}
+  _outlineColor: {r: 0.6509804, g: 0.48627454, b: 0.13725491, a: 1}
+  _intensity: 1.63
 --- !u!1 &8612068103122048513
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +586,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ed0707c785b47842ad9c874032a7128, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

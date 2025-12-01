@@ -35,7 +35,7 @@ public class CardInstance : MonoBehaviour
     public int MaxHealth => maxHealth;
     public CharacterResistances Resistances => resistances;
     public IReadOnlyList<StatusEffect> ActiveEffects => activeEffects.AsReadOnly();
-    protected ProgressBar hpBar; 
+    protected ProgressBar hpBar;
     private List<PassiveSkill> passiveSkills;
     protected static CardInstance selectedAttacker;
     private void Awake()
@@ -49,7 +49,7 @@ public class CardInstance : MonoBehaviour
     }
     void Start()
     {
-        if(currentHealth == 0)
+        if (currentHealth == 0)
             currentHealth = maxHealth;
         Initialize();
         hpBar = GetComponentInChildren<ProgressBar>();
@@ -265,17 +265,20 @@ public class CardInstance : MonoBehaviour
     }
     protected virtual IEnumerator HandleDestruction()
     {
-        GameManager.Instance.SetPlayerInput(false);
-
-        yield return new WaitForSeconds(0.5f);
-
+        //GameManager.Instance.SetPlayerInput(false);
+        Dissolve dissolveEffect = GetComponentInChildren<Dissolve>();
+        if (dissolveEffect != null)
+        {
+            dissolveEffect.DissolveVanish();
+        }
+        yield return new WaitForSeconds(1.5f);
         if (troopsField != null)
         {
             troopsField.RemoveCard(this);
         }
 
         Destroy(gameObject);
-        GameManager.Instance.SetPlayerInput(true);
+        //GameManager.Instance.SetPlayerInput(true);
     }
     private IEnumerator MoveToPosition(Vector3 target, float duration)
     {

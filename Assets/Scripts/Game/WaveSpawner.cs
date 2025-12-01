@@ -67,6 +67,7 @@ public class WaveSpawner : MonoBehaviour
         currentWave++;
 
         GameObject newCardGO = Instantiate(BossPrefab, transform.position, Quaternion.identity).gameObject;
+        newCardGO.name = BossPrefab.name;
         CardInstance cardInstance = newCardGO.GetComponent<CardInstance>();
         cardInstance.ScalePower(healthScale, damageScale);
 
@@ -85,6 +86,7 @@ public class WaveSpawner : MonoBehaviour
         CardInstance randomEnemy = enemies[Random.Range(0, enemies.Count)];
 
         GameObject newCardGO = Instantiate(randomEnemy, transform.position, Quaternion.identity).gameObject;
+        newCardGO.name = randomEnemy.name;
         CardInstance cardInstance = newCardGO.GetComponent<CardInstance>();
         cardInstance.ScalePower(healthScale, damageScale);
 

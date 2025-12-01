@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public AudioClip lossSound;
     public bool IsActionPending(string type) => pendingActionType == type;
     [Header("Stages swap")]
-    [HideInInspector]public int waveCounter = 0;
+    [HideInInspector] public int waveCounter = 0;
     public int maxWavesCount = 2;
     public Transform[] exitPathPoints;
     public CameraPathPoint[] enterCameraPath;
@@ -149,7 +149,8 @@ public class GameManager : MonoBehaviour
                 lowestCount = card.speedCount;
                 highestSpeed = card.speed;
             }
-            else if (card.speedCount == lowestCount && card.speed > highestSpeed){
+            else if (card.speedCount == lowestCount && card.speed > highestSpeed)
+            {
                 nextCard = card;
                 lowestCount = card.speedCount;
                 highestSpeed = card.speed;
@@ -178,7 +179,7 @@ public class GameManager : MonoBehaviour
         nextCard.speedCount += 500;
         attackQueue.Enqueue(nextCard);
         Debug.Log("Added " + nextCard.gameObject.name + " to the attack queue");
-        
+
 
         Queue<CardInstance> newAttackQueue = new Queue<CardInstance>();
         bool dead = false;
@@ -263,6 +264,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < heroSelectionData.selectedHeroes.Length; i++)
         {
             HeroInstance hero = Instantiate(heroSelectionData.selectedHeroes[i], playerField.transform).GetComponent<HeroInstance>();
+            hero.name = heroSelectionData.selectedHeroes[i].name;
             //hero.SetCardData(hero);
             hero.troopsField = playerField;
             PlayerHeroes.Add(hero);
@@ -274,7 +276,7 @@ public class GameManager : MonoBehaviour
         // Spawn enemy wave
         waveCounter++;
         InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
-        
+
         yield return enemySpawner.SpawnWaveCoroutine();
         waveActive = true;
 
@@ -327,7 +329,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 StartCoroutine(EndLevel());
-            }  
+            }
         }
     }
     public void SelectTarget(CardInstance target)
@@ -346,7 +348,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         actionsText.text = $"actions left: {actionsThisTurn}";
-        if(actionsThisTurn > 0)
+        if (actionsThisTurn > 0)
         {
             healText.gameObject.SetActive(true);
             healText.text = $"heal for {healLevels[actionsThisTurn - 1]} hp";
@@ -357,7 +359,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
+
 
     private IEnumerator PlayerTurnRoutine(CardInstance hero)
     {
@@ -371,7 +373,8 @@ public class GameManager : MonoBehaviour
         }
 
 
-        if (hero != null) {
+        if (hero != null)
+        {
             yield return StartCoroutine(hero.ProcessStartOfTurnEffects());
             yield return new WaitForSeconds(0.2f);
         }
@@ -395,7 +398,8 @@ public class GameManager : MonoBehaviour
         List<CardInstance> playerCards = playerField.GetCards().ToList();
         playerCards.RemoveAll(x => (x as HeroInstance).isDefeated);
 
-        if (enemyCard != null) {
+        if (enemyCard != null)
+        {
             yield return StartCoroutine(enemyCard.ProcessStartOfTurnEffects());
             yield return StartCoroutine(enemyCard.ProcessPassivesTurnStart());
 
@@ -407,7 +411,8 @@ public class GameManager : MonoBehaviour
 
 
         playerCards.RemoveAll(x => (x as HeroInstance).isDefeated);
-        if (enemyCard != null && playerCards.Count > 0 && enemyCard.GetComponent<FreezeEffect>() == null) {
+        if (enemyCard != null && playerCards.Count > 0 && enemyCard.CurrentHealth > 0)
+        {
 
             BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>().Where(x => x.enabled).ToArray();
 
@@ -652,11 +657,11 @@ public class GameManager : MonoBehaviour
             cam.transform.position = target.position;
             cam.transform.rotation = target.rotation;
 
-            
+
             camController.ResetValues();
             //yield return new WaitForSeconds(0.05f);
         }
-        
+
     }
     public IEnumerator JustFadeOut()
     {
@@ -777,7 +782,7 @@ public class GameManager : MonoBehaviour
     }
     public void RemoveElementFromDeck(ElementType element)
     {
-        if(playerDeck.availableElements.Contains(element))
+        if (playerDeck.availableElements.Contains(element))
             playerDeck.availableElements.Remove(element);
     }
     public void AddElementToDeck(ElementType element)

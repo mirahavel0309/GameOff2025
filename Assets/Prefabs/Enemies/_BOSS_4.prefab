@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 1716852544195132345}
   - component: {fileID: 8077459593497783422}
   - component: {fileID: 8194706822023651428}
+  - component: {fileID: 6401811491720128624}
   m_Layer: 0
   m_Name: _BOSS_4
   m_TagString: Enemy
@@ -526,6 +527,23 @@ MonoBehaviour:
   skills:
   - {fileID: 1716852544195132345}
   - {fileID: 8077459593497783422}
+--- !u!114 &6401811491720128624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69498dc457939f743ab6ac9dee053120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dissolveTime: 0.75
+  _spriteRenderers:
+  - {fileID: 8469931686135480976}
+  _outlineColor: {r: 2.4235451, g: 0, b: 0.1128063, a: 1}
+  _intensity: 1.63
 --- !u!1 &8223478066681231905
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +632,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ed0707c785b47842ad9c874032a7128, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

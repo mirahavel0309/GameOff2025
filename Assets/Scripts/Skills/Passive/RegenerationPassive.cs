@@ -7,7 +7,8 @@ public class RegenerationPassive : PassiveSkill
 
     public override IEnumerator OnTurnStart()
     {
-        owner.Heal(Mathf.RoundToInt(owner.maxHealth * healRate));
+        if (owner.CurrentHealth > 0) //skip heal is HmiPlatform is below 0
+            owner.Heal(Mathf.RoundToInt(owner.maxHealth * healRate));
         yield return new WaitForSeconds(0.15f);
     }
 }
