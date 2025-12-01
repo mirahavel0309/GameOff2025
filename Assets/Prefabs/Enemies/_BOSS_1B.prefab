@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 3303585355228617710}
   - component: {fileID: 4964113359520524644}
   - component: {fileID: 7241518395779014748}
+  - component: {fileID: 2529737819517694187}
   m_Layer: 0
   m_Name: _BOSS_1B
   m_TagString: Enemy
@@ -344,6 +345,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPower: 100
   maxHealth: 100
+  speed: 100
+  speedCount: 500
   cardSprite: {fileID: 8469931686135480976}
   highlightSprite: {fileID: 9070761382798154575}
   animator: {fileID: 0}
@@ -491,6 +494,23 @@ MonoBehaviour:
   timeBetweenShots: 0.1
   attacksCount: 6
   attackOrigin: {fileID: 805646930765066053}
+--- !u!114 &2529737819517694187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69498dc457939f743ab6ac9dee053120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dissolveTime: 0.75
+  _spriteRenderers:
+  - {fileID: 8469931686135480976}
+  _outlineColor: {r: 0.18544084, g: 1.3556362, b: 1.3391448, a: 1}
+  _intensity: 1.63
 --- !u!1 &8223478066681231905
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +599,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ed0707c785b47842ad9c874032a7128, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
