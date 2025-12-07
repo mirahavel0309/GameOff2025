@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public enum ElementType { Fire, Water, Nature, Wind, Physical }
+public enum ElementType { Fire, Water, Nature, Wind, Physical, Spirit }
 public class ElementalCardInstance : MonoBehaviour, IPointerClickHandler
 {
     public ElementType elementType;

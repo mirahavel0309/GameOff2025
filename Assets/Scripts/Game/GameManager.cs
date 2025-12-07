@@ -395,8 +395,13 @@ public class GameManager : MonoBehaviour
     private IEnumerator EnemyTurnRoutine(CardInstance enemyCard)
     {
         List<CardInstance> enemyCards = enemyField.GetCards();
-        List<CardInstance> playerCards = playerField.GetCards().ToList();
-        playerCards.RemoveAll(x => (x as HeroInstance).isDefeated);
+        List<CardInstance> playerCards = playerField.GetCards().ToList(); 
+        
+        playerCards.RemoveAll(card =>
+        {
+            HeroInstance hero = card as HeroInstance;
+            return hero != null && hero.isDefeated;
+        });
 
         if (enemyCard != null)
         {
@@ -410,7 +415,11 @@ public class GameManager : MonoBehaviour
         enemyCards.RemoveAll(e => e.GetComponent<FreezeEffect>() != null); // make frozen units skip action
 
 
-        playerCards.RemoveAll(x => (x as HeroInstance).isDefeated);
+        playerCards.RemoveAll(card =>
+        {
+            HeroInstance hero = card as HeroInstance;
+            return hero != null && hero.isDefeated;
+        });
         if (enemyCard != null && playerCards.Count > 0 && enemyCard.CurrentHealth > 0)
         {
 

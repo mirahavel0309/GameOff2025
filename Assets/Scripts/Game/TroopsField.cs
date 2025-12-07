@@ -51,6 +51,11 @@ public class TroopsField : MonoBehaviour
         StartCoroutine(MoveCardToPosition(card, freeSlot.position));
     }
 
+    internal void AddSummonedCard(CardInstance minionCard)
+    {
+        cardsOnField.Add(minionCard);
+    }
+
     public void RemoveCard(CardInstance card)
     {
         if (card == null)
@@ -119,6 +124,17 @@ public class TroopsField : MonoBehaviour
 
     public bool AllHeroesDefeated()
     {
-        return cardsOnField.Count > 0 && cardsOnField.Where(x => !(x as HeroInstance).isDefeated).Count() == 0;
+        // Extract only the HeroInstances
+        var heroes = cardsOnField
+            .Select(c => c as HeroInstance)
+            .Where(h => h != null)
+            .ToList();
+
+        if (heroes.Count == 0)
+            return false;
+
+        return heroes.All(h => h.isDefeated);
+
+        //return cardsOnField.Count > 0 && cardsOnField.Where(x => x as HeroCard && !(x as HeroInstance).isDefeated).Count() == 0;
     }
 }

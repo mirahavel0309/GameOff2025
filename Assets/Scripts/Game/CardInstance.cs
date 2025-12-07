@@ -194,7 +194,7 @@ public class CardInstance : MonoBehaviour
         if (resistances != null)
         {
             Color textColor = Color.black;
-            float resistance = 1000f;
+            float resistance = 0;
             switch (element)
             {
                 case ElementType.Fire:
@@ -215,6 +215,10 @@ public class CardInstance : MonoBehaviour
                     break;
                 case ElementType.Physical:
                     resistance = resistances.GetResistanceValue(ElementType.Physical);
+                    break;
+                case ElementType.Spirit:
+                    resistance = resistances.GetResistanceValue(ElementType.Spirit);
+                    textColor = Color.blue;
                     break;
             }
 

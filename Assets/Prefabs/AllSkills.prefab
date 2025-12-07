@@ -82,7 +82,6 @@ MonoBehaviour:
   description: 
   effectPrefab: {fileID: 0}
   duration: 2
-  speedPenalty: 0
 --- !u!1 &439547023762225137
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +214,7 @@ MonoBehaviour:
   soundCharge: {fileID: 0}
   healEffectPrefab: {fileID: 1714363467411018263, guid: 9d41950162247bf45b990eaa5955a0b7, type: 3}
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
+  healSound: {fileID: 0}
   elementalRiseHeight: 2
   elementalLaunchDuration: 0.8
   mergeDelay: 0.3
@@ -1077,6 +1077,7 @@ MonoBehaviour:
   mergeDelay: 0.3
   healEffectDuration: 1.5
   baseHeal: 15
+  healSound: {fileID: 0}
 --- !u!1 &3127187402080381879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1474,8 @@ Transform:
   - {fileID: 4945804107897719782}
   - {fileID: 9157436116424040659}
   - {fileID: 3585399003441552215}
+  - {fileID: 7903440573960169413}
+  - {fileID: 4172750123639722034}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3887558833413028151
@@ -1645,6 +1648,87 @@ MonoBehaviour:
   effectPrefab: {fileID: 0}
   duration: 3
   accuracyPenalty: 25
+--- !u!1 &4709900901017137120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7903440573960169413}
+  - component: {fileID: 5538219020576261775}
+  - component: {fileID: 6430678291586559800}
+  m_Layer: 0
+  m_Name: FireBall (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7903440573960169413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4709900901017137120}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5538219020576261775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4709900901017137120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53af9f0852ec7847941291553b7d24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Fire Bolt
+  description: Deal <damage> fire damage
+  skillIcon: {fileID: -7045954298782371865, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  requiredElements: 05000000
+  soundCharge: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
+  formedProjectilePrefab: {fileID: 5492295935689872714, guid: 9f9ba681ce513474a9b1545a8d6c7f32, type: 3}
+  elementalRiseHeight: 3
+  elementalLaunchDuration: 0.8
+  mergeDelay: 0.5
+  travelDuration: 1.2
+  impactDelay: 0.1
+  baseDamage: 8
+  damageType: 5
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
+  onHitEffect: {fileID: 1714363467411018263, guid: e6c971256c7042c4d85a927ed0c430ab, type: 3}
+  statusEffect: {fileID: 6430678291586559800}
+  chanceToProc: 20
+  soundLaunch: {fileID: 8300000, guid: ac69c2057526c0f428f1b7ef48890792, type: 3}
+  soundHit: {fileID: 8300000, guid: 2b3f6f67fb69d2b4f9159696cf41eec6, type: 3}
+--- !u!114 &6430678291586559800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4709900901017137120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576b6ef1b9da5834ea250c3346fa2b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectName: Burning
+  description: 
+  effectPrefab: {fileID: 6709276644064086281, guid: 439f64f9a70c20242b9a36f8ade449d4, type: 3}
+  duration: 3
+  damagePerTurn: 4
 --- !u!1 &4869640314808536140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,7 +1890,6 @@ MonoBehaviour:
   description: 
   effectPrefab: {fileID: 0}
   duration: 2
-  speedPenalty: 0
 --- !u!1 &5968227544144529352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,6 +2088,64 @@ MonoBehaviour:
   projectileSpeed: 6
   explosionDuration: 0.6
   baseDamage: 12
+--- !u!1 &6132643711215100166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4172750123639722034}
+  - component: {fileID: 3060193415887633300}
+  m_Layer: 0
+  m_Name: FireBall (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4172750123639722034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6132643711215100166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3060193415887633300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6132643711215100166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a09f26546f99c44b27e9096cd805e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  skillIcon: {fileID: 1319902094, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  requiredElements: 05000000
+  soundCharge: {fileID: 0}
+  elementalRiseHeight: 4
+  elementalLaunchDuration: 1
+  mergeDelay: 0.5
+  minionPrefab: {fileID: 6709276644064086281, guid: 00489db4fa50efb448f5b637ef16dbae, type: 3}
+  searchRadius: 2
+  minSeparation: 1
+  maxSearchPoints: 16
+  effectDelay: 0.2
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
 --- !u!1 &6168288286251122584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,7 +2228,6 @@ MonoBehaviour:
   description: 
   effectPrefab: {fileID: 0}
   duration: 2
-  speedPenalty: 0
 --- !u!1 &6395192032614187813
 GameObject:
   m_ObjectHideFlags: 0

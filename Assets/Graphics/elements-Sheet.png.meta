@@ -240,6 +240,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: elements-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 0
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a964a59a43881428fb2bd94cfd186b
+      internalID: 1319902094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -259,6 +281,7 @@ TextureImporter:
       elements-Sheet_2: 5208024241582667449
       elements-Sheet_3: -7105074764738127781
       elements-Sheet_4: -1562093178560388313
+      elements-Sheet_5: 1319902094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

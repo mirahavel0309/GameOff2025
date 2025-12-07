@@ -213,7 +213,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -235,7 +235,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 35
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -257,7 +257,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 70
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -279,7 +279,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 105
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -301,7 +301,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 140
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -323,7 +323,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 175
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -345,7 +345,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 210
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -367,7 +367,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 245
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -389,7 +389,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 280
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -411,7 +411,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 315
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -433,7 +433,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 350
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -455,7 +455,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 385
-        y: 30
+        y: 60
         width: 35
         height: 30
       alignment: 0
@@ -477,7 +477,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -499,7 +499,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 35
-        y: 0
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -521,7 +521,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 70
-        y: 0
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -543,7 +543,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 105
-        y: 0
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -565,7 +565,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 140
-        y: 0
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -587,7 +587,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 175
-        y: 0
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -608,8 +608,8 @@ TextureImporter:
       name: spells-Sheet_18
       rect:
         serializedVersion: 2
-        x: 245
-        y: 0
+        x: 210
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -630,8 +630,8 @@ TextureImporter:
       name: spells-Sheet_19
       rect:
         serializedVersion: 2
-        x: 280
-        y: 0
+        x: 245
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -652,8 +652,8 @@ TextureImporter:
       name: spells-Sheet_20
       rect:
         serializedVersion: 2
-        x: 315
-        y: 0
+        x: 280
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -674,8 +674,8 @@ TextureImporter:
       name: spells-Sheet_21
       rect:
         serializedVersion: 2
-        x: 350
-        y: 0
+        x: 315
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -696,8 +696,8 @@ TextureImporter:
       name: spells-Sheet_22
       rect:
         serializedVersion: 2
-        x: 385
-        y: 0
+        x: 350
+        y: 30
         width: 35
         height: 30
       alignment: 0
@@ -710,6 +710,292 @@ TextureImporter:
       bones: []
       spriteID: 7107912c2e205164db23be13c2d0724d
       internalID: 5416130795730616692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 30
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a788cf3568ece1745ab5a89e40f2a6f0
+      internalID: 467480073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4b4c9e294932340b265ebb7a129618
+      internalID: 197466999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72cee9cbb7e15ab4691923cfa1d72fd9
+      internalID: -1013668220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dc1161075f5b94dbc78519257e785a
+      internalID: -1219392996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cffd2b1525f4dc46a4a4a2f2b390a4e
+      internalID: -30348061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973e24fbf8a86854088c4204dedf7e38
+      internalID: -1067395625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3497fe1ea6a886942bde394bd05eb3c4
+      internalID: 1785253842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9bf85afb23c43489aa620327808234
+      internalID: -108685079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0822be51143314a449abed3dd5524b7d
+      internalID: -509325864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56eaeb22a0f0cb49979bcae9b61afa3
+      internalID: -1037477063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe77c9b428d5e974382f4dd0079cf5ff
+      internalID: 127824806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd857d66bbc8744dafbbbe3db590762
+      internalID: -144056053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spells-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b1650ab96acd84e8ace85aca719f86
+      internalID: -1293409923
       vertices: []
       indices: 
       edges: []
@@ -744,7 +1030,20 @@ TextureImporter:
       spells-Sheet_20: 974909791873148181
       spells-Sheet_21: -4932745210665146139
       spells-Sheet_22: 5416130795730616692
+      spells-Sheet_23: 467480073
+      spells-Sheet_24: 197466999
+      spells-Sheet_25: -1013668220
+      spells-Sheet_26: -1219392996
+      spells-Sheet_27: -30348061
+      spells-Sheet_28: -1067395625
+      spells-Sheet_29: 1785253842
       spells-Sheet_3: -3189097892625286062
+      spells-Sheet_30: -108685079
+      spells-Sheet_31: -509325864
+      spells-Sheet_32: -1037477063
+      spells-Sheet_33: 127824806
+      spells-Sheet_34: -144056053
+      spells-Sheet_35: -1293409923
       spells-Sheet_4: 4730339109292127003
       spells-Sheet_5: -8695878343116310139
       spells-Sheet_6: -7077343089386191299
