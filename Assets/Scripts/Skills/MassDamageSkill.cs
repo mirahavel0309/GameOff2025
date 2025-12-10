@@ -49,12 +49,12 @@ public class MassDamageSkill : BaseSkill
             )
         );
 
-        GameObject[] allUnits = GameObject.FindGameObjectsWithTag("Enemy");
+        List<CardInstance> allUnits = GameManager.Instance.GetEnemies();
         List<CardInstance> friendlyUnits = new List<CardInstance>();
 
-        foreach (GameObject unitObj in allUnits)
+        foreach (CardInstance card in allUnits)
         {
-            CardInstance card = unitObj.GetComponent<CardInstance>();
+            //CardInstance card = unitObj.GetComponent<CardInstance>();
             if (card != null)
                 friendlyUnits.Add(card);
         }

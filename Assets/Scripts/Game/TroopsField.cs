@@ -54,6 +54,7 @@ public class TroopsField : MonoBehaviour
     internal void AddSummonedCard(CardInstance minionCard)
     {
         cardsOnField.Add(minionCard);
+        minionCard.troopsField = this;
     }
 
     public void RemoveCard(CardInstance card)

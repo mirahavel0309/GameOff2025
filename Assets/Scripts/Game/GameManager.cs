@@ -178,7 +178,6 @@ public class GameManager : MonoBehaviour
 
         nextCard.speedCount += 500;
         attackQueue.Enqueue(nextCard);
-        Debug.Log("Added " + nextCard.gameObject.name + " to the attack queue");
 
 
         Queue<CardInstance> newAttackQueue = new Queue<CardInstance>();
@@ -280,8 +279,9 @@ public class GameManager : MonoBehaviour
         yield return enemySpawner.SpawnWaveCoroutine();
         waveActive = true;
 
-        StartOfWaveRoutine();
-        playerDeck.DrawUntilHandIsFull();
+
+        //StartOfWaveRoutine();
+        yield return StartCoroutine(PlayerTurnSimple()); // trying out simple turn order
     }
     private IEnumerator WaveMonitorRoutine()
     {
@@ -315,7 +315,8 @@ public class GameManager : MonoBehaviour
                 waveActive = true;
 
                 // Return control to the player
-                StartOfWaveRoutine();
+                //StartOfWaveRoutine();
+                yield return StartCoroutine(PlayerTurnSimple());
             }
             else if (waveCounter == maxWavesCount)
             {
@@ -324,13 +325,144 @@ public class GameManager : MonoBehaviour
                 waveActive = true;
 
                 // Return control to the player
-                StartOfWaveRoutine();
+                //StartOfWaveRoutine();
+                yield return StartCoroutine(PlayerTurnSimple());
             }
             else
             {
                 StartCoroutine(EndLevel());
             }
         }
+    }
+
+    private IEnumerator PlayerTurnSimple()
+    {
+        currentTurn++;
+
+        if (playerField.AllHeroesDefeated())
+        {
+            GameOverScreen.instance.Show();
+        }
+
+        CardInstance[] playerUnits = playerField.GetCards().ToArray();
+        foreach (var hero in playerUnits)
+        {
+            if (hero == null) continue;
+            yield return StartCoroutine(hero.ProcessStartOfTurnEffects());
+            yield return StartCoroutine(hero.ProcessPassivesTurnStart());
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        List<CardInstance> justHeroes = playerField.GetCards().ToList();
+        justHeroes.RemoveAll(card =>
+        {
+            HeroInstance hero = card as HeroInstance;
+            return hero == null || hero.isDefeated;
+        });
+
+        actionsThisTurn = 3;
+        ResetAllAttacks();
+        playerDeck.DrawUntilHandIsFull();
+
+        SetPlayerInput(true);
+        foreach (var hero in justHeroes)
+            hero.ShowSelector(SelectionState.Active);
+
+        yield return new WaitUntil(() => playerInput.EndTurnPressed);
+        playerInput.EndTurnPressed = false;
+
+        //HealPlayers(); bad idea. can be exploited :(
+
+        SetPlayerInput(false);
+        foreach (var hero in justHeroes)
+            hero.HideSelector();
+
+        if( enemyField.GetCards().Count > 0)
+            StartCoroutine(SummonsTurnSimple());
+    }
+    private IEnumerator SummonsTurnSimple()
+    {
+        Debug.Log("Player minions turn start");
+        List<CardInstance> enemyCards = enemyField.GetCards();
+        List<CardInstance> summonCards = playerField.GetCards().ToList();
+        summonCards.RemoveAll(card =>
+        {
+            HeroInstance hero = card as HeroInstance;
+            return hero != null;
+        });
+
+        //enemyCards = enemyField.GetCards().ToList(); // Rebuild the list after potential removals
+        summonCards.RemoveAll(e => e.GetComponent<FreezeEffect>() != null); // make frozen units skip action
+
+        foreach (var summon in summonCards)
+            summon.ShowSelector(SelectionState.Inactive);
+
+        foreach (var summon in summonCards)
+        {
+            summon.ShowSelector(SelectionState.Active);
+            enemyCards = enemyField.GetCards();
+            if (summon == null) continue;
+            if (enemyCards.Count == 0) break;
+
+            BaseMonsterSkill[] skills = summon.gameObject.GetComponents<BaseMonsterSkill>();
+
+            BaseMonsterSkill selectedSkill = skills[Random.Range(0, skills.Length)];
+
+            CardInstance target = enemyCards[Random.Range(0, enemyCards.Count)];
+            yield return selectedSkill.StartCoroutine(selectedSkill.Execute(target));
+            yield return new WaitForSeconds(0.2f);
+            summon.HideSelector();
+        }
+        Debug.Log("Player minions turn end");
+        foreach (var summon in summonCards)
+            summon.HideSelector();
+
+        if (enemyField.GetCards().Count > 0)
+            StartCoroutine(EnemyTurnSimple());
+    }
+    private IEnumerator EnemyTurnSimple()
+    {
+        List<CardInstance> enemyCards = enemyField.GetCards();
+        List<CardInstance> playerCards = playerField.GetCards().ToList();
+        playerCards.RemoveAll(card =>
+        {
+            HeroInstance hero = card as HeroInstance;
+            return hero != null && hero.isDefeated;
+        });
+
+        foreach (var enemyCard in new List<CardInstance>(enemyCards))
+        {
+            if (enemyCard == null) continue;
+
+            yield return StartCoroutine(enemyCard.ProcessStartOfTurnEffects());
+            yield return StartCoroutine(enemyCard.ProcessPassivesTurnStart());
+
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        enemyCards = enemyField.GetCards().ToList(); // Rebuild the list after potential removals
+        enemyCards.RemoveAll(e => e.GetComponent<FreezeEffect>() != null); // make frozen units skip action
+
+        foreach (var enemyCard in enemyCards)
+            enemyCard.ShowSelector(SelectionState.Inactive);
+        foreach (var enemyCard in enemyCards)
+        {
+            enemyCard.ShowSelector(SelectionState.Active);
+            if (enemyCard == null) continue;
+            if (playerCards.Count == 0) break;
+
+            BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>();
+
+            BaseMonsterSkill selectedSkill = skills[Random.Range(0, skills.Length)];
+
+            CardInstance target = playerCards[Random.Range(0, playerCards.Count)];
+            yield return selectedSkill.StartCoroutine(selectedSkill.Execute(target));
+            yield return new WaitForSeconds(0.5f);
+            enemyCard.HideSelector();
+        }
+
+        yield return new WaitForSeconds(enemyTurnDuration);
+        StartCoroutine(PlayerTurnSimple());
     }
     public void SelectTarget(CardInstance target)
     {
@@ -618,7 +750,8 @@ public class GameManager : MonoBehaviour
             yield return enemySpawner.SpawnWaveCoroutine();
             InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
             waveActive = true;
-            StartOfWaveRoutine();
+            //StartOfWaveRoutine(); 
+            yield return StartCoroutine(PlayerTurnSimple());
         }
         else
         {

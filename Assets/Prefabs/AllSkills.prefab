@@ -163,6 +163,64 @@ MonoBehaviour:
   effectPrefab: {fileID: 6709276644064086281, guid: 754cbd3cdf8c73348a028ce7b24d3d52, type: 3}
   duration: 6
   damagePerTurn: 8
+--- !u!1 &491464870987523133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7189738331127039444}
+  - component: {fileID: 4636244865399139999}
+  m_Layer: 0
+  m_Name: SummonNatureMinion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7189738331127039444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491464870987523133}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4636244865399139999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491464870987523133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a09f26546f99c44b27e9096cd805e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Nature Minion
+  description: Summon Nature minion.
+  skillIcon: {fileID: 1319902094, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  requiredElements: 0500000002000000
+  soundCharge: {fileID: 0}
+  elementalRiseHeight: 4
+  elementalLaunchDuration: 1
+  mergeDelay: 0.5
+  minionPrefab: {fileID: 6709276644064086281, guid: a1a5e583650f26f4f97c8c157879f6c3, type: 3}
+  searchRadius: 2
+  minSeparation: 3
+  maxSearchPoints: 32
+  effectDelay: 0.2
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
 --- !u!1 &603527255239897448
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +418,7 @@ MonoBehaviour:
   description: 'Appies fire shield to all allies.
 
     <passive_info>'
-  skillIcon: {fileID: -300472272976743755, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  skillIcon: {fileID: -5253547813027793777, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0000000000000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
@@ -584,7 +642,7 @@ MonoBehaviour:
   description: 'Appies water shield to all allies.
 
     <passive_info>'
-  skillIcon: {fileID: -5253547813027793777, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  skillIcon: {fileID: 974909791873148181, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 01000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
@@ -861,6 +919,64 @@ MonoBehaviour:
   effectPrefab: {fileID: 0}
   duration: 3
   accuracyPenalty: 25
+--- !u!1 &2322384245700995628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8429714809063832775}
+  - component: {fileID: 2807125179550174786}
+  m_Layer: 0
+  m_Name: SummonWaterMinion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8429714809063832775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322384245700995628}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2807125179550174786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322384245700995628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a09f26546f99c44b27e9096cd805e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Water Minion
+  description: 
+  skillIcon: {fileID: 1319902094, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  requiredElements: 0500000001000000
+  soundCharge: {fileID: 0}
+  elementalRiseHeight: 4
+  elementalLaunchDuration: 1
+  mergeDelay: 0.5
+  minionPrefab: {fileID: 6709276644064086281, guid: eb37acf75073bf54fa7ebcf1d9687bf2, type: 3}
+  searchRadius: 2
+  minSeparation: 3
+  maxSearchPoints: 32
+  effectDelay: 0.2
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
 --- !u!1 &2445413312923690284
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +1026,7 @@ MonoBehaviour:
   description: 'Appies wind shield to all allies.
 
     <passive_info>'
-  skillIcon: {fileID: -4932745210665146139, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  skillIcon: {fileID: 5416130795730616692, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0300000003000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
@@ -1299,7 +1415,7 @@ MonoBehaviour:
   description: 'Appies wind shield to all allies.
 
     <passive_info>'
-  skillIcon: {fileID: -4932745210665146139, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  skillIcon: {fileID: 5416130795730616692, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 03000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
@@ -1476,6 +1592,10 @@ Transform:
   - {fileID: 3585399003441552215}
   - {fileID: 7903440573960169413}
   - {fileID: 4172750123639722034}
+  - {fileID: 534748487690094071}
+  - {fileID: 8429714809063832775}
+  - {fileID: 7189738331127039444}
+  - {fileID: 5487168429850402876}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3887558833413028151
@@ -1660,7 +1780,7 @@ GameObject:
   - component: {fileID: 5538219020576261775}
   - component: {fileID: 6430678291586559800}
   m_Layer: 0
-  m_Name: FireBall (1)
+  m_Name: Spirit Strike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1778,7 +1898,7 @@ MonoBehaviour:
   description: 'Appies nature shield to all allies.
 
     <passive_info>'
-  skillIcon: {fileID: 974909791873148181, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  skillIcon: {fileID: -4932745210665146139, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 02000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
@@ -1810,6 +1930,64 @@ MonoBehaviour:
   shieldBarPrefab: {fileID: 181281477184934585, guid: 386d1a89cd2ea094097437ec711a6e62, type: 3}
   worldVisualOffset: {x: 0, y: 0, z: 0}
   uiBarOffset: {x: 0, y: -0.25, z: 0}
+--- !u!1 &5771706552408599801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5487168429850402876}
+  - component: {fileID: 4772820289443276382}
+  m_Layer: 0
+  m_Name: SummonWindMinion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5487168429850402876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5771706552408599801}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4772820289443276382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5771706552408599801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a09f26546f99c44b27e9096cd805e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Wind Minion
+  description: Summon Wind Minion
+  skillIcon: {fileID: 1319902094, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  requiredElements: 0500000003000000
+  soundCharge: {fileID: 0}
+  elementalRiseHeight: 4
+  elementalLaunchDuration: 1
+  mergeDelay: 0.5
+  minionPrefab: {fileID: 6709276644064086281, guid: 45a3826a1655c634c9d212ec858ccae4, type: 3}
+  searchRadius: 2
+  minSeparation: 3
+  maxSearchPoints: 32
+  effectDelay: 0.2
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
 --- !u!1 &5814782397157253723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,7 +2277,7 @@ GameObject:
   - component: {fileID: 4172750123639722034}
   - component: {fileID: 3060193415887633300}
   m_Layer: 0
-  m_Name: FireBall (2)
+  m_Name: Spirit Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2132,18 +2310,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a09f26546f99c44b27e9096cd805e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: Spirit Orb
+  description: Summon Spirit orb
   skillIcon: {fileID: 1319902094, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
-  requiredElements: 05000000
+  requiredElements: 0500000005000000
   soundCharge: {fileID: 0}
   elementalRiseHeight: 4
   elementalLaunchDuration: 1
   mergeDelay: 0.5
-  minionPrefab: {fileID: 6709276644064086281, guid: 00489db4fa50efb448f5b637ef16dbae, type: 3}
+  minionPrefab: {fileID: 6709276644064086281, guid: 89db053249e2cad4d8fdb887b3ad1d7e, type: 3}
   searchRadius: 2
-  minSeparation: 1
-  maxSearchPoints: 16
+  minSeparation: 3
+  maxSearchPoints: 32
   effectDelay: 0.2
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
 --- !u!1 &6168288286251122584
@@ -2727,7 +2905,7 @@ MonoBehaviour:
   description: 'Appies water shield to all allies.
 
     <passive_info>'
-  skillIcon: {fileID: -5253547813027793777, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  skillIcon: {fileID: 974909791873148181, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0100000001000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
@@ -2808,7 +2986,7 @@ MonoBehaviour:
   description: 'Appies fire shield to all allies.
 
     <passive_info>'
-  skillIcon: {fileID: -300472272976743755, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  skillIcon: {fileID: -5253547813027793777, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 00000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}
@@ -2915,6 +3093,64 @@ MonoBehaviour:
   effectPrefab: {fileID: 6709276644064086281, guid: 7206cf20b2462d44f994e7cb77128949, type: 3}
   duration: 5
   regenAmount: 7
+--- !u!1 &8410277126120508739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534748487690094071}
+  - component: {fileID: 6555127503022360626}
+  m_Layer: 0
+  m_Name: SummonFireMinion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &534748487690094071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8410277126120508739}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3888285316096645545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6555127503022360626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8410277126120508739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a09f26546f99c44b27e9096cd805e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Fire Minion
+  description: Summon Fire Minion
+  skillIcon: {fileID: 1319902094, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
+  requiredElements: 0500000000000000
+  soundCharge: {fileID: 0}
+  elementalRiseHeight: 4
+  elementalLaunchDuration: 1
+  mergeDelay: 0.5
+  minionPrefab: {fileID: 6709276644064086281, guid: 8a48edb9d0da4924b9dfe3b441c75cea, type: 3}
+  searchRadius: 2
+  minSeparation: 3
+  maxSearchPoints: 32
+  effectDelay: 0.2
+  elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
 --- !u!1 &8420358782922621619
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,7 +3407,7 @@ MonoBehaviour:
   description: 'Appies nature shield to all allies.
 
     <passive_info>'
-  skillIcon: {fileID: 974909791873148181, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
+  skillIcon: {fileID: -4932745210665146139, guid: 231b2f73a68c0d94099086365c7cd95b, type: 3}
   requiredElements: 0200000002000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 6709276644064086281, guid: d98d971065e112f42a8844a51c90be54, type: 3}

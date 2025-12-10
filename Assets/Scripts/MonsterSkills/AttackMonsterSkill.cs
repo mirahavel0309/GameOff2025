@@ -55,7 +55,6 @@ public class AttackMonsterSkill : BaseMonsterSkill
 
         animator.SetTrigger("Action");
 
-        cardInstance.ToggleHighlight(false);
         GameManager.Instance.SelectHero(null);
 
         Vector3 originalPosition = transform.position;

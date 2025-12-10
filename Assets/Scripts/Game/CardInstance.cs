@@ -20,7 +20,6 @@ public class CardInstance : MonoBehaviour
 
     [Header("References")]
     [SerializeField] public SpriteRenderer cardSprite;
-    [SerializeField] private SpriteRenderer highlightSprite;
     public Animator animator;
     public TroopsField troopsField;
     public bool HasActedThisTurn { get; set; } = false;
@@ -38,9 +37,11 @@ public class CardInstance : MonoBehaviour
     protected ProgressBar hpBar;
     private List<PassiveSkill> passiveSkills;
     protected static CardInstance selectedAttacker;
+    protected SelectionCircle selectionCircle;
     private void Awake()
     {
         resistances = GetComponent<CharacterResistances>();
+        selectionCircle = GetComponentInChildren<SelectionCircle>();
     }
     public void ScalePower(float hpScale, float attackScale)
     {
@@ -59,9 +60,6 @@ public class CardInstance : MonoBehaviour
     public virtual void Initialize()
     {
         UpdateVisuals();
-
-        if (highlightSprite != null)
-            highlightSprite.enabled = false;
     }
 
     void OnMouseDown()
@@ -143,27 +141,14 @@ public class CardInstance : MonoBehaviour
     }
     public virtual void SelectAsAttacker()
     {
-        if (selectedAttacker != null)
-            selectedAttacker.ToggleHighlight(false);
-
         selectedAttacker = this;
-        ToggleHighlight(true);
     }
 
     public static void ClearSelection()
     {
         if (selectedAttacker != null)
         {
-            selectedAttacker.ToggleHighlight(false);
             selectedAttacker = null;
-        }
-    }
-    public void ToggleHighlight(bool active)
-    {
-        if (highlightSprite != null)
-        {
-            highlightSprite.color = active ? new Color(0f, 1f, 0f, 0.5f) : Color.clear;
-            highlightSprite.enabled = active;
         }
     }
 
@@ -267,22 +252,24 @@ public class CardInstance : MonoBehaviour
             );
         }
     }
+    public IEnumerator Despawn()
+    {
+        yield return StartCoroutine(HandleDestruction());
+    }
     protected virtual IEnumerator HandleDestruction()
     {
-        //GameManager.Instance.SetPlayerInput(false);
+        if (troopsField != null)
+        {
+            troopsField.RemoveCard(this);
+        }
         Dissolve dissolveEffect = GetComponentInChildren<Dissolve>();
         if (dissolveEffect != null)
         {
             dissolveEffect.DissolveVanish();
         }
         yield return new WaitForSeconds(1.5f);
-        if (troopsField != null)
-        {
-            troopsField.RemoveCard(this);
-        }
 
         Destroy(gameObject);
-        //GameManager.Instance.SetPlayerInput(true);
     }
     private IEnumerator MoveToPosition(Vector3 target, float duration)
     {
@@ -362,5 +349,13 @@ public class CardInstance : MonoBehaviour
         {
             yield return passive.OnTurnStart();
         }
+    }
+    public void HideSelector()
+    {
+        selectionCircle.Hide();
+    }
+    public void ShowSelector(SelectionState state)
+    {
+        selectionCircle.Show(state);
     }
 }

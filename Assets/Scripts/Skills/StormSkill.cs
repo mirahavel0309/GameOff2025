@@ -55,7 +55,7 @@ public class StormSkill : BaseSkill
             )
         );
 
-        List<CardInstance> enemies = GameManager.Instance.GetEnemies();
+        List<CardInstance> enemies = GameManager.Instance.GetEnemies().ToList();
         if (enemies.Count == 0)
         {
             GameManager.Instance.SetPlayerInput(true);

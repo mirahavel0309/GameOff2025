@@ -22,9 +22,9 @@ public class MonsterHealSkill : BaseMonsterSkill
 
     public override IEnumerator Execute(CardInstance target)
     {
-        var allEnemies = GameManager.Instance.enemyField.GetCards();
+        var allUnitsOnfield = GetComponent<CardInstance>().troopsField.GetCards();
 
-        List<CardInstance> validTargets = allEnemies
+        List<CardInstance> validTargets = allUnitsOnfield
             .Where(e =>
                 e != null &&
                 e != this.cardInstance && // cannot heal itself

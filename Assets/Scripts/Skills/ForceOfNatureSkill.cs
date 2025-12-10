@@ -35,7 +35,7 @@ public class ForceOfNatureSkill : BaseSkill
         GameManager.Instance.SetPlayerInput(false);
         InfoPanel.instance.ShowMessage("Unleashing Force of Nature...");
 
-        List<CardInstance> enemyUnits = GameManager.Instance.GetEnemies();
+        List<CardInstance> enemyUnits = GameManager.Instance.GetEnemies().ToList();
         List<CardInstance> poisonedEnemies = new List<CardInstance>();
         List<PoisonEffect> poisonEffects = new List<PoisonEffect>();
         List<int> poisonDamageValues = new List<int>();

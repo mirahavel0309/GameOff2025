@@ -39,11 +39,29 @@ public class SummonMinionSkill : BaseSkill
 
         yield return new WaitForSeconds(effectDelay);
 
-        Vector3 spawnPos = FindValidSummonPosition(mergePoint);
+
+        Dictionary<ElementType, HeroInstance> contributingHeroes = new Dictionary<ElementType, HeroInstance>();
+        foreach (var hero in GameManager.Instance.PlayerHeroes)
+        {
+            if (requiredElements.Contains(hero.mainElement))
+                contributingHeroes.Add(hero.mainElement, hero);
+        }
+
+        Vector3 spawnPoint = Vector3.zero;
+        if (contributingHeroes.Count > 0)
+        {
+            spawnPoint = Vector3.zero;
+            foreach (var p in contributingHeroes.Values)
+                spawnPoint += p.transform.position;
+            spawnPoint /= contributingHeroes.Count;
+        }
+
+        Vector3 spawnPos = FindValidSummonPosition(spawnPoint);
 
         // Step 3: Spawn the minion
         GameObject minionGO = Instantiate(minionPrefab, spawnPos, Quaternion.identity);
         CardInstance minionCard = minionGO.GetComponent<CardInstance>();
+        minionCard.speedCount = 0;
 
         if (minionCard == null)
         {
@@ -55,28 +73,28 @@ public class SummonMinionSkill : BaseSkill
 
         GameManager.Instance.playerField.AddSummonedCard(minionCard);
 
-        Debug.Log("Summoned minion at: " + spawnPos);
+        //Debug.Log("Summoned minion at: " + spawnPos);
 
         GameManager.Instance.SetPlayerInput(true);
         GameManager.Instance.RegisterActionUse();
     }
-
-    // --------------------------------------------------------------------
-    // Finds nearest non-overlapping spot around caster for the minion.
-    // --------------------------------------------------------------------
+        
     private Vector3 FindValidSummonPosition(Vector3 mergepoint)
     {
         Vector3 casterPos = mergepoint;
 
         // Try multiple evenly spaced angles around a circle
-        for (int i = 0; i < maxSearchPoints; i++)
+        for (int j = 1; j <= 3; j++)
         {
-            float angle = (360f / maxSearchPoints) * i;
-            Vector3 offset = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), 0, Mathf.Sin(angle * Mathf.Deg2Rad));
-            Vector3 testPos = casterPos + offset * searchRadius;
+            for (int i = 0; i < maxSearchPoints; i++)
+            {
+                float angle = (360f / maxSearchPoints) * i;
+                Vector3 offset = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), 0, Mathf.Sin(angle * Mathf.Deg2Rad));
+                Vector3 testPos = casterPos + offset * searchRadius * j;
 
-            if (IsPositionFree(testPos))
-                return testPos;
+                if (IsPositionFree(testPos))
+                    return testPos;
+            }
         }
 
         // If all else fails, return caster position offset slightly
@@ -87,7 +105,7 @@ public class SummonMinionSkill : BaseSkill
     {
         float checkRadius = minSeparation * 0.5f;
 
-        Collider[] cols = Physics.OverlapSphere(testPos, checkRadius, LayerMask.GetMask("Unit"));
+        Collider[] cols = Physics.OverlapSphere(testPos, checkRadius, LayerMask.GetMask("Character"));
 
         // If any unit overlaps this position, it's not free
         return cols.Length == 0;

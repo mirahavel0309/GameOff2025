@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class AttackAllMonsterSkill : BaseMonsterSkill
 {
@@ -44,7 +45,13 @@ public class AttackAllMonsterSkill : BaseMonsterSkill
             yield return null;
         }
 
-        foreach (var hero in GameManager.Instance.PlayerHeroes)
+        List<CardInstance> targets;
+        if (cardInstance.troopsField == GameManager.Instance.enemyField)
+            targets = GameManager.Instance.playerField.GetCards().ToList();
+        else
+            targets = GameManager.Instance.enemyField.GetCards().ToList();
+
+        foreach (var hero in targets)
         {
             int accuracy = baseAccuracy;
             LowerAccuracyStatus accStatus = GetComponent<LowerAccuracyStatus>();
