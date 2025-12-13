@@ -89,6 +89,19 @@ public class GameManager : MonoBehaviour
     public Image[] attackQueueImages;
     public Image currentAttackerImage;
 
+    [Header("Stage Selection")]
+    public StageSelectMenu stageSelectMenu;
+    private bool waitingForStageSelection = false;
+
+    [Header("Stage Tree")]
+    public int maxStageDepth = 4;
+    public int maxStageIndex = 3;
+
+    public StageNode stageTreeRoot;
+    public StageNode currentStageNode;
+
+
+
     void Awake()
     {
         Instance = this;
@@ -96,6 +109,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        stageTreeRoot = StageTreeGenerator.GenerateTree(
+            maxStageDepth,
+            maxStageIndex
+        );
+
+        currentStageNode = stageTreeRoot;
+
+        stageSelectMenu.Close();
+
         allSkills = GetComponentsInChildren<BaseSkill>().ToList();
         StartCoroutine(GameStartRoutine());
         StartCoroutine(WaveMonitorRoutine());
@@ -737,7 +759,13 @@ public class GameManager : MonoBehaviour
             yield return StartCoroutine(MoveHeroesThroughPath(exitPathPoints));
             currentStageIndex++;
             camController.enabled = false;
-            yield return StartCoroutine(FadeScreen());
+
+            waitingForStageSelection = true;
+            yield return StartCoroutine(JustFadeOut());
+            stageSelectMenu.Open(currentStageNode);
+            yield return new WaitUntil(() => waitingForStageSelection == false);
+            Debug.Log("Stage Selection Completed");
+
             camController.enabled = true;
 
             enemySpawner.healthScale += hpScaleIncPerStage;
@@ -773,6 +801,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    bool movingCamera;
     private IEnumerator MoveCamera(CameraPathPoint[] path)
     {
         camController.enabled = false;
@@ -803,7 +832,7 @@ public class GameManager : MonoBehaviour
             camController.ResetValues();
             //yield return new WaitForSeconds(0.05f);
         }
-
+        movingCamera = false;
     }
     public IEnumerator JustFadeOut()
     {
@@ -820,6 +849,59 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         blackFade.color = new Color(blackFade.color.r, blackFade.color.g, blackFade.color.b, 1f);
+    }
+
+    public void OnStageNodeSelected(StageNode node)
+    {
+        currentStageNode = node;
+        stageSelectMenu.Close();
+        StartCoroutine(LoadSelectedStage(node.stageIndex));
+    }
+
+
+    private IEnumerator LoadSelectedStage(int stageIndex)
+    {
+        currentStageIndex = stageIndex;
+
+        
+
+        StartCoroutine(LoadNextRoomEnvironment());
+        movingCamera = true;
+        StartCoroutine(MoveCamera(enterCameraPath));
+
+        // Fade back in
+        float duration = 1f;
+        for (float t = 0; t < duration; t += Time.deltaTime)
+        {
+            float normalized = t / duration;
+            Color c = blackFade.color;
+            c.a = Mathf.Lerp(1f, 0f, normalized);
+            blackFade.color = c;
+            yield return null;
+        }
+
+
+        blackFade.gameObject.SetActive(false);
+        blackFade.color = new Color(0, 0, 0, 0);
+        yield return new WaitUntil(() => movingCamera == false);
+        waitingForStageSelection = false;
+        camController.enabled = false;
+
+        // camController.enabled = true;
+
+        // Reset wave state
+        // waveCounter = 1;
+        // InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
+        //
+        // enemySpawner.healthScale += hpScaleIncPerStage;
+        // enemySpawner.damageScale += dmgScaleIncPerStage;
+        //
+        // yield return enemySpawner.SpawnWaveCoroutine();
+        // waveActive = true;
+        //
+        // waitingForStageSelection = false;
+        //
+        // yield return StartCoroutine(PlayerTurnSimple());
     }
 
     public IEnumerator FadeScreen()
