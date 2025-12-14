@@ -18,9 +18,9 @@ public class MassHealSkill : BaseSkill
     [Header("Healing")]
     public int baseHeal = 8;
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        GameManager.Instance.StartCoroutine(PerformMassHeal());
+        yield return GameManager.Instance.StartCoroutine(PerformMassHeal());
     }
     public override string UpdatedDescription()
     {

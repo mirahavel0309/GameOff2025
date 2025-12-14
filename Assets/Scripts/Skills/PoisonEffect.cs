@@ -14,6 +14,10 @@ public class PoisonEffect : StatusEffect
         target = targetUnit;
         EffectsManager.instance.CreateFloatingText(target.transform.position, "Poisoned", Color.black);
     }
+    public override string GetDescription()
+    {
+        return $"Poisoned:\n  damage: {damagePerTurn}\n  duration: {duration}";
+    }
     public override IEnumerator OnTurnStartCoroutine()
     {
         if (target == null)
@@ -23,6 +27,7 @@ public class PoisonEffect : StatusEffect
 
         // add visual effect for posin here and wait a bit
         yield return new WaitForSeconds(0.3f);
+        yield return GameManager.Instance.StartCoroutine(target.ResolveDeathIfNeeded());
 
         duration--;
         if (duration <= 0)

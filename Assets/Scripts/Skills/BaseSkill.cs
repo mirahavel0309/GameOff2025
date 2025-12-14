@@ -13,7 +13,12 @@ public abstract class BaseSkill : MonoBehaviour
     protected List<GameObject> elementalEffects; // for use in some skills
     public AudioClip soundCharge;
 
-    public abstract void Execute();
+    public abstract IEnumerator Execute();
+
+    public IEnumerator PostExecute()
+    {
+        yield return SpiritLinkManager.Instance.ResolveAll();
+    }
 
     public bool Matches(List<ElementType> elements)
     {

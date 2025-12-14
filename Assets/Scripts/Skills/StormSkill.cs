@@ -30,9 +30,9 @@ public class StormSkill : BaseSkill
     public AudioClip soundStormStart;
     public AudioClip soundStormEnd;
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        GameManager.Instance.StartCoroutine(ExecuteRoutine());
+        yield return GameManager.Instance.StartCoroutine(ExecuteRoutine());
     }
     public override string UpdatedDescription()
     {
@@ -104,6 +104,8 @@ public class StormSkill : BaseSkill
 
         Destroy(storm);
 
+        foreach (var enemy in enemies)
+            yield return StartCoroutine(enemy.ResolveDeathIfNeeded());
         GameManager.Instance.SetPlayerInput(true);
         GameManager.Instance.RegisterActionUse();
     }

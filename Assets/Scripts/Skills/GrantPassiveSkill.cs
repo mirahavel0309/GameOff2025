@@ -18,9 +18,9 @@ public class GrantPassiveSkill : BaseSkill
     public PassiveSkill passiveToGrant;   // Prefab or component reference
     public ElementType mainElement;
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        GameManager.Instance.StartCoroutine(ApplyPassivesRoutine());
+        yield return GameManager.Instance.StartCoroutine(ApplyPassivesRoutine());
     }
     public override string UpdatedDescription()
     {

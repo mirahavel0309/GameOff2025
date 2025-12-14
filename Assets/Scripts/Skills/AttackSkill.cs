@@ -25,10 +25,26 @@ public class AttackSkill : BaseSkill
     public AudioClip soundLaunch;
     public AudioClip soundHit;
     private List<PassiveSkill> passiveSkills;
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        GameManager.Instance.StartCoroutine(WaitForTargetAndAttack());
         passiveSkills = GetComponents<PassiveSkill>().ToList();
+        yield return GameManager.Instance.StartCoroutine(WaitForTargetAndAttack());
+    }
+    public void HighLightUnits(List<CardInstance> enemies)
+    {
+        foreach (var e in enemies)
+        {
+            if (e != null)
+                e.ShowSelector(SelectionState.Red);
+        }
+    }
+    public void HideHighlight(List<CardInstance> enemies)
+    {
+        foreach (var e in enemies)
+        {
+            if (e != null)
+                e.HideSelector();
+        }
     }
     public override string UpdatedDescription()
     {
@@ -48,12 +64,16 @@ public class AttackSkill : BaseSkill
     private IEnumerator WaitForTargetAndAttack()
     {
         GameManager.Instance.SetPlayerInput(false);
+        List<CardInstance> enemies = GameManager.Instance.enemyField.GetCards();
+
+        HighLightUnits(enemies);
 
         GameManager.Instance.SelectedTarget = null;
         InfoPanel.instance.ShowMessage("Select enemy as target...");
 
         yield return new WaitUntil(() => GameManager.Instance.SelectedTarget != null);
 
+        HideHighlight(enemies);
         InfoPanel.instance.Hide();
         var target = GameManager.Instance.SelectedTarget;
         GameManager.Instance.SelectTarget(null);
@@ -77,6 +97,7 @@ public class AttackSkill : BaseSkill
         if (soundHit)
             EffectsManager.instance.CreateSoundEffect(soundHit, transform.position);
 
+        yield return StartCoroutine(target.ResolveDeathIfNeeded());
         GameManager.Instance.SetPlayerInput(true);
         GameManager.Instance.RegisterActionUse();
     }

@@ -11,6 +11,7 @@ public abstract class StatusEffect : MonoBehaviour
     private GameObject effectObject;
     public int duration = 3;
     protected CardInstance target;
+    public CardInstance owner => target;
 
     public virtual void Initialize(CardInstance targetUnit, StatusEffect origin, int power)
     {
@@ -28,6 +29,10 @@ public abstract class StatusEffect : MonoBehaviour
             OnExpire();
             Destroy(this);
         }
+    }
+    public virtual string GetDescription()
+    {
+        return "";
     }
     protected virtual void OnExpire()
     {

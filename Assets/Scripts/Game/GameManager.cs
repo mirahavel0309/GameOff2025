@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
     {
         allSkills = GetComponentsInChildren<BaseSkill>().ToList();
         StartCoroutine(GameStartRoutine());
-        StartCoroutine(WaveMonitorRoutine());
+        //StartCoroutine(WaveMonitorRoutine());
     }
 
     public List<CardInstance> GetEnemies()
@@ -267,9 +267,8 @@ public class GameManager : MonoBehaviour
             //hero.SetCardData(hero);
             hero.troopsField = playerField;
             PlayerHeroes.Add(hero);
-            playerField.AddCard(hero);
+            yield return playerField.AddCard(hero);
             playerDeck.availableElements.Add(hero.mainElement);
-            yield return new WaitForSeconds(0.1f);
         }
 
         // Spawn enemy wave
@@ -278,7 +277,6 @@ public class GameManager : MonoBehaviour
 
         yield return enemySpawner.SpawnWaveCoroutine();
         waveActive = true;
-
 
         //StartOfWaveRoutine();
         yield return StartCoroutine(PlayerTurnSimple()); // trying out simple turn order
@@ -311,7 +309,7 @@ public class GameManager : MonoBehaviour
             if (waveCounter < maxWavesCount)
             {
                 InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
-                yield return enemySpawner.SpawnWaveCoroutine(enemyCount);
+                yield return StartCoroutine(enemySpawner.SpawnWaveCoroutine(enemyCount));
                 waveActive = true;
 
                 // Return control to the player
@@ -377,8 +375,10 @@ public class GameManager : MonoBehaviour
         foreach (var hero in justHeroes)
             hero.HideSelector();
 
-        if( enemyField.GetCards().Count > 0)
+        if (enemyField.GetCards().Count > 0)
             StartCoroutine(SummonsTurnSimple());
+        else
+            yield return SimpleWaveTransition();
     }
     private IEnumerator SummonsTurnSimple()
     {
@@ -419,10 +419,12 @@ public class GameManager : MonoBehaviour
 
         if (enemyField.GetCards().Count > 0)
             StartCoroutine(EnemyTurnSimple());
+        else
+            yield return SimpleWaveTransition();
     }
     private IEnumerator EnemyTurnSimple()
     {
-        List<CardInstance> enemyCards = enemyField.GetCards();
+        List<CardInstance> enemyCards = enemyField.GetCards().ToList();
         List<CardInstance> playerCards = playerField.GetCards().ToList();
         playerCards.RemoveAll(card =>
         {
@@ -443,26 +445,68 @@ public class GameManager : MonoBehaviour
         enemyCards = enemyField.GetCards().ToList(); // Rebuild the list after potential removals
         enemyCards.RemoveAll(e => e.GetComponent<FreezeEffect>() != null); // make frozen units skip action
 
-        foreach (var enemyCard in enemyCards)
-            enemyCard.ShowSelector(SelectionState.Inactive);
-        foreach (var enemyCard in enemyCards)
+        if(enemyCards.Count > 0)
         {
-            enemyCard.ShowSelector(SelectionState.Active);
-            if (enemyCard == null) continue;
-            if (playerCards.Count == 0) break;
+            foreach (var enemyCard in enemyCards)
+                enemyCard.ShowSelector(SelectionState.Inactive);
+            foreach (var enemyCard in enemyCards)
+            {
+                enemyCard.ShowSelector(SelectionState.Active);
+                if (enemyCard == null) continue;
+                if (playerCards.Count == 0) break;
 
-            BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>();
+                BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>();
 
-            BaseMonsterSkill selectedSkill = skills[Random.Range(0, skills.Length)];
+                BaseMonsterSkill selectedSkill = skills[Random.Range(0, skills.Length)];
 
-            CardInstance target = playerCards[Random.Range(0, playerCards.Count)];
-            yield return selectedSkill.StartCoroutine(selectedSkill.Execute(target));
-            yield return new WaitForSeconds(0.5f);
-            enemyCard.HideSelector();
+                CardInstance target = playerCards[Random.Range(0, playerCards.Count)];
+                yield return selectedSkill.StartCoroutine(selectedSkill.Execute(target));
+                yield return selectedSkill.StartCoroutine(selectedSkill.PostExecute());
+                yield return new WaitForSeconds(0.5f);
+                enemyCard.HideSelector();
+            }
+
+            yield return new WaitForSeconds(enemyTurnDuration);
+            StartCoroutine(PlayerTurnSimple());
         }
+        else
+            yield return SimpleWaveTransition();
+    }
+    private IEnumerator SimpleWaveTransition()
+    {
+            yield return new WaitForSeconds(0.5f);
+            waveActive = false;
 
-        yield return new WaitForSeconds(enemyTurnDuration);
-        StartCoroutine(PlayerTurnSimple());
+            HealOnWaveClear();
+            int enemyCount = 3;
+            waveCounter++;
+            if (waveCounter is (2 or 4 or 8))
+                enemyCount = 4;
+            if (waveCounter is (5 or 9))
+                enemyCount = 5;
+
+            enemySpawner.healthScale += hpScaleIncPerWave;
+            enemySpawner.damageScale += dmgScaleIncPerWave;
+            if (waveCounter < maxWavesCount)
+            {
+                InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
+                yield return StartCoroutine(enemySpawner.SpawnWaveCoroutine(enemyCount));
+                waveActive = true;
+
+                yield return StartCoroutine(PlayerTurnSimple());
+            }
+            else if (waveCounter == maxWavesCount)
+            {
+                InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
+                yield return enemySpawner.SpawnBossCoroutine();
+                waveActive = true;
+                yield return StartCoroutine(PlayerTurnSimple());
+            }
+            else
+            {
+                StartCoroutine(EndLevel());
+            }
+        
     }
     public void SelectTarget(CardInstance target)
     {
@@ -708,7 +752,12 @@ public class GameManager : MonoBehaviour
 
         EffectsManager.instance.CreateSoundEffect(useSound, Vector3.zero);
 
-        chosenSkill.Execute();
+        StartCoroutine(ExecuteSkill(chosenSkill));
+    }
+    public IEnumerator ExecuteSkill(BaseSkill chosenSkill)
+    {
+        yield return chosenSkill.Execute();
+        yield return chosenSkill.PostExecute();
     }
 
     private void ClearSkillCards()
@@ -743,14 +792,10 @@ public class GameManager : MonoBehaviour
             enemySpawner.healthScale += hpScaleIncPerStage;
             enemySpawner.damageScale += dmgScaleIncPerStage;
 
-            //yield return StartCoroutine(MoveHeroesThroughPath(entryPathPoints));
-
-
             waveCounter = 1;
             yield return enemySpawner.SpawnWaveCoroutine();
             InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
             waveActive = true;
-            //StartOfWaveRoutine(); 
             yield return StartCoroutine(PlayerTurnSimple());
         }
         else

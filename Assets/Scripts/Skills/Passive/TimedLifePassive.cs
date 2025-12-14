@@ -10,6 +10,10 @@ public class TimedLifePassive : PassiveSkill
         base.Initialize();
         turnsLeft = turnsToLive;
     }
+    public override string GetDescription()
+    {
+        return $"summoned. \nTurns left: {turnsLeft}";
+    }
     public override IEnumerator OnTurnStart()
     {
         turnsLeft--;

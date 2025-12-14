@@ -14,12 +14,17 @@ public class BurnEffect : StatusEffect
         target = targetUnit;
         EffectsManager.instance.CreateFloatingText(target.transform.position, "Burning", Color.black);
     }
+    public override string GetDescription()
+    {
+        return $"Burning:\n  damage: {damagePerTurn}\n  duration: {duration}";
+    }
     public override IEnumerator OnTurnStartCoroutine()
     {
         if (target == null)
             yield break;
 
         target.TakeDamage(damagePerTurn, ElementType.Fire);
+        yield return GameManager.Instance.StartCoroutine(target.ResolveDeathIfNeeded());
 
         // add visual effect for posin here and wait a bit
         yield return new WaitForSeconds(0.3f);

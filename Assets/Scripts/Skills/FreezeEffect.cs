@@ -13,6 +13,10 @@ public class FreezeEffect : StatusEffect
         target.speed -= Mathf.RoundToInt(target.speed * 0.5f);
         target.speedCount += 100;
     }
+    public override string GetDescription()
+    {
+        return $"Frozen\n turns left: {duration}";
+    }
     public override IEnumerator OnTurnStartCoroutine()
     {
         // no effect here skip 

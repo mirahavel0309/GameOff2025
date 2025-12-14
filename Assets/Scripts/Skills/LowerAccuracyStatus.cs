@@ -11,6 +11,10 @@ public class LowerAccuracyStatus : StatusEffect
         accuracyPenalty = originAccStatus.accuracyPenalty;
         EffectsManager.instance.CreateFloatingText(target.transform.position, "Accuracy down", Color.black);
     }
+    public override string GetDescription()
+    {
+        return $"Lower accuracy:\n  Loss: {accuracyPenalty}\n  duration: {duration}";
+    }
     public override IEnumerator OnTurnStartCoroutine()
     {
         // no effect here skip 

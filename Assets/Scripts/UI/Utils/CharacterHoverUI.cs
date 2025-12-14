@@ -73,40 +73,22 @@ public class CharacterHoverUI : MonoBehaviour
             weakText.text = "None";
         }
 
-        // Spell power for heroes
-        //var hero = card as HeroInstance;
-        //if (hero != null)
-        //{
-        //    spellPowerText.gameObject.SetActive(true);
-        //    spellPowerText.text = $"Spell: {hero.spellPower}";
-        //}
-        //else
-        //{
-        //    if (spellPowerText != null)
-        //        spellPowerText.gameObject.SetActive(false);
-        //}
-
-        // Status effects list
-        if (statusContainer != null && statusTextPrefab != null)
+        string finalString = "";
+        PassiveSkill[] passives = card.GetComponents<PassiveSkill>();
+        foreach (var item in passives)
         {
-            foreach (Transform t in statusContainer)
-                Destroy(t.gameObject);
-
-            if (card.activeEffects != null && card.activeEffects.Count > 0)
-            {
-                foreach (var eff in card.activeEffects.Where(e => e != null))
-                {
-                    var go = Instantiate(statusTextPrefab.gameObject, statusContainer);
-                    var tmp = go.GetComponent<TextMeshProUGUI>();
-                    if (tmp != null)
-                    {
-
-                        string display = eff.GetType().Name;
-                        tmp.text = display;
-                    }
-                }
-            }
+            string desc = item.GetDescription();
+            if (desc != "")
+                finalString += desc + "\n";
         }
+        StatusEffect[] statusEffects = card.GetComponents<StatusEffect>();
+        foreach (var item in statusEffects)
+        {
+            string desc = item.GetDescription();
+            if (desc != "")
+                finalString += desc + "\n";
+        }
+        statusTextPrefab.text = finalString;
     }
 
     public void Hide()

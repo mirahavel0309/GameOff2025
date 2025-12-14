@@ -52,8 +52,7 @@ public class WaveSpawner : MonoBehaviour
 
         for (int i = 0; i < enemyCount; i++)
         {
-            yield return new WaitForSeconds(spawnDelay);
-            SpawnRandomEnemyCard();
+            yield return StartCoroutine(SpawnRandomEnemyCard());
         }
 
         waveActive = false;
@@ -75,13 +74,13 @@ public class WaveSpawner : MonoBehaviour
         {
             //cardInstance.SetCardData(randomCard);
             cardInstance.troopsField = enemyField;
-            enemyField.AddCard(cardInstance);
+            yield return StartCoroutine(enemyField.AddCard(cardInstance));
         }
 
         waveActive = false;
     }
 
-    private void SpawnRandomEnemyCard()
+    private IEnumerator SpawnRandomEnemyCard()
     {
         CardInstance randomEnemy = enemies[Random.Range(0, enemies.Count)];
 
@@ -94,7 +93,7 @@ public class WaveSpawner : MonoBehaviour
         {
             //cardInstance.SetCardData(randomCard);
             cardInstance.troopsField = enemyField;
-            enemyField.AddCard(cardInstance);
+            yield return StartCoroutine(enemyField.AddCard(cardInstance));
         }
     }
 }

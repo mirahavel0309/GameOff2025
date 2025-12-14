@@ -10,6 +10,10 @@ public abstract class BaseMonsterSkill : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public abstract IEnumerator Execute(CardInstance target);
+    public IEnumerator PostExecute()
+    {
+        yield return SpiritLinkManager.Instance.ResolveAll();
+    }
 
     protected CardInstance cardInstance;
 

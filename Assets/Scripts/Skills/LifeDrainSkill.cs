@@ -16,10 +16,9 @@ public class LifeDrainSkill : BaseSkill
     [Header("Damage / Healing")]
     public int baseDamage = 8;
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        Debug.Log($"Executing Life Drain Skill: {skillName}");
-        GameManager.Instance.StartCoroutine(WaitForTargetAndDrain());
+        yield return GameManager.Instance.StartCoroutine(WaitForTargetAndDrain());
     }
     public override string UpdatedDescription()
     {
@@ -95,6 +94,7 @@ public class LifeDrainSkill : BaseSkill
         int totalHeal = Mathf.Max(1, realDamageDone); // minimum heal = 1 total
         DistributeHealing(heroes, totalHeal);
 
+        yield return StartCoroutine(target.ResolveDeathIfNeeded());
         GameManager.Instance.SetPlayerInput(true);
         GameManager.Instance.RegisterActionUse();
     }

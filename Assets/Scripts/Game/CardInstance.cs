@@ -163,6 +163,13 @@ public class CardInstance : MonoBehaviour
             }
         }
 
+        SpiritLinkEffect link = GetComponent<SpiritLinkEffect>();
+        if (link && !SpiritLinkManager.Instance.resolving && SpiritLinkManager.Instance.IsLinked(this) && !SpiritLinkManager.Instance.IsQueued(this))
+        {
+            link.OnIncomingDamage(dmg);
+            return 0;
+        }
+
         ElementalProtectionEffect protection = GetComponent<ElementalProtectionEffect>();
         if (protection != null)
         {
@@ -229,11 +236,15 @@ public class CardInstance : MonoBehaviour
         StartCoroutine(Shake(0.35f, 0.25f));
         UpdateVisuals();
 
+        return realDamageDone;
+    }
+    public IEnumerator ResolveDeathIfNeeded()
+    {
         if (currentHealth <= 0)
         {
-            StartCoroutine(HandleDestruction());
+            yield return StartCoroutine(HandleDestruction());
         }
-        return realDamageDone;
+        yield return null;
     }
     public void Heal(int amount)
     {

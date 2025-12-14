@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 8564501587394534196}
   - component: {fileID: 5160054661922838905}
   - component: {fileID: 4410818405543924369}
+  - component: {fileID: 4478410395308349921}
   m_Layer: 6
   m_Name: SummonFire
   m_TagString: Enemy
@@ -446,8 +447,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5492295935689872714, guid: 9f9ba681ce513474a9b1545a8d6c7f32, type: 3}
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 805646930765066053}
-  statusEffect: {fileID: 0}
-  chanceToProc: 0
+  statusEffect: {fileID: 4478410395308349921}
+  chanceToProc: 20
   originSound: {fileID: 8300000, guid: 5e0e36c2051e89b4a824cdde41b091ca, type: 3}
   hitSound: {fileID: 8300000, guid: 2b3f6f67fb69d2b4f9159696cf41eec6, type: 3}
 --- !u!114 &8564501587394534196
@@ -502,6 +503,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castDescription: 
   turnsToLive: 3
+--- !u!114 &4478410395308349921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576b6ef1b9da5834ea250c3346fa2b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectName: 
+  description: 
+  effectPrefab: {fileID: 0}
+  duration: 3
+  damagePerTurn: 2
 --- !u!1 &8223478066681231905
 GameObject:
   m_ObjectHideFlags: 0

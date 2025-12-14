@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GrantStatusEffectSkill : BaseSkill
@@ -14,16 +15,18 @@ public class GrantStatusEffectSkill : BaseSkill
     public float effectDuration = 0.6f;
     public ElementType mainElement;
     public StatusEffect statusEffect;
+    public bool singleTarget = true;
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        GameManager.Instance.StartCoroutine(WaitForTargetAndHeal());
+        if (singleTarget)
+            yield return GameManager.Instance.StartCoroutine(SingleTargetVersion());
+        else
+            yield return GameManager.Instance.StartCoroutine(AllHeroesVersion());
     }
 
-    private IEnumerator WaitForTargetAndHeal()
+    private IEnumerator SingleTargetVersion()
     {
-        GameManager.Instance.SetPlayerInput(false);
-
         Debug.Log("Select friendly target to heal...");
         GameManager.Instance.SelectedTarget = null;
         InfoPanel.instance.ShowMessage("Select ally to heal...");
@@ -72,6 +75,51 @@ public class GrantStatusEffectSkill : BaseSkill
         {
             HeroInstance mainHero = GameManager.Instance.GetHeroOfelement(mainElement);
             target.AddStatusEffect(statusEffect, mainHero.spellPower);
+        }
+
+        GameManager.Instance.SetPlayerInput(true);
+        GameManager.Instance.RegisterActionUse();
+    }
+
+    private IEnumerator AllHeroesVersion()
+    {
+
+        // Launch elemental projectiles above heroes (visuals)
+        yield return GameManager.Instance.StartCoroutine(
+            PerformElementalLaunches(
+                elementsLib,
+                requiredElements,
+                elementalRiseHeight,
+                elementalLaunchDuration,
+                mergeDelay
+            )
+        );
+
+
+        //// Spawn global effect (optional)
+        //if (effectPrefab != null)
+        //{
+        //    // Spawn once at center of team
+        //    Vector3 midpoint = GetPlayerMidpoint();
+        //    GameObject fx = GameObject.Instantiate(effectPrefab, midpoint, Quaternion.identity);
+        //    GameObject.Destroy(fx, effectDuration);
+        //}
+
+        yield return new WaitForSeconds(0.1f);
+
+        List<HeroInstance> heroes = GameManager.Instance.PlayerHeroes;
+        HeroInstance mainHero = GameManager.Instance.GetHeroOfelement(mainElement);
+
+        foreach (var hero in heroes)
+        {
+            if (hero == null) continue;
+
+            PassiveSkill existing = hero.GetComponent(statusEffect.GetType()) as PassiveSkill;
+            if (existing != null)
+            {
+                GameObject.Destroy(existing);
+            }
+            hero.AddStatusEffect(statusEffect, mainHero.spellPower);
         }
 
         GameManager.Instance.SetPlayerInput(true);

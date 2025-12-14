@@ -19,10 +19,9 @@ public class ForceOfNatureSkill : BaseSkill
     public float elementalLaunchDuration = 0.8f;
     public float mergeDelay = 0.5f;
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        Debug.Log("Executing Force of Nature Skill: " + skillName);
-        GameManager.Instance.StartCoroutine(DoForceOfNature());
+        yield return GameManager.Instance.StartCoroutine(DoForceOfNature());
     }
     public override string UpdatedDescription()
     {
@@ -73,11 +72,11 @@ public class ForceOfNatureSkill : BaseSkill
             }
 
             enemy.AddStatusEffect(poisonEffect, hero.spellPower);
+            yield return StartCoroutine(enemy.ResolveDeathIfNeeded());
         }
 
         if (poisonedEnemies.Count == 0)
         {
-            Debug.Log("Force of Nature found no poisoned targets.");
             InfoPanel.instance.Hide();
             GameManager.Instance.SetPlayerInput(true);
             GameManager.Instance.RegisterActionUse();
@@ -112,6 +111,7 @@ public class ForceOfNatureSkill : BaseSkill
             }
 
             yield return new WaitForSeconds(0.1f);
+            yield return StartCoroutine(enemy.ResolveDeathIfNeeded());
         }
 
         Debug.Log($"Force of Nature total damage dealt: {totalDamage}");

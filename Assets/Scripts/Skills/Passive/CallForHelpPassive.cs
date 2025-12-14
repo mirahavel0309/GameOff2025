@@ -37,39 +37,4 @@ public class CallForHelpPassive : PassiveSkill
         Destroy(this);
     }
 
-    //public override IEnumerator OnTurnStart()
-    //{
-    //    if (activated) yield break;
-    //    activated = true;
-
-    //    // Safety check
-    //    if (enemyPrefab == null || spawnCount <= 0)
-    //    {
-    //        Debug.LogWarning("CallForHelpPassive: No prefab or invalid spawn count.");
-    //        yield break;
-    //    }
-
-    //    yield return new WaitForSeconds(0.2f);
-
-    //    // Summon enemies
-    //    for (int i = 0; i < spawnCount; i++)
-    //    {
-    //        GameObject obj = GameObject.Instantiate(enemyPrefab);
-    //        CardInstance newCard = obj.GetComponent<CardInstance>();
-
-    //        if (newCard == null)
-    //        {
-    //            Debug.LogError("CallForHelpPassive: Spawned prefab has no CardInstance component!");
-    //            Destroy(obj);
-    //            continue;
-    //        }
-
-    //        GameManager.Instance.enemyField.AddCard(newCard);
-
-    //        yield return new WaitForSeconds(0.1f);
-    //    }
-
-    //    // Remove this passive so it never triggers again
-    //    Destroy(this);
-    //}
 }

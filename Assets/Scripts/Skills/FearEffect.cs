@@ -18,6 +18,10 @@ public class FearEffect : StatusEffect
             GameManager.Instance.RemoveElementFromDeck(affectedElement);
         }
     }
+    public override string GetDescription()
+    {
+        return $"Feared\n  turns left: {duration}";
+    }
     public override IEnumerator OnTurnStartCoroutine()
     {
         // no effect here skip 

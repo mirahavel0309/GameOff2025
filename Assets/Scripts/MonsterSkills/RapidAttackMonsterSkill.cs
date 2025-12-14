@@ -98,5 +98,6 @@ public class RapidAttackMonsterSkill : BaseMonsterSkill
         int finalDamage = Mathf.RoundToInt(entry.damage * card.attackPower * 0.01f);
 
         target.TakeDamage(finalDamage, entry.element, accuracy);
+        yield return StartCoroutine(target.ResolveDeathIfNeeded());
     }
 }

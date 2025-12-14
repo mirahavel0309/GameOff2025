@@ -36,6 +36,10 @@ public class ElementalShieldPassive : PassiveSkill
             UpdateVisuals();
         }
     }
+    public override string GetDescription()
+    {
+        return $"Shield {shieldAmount}\n resists {strongAgainst}\n weak {weakAgainst}";
+    }
     public override string GetDescription(int spellPower)
     {
         return castDescription.Replace("shield_value", Mathf.RoundToInt(maxShieldAmount * (spellPower / 100f)).ToString());

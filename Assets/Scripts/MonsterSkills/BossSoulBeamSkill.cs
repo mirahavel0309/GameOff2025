@@ -71,6 +71,11 @@ public class BossSoulBeamSkill : BaseMonsterSkill
             Destroy(beamGO, 0.25f);
         }
 
+        foreach (var hero in playerHeroes)
+        {
+            yield return StartCoroutine(hero.ResolveDeathIfNeeded());
+        }
+
         if (fx != null)
             Destroy(fx, 0.8f);
 

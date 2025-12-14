@@ -33,9 +33,9 @@ public class MeteorSkill : BaseSkill
     [Range(0, 100)]
     public int chanceToProc = 0;        // % chance to apply
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        GameManager.Instance.StartCoroutine(WaitForTargetAndCastMeteor());
+        yield return GameManager.Instance.StartCoroutine(WaitForTargetAndCastMeteor());
     }
     public override string UpdatedDescription()
     {
@@ -67,7 +67,7 @@ public class MeteorSkill : BaseSkill
 
         // AoE
         if (damageRadius > 0f && areaDamage > 0)
-            ApplyAreaDamage(target);
+            yield return ApplyAreaDamage(target);
 
         if (soundHit)
             EffectsManager.instance.CreateSoundEffect(soundHit, target.transform.position);
@@ -75,6 +75,7 @@ public class MeteorSkill : BaseSkill
         if (meteorImpactVFX)
             Instantiate(meteorImpactVFX, target.transform.position, Quaternion.identity);
 
+        yield return StartCoroutine(target.ResolveDeathIfNeeded());
         GameManager.Instance.SetPlayerInput(true);
         GameManager.Instance.RegisterActionUse();
     }
@@ -186,7 +187,7 @@ public class MeteorSkill : BaseSkill
     }
 
 
-    private void ApplyAreaDamage(CardInstance mainTarget)
+    private IEnumerator ApplyAreaDamage(CardInstance mainTarget)
     {
         List<CardInstance> enemies = GameManager.Instance.GetEnemies();
 
@@ -199,6 +200,7 @@ public class MeteorSkill : BaseSkill
             if (dist <= damageRadius)
             {
                 enemy.TakeDamage(areaDamage, damageType);
+                yield return StartCoroutine(enemy.ResolveDeathIfNeeded());
             }
         }
     }

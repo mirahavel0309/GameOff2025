@@ -16,9 +16,9 @@ public class HealingSkill : BaseSkill
     public int baseHeal = 10;
     public AudioClip healSound;
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        GameManager.Instance.StartCoroutine(WaitForTargetAndHeal());
+        yield return GameManager.Instance.StartCoroutine(WaitForTargetAndHeal());
     }
     public override string UpdatedDescription()
     {

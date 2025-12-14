@@ -17,9 +17,9 @@ public class SummonMinionSkill : BaseSkill
     public float effectDelay = 0.2f;
     public ElementIconLibrary elementsLib;
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        GameManager.Instance.StartCoroutine(SummonRoutine());
+        yield return GameManager.Instance.StartCoroutine(SummonRoutine());
     }
 
     private IEnumerator SummonRoutine()

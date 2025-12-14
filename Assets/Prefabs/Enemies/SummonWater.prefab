@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 8564501587394534196}
   - component: {fileID: 5160054661922838905}
   - component: {fileID: -7035555056978240081}
+  - component: {fileID: 7326103999280908222}
   m_Layer: 6
   m_Name: SummonWater
   m_TagString: Enemy
@@ -446,8 +447,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6709276644064086281, guid: 20735f9ec6bc8f74a89132bf657c5c7d, type: 3}
   projectileSpeed: 12
   projectileSpawnPoint: {fileID: 805646930765066053}
-  statusEffect: {fileID: 0}
-  chanceToProc: 0
+  statusEffect: {fileID: 7326103999280908222}
+  chanceToProc: 50
   originSound: {fileID: 8300000, guid: 7a97542a230f233469c04b7207546999, type: 3}
   hitSound: {fileID: 8300000, guid: 0247fff4ab587ea40906e8fd8ab6f422, type: 3}
 --- !u!114 &8564501587394534196
@@ -502,6 +503,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castDescription: 
   turnsToLive: 3
+--- !u!114 &7326103999280908222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e20f2e5af9a8bb4a89fae4a87e14fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectName: 
+  description: 
+  effectPrefab: {fileID: 0}
+  duration: 3
+  accuracyPenalty: 10
 --- !u!1 &8223478066681231905
 GameObject:
   m_ObjectHideFlags: 0

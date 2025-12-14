@@ -15,16 +15,16 @@ public class TroopsField : MonoBehaviour
     private Dictionary<CardInstance, Transform> cardToPosition = new Dictionary<CardInstance, Transform>();
     private HashSet<Transform> occupiedPositions = new HashSet<Transform>();
 
-    public void AddCard(CardInstance card, bool setPosition = true)
+    public IEnumerator AddCard(CardInstance card, bool setPosition = true)
     {
         if (card == null)
-            return;
+            yield break;
 
         Transform freeSlot = FindFreePosition();
         if (freeSlot == null)
         {
             Debug.LogWarning("No free position available on TroopsField!");
-            return;
+            yield break;
         }
 
         cardsOnField.Add(card);
@@ -34,21 +34,21 @@ public class TroopsField : MonoBehaviour
         // Place card at spawn point and animate move to target
         if(setPosition)
             card.transform.position = spawnPoint.position;
-        StartCoroutine(MoveCardToPosition(card, freeSlot.position));
+        yield return StartCoroutine(MoveCardToPosition(card, freeSlot.position));
         card.troopsField = this;
     }
-    public void ReasignPositions(CardInstance card)
+    public IEnumerator ReasignPositions(CardInstance card)
     {
         Transform freeSlot = FindFreePosition();
         if (freeSlot == null)
         {
             Debug.LogWarning("No free position available on TroopsField!");
-            return;
+            yield break;
         }
         cardToPosition[card] = freeSlot;
         occupiedPositions.Add(freeSlot);
         card.transform.position = spawnPoint.position;
-        StartCoroutine(MoveCardToPosition(card, freeSlot.position));
+        yield return StartCoroutine(MoveCardToPosition(card, freeSlot.position));
     }
 
     internal void AddSummonedCard(CardInstance minionCard)

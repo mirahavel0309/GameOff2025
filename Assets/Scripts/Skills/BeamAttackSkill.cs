@@ -21,9 +21,9 @@ public class BeamAttackSkill : BaseSkill
     public AudioClip soundHit;
     public ElementIconLibrary elementsLib;
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        GameManager.Instance.StartCoroutine(ExecuteRoutine());
+        yield return GameManager.Instance.StartCoroutine(ExecuteRoutine());
     }
     public override string UpdatedDescription()
     {
@@ -118,5 +118,6 @@ public class BeamAttackSkill : BaseSkill
         controller.EndEffect();
 
         Destroy(beam);
+        yield return StartCoroutine(target.ResolveDeathIfNeeded());
     }
 }

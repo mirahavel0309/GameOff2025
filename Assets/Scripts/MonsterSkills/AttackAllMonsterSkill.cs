@@ -73,6 +73,8 @@ public class AttackAllMonsterSkill : BaseMonsterSkill
 
             GameObject targetEffect = Instantiate(attackEffetPrefab, hero.transform.position, Quaternion.identity);
             Destroy(targetEffect, 1);
+
+            yield return StartCoroutine(hero.ResolveDeathIfNeeded());
         }
 
         yield return new WaitForSeconds(0.2f);

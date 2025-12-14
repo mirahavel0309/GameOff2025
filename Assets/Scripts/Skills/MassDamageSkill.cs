@@ -23,9 +23,9 @@ public class MassDamageSkill : BaseSkill
     [Range(0, 100)]
     public int chanceToProc = 0;
 
-    public override void Execute()
+    public override IEnumerator Execute()
     {
-        GameManager.Instance.StartCoroutine(PerformMassHeal());
+        yield return GameManager.Instance.StartCoroutine(PerformMassHeal());
     }
     public override string UpdatedDescription()
     {
@@ -79,7 +79,6 @@ public class MassDamageSkill : BaseSkill
                 int roll = Random.Range(0, 100);
                 if (roll < chanceToProc)
                 {
-                    Debug.Log($"Applying {statusEffect.effectName} to {target.name} ({roll}% < {chanceToProc}%)");
                     target.AddStatusEffect(statusEffect, hero.spellPower);
                 }
                 else
@@ -91,6 +90,8 @@ public class MassDamageSkill : BaseSkill
             // Small stagger for visual pacing
             yield return new WaitForSeconds(0.1f);
         }
+        foreach (var target in friendlyUnits)
+            yield return StartCoroutine(target.ResolveDeathIfNeeded());
 
         InfoPanel.instance.Hide();
 

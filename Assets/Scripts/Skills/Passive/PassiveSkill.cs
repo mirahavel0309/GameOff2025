@@ -16,6 +16,10 @@ public abstract class PassiveSkill : MonoBehaviour
     {
         owner = GetComponent<CardInstance>();
     }
+    public virtual string GetDescription()
+    {
+        return "";
+    }
 
     public virtual void OnApply() { }
 

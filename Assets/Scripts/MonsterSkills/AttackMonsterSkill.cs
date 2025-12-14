@@ -79,6 +79,7 @@ public class AttackMonsterSkill : BaseMonsterSkill
         }
 
         yield return MoveToPosition(originalPosition, 0.25f);
+        yield return StartCoroutine(target.ResolveDeathIfNeeded());
     }
     public IEnumerator PerformProjectileAttack(CardInstance target)
     {
@@ -143,6 +144,7 @@ public class AttackMonsterSkill : BaseMonsterSkill
         }
 
         yield return new WaitForSeconds(0.2f);
+        yield return StartCoroutine(target.ResolveDeathIfNeeded());
     }
 
     private IEnumerator MoveToPosition(Vector3 target, float duration)
