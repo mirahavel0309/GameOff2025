@@ -47,7 +47,7 @@ public class FormChangePassive : PassiveSkill
 
         yield return ScaleUp(owner.transform, scaleUpDuration, finalScaleMultiplier);
 
-        ReplaceWithSecondForm();
+        yield return ReplaceWithSecondForm();
     }
 
     private IEnumerator Shake(GameObject obj, float duration, float intensity)
@@ -88,12 +88,12 @@ public class FormChangePassive : PassiveSkill
         target.localScale = finalScale;
     }
 
-    private void ReplaceWithSecondForm()
+    private IEnumerator ReplaceWithSecondForm()
     {
         if (secondFormPrefab == null)
         {
             Debug.LogError("Second form prefab is missing!");
-            return;
+            yield break;
         }
 
         // Store info from first form
@@ -124,7 +124,7 @@ public class FormChangePassive : PassiveSkill
         if (field != null)
         {
             field.RemoveCard(owner);
-            field.AddCard(newCard, false);
+            yield return field.AddCard(newCard, false);
         }
 
         // Destroy original

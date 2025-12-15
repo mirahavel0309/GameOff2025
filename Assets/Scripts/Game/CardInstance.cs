@@ -164,7 +164,7 @@ public class CardInstance : MonoBehaviour
         }
 
         SpiritLinkEffect link = GetComponent<SpiritLinkEffect>();
-        if (link && !SpiritLinkManager.Instance.resolving && SpiritLinkManager.Instance.IsLinked(this) && !SpiritLinkManager.Instance.IsQueued(this))
+        if (link && !SpiritLinkManager.Instance.resolving && SpiritLinkManager.Instance.IsLinked(this))
         {
             link.OnIncomingDamage(dmg);
             return 0;

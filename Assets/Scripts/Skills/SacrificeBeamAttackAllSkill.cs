@@ -126,10 +126,11 @@ public class SacrificeBeamAttackAllSkill : BaseSkill
             Destroy(beam, 1.1f);
         }
 
+        HeroInstance hero = GameManager.Instance.GetHeroOfelement(damageType);
         foreach (var enemy in enemyUnits)
         {
             if (enemy != null)
-                enemy.TakeDamage(dmg, damageType);
+                enemy.TakeDamage(Mathf.RoundToInt(dmg * (hero.spellPower / 100f)), damageType);
         }
 
         if (originFx != null)

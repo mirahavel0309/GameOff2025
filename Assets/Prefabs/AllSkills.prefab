@@ -2501,12 +2501,12 @@ MonoBehaviour:
   skillName: Spirit Link
   description: 'Link spirits of all friendly units.
 
-    For 3 turns they share all
+    For 5 turns they share all
     incoming damage.
 
     All damage is converted to Spirit damage'
   skillIcon: {fileID: 1319902094, guid: 8959a6af71418b045ac764480d5fcb7a, type: 3}
-  requiredElements: 05000000
+  requiredElements: 0500000005000000
   soundCharge: {fileID: 0}
   effectPrefab: {fileID: 0}
   elementsLib: {fileID: 11400000, guid: 6738d2d6b866057489065dcebbc16880, type: 2}
@@ -2532,7 +2532,7 @@ MonoBehaviour:
   effectName: SoulLink
   description: 
   effectPrefab: {fileID: 1714363467411018263, guid: fb2063504e63beb4da6b2531a7ebf31a, type: 3}
-  duration: 3
+  duration: 5
 --- !u!1 &6395192032614187813
 GameObject:
   m_ObjectHideFlags: 0

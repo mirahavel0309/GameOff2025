@@ -35,5 +35,6 @@ public class SoulBossControllerPassive : PassiveSkill
         currentIndex++;
         if (currentIndex >= skills.Length)
             currentIndex = 0;   // loop back
+
     }
 }

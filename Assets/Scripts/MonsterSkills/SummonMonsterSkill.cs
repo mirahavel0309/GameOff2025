@@ -53,7 +53,7 @@ public class SummonMonsterSkill : BaseMonsterSkill
                 yield break;
             }
 
-            field.AddCard(summonedCard);
+            yield return field.AddCard(summonedCard);
         }
 
         //if (soundOnCast != null)

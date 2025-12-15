@@ -309,6 +309,7 @@ GameObject:
   - component: {fileID: 8077459593497783422}
   - component: {fileID: 8194706822023651428}
   - component: {fileID: 6401811491720128624}
+  - component: {fileID: 6810986684166733805}
   m_Layer: 0
   m_Name: _BOSS_4
   m_TagString: Enemy
@@ -526,6 +527,7 @@ MonoBehaviour:
   castDescription: 
   skills:
   - {fileID: 1716852544195132345}
+  - {fileID: 6810986684166733805}
   - {fileID: 8077459593497783422}
 --- !u!114 &6401811491720128624
 MonoBehaviour:
@@ -544,6 +546,30 @@ MonoBehaviour:
   - {fileID: 8469931686135480976}
   _outlineColor: {r: 2.4235451, g: 0, b: 0.1128063, a: 1}
   _intensity: 1.63
+--- !u!114 &6810986684166733805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709276644064086281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28923afc5accd9c4494eb03b8b9327c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: 
+  skillDescription: 
+  animator: {fileID: 5490996520537943343}
+  spriteRenderer: {fileID: 8469931686135480976}
+  attacks:
+  - projectilePrefab: {fileID: 5492295935689872714, guid: 9f9ba681ce513474a9b1545a8d6c7f32, type: 3}
+    damage: 3
+    element: 5
+  projectileSpeed: 25
+  timeBetweenShots: 0.1
+  attacksCount: 6
+  attackOrigin: {fileID: 805646930765066053, guid: 3fec6352fa8f1cb4c9cdecc5fad99bbd, type: 3}
 --- !u!1 &8223478066681231905
 GameObject:
   m_ObjectHideFlags: 0

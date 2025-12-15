@@ -11,8 +11,11 @@ public class CallForHelpPassive : PassiveSkill
     public override void Initialize()
     {
         base.Initialize();
-
+        StartCoroutine(CallHelp());
         // Safety check
+    }
+    public IEnumerator CallHelp()
+    {
         if (enemyPrefab == null || spawnCount <= 0)
         {
             Debug.LogWarning("CallForHelpPassive: No prefab or invalid spawn count.");
@@ -31,7 +34,7 @@ public class CallForHelpPassive : PassiveSkill
                 continue;
             }
 
-            GameManager.Instance.enemyField.AddCard(newCard);
+            yield return GameManager.Instance.enemyField.AddCard(newCard);
 
         }
         Destroy(this);

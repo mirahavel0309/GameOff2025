@@ -388,10 +388,8 @@ public class GameManager : MonoBehaviour
         foreach (var hero in justHeroes)
             hero.ShowSelector(SelectionState.Active);
 
-        yield return new WaitUntil(() => playerInput.EndTurnPressed);
+        yield return new WaitUntil(() => playerInput.EndTurnPressed || enemyField.GetCards().Count == 0);
         playerInput.EndTurnPressed = false;
-
-        //HealPlayers(); bad idea. can be exploited :(
 
         SetPlayerInput(false);
         foreach (var hero in justHeroes)
@@ -473,11 +471,13 @@ public class GameManager : MonoBehaviour
                 enemyCard.ShowSelector(SelectionState.Inactive);
             foreach (var enemyCard in enemyCards)
             {
+                if (enemyCard == null) // some effects can remove units
+                    continue;
                 enemyCard.ShowSelector(SelectionState.Active);
                 if (enemyCard == null) continue;
                 if (playerCards.Count == 0) break;
 
-                BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>();
+                BaseMonsterSkill[] skills = enemyCard.gameObject.GetComponents<BaseMonsterSkill>().Where(x => x.enabled).ToArray();
 
                 BaseMonsterSkill selectedSkill = skills[Random.Range(0, skills.Length)];
 
@@ -808,12 +808,18 @@ public class GameManager : MonoBehaviour
             yield return StartCoroutine(MoveHeroesThroughPath(exitPathPoints));
             currentStageIndex++;
             camController.enabled = false;
+            yield return StartCoroutine(FadeScreen());
 
-            waitingForStageSelection = true;
-            yield return StartCoroutine(JustFadeOut());
-            stageSelectMenu.Open(currentStageNode);
-            yield return new WaitUntil(() => waitingForStageSelection == false);
-            Debug.Log("Stage Selection Completed");
+            //RevieveFallenHeroes();
+            //yield return StartCoroutine(MoveHeroesThroughPath(exitPathPoints));
+            //currentStageIndex++;
+            //camController.enabled = false;
+
+            //waitingForStageSelection = true;
+            //yield return StartCoroutine(JustFadeOut());
+            //stageSelectMenu.Open(currentStageNode);
+            //yield return new WaitUntil(() => waitingForStageSelection == false);
+            //Debug.Log("Stage Selection Completed");
 
             camController.enabled = true;
 
@@ -1044,7 +1050,7 @@ public class GameManager : MonoBehaviour
         foreach (var hero in PlayerHeroes)
         {
             hero.transform.position = currentRoom.playerEnterLocation.position;
-            playerField.ReasignPositions(hero);
+            yield return playerField.ReasignPositions(hero);
         }
 
         yield return new WaitForSeconds(1f);

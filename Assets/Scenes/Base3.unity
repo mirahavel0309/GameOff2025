@@ -455,7 +455,7 @@ MonoBehaviour:
   winSound: {fileID: 8300000, guid: 4d6ad05d01056fb4aa34ea8b76c13899, type: 3}
   lossSound: {fileID: 8300000, guid: 8aeb31aeafead4d47a96ecd72d845128, type: 3}
   waveCounter: 0
-  maxWavesCount: 2
+  maxWavesCount: 10
   exitPathPoints: []
   enterCameraPath: []
   exitCameraPath: []
@@ -473,7 +473,7 @@ MonoBehaviour:
   dmgScaleIncPerWave: 0.001
   hpScaleIncPerStage: 0.5
   dmgScaleIncPerStage: 0.33
-  enemyTurnDuration: 0.25
+  enemyTurnDuration: 0.1
   healLevels: 020000000300000005000000
   allSkills:
   - {fileID: 882667805}
