@@ -17,6 +17,7 @@ public class GrantPassiveSkill : BaseSkill
     [Header("Passive Skill to Grant")]
     public PassiveSkill passiveToGrant;   // Prefab or component reference
     public ElementType mainElement;
+    public AudioClip effectSound;
 
     public override IEnumerator Execute()
     {
@@ -82,9 +83,10 @@ public class GrantPassiveSkill : BaseSkill
             // Optional spellPower scaling
             newPassive.InitializeFromCaster(mainHero);
         }
+        if (effectSound != null)
+            EffectsManager.instance.CreateSoundEffect(effectSound, mergePoint);
 
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 
     private Vector3 GetPlayerMidpoint()

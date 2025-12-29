@@ -79,7 +79,6 @@ public class ForceOfNatureSkill : BaseSkill
         {
             InfoPanel.instance.Hide();
             GameManager.Instance.SetPlayerInput(true);
-            GameManager.Instance.RegisterActionUse();
             yield break;
         }
 
@@ -152,7 +151,6 @@ public class ForceOfNatureSkill : BaseSkill
 
         InfoPanel.instance.Hide();
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 
     private IEnumerator MoveProjectile(GameObject proj, Vector3 target, float speed)

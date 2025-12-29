@@ -96,6 +96,7 @@ MonoBehaviour:
   iconImage: {fileID: 1861220040274918057}
   nameText: {fileID: 7620032966501193299}
   descriptionText: {fileID: 173912683705274349}
+  castText: {fileID: 7292923455951024576}
   useButton: {fileID: 7182156966759789101}
 --- !u!1 &470412765018729296
 GameObject:
@@ -705,7 +706,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cast
+  m_text: Cast <color=#009999>AP</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8edf036f33de23e4eb50389ec22a0e74, type: 2}
   m_sharedMaterial: {fileID: 6262746641171033696, guid: 8edf036f33de23e4eb50389ec22a0e74, type: 2}

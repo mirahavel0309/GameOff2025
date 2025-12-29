@@ -96,7 +96,6 @@ public class LifeDrainSkill : BaseSkill
 
         yield return StartCoroutine(target.ResolveDeathIfNeeded());
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 
     private IEnumerator MoveProjectile(GameObject proj, Vector3 targetPos, float speed)

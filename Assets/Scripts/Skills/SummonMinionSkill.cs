@@ -12,10 +12,13 @@ public class SummonMinionSkill : BaseSkill
     public float searchRadius = 2.0f;
     public float minSeparation = 1.0f;
     public int maxSearchPoints = 16;
+    public ElementType minionElement;
 
     [Header("Effect Settings")]
     public float effectDelay = 0.2f;
     public ElementIconLibrary elementsLib;
+    public GameObject preSummonEffect;
+    public GameObject summonEffect;
 
     public override IEnumerator Execute()
     {
@@ -26,7 +29,6 @@ public class SummonMinionSkill : BaseSkill
     {
         GameManager.Instance.SetPlayerInput(false);
 
-        // Step 1: Launch elemental projectiles
         yield return GameManager.Instance.StartCoroutine(
             PerformElementalLaunches(
                 elementsLib,
@@ -38,7 +40,6 @@ public class SummonMinionSkill : BaseSkill
         );
 
         yield return new WaitForSeconds(effectDelay);
-
 
         Dictionary<ElementType, HeroInstance> contributingHeroes = new Dictionary<ElementType, HeroInstance>();
         foreach (var hero in GameManager.Instance.PlayerHeroes)
@@ -57,15 +58,22 @@ public class SummonMinionSkill : BaseSkill
         }
 
         Vector3 spawnPos = FindValidSummonPosition(spawnPoint);
+        HeroInstance heroOfelement = GameManager.Instance.GetHeroOfelement(minionElement);
 
-        // Step 3: Spawn the minion
         GameObject minionGO = Instantiate(minionPrefab, spawnPos, Quaternion.identity);
         CardInstance minionCard = minionGO.GetComponent<CardInstance>();
         minionCard.speedCount = 0;
+        minionCard.ScalePower(heroOfelement.spellPower / 100f, heroOfelement.spellPower / 100f);
+        if (preSummonEffect)
+        {
+            Instantiate(preSummonEffect, spawnPos, Quaternion.identity);
+            yield return new WaitForSeconds(0.6f);
+        }
+        if(summonEffect != null)
+            Instantiate(summonEffect, spawnPos, Quaternion.identity);
 
         if (minionCard == null)
         {
-            Debug.LogError("Summoned minion prefab does not contain CardInstance!");
             Destroy(minionGO);
             GameManager.Instance.SetPlayerInput(true);
             yield break;
@@ -73,10 +81,7 @@ public class SummonMinionSkill : BaseSkill
 
         GameManager.Instance.playerField.AddSummonedCard(minionCard);
 
-        //Debug.Log("Summoned minion at: " + spawnPos);
-
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
         
     private Vector3 FindValidSummonPosition(Vector3 mergepoint)

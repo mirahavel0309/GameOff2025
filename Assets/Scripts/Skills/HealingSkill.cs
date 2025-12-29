@@ -83,6 +83,5 @@ public class HealingSkill : BaseSkill
         }
 
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 }

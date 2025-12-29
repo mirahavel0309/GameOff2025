@@ -38,7 +38,6 @@ public class SacrificeAttackSkill : BaseSkill
                 e.ShowSelector(SelectionState.Red);
         }
 
-        // Show yellow selectors on minions
         foreach (var m in minions)
         {
             if (m != null)
@@ -95,7 +94,6 @@ public class SacrificeAttackSkill : BaseSkill
             if (enemies.Contains(clicked))
             {
                 target = clicked;
-                Debug.Log("Enemy target selected: " + target.name);
                 break;
             }
 
@@ -107,10 +105,13 @@ public class SacrificeAttackSkill : BaseSkill
                 foreach (var m in minions)
                     m.HideSelector();
                 selectedSacrifice.ShowSelector(SelectionState.Green);
-                continue; // remain in the loop, waiting for enemy
+                continue;
             }
+        }
 
-            Debug.Log("Invalid target clicked.");
+        if(selectedSacrifice == null && minions.Count > 0)
+        {
+            selectedSacrifice = minions[Random.Range(0, minions.Count)];
         }
 
         InfoPanel.instance.Hide();
@@ -151,11 +152,10 @@ public class SacrificeAttackSkill : BaseSkill
 
         Destroy(proj);
 
-
-        target.TakeDamage(dmg, damageType);
+        HeroInstance hero = GameManager.Instance.GetHeroOfelement(damageType);
+        target.TakeDamage(Mathf.RoundToInt(dmg * (hero.spellPower / 100f)), damageType);
 
         yield return StartCoroutine(target.ResolveDeathIfNeeded());
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 }

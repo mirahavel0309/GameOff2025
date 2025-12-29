@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GrantStatusEffectSkill : BaseSkill
@@ -16,6 +17,7 @@ public class GrantStatusEffectSkill : BaseSkill
     public ElementType mainElement;
     public StatusEffect statusEffect;
     public bool singleTarget = true;
+    public AudioClip effectSound;
 
     public override IEnumerator Execute()
     {
@@ -78,13 +80,10 @@ public class GrantStatusEffectSkill : BaseSkill
         }
 
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 
     private IEnumerator AllHeroesVersion()
     {
-
-        // Launch elemental projectiles above heroes (visuals)
         yield return GameManager.Instance.StartCoroutine(
             PerformElementalLaunches(
                 elementsLib,
@@ -95,19 +94,9 @@ public class GrantStatusEffectSkill : BaseSkill
             )
         );
 
-
-        //// Spawn global effect (optional)
-        //if (effectPrefab != null)
-        //{
-        //    // Spawn once at center of team
-        //    Vector3 midpoint = GetPlayerMidpoint();
-        //    GameObject fx = GameObject.Instantiate(effectPrefab, midpoint, Quaternion.identity);
-        //    GameObject.Destroy(fx, effectDuration);
-        //}
-
         yield return new WaitForSeconds(0.1f);
 
-        List<HeroInstance> heroes = GameManager.Instance.PlayerHeroes;
+        List<HeroInstance> heroes = GameManager.Instance.PlayerHeroes.Where(x => !x.isDefeated).ToList();
         HeroInstance mainHero = GameManager.Instance.GetHeroOfelement(mainElement);
 
         foreach (var hero in heroes)
@@ -121,8 +110,9 @@ public class GrantStatusEffectSkill : BaseSkill
             }
             hero.AddStatusEffect(statusEffect, mainHero.spellPower);
         }
+        if(effectSound != null)
+            EffectsManager.instance.CreateSoundEffect(effectSound, mergePoint);
 
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 }

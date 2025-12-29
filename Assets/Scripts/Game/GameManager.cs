@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public bool playerTurn = true;
     public int actionsThisTurn = 3;
     public int maxActionsPerTurn = 3;
+    public int maxCardsInHand = 5;
     public Material skybox;
 
     [Header("References")]
@@ -301,6 +302,8 @@ public class GameManager : MonoBehaviour
         waveActive = true;
 
         //StartOfWaveRoutine();
+
+        playerDeck.DrawUntilHandIsFull(maxCardsInHand);
         yield return StartCoroutine(PlayerTurnSimple()); // trying out simple turn order
     }
     private IEnumerator WaveMonitorRoutine()
@@ -380,9 +383,10 @@ public class GameManager : MonoBehaviour
             return hero == null || hero.isDefeated;
         });
 
-        actionsThisTurn = 3;
+        actionsThisTurn = maxActionsPerTurn;
         ResetAllAttacks();
-        playerDeck.DrawUntilHandIsFull();
+        //playerDeck.DrawUntilHandIsFull(maxCardsInHand);
+        playerDeck.DrawMultiple(1);
 
         SetPlayerInput(true);
         foreach (var hero in justHeroes)
@@ -390,6 +394,9 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitUntil(() => playerInput.EndTurnPressed || enemyField.GetCards().Count == 0);
         playerInput.EndTurnPressed = false;
+
+        if (actionsThisTurn > 0)
+            playerDeck.DrawMultiple(actionsThisTurn);
 
         SetPlayerInput(false);
         foreach (var hero in justHeroes)
@@ -522,11 +529,12 @@ public class GameManager : MonoBehaviour
                 InfoPanel.instance.UpdateWavesCount(waveCounter, maxWavesCount);
                 yield return enemySpawner.SpawnBossCoroutine();
                 waveActive = true;
+                playerDeck.DrawUntilHandIsFull(maxCardsInHand);
                 yield return StartCoroutine(PlayerTurnSimple());
             }
             else
             {
-                StartCoroutine(EndLevel());
+                yield return StartCoroutine(EndLevel());
             }
         
     }
@@ -546,15 +554,15 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         actionsText.text = $"actions left: {actionsThisTurn}";
-        if (actionsThisTurn > 0)
-        {
-            healText.gameObject.SetActive(true);
-            healText.text = $"heal for {healLevels[actionsThisTurn - 1]} hp";
-        }
-        else
-        {
-            healText.gameObject.SetActive(false);
-        }
+        //if (actionsThisTurn > 0)
+        //{
+        //    healText.gameObject.SetActive(true);
+        //    healText.text = $"heal for {healLevels[actionsThisTurn - 1]} hp";
+        //}
+        //else
+        //{
+        //    healText.gameObject.SetActive(false);
+        //}
     }
 
 
@@ -633,11 +641,11 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(enemyTurnDuration);
         BeginNextTurn();
     }
-    public void RegisterActionUse()
+    public void RegisterActionUse(int cost)
     {
-        actionsThisTurn--;
+        actionsThisTurn -= cost;
 
-        if (actionsThisTurn <= 0 || PlayerHand.instance.GetCards().Count == 0)
+        if (actionsThisTurn <= 0 || (PlayerHand.instance.GetCards().Count == 0 && actionsThisTurn <= 0))
         {
             StartCoroutine(EndTurnAfterDelay());
         }
@@ -707,6 +715,7 @@ public class GameManager : MonoBehaviour
         ClearSkillCards();
 
         List<BaseSkill> matchingSkills = FindMatchingSkills(selectedElements);
+        int cost = selectedElements.Count;
 
         if (matchingSkills.Count > 0)
         {
@@ -714,7 +723,7 @@ public class GameManager : MonoBehaviour
             {
                 GameObject cardObj = Instantiate(skillCardPrefab, skillCardParent);
                 var cardUI = cardObj.GetComponent<SkillCardUI>();
-                cardUI.Initialize(skill);
+                cardUI.Initialize(skill, cost);
                 activeSkillCards.Add(cardObj);
             }
 
@@ -759,7 +768,7 @@ public class GameManager : MonoBehaviour
         return result;
     }
 
-    public void OnSkillCardChosen(BaseSkill chosenSkill)
+    public void OnSkillCardChosen(BaseSkill chosenSkill, int cost)
     {
         InfoPanel.instance.Hide();
 
@@ -774,12 +783,13 @@ public class GameManager : MonoBehaviour
 
         EffectsManager.instance.CreateSoundEffect(useSound, Vector3.zero);
 
-        StartCoroutine(ExecuteSkill(chosenSkill));
+        StartCoroutine(ExecuteSkill(chosenSkill, cost));
     }
-    public IEnumerator ExecuteSkill(BaseSkill chosenSkill)
+    public IEnumerator ExecuteSkill(BaseSkill chosenSkill, int cost)
     {
         yield return chosenSkill.Execute();
         yield return chosenSkill.PostExecute();
+        RegisterActionUse(cost);
     }
 
     private void ClearSkillCards()
@@ -1064,5 +1074,10 @@ public class GameManager : MonoBehaviour
     {
         if (!playerDeck.availableElements.Contains(element))
             playerDeck.availableElements.Add(element);
+    }
+    public void DrawCard()
+    {
+        playerDeck.DrawMultiple(1);
+        RegisterActionUse(1);
     }
 }

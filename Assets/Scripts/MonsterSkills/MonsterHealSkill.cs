@@ -23,6 +23,7 @@ public class MonsterHealSkill : BaseMonsterSkill
     public override IEnumerator Execute(CardInstance target)
     {
         var allUnitsOnfield = GetComponent<CardInstance>().troopsField.GetCards();
+        cardInstance = GetComponent<CardInstance>();
 
         List<CardInstance> validTargets = allUnitsOnfield
             .Where(e =>
@@ -37,8 +38,15 @@ public class MonsterHealSkill : BaseMonsterSkill
             yield break;
         }
 
-        // Pick a random ally to heal
-        selectedTarget = validTargets[Random.Range(0, validTargets.Count)];
+        // heal ally with lowest hp
+        validTargets.Sort((a, b) =>
+        {
+            float healthA = (float)a.GetComponent<CardInstance>().CurrentHealth / a.GetComponent<CardInstance>().MaxHealth;
+            float healthB = (float)b.GetComponent<CardInstance>().CurrentHealth / b.GetComponent<CardInstance>().MaxHealth;
+
+            return healthA.CompareTo(healthB); // lowest health first
+        });
+        selectedTarget = validTargets[0];
 
         if (animator)
             animator.SetTrigger("Cast");
@@ -47,7 +55,7 @@ public class MonsterHealSkill : BaseMonsterSkill
 
         yield return StartCoroutine(PerformHealProjectile(target));
 
-        selectedTarget.Heal(healAmount);
+        selectedTarget.Heal(Mathf.RoundToInt(healAmount * cardInstance.attackPower * 0.01f));
         GameObject projectile = Instantiate(hitPrefab, selectedTarget.transform.position, Quaternion.identity);
     }
 

@@ -505,7 +505,7 @@ MonoBehaviour:
   skillDescription: 
   animator: {fileID: 5490996520537943343}
   spriteRenderer: {fileID: 8469931686135480976}
-  healAmount: 4
+  healAmount: 5
   projectilePrefab: {fileID: 6709276644064086281, guid: e8c7ef42158dbeb408affcb64101ea98, type: 3}
   hitPrefab: {fileID: 1714363467411018263, guid: fd3e7606c9b5a4a41a5da6ab7479961c, type: 3}
   projectileSpeed: 8

@@ -2567,7 +2567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04bb8872d45c2b4ea9934760d0f81d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroName: Mage Wind
+  heroName: Mage Spirit
   iconImage: {fileID: 943801608}
   descriptionText: 'Resonates with wind element.
 

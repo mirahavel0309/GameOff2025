@@ -99,7 +99,6 @@ public class AttackSkill : BaseSkill
 
         yield return StartCoroutine(target.ResolveDeathIfNeeded());
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
     private IEnumerator PerformAttackVisuals(CardInstance target)
     {

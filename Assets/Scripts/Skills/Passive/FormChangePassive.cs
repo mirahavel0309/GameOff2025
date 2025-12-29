@@ -123,8 +123,8 @@ public class FormChangePassive : PassiveSkill
         TroopsField field = GameManager.Instance.enemyField;
         if (field != null)
         {
-            field.RemoveCard(owner);
             yield return field.AddCard(newCard, false);
+            field.RemoveCard(owner);
         }
 
         // Destroy original

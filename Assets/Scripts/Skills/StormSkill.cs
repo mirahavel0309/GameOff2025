@@ -107,7 +107,6 @@ public class StormSkill : BaseSkill
         foreach (var enemy in enemies)
             yield return StartCoroutine(enemy.ResolveDeathIfNeeded());
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 
     // ---------------------------------------------------------------------

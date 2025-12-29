@@ -77,7 +77,6 @@ public class MeteorSkill : BaseSkill
 
         yield return StartCoroutine(target.ResolveDeathIfNeeded());
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 
     private IEnumerator PerformMeteorVisuals(CardInstance target)

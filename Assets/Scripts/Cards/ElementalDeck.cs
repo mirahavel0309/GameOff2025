@@ -49,9 +49,9 @@ public class ElementalDeck : MonoBehaviour
         }
     }
 
-    internal void DrawUntilHandIsFull()
+    internal void DrawUntilHandIsFull(int maxSize)
     {
-        int cardsNeeded = 5 - playerHand.GetCards().Count;
+        int cardsNeeded = maxSize - playerHand.GetCards().Count;
         if (cardsNeeded > 0)
         {
             for (int i = 0; i < cardsNeeded; i++)

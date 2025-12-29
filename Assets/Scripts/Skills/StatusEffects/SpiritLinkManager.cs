@@ -80,6 +80,9 @@ public class SpiritLinkManager : MonoBehaviour
                 unit.TakeDamage(dmg, ElementType.Spirit, 100);
         }
 
+        foreach (var target in activeLinks)
+            yield return StartCoroutine(target.owner.ResolveDeathIfNeeded());
+
         pendingDamage.Clear();
         resolving = false;
     }

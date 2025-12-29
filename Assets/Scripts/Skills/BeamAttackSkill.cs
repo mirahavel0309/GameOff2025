@@ -69,7 +69,6 @@ public class BeamAttackSkill : BaseSkill
 
 
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 
     private IEnumerator FireBeam(CardInstance target)

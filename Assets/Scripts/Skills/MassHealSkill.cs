@@ -80,6 +80,5 @@ public class MassHealSkill : BaseSkill
         InfoPanel.instance.Hide();
 
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 }

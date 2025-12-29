@@ -141,7 +141,6 @@ public class SacrificeBeamAttackAllSkill : BaseSkill
             yield return StartCoroutine(enemy.ResolveDeathIfNeeded());
         InfoPanel.instance.Hide();
         GameManager.Instance.SetPlayerInput(true);
-        GameManager.Instance.RegisterActionUse();
     }
 
     private Vector3 ComputeMergePoint()
